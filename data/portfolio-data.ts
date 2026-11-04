@@ -3,18 +3,18 @@ import { Project, ServiceItem, ReviewItem } from "@/types";
 export const PORTFOLIO_PROJECTS: Project[] = [
   {
     id: "axis-pro-usa",
-    title: "Creación de Contenido Multimedia & Miniaturas para Axis Pro",
+    title: "Creación de Contenido Multimedia, Miniaturas & Video Demos",
     client: "Axis Pro",
     category: "multimedia",
     categoryLabel: "Contenido & Multimedia",
     summary:
-      "Desarrollo de piezas visuales estratégicas, carruseles de Instagram y portadas de YouTube optimizadas para retención y CTR en Estados Unidos.",
+      "Desarrollo integral de activos multimedia para USA: 3 demos de video dinámicos, miniaturas de YouTube de alto CTR y carruseles educativos.",
     challenge:
-      "La marca requería profesionalizar sus canales digitales en USA con contenido educativo y dinámico que generara alto engagement y autoridad.",
+      "La marca requería profesionalizar sus canales digitales en USA con videos de demostración dinámicos, miniaturas llamativas y carruseles educativos que atraparan la atención en segundos.",
     solution:
-      "Diseño de miniaturas con alta tasa de clic (CTR), diagramación de carruseles informativos de alto valor y activos visuales adaptados a audiencias anglosajonas.",
+      "Producción de 3 videos demo con ritmo visual acelerado, diseño de miniaturas con composición estratégica y diagramación de carruseles modulares para Instagram.",
     fullDescription:
-      "Participación integral en la producción de contenido visual y multimedia para Axis Pro (USA). El proyecto abarcó el diseño de miniaturas de YouTube orientadas a captar tráfico orgánico calificado, carruseles educativos modulares para Instagram y piezas de soporte gráfico para lanzamientos digitales con una entrega ágil orientada a métricas.",
+      "Proyecto integral de producción visual y multimedia para Axis Pro en el mercado de Estados Unidos. Se desarrollaron 3 videos promocionales/demostrativos, una serie de miniaturas optimizadas para compresión y visualización en YouTube, y múltiples carruseles informativos para Instagram, asegurando una estética tecnológica y de alta conversión.",
     image: "/projects/axis-pro/miniaturas/1.png",
     gallery: [
       "/projects/axis-pro/miniaturas/1.png",
@@ -23,11 +23,26 @@ export const PORTFOLIO_PROJECTS: Project[] = [
       "/projects/axis-pro/carrusel-1/1.png",
       "/projects/axis-pro/carrusel-1/2.png",
       "/projects/axis-pro/carrusel-1/3.png",
+      "/projects/axis-pro/carrusel-1/4.png",
       "/projects/axis-pro/carrusel-2/1.png",
       "/projects/axis-pro/carrusel-2/2.png",
     ],
+    videos: [
+      {
+        title: "Video Demo 01 — Funcionalidad & Dinamismo",
+        url: "/projects/axis-pro/videos/1.mp4",
+      },
+      {
+        title: "Video Demo 02 — Características & Solución",
+        url: "/projects/axis-pro/videos/2.mp4",
+      },
+      {
+        title: "Video Demo 03 — Resumen & Llamado a la Acción",
+        url: "/projects/axis-pro/videos/3.mp4",
+      },
+    ],
     aspectRatioClass: "aspect-video",
-    tags: ["Contenido Multimedia", "Miniaturas YouTube", "Carruseles Instagram", "Mercado USA"],
+    tags: ["Edición de Video", "Miniaturas YouTube", "Carruseles Instagram", "Mercado USA"],
     palette: [
       { name: "Azul Pro", hex: "#0284C7" },
       { name: "Cian Eléctrico", hex: "#38BDF8" },
@@ -35,13 +50,108 @@ export const PORTFOLIO_PROJECTS: Project[] = [
       { name: "Blanco Puro", hex: "#FFFFFF" },
     ],
     deliverables: [
-      "Miniaturas de YouTube con alta tasa de clics (CTR)",
-      "Carruseles educativos de múltiples diapositivas para Instagram",
-      "Diagramación de activos visuales para plataformas digitales",
-      "Plantillas dinámicas para optimizar tiempos de producción",
+      "3 Videos demostrativos con edición dinámica y motion design",
+      "Miniaturas de YouTube probadas para maximizar el CTR",
+      "Carruseles informativos y educativos para Instagram",
+      "Activos visuales adaptados para campañas digitales en USA",
     ],
     year: "2024",
     clientLocation: "Estados Unidos (USA)",
+    featured: true,
+  },
+  {
+    id: "barberia-the-king",
+    title: "Campaña Audiovisual & Flyers Publicitarios para Barbería Urbana",
+    client: "Barbería The King",
+    category: "flyers",
+    categoryLabel: "Flyers & Video Promo",
+    summary:
+      "Producción de 3 videos comerciales para redes sociales más cartelería urbana de alto impacto y cuponeras promocionales.",
+    challenge:
+      "Baja afluencia de citas en días de inicio de semana y necesidad de mostrar la técnica y la experiencia prémium de la barbería en video.",
+    solution:
+      "Edición de 3 videos promocionales con música rítmica y cortes precisos, combinados con afiches streetwear de alto contraste para volanteo y Stories.",
+    fullDescription:
+      "Paquete completo de comunicación visual y video para Barbería The King. La dirección artística integró 3 videos promocionales en formato vertical con edición rápida para TikTok e Instagram Reels, acompañados de afiches publicitarios con ofertas 2x1 y cupones de fidelización.",
+    image: "/projects/barberia-the-king/flyer-1.png",
+    gallery: [
+      "/projects/barberia-the-king/flyer-1.png",
+      "/projects/barberia-the-king/flyer-2.png",
+    ],
+    videos: [
+      {
+        title: "Video Comercial 01 — Técnica & Estilo Urbano",
+        url: "/projects/barberia-the-king/videos/video-1.mp4",
+      },
+      {
+        title: "Video Comercial 02 — Experiencia Prémium en Silla",
+        url: "/projects/barberia-the-king/videos/video-2.mp4",
+      },
+      {
+        title: "Video Comercial 03 — Promoción & Ambiente",
+        url: "/projects/barberia-the-king/videos/video-3.mp4",
+      },
+    ],
+    aspectRatioClass: "aspect-[3/4]",
+    tags: ["Video Promocional", "Barbería", "Reels & TikTok", "Flyers Urbanos"],
+    palette: [
+      { name: "Dorado Rey", hex: "#EAB308" },
+      { name: "Negro Obsidiana", hex: "#09090B" },
+      { name: "Plata Cromo", hex: "#E4E4E7" },
+      { name: "Gris Plomo", hex: "#52525B" },
+    ],
+    deliverables: [
+      "3 Videos comerciales verticales listos para pauta y redes",
+      "Flyers promocionales con perfil CMYK para imprenta",
+      "Cuponeras digitales para estados de WhatsApp",
+    ],
+    year: "2024",
+    clientLocation: "Colombia",
+    featured: true,
+  },
+  {
+    id: "nails-pastel",
+    title: "Identidad Visual, Video Promocional & Catálogo de Citas",
+    client: "Nails Pastel",
+    category: "branding",
+    categoryLabel: "Branding & Video Promo",
+    summary:
+      "Video promocional delicado y moderno, logotipo distintivo y catálogo de tarifas para spa y salón de uñas.",
+    challenge:
+      "Nuevo salón de uñas que necesitaba transmitir higiene, sutileza y profesionalismo para captar clientas que valoran servicios prémium.",
+    solution:
+      "Producción de un video promocional que resalta el detalle de los acabados, junto con un sistema de logotipo y catálogo de precios en tonos pasteles.",
+    fullDescription:
+      "Desarrollo audiovisual y de marca para Nails Pastel. Incluye un video promocional diseñado para estados de WhatsApp e Instagram Reels mostrando los tratamientos en primer plano, logotipo vectorial, y flyers organizados por combos de manicura y pedicura.",
+    image: "/projects/nails-pastel/logo.png",
+    gallery: [
+      "/projects/nails-pastel/logo.png",
+      "/projects/nails-pastel/flyer-1.png",
+      "/projects/nails-pastel/flyer-2.png",
+      "/projects/nails-pastel/flyer-3.png",
+      "/projects/nails-pastel/flyer-4.png",
+    ],
+    videos: [
+      {
+        title: "Video Promocional — Cuidado Estético & Acabados",
+        url: "/projects/nails-pastel/videos/video-promocional.mp4",
+      },
+    ],
+    aspectRatioClass: "aspect-square",
+    tags: ["Video Promocional", "Identidad de Marca", "Nails Spa", "Catálogo"],
+    palette: [
+      { name: "Rosa Pastel", hex: "#F472B6" },
+      { name: "Lavanda Suave", hex: "#C084FC" },
+      { name: "Blanco Nácar", hex: "#FDF4FF" },
+      { name: "Dorado Champagne", hex: "#FDE047" },
+    ],
+    deliverables: [
+      "Video promocional con tomas de detalle y música envolvente",
+      "Logotipo principal y variantes de isotipo",
+      "Colección de 4 flyers comerciales con listas de precios",
+    ],
+    year: "2024",
+    clientLocation: "Colombia",
     featured: true,
   },
   {
@@ -53,7 +163,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     summary:
       "Miniaturas de alto contraste y dinamismo visual para YouTube, enfocadas en animales salvajes, felinos y narrativa documental.",
     challenge:
-      "Vídeos documentales y educativos sobre fauna que necesitaban destacar en la página de inicio de YouTube frente a canales de millones de suscriptores.",
+      "Vídeos documentales y educativos sobre fauna que necesitaban destacar en la página de inicio de YouTube frente a canales consolidados.",
     solution:
       "Composición de alto impacto emocional: recorte minucioso de sujetos, corrección de color dramática, tipografía bold y contraste lumínico para disparar el CTR.",
     fullDescription:
@@ -83,18 +193,18 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
   {
     id: "arepa-secreta-menus",
-    title: "Menú Gastronómico & Carta Editorial para Arepera Venezolana",
+    title: "Menús Gastronómicos, Cartas 1 & 2 para Arepera Venezolana",
     client: "Arepa Secreta",
     category: "menus",
     categoryLabel: "Menús Gastronómicos",
     summary:
-      "Diseño de carta física desplegable y versión digital optimizada para comensales, estructurando rellenos tradicionales, combos y bebidas típicas.",
+      "Diseño de cartas físicas y digitales separadas por fases (Menú 1 y Menú 2) estructurando rellenos tradicionales, combos y bebidas.",
     challenge:
       "La carta original presentaba saturación de texto, dificultaba la lectura en horas pico y no destacaba los combos con mayor margen de ganancia.",
     solution:
-      "Diagramación editorial limpia con jerarquía en tres niveles, fotografía de producto apetitosa y código QR ligero adaptado para lectura en smartphones.",
+      "Diagramación editorial limpia en varias cartas modulares, fotografía apetitosa y código QR ligero adaptado para lectura en smartphones.",
     fullDescription:
-      "Diseño y diagramación completa de la carta para Arepa Secreta, restaurante especializado en gastronomía venezolana tradicional. Se organizó la oferta culinaria mediante una jerarquía tipográfica limpia y apetitosa que resalta los rellenos icónicos (reina pepiada, carne mechada, pernil, queso guayanés), entradas, cachapas y bebidas típicas. Diseñado para maximizar la legibilidad en mesas y acelerar los pedidos.",
+      "Diseño y diagramación completa de las cartas gastronómicas para Arepa Secreta. Se crearon múltiples versiones (Menú 1 y Menú 2) organizando la oferta culinaria con jerarquía tipográfica limpia que resalta rellenos icónicos (reina pepiada, mechada, pernil, queso guayanés), desayunos y bebidas típicas.",
     image: "/projects/arepa-secreta/menu-1.png",
     gallery: [
       "/projects/arepa-secreta/menu-1.png",
@@ -113,8 +223,8 @@ export const PORTFOLIO_PROJECTS: Project[] = [
       { name: "Blanco Crema", hex: "#FAFAF9" },
     ],
     deliverables: [
-      "Carta completa de platos de 6 cuerpos con fotografías y precios",
-      "Diagramación de rellenos típicos, desayunos y bebidas",
+      "Cartas completas de platos con fotografías y listas de precios",
+      "Estructuración de rellenos típicos, desayunos y combos",
       "Formato optimizado para impresión en alta definición",
       "Versión digital móvil para visualización por código QR",
     ],
@@ -124,25 +234,28 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
   {
     id: "arepa-secreta-branding",
-    title: "Identidad Visual, Concepto de Marca & Packaging Comercial",
+    title: "Identidad Visual, Branding 1 & 2, Flyers Comerciales",
     client: "Arepa Secreta",
     category: "branding",
     categoryLabel: "Branding Comercial",
     summary:
-      "Sistema de identidad visual que honra las raíces de la arepa artesanal con una estética moderna, limpia y memorable.",
+      "Sistema de marca integral desarrollado en 2 etapas de branding, con afiches promocionales y empaques para delivery.",
     challenge:
       "El negocio operaba sin un identificador gráfico unificado, lo que debilitaba el reconocimiento en pedidos a domicilio frente a competidores directos.",
     solution:
-      "Creación de isotipo minimalista basado en el maíz y fogón, paleta cálida apetitosa y sistema de empaques para delivery en papel kraft.",
+      "Creación de dos fases de branding con isotipo minimalista basado en el maíz y fogón, paleta cálida apetitosa y sistema de empaques para delivery.",
     fullDescription:
-      "Construcción integral de identidad visual para Arepa Secreta. Se diseñó el sistema gráfico, isotipos, paleta de colores corporativos y su aplicación sobre empaques de delivery, bolsas térmicas, uniformes y papelería. El objetivo fue consolidar una personalidad de marca acogedora y reconocible en el competitivo sector gastronómico.",
+      "Construcción integral de identidad visual y material promocional para Arepa Secreta (Branding 1 y 2). Se diseñó el sistema gráfico, isotipos, paleta de colores y una serie de flyers para promocionar combos del día tanto en salón como en delivery.",
     image: "/projects/arepa-secreta/branding-1.png",
     gallery: [
       "/projects/arepa-secreta/branding-1.png",
       "/projects/arepa-secreta/branding-2.png",
+      "/projects/arepa-secreta/flyer-1.png",
+      "/projects/arepa-secreta/flyer-2.png",
+      "/projects/arepa-secreta/flyer-3.png",
     ],
     aspectRatioClass: "aspect-[3/4]",
-    tags: ["Identidad Visual", "Manual de Marca", "Food Branding", "Packaging"],
+    tags: ["Identidad Visual", "Branding Comercial", "Food Branding", "Flyers"],
     palette: [
       { name: "Ámbar Tostado", hex: "#D97706" },
       { name: "Rojo Pasión", hex: "#B91C1C" },
@@ -150,46 +263,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
       { name: "Papel Kraft", hex: "#E7E5E4" },
     ],
     deliverables: [
-      "Isotipo y logotipo principal con variantes de color",
-      "Diseño de bolsas para delivery y papel antigrasa para envolver",
-      "Mockups de presentación y aplicaciones en punto de venta",
+      "Branding 1 y Branding 2 con variantes de aplicación",
+      "Flyers promocionales para volanteo y WhatsApp",
+      "Diseño de bolsas para delivery y papel antigrasa",
       "Guía de contrastes y paleta cromática",
-    ],
-    year: "2024",
-    clientLocation: "Colombia",
-    featured: true,
-  },
-  {
-    id: "barberia-the-king-flyers",
-    title: "Flyers Publicitarios & Piezas Visuales para Barbería Urbana",
-    client: "Barbería The King",
-    category: "flyers",
-    categoryLabel: "Flyers & Publicidad",
-    summary:
-      "Cartelería urbana de alto contraste con estética premium, tipografía bold y cupones promocionales de corte y barba.",
-    challenge:
-      "Baja captación de nuevos clientes en días de baja afluencia (martes y miércoles) y promociones que pasaban desapercibidas en redes.",
-    solution:
-      "Campaña de alto impacto visual inspirada en streetwear, tipografía contundente, llamadas directas con cuponera 2x1 y formatos listos para Stories.",
-    fullDescription:
-      "Diseño de piezas publicitarias para Barbería The King. La dirección artística combina tonos dorados, negros profundos y una diagramación estilizada inspirada en el movimiento streetwear contemporáneo. Desarrolladas para promocionar cortes clásicos, desvanecidos (fade), perfilado de barba y membresías de clientes VIP.",
-    image: "/projects/barberia-the-king/flyer-1.png",
-    gallery: [
-      "/projects/barberia-the-king/flyer-1.png",
-      "/projects/barberia-the-king/flyer-2.png",
-    ],
-    aspectRatioClass: "aspect-[3/4]",
-    tags: ["Barbería", "Flyer Promocional", "Streetwear", "Tipografía Bold"],
-    palette: [
-      { name: "Dorado Rey", hex: "#EAB308" },
-      { name: "Negro Obsidiana", hex: "#09090B" },
-      { name: "Plata Cromo", hex: "#E4E4E7" },
-      { name: "Gris Plomo", hex: "#52525B" },
-    ],
-    deliverables: [
-      "Flyers promocionales para volanteo y exhibición en vitrina",
-      "Pósteres para redes sociales con precios y combos de corte",
-      "Formatos listos para impresión con perfil CMYK y sangrados",
     ],
     year: "2024",
     clientLocation: "Colombia",
@@ -202,13 +279,13 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     category: "flyers",
     categoryLabel: "Flyers & Publicidad",
     summary:
-      "Campaña publicitaria visualmente explosiva para taquería en Bogotá: promociones de tacos al pastor, 2x1 y combos taqueros.",
+      "Campaña publicitaria de 6 afiches y cartas promocionales en Bogotá: promociones de tacos al pastor, 2x1 y combos taqueros.",
     challenge:
       "Fuerte competencia en la zona gastronómica y necesidad de comunicar rápidamente sus días de promoción 2x1 y combos familiares.",
     solution:
       "Serie gráfica de alto impacto cromático (rojo picante, amarillo maíz) con textos gancho directos que aceleraron las órdenes en un 40%.",
     fullDescription:
-      "Serie de 6 afiches y flyers promocionales para Taquería DF 'La Capital del Taco' en Bogotá. La dirección de arte utiliza los vibrantes colores de la comida mexicana (rojos picantes, amarillos maíz y verdes frescos) combinados con frases directas y atractivas para detonar el antojo y aumentar las visitas entre semana y los pedidos a domicilio.",
+      "Serie de afiches y flyers promocionales para Taquería DF 'La Capital del Taco' en Bogotá. La dirección de arte utiliza los vibrantes colores de la comida mexicana (rojos picantes, amarillos maíz y verdes frescos) combinados con frases directas y atractivas para detonar el antojo y aumentar las visitas entre semana y los pedidos a domicilio.",
     image: "/projects/taqueria-df/flyer-1.png",
     gallery: [
       "/projects/taqueria-df/flyer-1.png",
@@ -235,45 +312,6 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     clientLocation: "Bogotá, Colombia",
     featured: true,
   },
-  {
-    id: "nails-pastel-branding",
-    title: "Identidad de Marca & Sistema Gráfico para Salón de Uñas",
-    client: "Nails Pastel",
-    category: "branding",
-    categoryLabel: "Branding Comercial",
-    summary:
-      "Creación de logotipo e identidad visual suave, elegante y moderna para emprendimiento de manicura, pedicura y spa.",
-    challenge:
-      "Emprendimiento nuevo sin diferenciación gráfica en un mercado saturado de estética genérica.",
-    solution:
-      "Desarrollo de branding en tonos pasteles refinados con tipografía sans serif suave y piezas para catálogo de citas en Instagram.",
-    fullDescription:
-      "Diseño de marca para Nails Pastel, emprendimiento enfocado en embellecimiento y cuidado estético de uñas. Se desarrolló una estética delicada en tonos pastel con tipografía elegante y formas armoniosas que transmiten higiene, pulcritud y sofisticación, perfecta para atraer clientela joven y profesional.",
-    image: "/projects/nails-pastel/logo.png",
-    gallery: [
-      "/projects/nails-pastel/logo.png",
-      "/projects/nails-pastel/flyer-1.png",
-      "/projects/nails-pastel/flyer-2.png",
-      "/projects/nails-pastel/flyer-3.png",
-      "/projects/nails-pastel/flyer-4.png",
-    ],
-    aspectRatioClass: "aspect-square",
-    tags: ["Identidad de Marca", "Nails Spa", "Estética Pastel", "Belleza"],
-    palette: [
-      { name: "Rosa Pastel", hex: "#F472B6" },
-      { name: "Lavanda Suave", hex: "#C084FC" },
-      { name: "Blanco Nácar", hex: "#FDF4FF" },
-      { name: "Dorado Champagne", hex: "#FDE047" },
-    ],
-    deliverables: [
-      "Logotipo principal e isotipo para perfiles sociales",
-      "Definición de paleta cromática pastel y armonías visuales",
-      "Plantillas editables para catálogo de servicios y citas",
-    ],
-    year: "2024",
-    clientLocation: "Colombia",
-    featured: true,
-  },
 ];
 
 export const CLIENT_REVIEWS: ReviewItem[] = [
@@ -284,8 +322,8 @@ export const CLIENT_REVIEWS: ReviewItem[] = [
     brand: "Axis Pro (USA)",
     rating: 5,
     comment:
-      "Allan nos apoyó con el diseño de miniaturas y carruseles con un tiempo de entrega impecable. La estética fue justo lo que necesitábamos para elevar el canal en el mercado estadounidense.",
-    service: "Contenido Multimedia & Miniaturas",
+      "Allan nos apoyó con el diseño de miniaturas, carruseles y edición de video con un tiempo de entrega impecable. La estética fue justo lo que necesitábamos para elevar el canal en el mercado estadounidense.",
+    service: "Contenido Multimedia, Miniaturas & Video",
     date: "2024",
     verified: true,
   },
@@ -308,8 +346,8 @@ export const CLIENT_REVIEWS: ReviewItem[] = [
     brand: "Barbería The King",
     rating: 5,
     comment:
-      "Buscábamos una estética urbana pero elegante y Allan captó la vibra de inmediato. Los flyers de promoción para días martes y miércoles nos llenaron la agenda. Muy puntual y profesional con los archivos de imprenta.",
-    service: "Flyers & Publicidad",
+      "Los videos promocionales con ritmo dinámico y los flyers urbanos llenaron nuestra agenda de los días flojos. Muy puntual y profesional con los archivos de imprenta y video.",
+    service: "Video Promocional & Flyers",
     date: "Febrero 2024",
     verified: true,
   },
@@ -332,8 +370,8 @@ export const CLIENT_REVIEWS: ReviewItem[] = [
     brand: "Nails Pastel",
     rating: 5,
     comment:
-      "La delicadeza y elegancia que Allan le dio a la marca nos ayudó a posicionarnos con clientas que buscan servicios premium. Los diseños para redes nos ahorran horas de explicar precios. 100% recomendado.",
-    service: "Branding Comercial & Catálogo",
+      "El video promocional de las sesiones y la estética del logo nos ayudaron a posicionarnos con clientas que buscan servicios prémium. Los diseños para redes nos ahorran horas de explicar precios. 100% recomendado.",
+    service: "Branding Comercial & Video Promo",
     date: "Abril 2024",
     verified: true,
   },
@@ -356,7 +394,7 @@ export const WORK_PROCESS_STEPS = [
     number: "03",
     title: "Entrega Final y Formatos",
     description:
-      "Archivos optimizados listos para su uso: alta definición para imprenta (CMYK), formatos adaptados para YouTube, Reels, TikTok o plataformas publicitarias.",
+      "Archivos optimizados listos para su uso: alta definición para imprenta (CMYK), videos en MP4 listos para pauta y redes, y formatos ligeros para WhatsApp y YouTube.",
   },
 ];
 
@@ -364,17 +402,17 @@ export const SERVICES_LIST: ServiceItem[] = [
   {
     id: "multimedia-video",
     iconName: "Video",
-    title: "Contenido Visual, Miniaturas & Video",
-    subtitle: "Piezas dinámicas enfocadas en retención y alto CTR",
+    title: "Edición de Video & Contenido Multimedia",
+    subtitle: "Piezas dinámicas enfocadas en retención y alto impacto",
     description:
-      "Producción de miniaturas de alto impacto para canales de YouTube, edición de video para formatos cortos (Reels, TikTok) y carruseles informativos para maximizar alcance.",
+      "Producción de videos comerciales y demostrativos (Axis Pro, Barbería The King, Nails Pastel), miniaturas de alto CTR para YouTube y carruseles para redes sociales.",
     features: [
+      "Edición de video comercial con ritmo y sincronización musical",
       "Miniaturas de YouTube con alta tasa de clic (CTR probado)",
-      "Edición de video ágil orientada a retención y dinamismo",
-      "Carruseles educativos y promocionales para Instagram",
+      "Carruseles informativos y educativos para Instagram",
       "Entrega rápida y optimizada para creadores y marcas",
     ],
-    badge: "Alta Retención & CTR",
+    badge: "Alta Retención & Video",
     popular: true,
   },
   {
@@ -433,7 +471,7 @@ export const DESIGNER_INFO = {
   rawPhone: "3248000501",
   whatsappNumber: "573248000501",
   whatsappMessage:
-    "Hola Allan, vi tu portafolio y me gustaría cotizar un proyecto de contenido visual / comercial contigo.",
+    "Hola Allan, vi tu portafolio y me gustaría cotizar un proyecto de contenido visual / comercial / video contigo.",
   telegramUsername: "+573248000501",
   telegramUrl: "https://t.me/+573248000501",
   email: "torresaallan534@gmail.com",

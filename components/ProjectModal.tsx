@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { X, Check, Copy, MessageCircle, ArrowRight, Calendar, Sparkles, CheckCircle2 } from "lucide-react";
+import { X, Check, Copy, MessageCircle, ArrowRight, Calendar, Sparkles, CheckCircle2, Play, Film, Image as ImageIcon } from "lucide-react";
 import { Project } from "@/types";
 import { DESIGNER_INFO } from "@/data/portfolio-data";
 
@@ -13,11 +13,19 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const [copiedHex, setCopiedHex] = useState<string | null>(null);
+  const [activeMediaMode, setActiveMediaMode] = useState<"image" | "video">("image");
   const [activeImage, setActiveImage] = useState<string>("");
+  const [activeVideo, setActiveVideo] = useState<string>("");
 
   useEffect(() => {
     if (project) {
       setActiveImage(project.image);
+      if (project.videos && project.videos.length > 0) {
+        setActiveVideo(project.videos[0].url);
+      } else {
+        setActiveVideo("");
+        setActiveMediaMode("image");
+      }
     }
   }, [project]);
 
@@ -54,7 +62,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   };
 
   const projectWhatsappUrl = `https://wa.me/${DESIGNER_INFO.whatsappNumber}?text=${encodeURIComponent(
-    `Hola Allan! Estuve viendo el proyecto "${project.title}" (${project.client}) en tu portafolio y me gustaría cotizar un diseño similar para mi negocio.`
+    `Hola Allan! Estuve viendo el proyecto "${project.title}" (${project.client}) en tu portafolio y me gustaría cotizar un diseño / producción similar para mi negocio.`
   )}`;
 
   return (
@@ -82,6 +90,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             <span className="text-xs text-[#71717A] font-mono hidden sm:inline">
               &bull; {project.client}
             </span>
+            {project.videos && project.videos.length > 0 && (
+              <span className="text-xs font-mono uppercase tracking-wider text-[#34D399] bg-[#34D399]/10 px-2.5 py-1 rounded flex items-center gap-1">
+                <Film className="w-3 h-3" />
+                <span>Incluye Video</span>
+              </span>
+            )}
           </div>
           <button
             onClick={onClose}
@@ -93,21 +107,88 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         </div>
 
         <div className="p-6 sm:p-8 space-y-8">
-          {/* Main Visual Showcase */}
+          {/* Main Visual Showcase (Tabs if videos available) */}
           <div className="space-y-4">
+            {project.videos && project.videos.length > 0 && (
+              <div className="flex items-center gap-2 p-1 bg-[#0A0A0B] rounded-lg border border-[#2A2A2E] w-fit">
+                <button
+                  type="button"
+                  onClick={() => setActiveMediaMode("image")}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                    activeMediaMode === "image"
+                      ? "bg-[#1C1C1F] text-[#F5F5F7] border border-[#2A2A2E]"
+                      : "text-[#71717A] hover:text-[#F5F5F7]"
+                  }`}
+                >
+                  <ImageIcon className="w-3.5 h-3.5" />
+                  <span>Galería de Imágenes</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveMediaMode("video")}
+                  className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                    activeMediaMode === "video"
+                      ? "bg-[#E8A023] text-[#0A0A0B] font-semibold"
+                      : "text-[#71717A] hover:text-[#F5F5F7]"
+                  }`}
+                >
+                  <Play className="w-3.5 h-3.5 fill-current" />
+                  <span>Reproductor de Video ({project.videos.length})</span>
+                </button>
+              </div>
+            )}
+
+            {/* Display Box */}
             <div className="relative w-full h-[400px] sm:h-[580px] overflow-hidden rounded-xl bg-[#0A0A0B] border border-[#2A2A2E] flex items-center justify-center p-2">
-              <Image
-                src={currentDisplayImage}
-                alt={project.title}
-                fill
-                sizes="(max-width: 1024px) 100vw, 900px"
-                className="object-contain"
-                priority
-              />
+              {activeMediaMode === "video" && activeVideo ? (
+                <video
+                  key={activeVideo}
+                  src={activeVideo}
+                  controls
+                  autoPlay
+                  playsInline
+                  className="max-h-full max-w-full rounded-lg object-contain"
+                />
+              ) : (
+                <Image
+                  src={currentDisplayImage}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 900px"
+                  className="object-contain"
+                  priority
+                />
+              )}
             </div>
 
-            {/* Gallery Thumbnails Strip */}
-            {allImages.length > 1 && (
+            {/* Video Selector Strip */}
+            {activeMediaMode === "video" && project.videos && project.videos.length > 1 && (
+              <div className="space-y-2">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-[#71717A]">
+                  Selecciona el video para reproducir:
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {project.videos.map((vid, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => setActiveVideo(vid.url)}
+                      className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium border transition-all ${
+                        activeVideo === vid.url
+                          ? "bg-[#E8A023] text-[#0A0A0B] border-[#E8A023] font-bold"
+                          : "bg-[#1C1C1F] text-[#A1A1AA] border-[#2A2A2E] hover:text-[#F5F5F7]"
+                      }`}
+                    >
+                      <Play className="w-3.5 h-3.5" />
+                      <span>{vid.title}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Image Gallery Strip */}
+            {activeMediaMode === "image" && allImages.length > 1 && (
               <div className="space-y-2">
                 <span className="text-[11px] font-mono uppercase tracking-wider text-[#71717A]">
                   Páginas y variaciones del proyecto ({allImages.length} vistas):
@@ -181,7 +262,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#34D399]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#34D399]" />
-                    La Solución Gráfica
+                    La Solución Gráfica & Audiovisual
                   </div>
                   <p className="text-sm text-[#A1A1AA] leading-relaxed">
                     {project.solution}
@@ -272,10 +353,10 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           <div className="p-5 rounded-xl bg-gradient-to-r from-[#E8A023]/10 via-[#1C1C1F] to-[#1C1C1F] border border-[#E8A023]/30 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
               <h4 className="text-sm font-semibold text-[#F5F5F7]">
-                ¿Quieres un diseño similar para tu marca?
+                ¿Quieres una producción similar para tu marca?
               </h4>
               <p className="text-xs text-[#A1A1AA] mt-0.5">
-                Conversemos los detalles de tu negocio y te armo una propuesta personalizada.
+                Conversemos los detalles de tu negocio y te armo una propuesta personalizada con entrega ágil.
               </p>
             </div>
             <a
@@ -285,7 +366,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#E8A023] text-[#0A0A0B] font-semibold text-xs hover:bg-[#F0B847] transition-all duration-200 shadow-md shrink-0 active:scale-95"
             >
               <MessageCircle className="w-4 h-4" />
-              <span>Quiero un diseño similar</span>
+              <span>Quiero un resultado similar</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>

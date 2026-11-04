@@ -5,6 +5,12 @@ export interface ColorSwatch {
   hex: string;
 }
 
+export interface ProjectVideo {
+  title: string;
+  url: string;
+  poster?: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -17,6 +23,7 @@ export interface Project {
   fullDescription: string;
   image: string;
   gallery?: string[];
+  videos?: ProjectVideo[];
   aspectRatioClass: string;
   tags: string[];
   palette?: ColorSwatch[];
