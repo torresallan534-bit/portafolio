@@ -13,7 +13,7 @@ export default function Services() {
       title: "Branding Comercial & Identidad",
       subtitle: "Construcción de marcas con identidad única",
       description:
-        "Desarrollo de logotipos, submarcas, paletas cromáticas armónicas y manuales de identidad visual preparados para destacar tanto en medios digitales como en papelería e imprenta comercial.",
+        "Desarrollo de logotipos, isotipos, paletas cromáticas armónicas y manuales de identidad visual preparados para destacar en medios digitales, papelería y empaques.",
       deliverables: [
         "Isotipo, logotipo y aplicaciones modulares",
         "Paleta cromática con códigos HEX, RGB y CMYK",
@@ -29,12 +29,12 @@ export default function Services() {
       title: "Diseño de Menús Gastronómicos",
       subtitle: "Cartas que seducen la vista y venden más",
       description:
-        "Ingeniería visual y diagramación de cartas para areperas venezolanas, restobares, cafeterías y locales de comida rápida. Jerarquía que resalta platos insignia y acelera los pedidos.",
+        "Estructuración y diagramación de cartas para restaurantes venezolanos, taquerías, cafeterías y locales de comida rápida. Jerarquía que resalta platos estrella.",
       deliverables: [
-        "Formato impreso repelente al agua y de alta durabilidad",
-        "Menú QR móvil ultra ligero y legible sin zoom excesivo",
-        "Iconografía personalizada para ingredientes y alérgenos",
-        "Plantillas actualizables para cambios de temporada",
+        "Formato impreso de alta durabilidad y legibilidad",
+        "Menú digital móvil optimizado para código QR",
+        "Iconografía y organización de categorías de platos",
+        "Plantillas actualizables para cambios de precios",
       ],
       tag: "Especialidad Culinaria",
       highlight: false,
@@ -45,12 +45,12 @@ export default function Services() {
       title: "Flyers & Piezas Promocionales",
       subtitle: "Publicidad de alto impacto para barberías y eventos",
       description:
-        "Afiches, cuponeras y volantes concebidos para capturar la atención en segundos. Diseños contundentes para barberías, lanzamientos de productos, noches especiales y promociones por tiempo limitado.",
+        "Afiches, cuponeras y volantes concebidos para capturar la atención de inmediato. Diseños directos para barberías, lanzamientos, promociones 2x1 y fechas especiales.",
       deliverables: [
         "Flyers en alta resolución listos para imprenta con sangrados",
-        "Formatos verticales optimizados para Stories de Instagram y TikTok",
-        "Cuponeras y tarjetas de fidelización para clientes recurrentes",
-        "Entrega rápida para eventos y ofertas de último minuto",
+        "Formatos verticales para Stories de Instagram y TikTok",
+        "Cuponeras y tarjetas de fidelización",
+        "Entrega ágil para eventos y ofertas activas",
       ],
       tag: "Conversión Directa",
       highlight: false,
@@ -61,12 +61,12 @@ export default function Services() {
       title: "Campañas de Donación & Causa Social",
       subtitle: "Diseño con propósito y transparencia",
       description:
-        "Piezas gráficas para ONGs, colectas comunitarias y campañas benéficas. Diseños empáticos y creíbles que transmiten confianza y movilizan a la comunidad a colaborar activamente.",
+        "Piezas gráficas para iniciativas comunitarias, causas benéficas y colectas. Diseños empáticos y creíbles que transmiten confianza y movilizan a colaborar.",
       deliverables: [
-        "Afiches para puntos de recaudación física",
-        "Infografías de impacto y rendición de cuentas",
-        "Kits de difusión para redes sociales y voluntarios",
-        "Banners web y formatos para mailing solidario",
+        "Afiches para puntos físicos y carteleras",
+        "Infografías visuales y de impacto",
+        "Kits de difusión para redes sociales",
+        "Banners y formatos digitales para mensajería",
       ],
       tag: "Impacto Social",
       highlight: false,
@@ -74,81 +74,81 @@ export default function Services() {
   ];
 
   return (
-    <section id="servicios" className="py-24 bg-zinc-950/60 border-y border-zinc-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="servicios" className="py-20 border-y border-border bg-surface/40">
+      <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Section title */}
-        <div className="max-w-3xl mb-16">
-          <span className="text-xs font-mono text-amber-400 uppercase tracking-widest">
+        <div className="max-w-2xl mb-14">
+          <span className="text-xs font-mono text-accent uppercase tracking-wider">
             Servicios Profesionales
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mt-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F5F5F7] tracking-tight mt-2">
             Soluciones Visuales Estratégicas
           </h2>
-          <p className="text-zinc-400 text-base sm:text-lg mt-3 font-light">
-            Cada pieza que diseño tiene un único objetivo: posicionar tu marca en la mente de tus clientes y acelerar tus ventas.
+          <p className="text-[#A1A1AA] text-base mt-3 leading-relaxed">
+            Cada pieza está diseñada con un objetivo: posicionar tu marca en la mente de tus clientes y acelerar tus ventas.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {services.map((service) => {
             const Icon = service.icon;
             return (
               <div
                 key={service.id}
-                className={`relative rounded-2xl p-7 sm:p-9 transition-all duration-300 flex flex-col justify-between ${
+                className={`relative rounded-xl p-7 flex flex-col justify-between transition-colors ${
                   service.highlight
-                    ? "bg-gradient-to-br from-zinc-900 via-zinc-900/90 to-zinc-950 border border-amber-500/30 shadow-xl shadow-amber-500/5"
-                    : "glass-card"
+                    ? "bg-surface border border-accent/40 shadow-sm"
+                    : "bg-surface border border-border hover:border-[#3f3f46]"
                 }`}
               >
                 <div>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="h-12 w-12 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center text-amber-400">
-                      <Icon className="w-6 h-6" />
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="h-10 w-10 rounded-lg bg-surface-elevated border border-border flex items-center justify-center text-accent">
+                      <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-mono uppercase tracking-wider px-3 py-1 rounded-full bg-zinc-800/80 text-zinc-300 border border-zinc-700/60">
+                    <span className="text-[11px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-surface-elevated text-[#A1A1AA] border border-border">
                       {service.tag}
                     </span>
                   </div>
 
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+                  <h3 className="text-xl font-display font-bold text-[#F5F5F7] tracking-tight">
                     {service.title}
                   </h3>
-                  <p className="text-xs font-mono text-amber-400/90 mt-1">
+                  <p className="text-xs font-mono text-accent mt-1">
                     {service.subtitle}
                   </p>
 
-                  <p className="text-sm text-zinc-300 mt-4 leading-relaxed font-light">
+                  <p className="text-sm text-[#A1A1AA] mt-3 leading-relaxed">
                     {service.description}
                   </p>
 
-                  {/* Deliverables Checklist */}
-                  <div className="mt-6 pt-6 border-t border-zinc-800/80 space-y-2.5">
-                    <span className="text-xs font-mono uppercase tracking-wider text-zinc-400 block mb-3">
-                      Qué incluye:
+                  {/* Checklist */}
+                  <div className="mt-5 pt-5 border-t border-border space-y-2">
+                    <span className="text-xs font-mono uppercase tracking-wider text-[#71717A] block mb-2">
+                      Incluye:
                     </span>
                     {service.deliverables.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-300">
-                        <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+                      <div key={idx} className="flex items-start gap-2 text-xs text-[#A1A1AA]">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-zinc-800/60 flex items-center justify-between">
-                  <span className="text-xs text-zinc-400 font-mono">
-                    Entrega personalizada &bull; Asesoría 1 a 1
+                <div className="mt-6 pt-5 border-t border-border flex items-center justify-between">
+                  <span className="text-xs text-[#71717A] font-mono">
+                    Atención personalizada
                   </span>
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-400 hover:text-amber-300 group transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-hover transition-colors"
                   >
-                    <span>Cotizar este servicio</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <span>Cotizar servicio</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </div>

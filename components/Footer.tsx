@@ -1,29 +1,29 @@
-import { ArrowUp, Heart } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 import { DESIGNER_INFO } from "@/data/portfolio-data";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-900 bg-zinc-950 py-12 px-4 sm:px-6 lg:px-8 text-xs text-zinc-500">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
-        <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-          <div className="flex items-center gap-2 font-mono text-zinc-300">
-            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+    <footer className="border-t border-border bg-[#0A0A0B] py-10 px-5 sm:px-8 text-xs text-[#71717A]">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
+          <div className="flex items-center gap-2 font-mono text-[#A1A1AA]">
+            <span className="w-1.5 h-1.5 rounded-full bg-success" />
             <span>{DESIGNER_INFO.name} &bull; Visual Identity & Graphic Design</span>
           </div>
-          <span className="hidden sm:inline text-zinc-700">|</span>
+          <span className="hidden sm:inline text-border">|</span>
           <span>&copy; {new Date().getFullYear()} Todos los derechos reservados.</span>
         </div>
 
-        <div className="flex items-center gap-6">
-          <span className="font-mono text-zinc-400">
+        <div className="flex items-center gap-4">
+          <span className="font-mono text-[#71717A]">
             {DESIGNER_INFO.location}
           </span>
           <a
             href="#inicio"
             aria-label="Volver arriba"
-            className="p-2 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700 transition-colors"
+            className="p-2 rounded-md bg-surface border border-border text-[#A1A1AA] hover:text-[#F5F5F7] transition-colors"
           >
-            <ArrowUp className="w-4 h-4" />
+            <ArrowUp className="w-3.5 h-3.5" />
           </a>
         </div>
       </div>

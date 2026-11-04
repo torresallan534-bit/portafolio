@@ -10,41 +10,40 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#09090b", // Neutral 950 deep obsidian
-        surface: "#121215",
-        "surface-elevated": "#18181b",
+        background: "#0A0A0B",
+        surface: "#141416",
+        "surface-elevated": "#1C1C1F",
+        border: "#2A2A2E",
         accent: {
-          DEFAULT: "#f59e0b", // warm amber/gold for premium design feel
-          light: "#fbbf24",
-          dark: "#d97706",
+          DEFAULT: "#E8A023",
+          hover: "#F0B847",
+          muted: "rgba(232, 160, 35, 0.12)",
         },
+        success: "#34D399",
         brand: {
-          purple: "#8b5cf6",
-          emerald: "#10b981",
-          telegram: "#229ED9",
           whatsapp: "#25D366",
+          telegram: "#229ED9",
         },
       },
       fontFamily: {
+        display: ["var(--font-sora)", "system-ui", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-display)", "system-ui", "sans-serif"],
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "noise-pattern": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E\")",
+        mono: ["var(--font-jetbrains)", "monospace"],
       },
       animation: {
-        "fade-in": "fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards",
-        "pulse-subtle": "pulseSubtle 3s ease-in-out infinite",
+        "fade-in-up":
+          "fadeInUp 0.5s ease-out forwards",
+        "scale-in":
+          "scaleIn 0.3s ease-out forwards",
       },
       keyframes: {
-        fadeIn: {
-          "0%": { opacity: "0", transform: "translateY(12px)" },
+        fadeInUp: {
+          "0%": { opacity: "0", transform: "translateY(16px)" },
           "100%": { opacity: "1", transform: "translateY(0)" },
         },
-        pulseSubtle: {
-          "0%, 100%": { opacity: "1" },
-          "50%": { opacity: "0.6" },
+        scaleIn: {
+          "0%": { opacity: "0", transform: "scale(0.95)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
         },
       },
     },

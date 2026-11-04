@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MessageCircle, Send, Mail, Clock, ShieldCheck, ArrowRight, Check, Sparkles, Phone, Copy } from "lucide-react";
+import { MessageCircle, Send, Mail, Clock, ShieldCheck, ArrowRight, Check, Phone, Copy } from "lucide-react";
 import { DESIGNER_INFO } from "@/data/portfolio-data";
 
 export default function Contact() {
@@ -31,7 +31,7 @@ export default function Contact() {
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const customText = `Hola Allan, soy ${formName || "un cliente"}. Me interesa contratar tus servicios de: ${projectType}. ${
+    const customText = `Hola Allan, soy ${formName || "un cliente"}. Me interesa cotizar: ${projectType}. ${
       formMessage ? `Detalles: ${formMessage}` : ""
     }`;
     const url = `https://wa.me/${DESIGNER_INFO.whatsappNumber}?text=${encodeURIComponent(customText)}`;
@@ -39,120 +39,106 @@ export default function Contact() {
   };
 
   return (
-    <section id="contacto" className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Background glow card */}
-      <div className="relative rounded-3xl overflow-hidden border border-zinc-800 bg-gradient-to-b from-zinc-900/90 to-zinc-950 p-8 sm:p-12 lg:p-16 shadow-2xl">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Direct Hiring Hook */}
+    <section id="contacto" className="py-20 max-w-6xl mx-auto px-5 sm:px-8">
+      <div className="rounded-2xl border border-border bg-surface p-8 sm:p-12 lg:p-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          {/* Left Column */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span>Agenda Abierta &bull; Cotizaciones Inmediatas</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-surface-elevated border border-border text-xs font-mono text-success">
+              <span className="w-1.5 h-1.5 rounded-full bg-success" />
+              <span>Agenda Abierta &bull; Cotizaciones Directas</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F5F5F7] tracking-tight leading-tight">
               ¿Listo para darle a tu negocio el diseño que merece?
             </h2>
 
-            <p className="text-base sm:text-lg text-zinc-300 font-light max-w-xl leading-relaxed">
-              Ya sea el menú de tu arepera, la campaña de flyers para tu barbería o el rediseño total de tu marca: hablemos directo por WhatsApp o Telegram para enviarte una propuesta a la medida.
+            <p className="text-base text-[#A1A1AA] leading-relaxed max-w-lg">
+              El menú de tu arepera o restaurante, la campaña de flyers para tu barbería o el rediseño total de tu marca: escríbeme directamente y coordinamos una propuesta personalizada.
             </p>
 
-            {/* Direct Action Buttons - WhatsApp & Telegram */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
-              {/* WhatsApp Button */}
+            {/* Direct Channels */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
               <a
                 href={whatsappDirectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-[#25D366] hover:bg-[#20ba59] text-zinc-950 font-bold text-sm transition-all duration-300 shadow-xl shadow-[#25D366]/20 active:scale-95"
+                className="group flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-brand-whatsapp text-[#0A0A0B] font-semibold text-sm hover:brightness-105 transition-all"
               >
-                <div className="p-1 rounded-full bg-white/20">
-                  <MessageCircle className="w-5 h-5 fill-current" />
-                </div>
+                <MessageCircle className="w-4 h-4" />
                 <span>Escríbeme por WhatsApp</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </a>
 
-              {/* Telegram Button */}
               <a
                 href={telegramDirectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-3 px-7 py-4 rounded-2xl bg-[#229ED9] hover:bg-[#1f8fc4] text-white font-bold text-sm transition-all duration-300 shadow-xl shadow-[#229ED9]/20 active:scale-95"
+                className="group flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-lg bg-brand-telegram text-white font-semibold text-sm hover:brightness-105 transition-all"
               >
-                <div className="p-1 rounded-full bg-white/20">
-                  <Send className="w-5 h-5 fill-current" />
-                </div>
+                <Send className="w-4 h-4" />
                 <span>Chat en Telegram</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </a>
             </div>
 
             {/* Quick Contact Info Strip */}
-            <div className="flex flex-wrap items-center gap-3 pt-2 text-xs">
+            <div className="flex flex-wrap items-center gap-2.5 pt-2 text-xs">
               <button
                 type="button"
                 onClick={handleCopyPhone}
-                className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 font-mono transition-colors"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface-elevated border border-border text-[#A1A1AA] hover:text-[#F5F5F7] font-mono transition-colors"
                 title="Copiar número"
               >
-                <Phone className="w-3.5 h-3.5 text-amber-400" />
+                <Phone className="w-3.5 h-3.5 text-accent" />
                 <span>+57 324 800 0501</span>
                 {copiedPhone ? (
-                  <Check className="w-3 h-3 text-emerald-400" />
+                  <Check className="w-3 h-3 text-success" />
                 ) : (
-                  <Copy className="w-3 h-3 text-zinc-500 hover:text-zinc-300" />
+                  <Copy className="w-3 h-3 opacity-60" />
                 )}
               </button>
 
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-zinc-900 border border-zinc-800 hover:border-zinc-700 text-zinc-300 font-mono transition-colors"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface-elevated border border-border text-[#A1A1AA] hover:text-[#F5F5F7] font-mono transition-colors"
                 title="Copiar correo"
               >
-                <Mail className="w-3.5 h-3.5 text-amber-400" />
+                <Mail className="w-3.5 h-3.5 text-accent" />
                 <span>torresaallan534@gmail.com</span>
                 {copiedEmail ? (
-                  <Check className="w-3 h-3 text-emerald-400" />
+                  <Check className="w-3 h-3 text-success" />
                 ) : (
-                  <Copy className="w-3 h-3 text-zinc-500 hover:text-zinc-300" />
+                  <Copy className="w-3 h-3 opacity-60" />
                 )}
               </button>
             </div>
 
             {/* Trust Badges */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-zinc-800/80 text-xs text-zinc-400">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-4 border-t border-border text-xs text-[#71717A]">
               <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-amber-400 shrink-0" />
-                <span>Respuesta promedio en menos de 2 horas</span>
+                <Clock className="w-4 h-4 text-accent shrink-0" />
+                <span>Respuesta rápida el mismo día</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Presupuesto claro sin costos ocultos</span>
+                <ShieldCheck className="w-4 h-4 text-success shrink-0" />
+                <span>Presupuestos claros sin costos ocultos</span>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Interactive Quick Brief Generator */}
+          {/* Right Column: Brief Form */}
           <div className="lg:col-span-5">
-            <div className="p-6 sm:p-8 rounded-2xl bg-zinc-950/80 border border-zinc-800 shadow-2xl backdrop-blur-md">
-              <div className="flex items-center justify-between mb-5">
-                <h3 className="text-sm font-semibold text-white flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-amber-400" />
-                  Enviar Brief Rápido
-                </h3>
-                <span className="text-[11px] font-mono text-zinc-500">1 minuto</span>
-              </div>
+            <div className="p-6 rounded-xl bg-surface-elevated border border-border">
+              <h3 className="text-sm font-display font-semibold text-[#F5F5F7] mb-4">
+                Enviar Brief Rápido
+              </h3>
 
-              <form onSubmit={handleFormSubmit} className="space-y-4 text-xs">
+              <form onSubmit={handleFormSubmit} className="space-y-3.5 text-xs">
                 <div>
-                  <label className="block text-zinc-300 font-medium mb-1.5 font-mono">
-                    Tu nombre o el de tu negocio
+                  <label className="block text-[#A1A1AA] mb-1 font-mono">
+                    Nombre o negocio
                   </label>
                   <input
                     type="text"
@@ -160,18 +146,18 @@ export default function Contact() {
                     value={formName}
                     onChange={(e) => setFormName(e.target.value)}
                     placeholder="Ej. Carlos - Arepera La Tradición"
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700/60 text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-amber-400 transition-colors"
+                    className="w-full px-3 py-2 rounded-lg bg-[#0A0A0B] border border-border text-[#F5F5F7] placeholder:text-[#71717A] focus:outline-none focus:border-accent transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-zinc-300 font-medium mb-1.5 font-mono">
-                    ¿Qué tipo de proyecto necesitas?
+                  <label className="block text-[#A1A1AA] mb-1 font-mono">
+                    Tipo de proyecto
                   </label>
                   <select
                     value={projectType}
                     onChange={(e) => setProjectType(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700/60 text-zinc-100 focus:outline-none focus:border-amber-400 transition-colors"
+                    className="w-full px-3 py-2 rounded-lg bg-[#0A0A0B] border border-border text-[#F5F5F7] focus:outline-none focus:border-accent transition-colors"
                   >
                     <option value="Menú Gastronómico (Impreso y QR)">
                       Menú Gastronómico (Impreso y QR)
@@ -192,48 +178,26 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label className="block text-zinc-300 font-medium mb-1.5 font-mono">
+                  <label className="block text-[#A1A1AA] mb-1 font-mono">
                     Detalles breves (opcional)
                   </label>
                   <textarea
                     rows={3}
                     value={formMessage}
                     onChange={(e) => setFormMessage(e.target.value)}
-                    placeholder="Cuéntame fecha estimada, cantidad de piezas o platos..."
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-zinc-900 border border-zinc-700/60 text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-amber-400 transition-colors resize-none"
+                    placeholder="Cuéntame fechas, cantidad de piezas o platos..."
+                    className="w-full px-3 py-2 rounded-lg bg-[#0A0A0B] border border-border text-[#F5F5F7] placeholder:text-[#71717A] focus:outline-none focus:border-accent transition-colors resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold text-xs flex items-center justify-center gap-2 transition-colors shadow-md active:scale-95"
+                  className="w-full py-2.5 px-4 rounded-lg bg-accent hover:bg-accent-hover text-[#0A0A0B] font-semibold text-xs flex items-center justify-center gap-2 transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-emerald-800" />
-                  Enviar directo a WhatsApp de Allan
+                  <MessageCircle className="w-3.5 h-3.5" />
+                  Enviar directo a WhatsApp
                 </button>
               </form>
-
-              {/* Direct email option */}
-              <div className="mt-5 pt-4 border-t border-zinc-800/80 flex items-center justify-between text-[11px] text-zinc-400">
-                <span className="flex items-center gap-1.5">
-                  <Mail className="w-3.5 h-3.5 text-zinc-500" />
-                  O por email tradicional:
-                </span>
-                <button
-                  type="button"
-                  onClick={handleCopyEmail}
-                  className="font-mono text-zinc-300 hover:text-amber-400 flex items-center gap-1 transition-colors"
-                >
-                  {copiedEmail ? (
-                    <>
-                      <Check className="w-3 h-3 text-emerald-400" />
-                      <span className="text-emerald-400 font-semibold">¡Copiado!</span>
-                    </>
-                  ) : (
-                    <span>{DESIGNER_INFO.email}</span>
-                  )}
-                </button>
-              </div>
             </div>
           </div>
         </div>

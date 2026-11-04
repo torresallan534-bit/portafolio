@@ -1,4 +1,4 @@
-import { ArrowDown, MessageCircle, Sparkles, Layers, Send } from "lucide-react";
+import { ArrowDown, MessageCircle, Send } from "lucide-react";
 import { DESIGNER_INFO } from "@/data/portfolio-data";
 
 export default function Hero() {
@@ -9,31 +9,34 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="relative pt-32 pb-20 md:pt-44 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col justify-center"
+      className="relative pt-28 pb-16 md:pt-40 md:pb-24 px-5 sm:px-8 max-w-6xl mx-auto"
     >
-      {/* Editorial badge */}
-      <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-zinc-900/90 border border-zinc-800 text-xs font-mono text-zinc-300 w-fit mb-6 shadow-sm">
-        <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-        <span>Portafolio Profesional &bull; 2024 - 2025</span>
-      </div>
+      {/* Subtle accent glow — just one, very faint */}
+      <div className="pointer-events-none absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-accent/[0.04] blur-[120px]" />
 
-      {/* Main typography & name */}
-      <div className="space-y-6 max-w-4xl">
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight text-white leading-[1.05]">
+      <div className="relative space-y-8 max-w-3xl">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface border border-border text-xs font-mono text-[#A1A1AA]">
+          Portafolio 2024–2025
+        </div>
+
+        {/* Name */}
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-extrabold tracking-tight text-[#F5F5F7] leading-[1.05]">
           Allan Torres
         </h1>
 
-        <p className="text-xl sm:text-2xl md:text-3xl text-zinc-300 font-light tracking-tight max-w-3xl leading-snug">
+        {/* Tagline */}
+        <p className="text-xl sm:text-2xl md:text-3xl text-[#A1A1AA] font-sans font-light tracking-tight leading-snug max-w-2xl">
           Diseño gráfico con impacto real:{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-500 font-medium">
+          <span className="text-accent font-medium">
             identidades visuales, menús gastronómicos
           </span>{" "}
-          y piezas promocionales que posicionan marcas y atraen clientes.
+          y piezas promocionales que atraen clientes.
         </p>
 
-        <p className="text-base sm:text-lg text-zinc-400 max-w-2xl font-normal leading-relaxed">
-          Especializado en la creación visual para el sector gastronómico (areperas, bistrós, restobares),
-          barberías urbanas, campañas sociales y negocios que exigen diseño de alto calibre estético.
+        <p className="text-base text-[#71717A] max-w-xl leading-relaxed">
+          Especializado en la creación visual para el sector gastronómico,
+          barberías urbanas y negocios que exigen diseño profesional.
         </p>
       </div>
 
@@ -41,42 +44,41 @@ export default function Hero() {
       <div className="mt-10 flex flex-wrap items-center gap-4">
         <a
           href="#proyectos"
-          className="group inline-flex items-center gap-3 px-6 py-3.5 rounded-full bg-zinc-100 text-zinc-950 font-semibold text-sm hover:bg-amber-400 transition-all duration-300 shadow-lg shadow-black/40 active:scale-95"
+          className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-[#F5F5F7] text-[#0A0A0B] font-semibold text-sm hover:bg-accent hover:text-[#0A0A0B] transition-colors duration-200"
         >
-          <Layers className="w-4 h-4" />
-          <span>Ver Galería de Trabajos</span>
-          <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+          Ver Trabajos
+          <ArrowDown className="w-4 h-4" />
         </a>
 
         <a
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-full glass-panel hover:bg-zinc-800/80 text-zinc-200 hover:text-white font-medium text-sm transition-all duration-300 border-zinc-700/60 active:scale-95"
+          className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-surface border border-border text-[#A1A1AA] hover:text-[#F5F5F7] hover:border-[#3f3f46] font-medium text-sm transition-all duration-200"
         >
-          <MessageCircle className="w-4 h-4 text-emerald-400" />
-          <span>Cotizar por WhatsApp</span>
+          <MessageCircle className="w-4 h-4 text-success" />
+          WhatsApp
         </a>
 
         <a
           href={DESIGNER_INFO.telegramUrl || `https://t.me/${DESIGNER_INFO.telegramUsername}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-3.5 rounded-full text-zinc-400 hover:text-sky-400 text-sm font-medium transition-colors"
+          className="inline-flex items-center gap-2 px-4 py-3 text-[#71717A] hover:text-brand-telegram text-sm font-medium transition-colors"
         >
-          <Send className="w-4 h-4 text-sky-400" />
-          <span>Telegram</span>
+          <Send className="w-4 h-4" />
+          Telegram
         </a>
       </div>
 
-      {/* Metrics / Key highlights bar */}
-      <div className="mt-16 sm:mt-24 pt-8 border-t border-zinc-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+      {/* Stats */}
+      <div className="mt-16 pt-8 border-t border-border grid grid-cols-2 md:grid-cols-4 gap-8">
         {DESIGNER_INFO.stats.map((stat, i) => (
-          <div key={i} className="flex flex-col">
-            <span className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+          <div key={i}>
+            <span className="text-2xl sm:text-3xl font-display font-bold text-[#F5F5F7] tracking-tight">
               {stat.value}
             </span>
-            <span className="text-xs sm:text-sm text-zinc-400 font-normal mt-1">
+            <span className="block text-xs text-[#71717A] mt-1 font-mono">
               {stat.label}
             </span>
           </div>

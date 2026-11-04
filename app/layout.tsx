@@ -1,8 +1,29 @@
 import type { Metadata } from "next";
+import { Inter, Sora, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const sora = Sora({
+  subsets: ["latin"],
+  variable: "--font-sora",
+  display: "swap",
+  weight: ["400", "600", "700", "800"],
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains",
+  display: "swap",
+  weight: ["400", "500"],
+});
+
 export const metadata: Metadata = {
-  title: "Allan Torres — Diseñador Gráfico & Identidad Visual",
+  title: "Allan Torres — Diseño Gráfico & Branding Visual",
   description:
     "Portafolio profesional de Allan Torres. Especialista en diseño de marcas, menús gastronómicos, flyers promocionales y piezas visuales de alto impacto comercial.",
   keywords: [
@@ -11,15 +32,13 @@ export const metadata: Metadata = {
     "Identidad Visual",
     "Branding Comercial",
     "Diseño de Menús",
-    "Menús de Arepas",
-    "Flyers Barbería",
-    "Campañas de Donación",
+    "Flyers Publicitarios",
     "Portafolio de Diseño",
   ],
   authors: [{ name: "Allan Torres" }],
   creator: "Allan Torres",
   openGraph: {
-    title: "Allan Torres — Diseñador Gráfico & Identidad Visual",
+    title: "Allan Torres — Diseño Gráfico & Branding Visual",
     description:
       "Portafolio moderno y visual: creación de marcas, cartas gastronómicas y material publicitario para impulsar negocios.",
     type: "website",
@@ -33,16 +52,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="dark">
-      <body className="min-h-screen bg-background text-zinc-100 antialiased selection:bg-amber-500/20 selection:text-amber-300">
-        <div className="relative min-h-screen overflow-hidden">
-          {/* Subtle background ambient glow */}
-          <div className="pointer-events-none fixed -top-40 -left-40 h-[600px] w-[600px] rounded-full bg-amber-500/5 blur-[140px]" />
-          <div className="pointer-events-none fixed top-1/2 -right-40 h-[500px] w-[500px] rounded-full bg-orange-600/5 blur-[140px]" />
-          <div className="pointer-events-none fixed -bottom-40 left-1/3 h-[500px] w-[500px] rounded-full bg-amber-500/5 blur-[140px]" />
-          
-          {children}
-        </div>
+    <html
+      lang="es"
+      className={`dark ${inter.variable} ${sora.variable} ${jetbrains.variable}`}
+    >
+      <body className="min-h-screen bg-background text-[#F5F5F7] antialiased font-sans">
+        {children}
       </body>
     </html>
   );
