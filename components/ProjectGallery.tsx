@@ -15,8 +15,7 @@ export default function ProjectGallery() {
     { key: "all", label: "Todos los Trabajos" },
     { key: "menus", label: "Menús Gastronómicos" },
     { key: "flyers", label: "Flyers & Publicidad" },
-    { key: "branding", label: "Branding & Color" },
-    { key: "campanas", label: "Campañas de Donación" },
+    { key: "branding", label: "Branding & Marcas" },
   ];
 
   const filteredProjects =

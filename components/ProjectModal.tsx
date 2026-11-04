@@ -13,6 +13,13 @@ interface ProjectModalProps {
 
 export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   const [copiedHex, setCopiedHex] = useState<string | null>(null);
+  const [activeImage, setActiveImage] = useState<string>("");
+
+  useEffect(() => {
+    if (project) {
+      setActiveImage(project.image);
+    }
+  }, [project]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -31,6 +38,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
   }, [project, onClose]);
 
   if (!project) return null;
+
+  const currentDisplayImage = activeImage || project.image;
+  const allImages = project.gallery && project.gallery.length > 0 
+    ? [project.image, ...project.gallery.filter(img => img !== project.image)]
+    : [project.image];
 
   const copyToClipboard = (hex: string) => {
     navigator.clipboard.writeText(hex);
@@ -73,29 +85,56 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
         <div className="p-6 sm:p-8 space-y-8">
           {/* Main Visual Showcase */}
-          <div className="relative w-full overflow-hidden rounded-xl bg-zinc-900 border border-zinc-800/80 shadow-inner group">
-            <div className="relative w-full h-[320px] sm:h-[460px]">
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                sizes="(max-width: 1024px) 100vw, 850px"
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                priority
-              />
-            </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-            <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-zinc-300">
-              <span className="bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10">
-                Cliente: {project.client}
-              </span>
-              {project.clientLocation && (
-                <span className="flex items-center gap-1 bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10">
-                  <MapPin className="w-3 h-3 text-amber-400" />
-                  {project.clientLocation}
+          <div className="space-y-3">
+            <div className="relative w-full overflow-hidden rounded-xl bg-zinc-900 border border-zinc-800/80 shadow-inner group">
+              <div className="relative w-full h-[340px] sm:h-[480px]">
+                <Image
+                  src={currentDisplayImage}
+                  alt={project.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 850px"
+                  className="object-contain sm:object-cover transition-transform duration-500"
+                  priority
+                />
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-zinc-300">
+                <span className="bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10">
+                  Cliente: {project.client}
                 </span>
-              )}
+                {project.clientLocation && (
+                  <span className="flex items-center gap-1 bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10">
+                    <MapPin className="w-3 h-3 text-amber-400" />
+                    {project.clientLocation}
+                  </span>
+                )}
+              </div>
             </div>
+
+            {/* Gallery Thumbnails Strip */}
+            {allImages.length > 1 && (
+              <div className="flex items-center gap-2.5 overflow-x-auto py-2 px-1">
+                {allImages.map((img, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => setActiveImage(img)}
+                    className={`relative w-16 h-20 sm:w-20 sm:h-24 rounded-lg overflow-hidden border-2 shrink-0 transition-all ${
+                      currentDisplayImage === img
+                        ? "border-amber-400 ring-2 ring-amber-400/30 scale-95"
+                        : "border-zinc-800 opacity-60 hover:opacity-100"
+                    }`}
+                  >
+                    <Image
+                      src={img}
+                      alt={`Miniatura ${idx + 1}`}
+                      fill
+                      className="object-cover"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Title & Metadata */}

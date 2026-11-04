@@ -14,6 +14,7 @@ export interface Project {
   summary: string;
   fullDescription: string;
   image: string;
+  gallery?: string[];
   aspectRatioClass: string;
   tags: string[];
   palette?: ColorSwatch[];
