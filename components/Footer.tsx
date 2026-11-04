@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
           <div className="flex items-center gap-2 font-mono text-[#A1A1AA]">
             <span className="w-1.5 h-1.5 rounded-full bg-success" />
-            <span>{DESIGNER_INFO.name} &bull; Visual Identity & Graphic Design</span>
+            <span>{DESIGNER_INFO.name} &bull; Productor de Contenido Visual & Multimedia</span>
           </div>
           <span className="hidden sm:inline text-border">|</span>
           <span>&copy; {new Date().getFullYear()} Todos los derechos reservados.</span>

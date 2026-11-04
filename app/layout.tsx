@@ -23,27 +23,29 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Allan Torres | Identidad Visual & Menús Gastronómicos",
+  title: "Allan Torres | Productor de Contenido Visual & Multimedia",
   description:
-    "Diseño gráfico estratégico para gastronomía, barberías y marcas comerciales. Bogotá y proyectos remotos internacionales.",
+    "Productor de contenido visual y multimedia. Especializado en diseño de piezas comerciales (menús, flyers, identidad para negocios) y edición de video enfocada en resultados claros y entrega ágil.",
   keywords: [
     "Allan Torres",
-    "Diseño Gráfico",
-    "Identidad Visual",
+    "Productor de Contenido Visual",
+    "Multimedia",
+    "Edición de Video",
+    "Miniaturas YouTube",
+    "Diseño de Piezas Comerciales",
     "Menús Gastronómicos",
-    "Branding Comercial",
     "Flyers Publicitarios",
-    "Diseñador Gráfico Bogotá",
-    "Cartas Restaurantes",
-    "Portafolio de Diseño",
+    "Identidad para Negocios",
+    "Axis Pro USA",
+    "Allan Zoo",
   ],
   authors: [{ name: "Allan Torres" }],
   creator: "Allan Torres",
   metadataBase: new URL("https://portafolio-mu-nine-11.vercel.app"),
   openGraph: {
-    title: "Allan Torres | Identidad Visual & Menús Gastronómicos",
+    title: "Allan Torres | Productor de Contenido Visual & Multimedia",
     description:
-      "Diseño gráfico estratégico para gastronomía, barberías y marcas comerciales. Bogotá y proyectos remotos internacionales.",
+      "Productor de contenido visual y multimedia. Especializado en diseño de piezas comerciales (menús, flyers, identidad para negocios) y edición de video enfocada en resultados claros y entrega ágil.",
     url: "https://portafolio-mu-nine-11.vercel.app",
     siteName: "Allan Torres Portfolio",
     locale: "es_CO",
@@ -53,15 +55,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Allan Torres - Identidad Visual y Menús Gastronómicos",
+        alt: "Allan Torres - Productor de Contenido Visual y Multimedia",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Allan Torres | Identidad Visual & Menús Gastronómicos",
+    title: "Allan Torres | Productor de Contenido Visual & Multimedia",
     description:
-      "Diseño gráfico estratégico para gastronomía, barberías y marcas comerciales. Bogotá y proyectos remotos internacionales.",
+      "Productor de contenido visual y multimedia. Especializado en diseño de piezas comerciales (menús, flyers, identidad para negocios) y edición de video enfocada en resultados claros y entrega ágil.",
     images: ["/og-image.png"],
     creator: "@torresallan",
   },

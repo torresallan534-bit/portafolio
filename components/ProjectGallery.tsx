@@ -13,9 +13,10 @@ export default function ProjectGallery() {
 
   const categories: { key: ProjectCategory; label: string }[] = [
     { key: "all", label: "Todos" },
+    { key: "multimedia", label: "Contenido & Multimedia" },
     { key: "menus", label: "Menús Gastronómicos" },
-    { key: "branding", label: "Branding Comercial" },
     { key: "flyers", label: "Flyers & Publicidad" },
+    { key: "branding", label: "Branding Comercial" },
   ];
 
   const filteredProjects =
@@ -32,10 +33,10 @@ export default function ProjectGallery() {
             Galería Seleccionada &bull; Trabajos Reales
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F5F5F7] tracking-tight">
-            Diseños que Capturan Clientes
+            Piezas & Contenido con Resultados Claros
           </h2>
           <p className="text-[#A1A1AA] text-sm sm:text-base mt-2 max-w-xl">
-            Explora cartas gastronómicas, identidades de marca y campañas publicitarias. Haz clic en cualquiera para abrir la ficha técnica y ver todas las piezas en alta definición.
+            Explora proyectos de creación de contenido en USA, miniaturas para YouTube, cartas gastronómicas y piezas comerciales para marcas.
           </p>
         </div>
 
@@ -66,7 +67,7 @@ export default function ProjectGallery() {
         </div>
       </div>
 
-      {/* Grid Layout with smooth client-side rendering */}
+      {/* Grid Layout */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
         {filteredProjects.map((project, idx) => (
           <article
@@ -75,14 +76,18 @@ export default function ProjectGallery() {
             className="group flex flex-col rounded-xl bg-[#141416] border border-[#2A2A2E] hover:border-[#E8A023]/50 transition-all duration-300 cursor-pointer overflow-hidden shadow-sm hover:shadow-lg hover:shadow-[#E8A023]/5"
           >
             {/* Visual Container */}
-            <div className="relative w-full aspect-[1/1.25] overflow-hidden bg-[#0A0A0B] flex items-center justify-center">
+            <div
+              className={`relative w-full overflow-hidden bg-[#0A0A0B] flex items-center justify-center ${
+                project.category === "multimedia" ? "aspect-video" : "aspect-[1/1.25]"
+              }`}
+            >
               <Image
                 src={project.image}
                 alt={project.title}
                 fill
                 priority={idx < 3}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                className="object-cover object-top transition-transform duration-500 ease-out group-hover:scale-102"
+                className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
               />
 
               {/* Floating Category Pill */}
@@ -122,7 +127,7 @@ export default function ProjectGallery() {
                 </p>
               </div>
 
-              {/* Footer row with Color Swatches & Details trigger */}
+              {/* Footer row */}
               <div className="mt-4 pt-3 border-t border-[#2A2A2E]/60 flex items-center justify-between">
                 {project.palette && (
                   <div className="flex items-center gap-1.5" title="Paleta de color del proyecto">

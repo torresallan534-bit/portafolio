@@ -2,6 +2,86 @@ import { Project, ServiceItem, ReviewItem } from "@/types";
 
 export const PORTFOLIO_PROJECTS: Project[] = [
   {
+    id: "axis-pro-usa",
+    title: "Creación de Contenido Multimedia & Miniaturas para Axis Pro",
+    client: "Axis Pro",
+    category: "multimedia",
+    categoryLabel: "Contenido & Multimedia",
+    summary:
+      "Desarrollo de piezas visuales estratégicas, carruseles de Instagram y portadas de YouTube optimizadas para retención y CTR en Estados Unidos.",
+    challenge:
+      "La marca requería profesionalizar sus canales digitales en USA con contenido educativo y dinámico que generara alto engagement y autoridad.",
+    solution:
+      "Diseño de miniaturas con alta tasa de clic (CTR), diagramación de carruseles informativos de alto valor y activos visuales adaptados a audiencias anglosajonas.",
+    fullDescription:
+      "Participación integral en la producción de contenido visual y multimedia para Axis Pro (USA). El proyecto abarcó el diseño de miniaturas de YouTube orientadas a captar tráfico orgánico calificado, carruseles educativos modulares para Instagram y piezas de soporte gráfico para lanzamientos digitales con una entrega ágil orientada a métricas.",
+    image: "/projects/axis-pro/miniaturas/1.png",
+    gallery: [
+      "/projects/axis-pro/miniaturas/1.png",
+      "/projects/axis-pro/miniaturas/2.png",
+      "/projects/axis-pro/miniaturas/3.png",
+      "/projects/axis-pro/carrusel-1/1.png",
+      "/projects/axis-pro/carrusel-1/2.png",
+      "/projects/axis-pro/carrusel-1/3.png",
+      "/projects/axis-pro/carrusel-2/1.png",
+      "/projects/axis-pro/carrusel-2/2.png",
+    ],
+    aspectRatioClass: "aspect-video",
+    tags: ["Contenido Multimedia", "Miniaturas YouTube", "Carruseles Instagram", "Mercado USA"],
+    palette: [
+      { name: "Azul Pro", hex: "#0284C7" },
+      { name: "Cian Eléctrico", hex: "#38BDF8" },
+      { name: "Grafito Oscuro", hex: "#0F172A" },
+      { name: "Blanco Puro", hex: "#FFFFFF" },
+    ],
+    deliverables: [
+      "Miniaturas de YouTube con alta tasa de clics (CTR)",
+      "Carruseles educativos de múltiples diapositivas para Instagram",
+      "Diagramación de activos visuales para plataformas digitales",
+      "Plantillas dinámicas para optimizar tiempos de producción",
+    ],
+    year: "2024",
+    clientLocation: "Estados Unidos (USA)",
+    featured: true,
+  },
+  {
+    id: "allan-zoo-youtube",
+    title: "Diseño de Miniaturas de Alto CTR para Canal de YouTube Allan Zoo",
+    client: "Allan Zoo",
+    category: "multimedia",
+    categoryLabel: "Contenido & Multimedia",
+    summary:
+      "Miniaturas de alto contraste y dinamismo visual para YouTube, enfocadas en animales salvajes, felinos y narrativa documental.",
+    challenge:
+      "Vídeos documentales y educativos sobre fauna que necesitaban destacar en la página de inicio de YouTube frente a canales de millones de suscriptores.",
+    solution:
+      "Composición de alto impacto emocional: recorte minucioso de sujetos, corrección de color dramática, tipografía bold y contraste lumínico para disparar el CTR.",
+    fullDescription:
+      "Diseño y dirección visual de miniaturas para el canal de YouTube Allan Zoo. Se aplicaron técnicas avanzadas de fotomontaje, iluminación y jerarquía tipográfica para despertar curiosidad inmediata en temáticas sobre felinos salvajes, naturaleza y animales imponentes, garantizando máxima visibilidad en el feed de recomendaciones.",
+    image: "/projects/allan-zoo/1.png",
+    gallery: [
+      "/projects/allan-zoo/1.png",
+      "/projects/allan-zoo/2.png",
+      "/projects/allan-zoo/3.png",
+    ],
+    aspectRatioClass: "aspect-video",
+    tags: ["Miniaturas YouTube", "Alto CTR", "Diseño Documental", "Fotomontaje"],
+    palette: [
+      { name: "Ámbar Furia", hex: "#F59E0B" },
+      { name: "Rojo Alerta", hex: "#DC2626" },
+      { name: "Verde Selva", hex: "#15803D" },
+      { name: "Negro Profundo", hex: "#0A0A0B" },
+    ],
+    deliverables: [
+      "Miniaturas 1280x720 en alta definición optimizadas para compresión de YouTube",
+      "Fotomontajes y retoque de color dramático en sujetos centrales",
+      "Pruebas de legibilidad en pantallas móviles y modo oscuro",
+    ],
+    year: "2024",
+    clientLocation: "YouTube / Global",
+    featured: true,
+  },
+  {
     id: "arepa-secreta-menus",
     title: "Menú Gastronómico & Carta Editorial para Arepera Venezolana",
     client: "Arepa Secreta",
@@ -81,7 +161,7 @@ export const PORTFOLIO_PROJECTS: Project[] = [
   },
   {
     id: "barberia-the-king-flyers",
-    title: "Flyers Publicitarios & Campaña Visual para Barbería Urbana",
+    title: "Flyers Publicitarios & Piezas Visuales para Barbería Urbana",
     client: "Barbería The King",
     category: "flyers",
     categoryLabel: "Flyers & Publicidad",
@@ -194,122 +274,21 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     clientLocation: "Colombia",
     featured: true,
   },
-  {
-    id: "arepa-secreta-flyers",
-    title: "Campaña de Flyers Promocionales & Piezas para Redes Sociales",
-    client: "Arepa Secreta",
-    category: "flyers",
-    categoryLabel: "Flyers & Publicidad",
-    summary:
-      "Piezas publicitarias de alto apetito visual para promociones semanales, combos familiares y lanzamientos especiales.",
-    challenge:
-      "La comunidad local desconocía los combos familiares nocturnos y la línea de desayunos típicos.",
-    solution:
-      "Diseño modular de flyers promocionales para WhatsApp Status e impresos tipo mantel de mesa que dispararon las ventas cruzadas.",
-    fullDescription:
-      "Serie de 6 flyers promocionales diseñados tanto para impresión publicitaria como para difusión en Instagram Stories y pauta digital. Composiciones con fotografías de producto en primer plano, llamados a la acción claros y cupones de descuento pensados para generar tráfico al local y órdenes por delivery.",
-    image: "/projects/arepa-secreta/flyer-1.png",
-    gallery: [
-      "/projects/arepa-secreta/flyer-1.png",
-      "/projects/arepa-secreta/flyer-2.png",
-      "/projects/arepa-secreta/flyer-3.png",
-      "/projects/arepa-secreta/flyer-4.png",
-      "/projects/arepa-secreta/flyer-5.png",
-      "/projects/arepa-secreta/flyer-6.png",
-    ],
-    aspectRatioClass: "aspect-[3/4]",
-    tags: ["Flyers Promocionales", "Combos 2x1", "Social Media", "Publicidad"],
-    palette: [
-      { name: "Amarillo Arepa", hex: "#FBBF24" },
-      { name: "Rojo Carmesí", hex: "#EF4444" },
-      { name: "Gris Asfalto", hex: "#27272A" },
-    ],
-    deliverables: [
-      "Pack de 6 flyers promocionales en alta resolución",
-      "Formatos verticales 9:16 para Stories y pauta en Instagram",
-      "Adaptaciones con códigos QR y teléfonos de delivery",
-    ],
-    year: "2024",
-    clientLocation: "Colombia",
-    featured: false,
-  },
-  {
-    id: "taqueria-df-menu",
-    title: "Carta de Especialidades & Menú Promocional de Tacos y Bebidas",
-    client: "Taquería DF — La Capital del Taco",
-    category: "menus",
-    categoryLabel: "Menús Gastronómicos",
-    summary:
-      "Estructuración visual de tacos individuales, órdenes por kilo y bebidas tradicionales con precios destacados.",
-    challenge:
-      "Los comensales tardaban demasiado en ordenar debido a un menú disperso y precios difíciles de contrastar.",
-    solution:
-      "Estructura en dos columnas con iconografía de salsas y especialidades recomendadas para acelerar la rotación de mesas.",
-    fullDescription:
-      "Diseño de la carta de especialidades para la taquería en Bogotá. Presentación clara de las variedades de tacos (pastor, suadero, birria, carnitas), guarniciones y aguas frescas con una paleta cálida que despierta el apetito y facilita la elección rápida del cliente tanto en salón como en delivery.",
-    image: "/projects/taqueria-df/flyer-2.png",
-    gallery: [
-      "/projects/taqueria-df/flyer-2.png",
-      "/projects/taqueria-df/flyer-3.png",
-      "/projects/taqueria-df/flyer-4.png",
-      "/projects/taqueria-df/flyer-5.png",
-    ],
-    aspectRatioClass: "aspect-[3/4]",
-    tags: ["Carta de Tacos", "Taquería Mexicana", "Menú Promocional"],
-    palette: [
-      { name: "Rojo Salsa", hex: "#B91C1C" },
-      { name: "Naranja Fuego", hex: "#EA580C" },
-      { name: "Blanco Tortilla", hex: "#FDFBF7" },
-    ],
-    deliverables: [
-      "Diagramación de precios y combos de especialidades",
-      "Iconografía de nivel de picante y salsas de la casa",
-      "Versión digital de alta resolución para consulta móvil",
-    ],
-    year: "2024",
-    clientLocation: "Bogotá, Colombia",
-    featured: false,
-  },
-  {
-    id: "nails-pastel-flyers",
-    title: "Flyers Promocionales & Catálogo de Tratamientos de Manicura",
-    client: "Nails Pastel",
-    category: "flyers",
-    categoryLabel: "Flyers & Publicidad",
-    summary:
-      "Serie de piezas para difusión en redes sociales con listas de precios, combos de spa y promociones de temporada.",
-    challenge:
-      "Dificultad para explicar el desglose de tarifas de tratamientos semipermanentes y citas de spa por mensaje.",
-    solution:
-      "Plantillas verticales claras con paquetes cerrados y botón directo a WhatsApp que triplicó las reservas de fines de semana.",
-    fullDescription:
-      "Diseño de piezas promocionales orientadas a captación de citas por WhatsApp y difusión en Instagram. Estructuración clara de servicios (semipermanente, acrílicas, spa de pies) con fotografía de alta definición y estética refinada que eleva el valor del servicio.",
-    image: "/projects/nails-pastel/flyer-1.png",
-    gallery: [
-      "/projects/nails-pastel/flyer-1.png",
-      "/projects/nails-pastel/flyer-2.png",
-      "/projects/nails-pastel/flyer-3.png",
-      "/projects/nails-pastel/flyer-4.png",
-    ],
-    aspectRatioClass: "aspect-[3/4]",
-    tags: ["Catálogo de Servicios", "Promociones Spa", "Instagram Stories"],
-    palette: [
-      { name: "Fucsia Dulce", hex: "#EC4899" },
-      { name: "Púrpura Seda", hex: "#A855F7" },
-      { name: "Crema Suave", hex: "#FAF5FF" },
-    ],
-    deliverables: [
-      "Flyers promocionales para campañas de agendamiento",
-      "Tarjetas de precios y servicios para estados de WhatsApp",
-      "Gráficos para promociones de fin de semana",
-    ],
-    year: "2024",
-    clientLocation: "Colombia",
-    featured: false,
-  },
 ];
 
 export const CLIENT_REVIEWS: ReviewItem[] = [
+  {
+    id: "review-0",
+    name: "Equipo de Creadores",
+    role: "Gestión de Contenido",
+    brand: "Axis Pro (USA)",
+    rating: 5,
+    comment:
+      "Allan nos apoyó con el diseño de miniaturas y carruseles con un tiempo de entrega impecable. La estética fue justo lo que necesitábamos para elevar el canal en el mercado estadounidense.",
+    service: "Contenido Multimedia & Miniaturas",
+    date: "2024",
+    verified: true,
+  },
   {
     id: "review-1",
     name: "Carlos Mendoza",
@@ -365,23 +344,39 @@ export const WORK_PROCESS_STEPS = [
     number: "01",
     title: "Diagnóstico & Brief",
     description:
-      "Analizamos a fondo tu negocio, tu cliente ideal, la oferta comercial y el estilo estético deseado. Definimos entregables y una cotización transparente sin sorpresas.",
+      "Analizamos tus objetivos, formato requerido (video, piezas comerciales o miniaturas), estilo estético y plazos de entrega. Cotización clara y sin costos ocultos.",
   },
   {
     number: "02",
-    title: "Diseño & Rondas de Ajuste",
+    title: "Producción & Rondas de Ajuste",
     description:
-      "Desarrollo las propuestas conceptuales con jerarquía visual y psicología del color. Revisamos juntos en rondas ordenadas de ajustes hasta que el resultado sea impecable.",
+      "Desarrollo las propuestas conceptuales y ediciones con enfoque en retención y jerarquía visual. Rondas ágiles de feedback hasta llegar al resultado óptimo.",
   },
   {
     number: "03",
-    title: "Entrega Final para Producción",
+    title: "Entrega Final y Formatos",
     description:
-      "Recibes todos los archivos listos: artes en alta resolución con sangrados y perfil CMYK para imprenta, más formatos ligeros (RGB/Web) para WhatsApp, redes y QR.",
+      "Archivos optimizados listos para su uso: alta definición para imprenta (CMYK), formatos adaptados para YouTube, Reels, TikTok o plataformas publicitarias.",
   },
 ];
 
 export const SERVICES_LIST: ServiceItem[] = [
+  {
+    id: "multimedia-video",
+    iconName: "Video",
+    title: "Contenido Visual, Miniaturas & Video",
+    subtitle: "Piezas dinámicas enfocadas en retención y alto CTR",
+    description:
+      "Producción de miniaturas de alto impacto para canales de YouTube, edición de video para formatos cortos (Reels, TikTok) y carruseles informativos para maximizar alcance.",
+    features: [
+      "Miniaturas de YouTube con alta tasa de clic (CTR probado)",
+      "Edición de video ágil orientada a retención y dinamismo",
+      "Carruseles educativos y promocionales para Instagram",
+      "Entrega rápida y optimizada para creadores y marcas",
+    ],
+    badge: "Alta Retención & CTR",
+    popular: true,
+  },
   {
     id: "diseno-de-menus",
     iconName: "MenuBook",
@@ -396,12 +391,11 @@ export const SERVICES_LIST: ServiceItem[] = [
       "Plantillas actualizables para cambios de temporada",
     ],
     badge: "Especialidad Gastronómica",
-    popular: true,
   },
   {
     id: "flyers-publicidad",
     iconName: "Megaphone",
-    title: "Flyers & Piezas Publicitarias",
+    title: "Flyers & Piezas Comerciales",
     subtitle: "Publicidad de alto impacto para barberías, eventos y promociones",
     description:
       "Afiches, cuponeras y volantes concebidos para capturar la atención en segundos. Diseños contundentes para barberías urbanas, taquerías, promociones 2x1 y salones de belleza.",
@@ -416,7 +410,7 @@ export const SERVICES_LIST: ServiceItem[] = [
   {
     id: "branding-comercial",
     iconName: "Palette",
-    title: "Branding Comercial & Identidad Visual",
+    title: "Branding & Identidad para Negocios",
     subtitle: "Marcas con identidad única que conectan y perduran",
     description:
       "Construyo la identidad visual integral para tu negocio: logotipos, paletas de colores armónicas, diseño de empaques para delivery y manuales de marca comerciales.",
@@ -427,41 +421,27 @@ export const SERVICES_LIST: ServiceItem[] = [
       "Archivos vectoriales (AI, SVG, PDF) listos para producción",
     ],
   },
-  {
-    id: "campanas-sociales",
-    iconName: "FileSpreadsheet",
-    title: "Campañas & Material Promocional para Redes",
-    subtitle: "Contenido visual estratégico para captar clientes",
-    description:
-      "Packs de piezas promocionales para estados de WhatsApp, posts y reels de Instagram. Gráficos dinámicos pensados para agendar citas y cerrar ventas.",
-    features: [
-      "Kits de plantillas promocionales coherentes con tu marca",
-      "Diseños de combos del día y días especiales",
-      "Infografías visuales de impacto",
-      "Llamados a la acción directos hacia WhatsApp",
-    ],
-  },
 ];
 
 export const DESIGNER_INFO = {
   name: "Allan Torres",
-  title: "Diseñador Gráfico & Estratega Visual",
+  title: "Productor de Contenido Visual & Multimedia",
   tagline:
-    "Especializado en identidad de marca, menús para negocios gastronómicos y material publicitario de alta conversión.",
-  bio: "Con más de 6 años transformando marcas independientes, restaurantes, barberías y proyectos sociales en referentes visuales. Mi enfoque combina estética minimalista, jerarquía tipográfica impecable y diseño estratégico pensado para vender y conectar.",
+    "Especializado en diseño de piezas comerciales (menús, flyers, identidad para negocios) y edición de video enfocada en resultados claros y entrega ágil.",
+  bio: "Productor de contenido visual y multimedia. Especializado en diseño de piezas comerciales (menús, flyers, identidad para negocios) y edición de video enfocada en resultados claros y entrega ágil.",
   phone: "+57 324 800 0501",
   rawPhone: "3248000501",
   whatsappNumber: "573248000501",
   whatsappMessage:
-    "Hola Allan, vi tu portafolio y me gustaría cotizar un proyecto de diseño gráfico contigo.",
+    "Hola Allan, vi tu portafolio y me gustaría cotizar un proyecto de contenido visual / comercial contigo.",
   telegramUsername: "+573248000501",
   telegramUrl: "https://t.me/+573248000501",
   email: "torresaallan534@gmail.com",
-  location: "Bogotá, Colombia & Disponible en remoto a nivel internacional",
+  location: "Colombia & Proyectos internacionales (USA, Colombia, México)",
   stats: [
-    { value: "+120", label: "Proyectos Entregados" },
-    { value: "99%", label: "Clientes Satisfechos" },
-    { value: "48h", label: "Tiempo Promedio de Respuesta Inicial" },
-    { value: "8+", label: "Países con Clientes Activos" },
+    { value: "6", label: "Proyectos Clave Entregados" },
+    { value: "100%", label: "Enfoque en Resultados y Entrega Ágil" },
+    { value: "24h-48h", label: "Tiempo Promedio de Respuesta Inicial" },
+    { value: "3", label: "Países con Clientes Activos" },
   ],
 };

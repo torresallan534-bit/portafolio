@@ -6,7 +6,7 @@ import { DESIGNER_INFO } from "@/data/portfolio-data";
 
 export default function Contact() {
   const [formName, setFormName] = useState("");
-  const [projectType, setProjectType] = useState("Menú Gastronómico");
+  const [projectType, setProjectType] = useState("Edición de Video / Contenido Multimedia");
   const [formMessage, setFormMessage] = useState("");
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
@@ -50,11 +50,11 @@ export default function Contact() {
             </div>
 
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F5F5F7] tracking-tight leading-tight">
-              ¿Listo para darle a tu negocio el diseño que merece?
+              ¿Listo para impulsar tu contenido y piezas comerciales?
             </h2>
 
             <p className="text-base text-[#A1A1AA] leading-relaxed max-w-lg">
-              El menú de tu arepera o restaurante, la campaña de flyers para tu barbería o el rediseño total de tu marca: escríbeme directamente y coordinamos una propuesta personalizada.
+              Ya sea creación de contenido para canales digitales, miniaturas de alto CTR, edición de video o piezas comerciales (menús y flyers): hablemos directo y coordinamos tu entrega ágil.
             </p>
 
             {/* Direct Channels */}
@@ -123,7 +123,7 @@ export default function Contact() {
               </div>
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-success shrink-0" />
-                <span>Presupuestos claros sin costos ocultos</span>
+                <span>Entrega ágil y enfocada en métricas</span>
               </div>
             </div>
           </div>
@@ -138,54 +138,57 @@ export default function Contact() {
               <form onSubmit={handleFormSubmit} className="space-y-3.5 text-xs">
                 <div>
                   <label className="block text-[#A1A1AA] mb-1 font-mono">
-                    Nombre o negocio
+                    Nombre o proyecto
                   </label>
                   <input
                     type="text"
                     required
                     value={formName}
                     onChange={(e) => setFormName(e.target.value)}
-                    placeholder="Ej. Carlos - Arepera La Tradición"
+                    placeholder="Ej. Andrés - Canal YouTube / Negocio"
                     className="w-full px-3 py-2 rounded-lg bg-[#0A0A0B] border border-border text-[#F5F5F7] placeholder:text-[#71717A] focus:outline-none focus:border-accent transition-colors"
                   />
                 </div>
 
                 <div>
                   <label className="block text-[#A1A1AA] mb-1 font-mono">
-                    Tipo de proyecto
+                    Tipo de servicio requerido
                   </label>
                   <select
                     value={projectType}
                     onChange={(e) => setProjectType(e.target.value)}
                     className="w-full px-3 py-2 rounded-lg bg-[#0A0A0B] border border-border text-[#F5F5F7] focus:outline-none focus:border-accent transition-colors"
                   >
+                    <option value="Miniaturas de YouTube / Edición de Video">
+                      Miniaturas de YouTube / Edición de Video
+                    </option>
+                    <option value="Creación de Contenido Multimedia & Carruseles">
+                      Creación de Contenido Multimedia & Carruseles
+                    </option>
                     <option value="Menú Gastronómico (Impreso y QR)">
                       Menú Gastronómico (Impreso y QR)
                     </option>
-                    <option value="Flyers Promocionales para Barbería / Eventos">
-                      Flyers Promocionales para Barbería / Eventos
+                    <option value="Flyers Promocionales & Piezas Comerciales">
+                      Flyers Promocionales & Piezas Comerciales
                     </option>
-                    <option value="Branding Comercial & Paleta de Colores">
-                      Branding Comercial & Paleta de Colores
+                    <option value="Identidad & Branding para Negocios">
+                      Identidad & Branding para Negocios
                     </option>
-                    <option value="Campaña Social o Colecta de Donación">
-                      Campaña Social o Colecta de Donación
-                    </option>
-                    <option value="Paquete Completo (Branding + Menú + Flyers)">
-                      Paquete Completo (Branding + Menú + Flyers)
+                    <option value="Paquete Completo Personalizado">
+                      Paquete Completo Personalizado
                     </option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-[#A1A1AA] mb-1 font-mono">
-                    Detalles breves (opcional)
+                    Detalles breves del proyecto (opcional)
                   </label>
                   <textarea
                     rows={3}
                     value={formMessage}
                     onChange={(e) => setFormMessage(e.target.value)}
-                    placeholder="Cuéntame fechas, cantidad de piezas o platos..."
+                    placeholder="Cuéntame fechas, temática del canal o piezas necesarias..."
                     className="w-full px-3 py-2 rounded-lg bg-[#0A0A0B] border border-border text-[#F5F5F7] placeholder:text-[#71717A] focus:outline-none focus:border-accent transition-colors resize-none"
                   />
                 </div>

@@ -1,4 +1,4 @@
-import { ArrowDown, MessageCircle, Send } from "lucide-react";
+import { ArrowDown, MessageCircle, Send, Play } from "lucide-react";
 import { DESIGNER_INFO } from "@/data/portfolio-data";
 
 export default function Hero() {
@@ -11,13 +11,14 @@ export default function Hero() {
       id="inicio"
       className="relative pt-28 pb-16 md:pt-40 md:pb-24 px-5 sm:px-8 max-w-6xl mx-auto"
     >
-      {/* Subtle accent glow — just one, very faint */}
+      {/* Subtle accent glow */}
       <div className="pointer-events-none absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-accent/[0.04] blur-[120px]" />
 
-      <div className="relative space-y-8 max-w-3xl">
+      <div className="relative space-y-6 max-w-3xl">
         {/* Badge */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface border border-border text-xs font-mono text-[#A1A1AA]">
-          Portafolio 2024–2025
+          <span className="w-1.5 h-1.5 rounded-full bg-[#E8A023]" />
+          <span>Productor de Contenido Visual & Multimedia &bull; Portafolio 2024–2025</span>
         </div>
 
         {/* Name */}
@@ -25,18 +26,14 @@ export default function Hero() {
           Allan Torres
         </h1>
 
-        {/* Tagline */}
+        {/* Tagline con definición exacta del usuario */}
         <p className="text-xl sm:text-2xl md:text-3xl text-[#A1A1AA] font-sans font-light tracking-tight leading-snug max-w-2xl">
-          Diseño gráfico con impacto real:{" "}
-          <span className="text-accent font-medium">
-            identidades visuales, menús gastronómicos
-          </span>{" "}
-          y piezas promocionales que atraen clientes.
+          <span className="text-[#F5F5F7] font-medium">Productor de contenido visual y multimedia.</span> Especializado en diseño de piezas comerciales (menús, flyers, identidad para negocios) y{" "}
+          <span className="text-accent font-medium">edición de video enfocada en resultados claros y entrega ágil.</span>
         </p>
 
-        <p className="text-base text-[#71717A] max-w-xl leading-relaxed">
-          Especializado en la creación visual para el sector gastronómico,
-          barberías urbanas y negocios que exigen diseño profesional.
+        <p className="text-sm sm:text-base text-[#71717A] max-w-xl leading-relaxed">
+          Experiencia colaborando con creadores y marcas en Estados Unidos y Colombia (Axis Pro, Allan Zoo, gastronomía y negocios urbanos).
         </p>
       </div>
 
@@ -71,7 +68,7 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Stats */}
+      {/* Stats actualizadas: 6 proyectos, 3 países */}
       <div className="mt-16 pt-8 border-t border-border grid grid-cols-2 md:grid-cols-4 gap-8">
         {DESIGNER_INFO.stats.map((stat, i) => (
           <div key={i}>

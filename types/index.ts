@@ -1,4 +1,4 @@
-export type ProjectCategory = "all" | "menus" | "branding" | "flyers";
+export type ProjectCategory = "all" | "multimedia" | "menus" | "branding" | "flyers";
 
 export interface ColorSwatch {
   name: string;
@@ -28,7 +28,7 @@ export interface Project {
 
 export interface ServiceItem {
   id: string;
-  iconName: "MenuBook" | "Palette" | "FileSpreadsheet" | "Megaphone";
+  iconName: "MenuBook" | "Palette" | "FileSpreadsheet" | "Megaphone" | "Video";
   title: string;
   subtitle: string;
   description: string;
