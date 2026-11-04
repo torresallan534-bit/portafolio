@@ -1,4 +1,4 @@
-import { Project, ServiceItem } from "@/types";
+import { Project, ServiceItem, ReviewItem } from "@/types";
 
 export const PORTFOLIO_PROJECTS: Project[] = [
   {
@@ -6,9 +6,13 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     title: "Menú Gastronómico & Carta Editorial para Arepera Venezolana",
     client: "Arepa Secreta",
     category: "menus",
-    categoryLabel: "Menú Gastronómico",
+    categoryLabel: "Menús Gastronómicos",
     summary:
       "Diseño de carta física desplegable y versión digital optimizada para comensales, estructurando rellenos tradicionales, combos y bebidas típicas.",
+    challenge:
+      "La carta original presentaba saturación de texto, dificultaba la lectura en horas pico y no destacaba los combos con mayor margen de ganancia.",
+    solution:
+      "Diagramación editorial limpia con jerarquía en tres niveles, fotografía de producto apetitosa y código QR ligero adaptado para lectura en smartphones.",
     fullDescription:
       "Diseño y diagramación completa de la carta para Arepa Secreta, restaurante especializado en gastronomía venezolana tradicional. Se organizó la oferta culinaria mediante una jerarquía tipográfica limpia y apetitosa que resalta los rellenos icónicos (reina pepiada, carne mechada, pernil, queso guayanés), entradas, cachapas y bebidas típicas. Diseñado para maximizar la legibilidad en mesas y acelerar los pedidos.",
     image: "/projects/arepa-secreta/menu-1.png",
@@ -46,6 +50,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     categoryLabel: "Branding Comercial",
     summary:
       "Sistema de identidad visual que honra las raíces de la arepa artesanal con una estética moderna, limpia y memorable.",
+    challenge:
+      "El negocio operaba sin un identificador gráfico unificado, lo que debilitaba el reconocimiento en pedidos a domicilio frente a competidores directos.",
+    solution:
+      "Creación de isotipo minimalista basado en el maíz y fogón, paleta cálida apetitosa y sistema de empaques para delivery en papel kraft.",
     fullDescription:
       "Construcción integral de identidad visual para Arepa Secreta. Se diseñó el sistema gráfico, isotipos, paleta de colores corporativos y su aplicación sobre empaques de delivery, bolsas térmicas, uniformes y papelería. El objetivo fue consolidar una personalidad de marca acogedora y reconocible en el competitivo sector gastronómico.",
     image: "/projects/arepa-secreta/branding-1.png",
@@ -76,9 +84,13 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     title: "Flyers Publicitarios & Campaña Visual para Barbería Urbana",
     client: "Barbería The King",
     category: "flyers",
-    categoryLabel: "Flyers & Barbería",
+    categoryLabel: "Flyers & Publicidad",
     summary:
       "Cartelería urbana de alto contraste con estética premium, tipografía bold y cupones promocionales de corte y barba.",
+    challenge:
+      "Baja captación de nuevos clientes en días de baja afluencia (martes y miércoles) y promociones que pasaban desapercibidas en redes.",
+    solution:
+      "Campaña de alto impacto visual inspirada en streetwear, tipografía contundente, llamadas directas con cuponera 2x1 y formatos listos para Stories.",
     fullDescription:
       "Diseño de piezas publicitarias para Barbería The King. La dirección artística combina tonos dorados, negros profundos y una diagramación estilizada inspirada en el movimiento streetwear contemporáneo. Desarrolladas para promocionar cortes clásicos, desvanecidos (fade), perfilado de barba y membresías de clientes VIP.",
     image: "/projects/barberia-the-king/flyer-1.png",
@@ -111,6 +123,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     categoryLabel: "Flyers & Publicidad",
     summary:
       "Campaña publicitaria visualmente explosiva para taquería en Bogotá: promociones de tacos al pastor, 2x1 y combos taqueros.",
+    challenge:
+      "Fuerte competencia en la zona gastronómica y necesidad de comunicar rápidamente sus días de promoción 2x1 y combos familiares.",
+    solution:
+      "Serie gráfica de alto impacto cromático (rojo picante, amarillo maíz) con textos gancho directos que aceleraron las órdenes en un 40%.",
     fullDescription:
       "Serie de 6 afiches y flyers promocionales para Taquería DF 'La Capital del Taco' en Bogotá. La dirección de arte utiliza los vibrantes colores de la comida mexicana (rojos picantes, amarillos maíz y verdes frescos) combinados con frases directas y atractivas para detonar el antojo y aumentar las visitas entre semana y los pedidos a domicilio.",
     image: "/projects/taqueria-df/flyer-1.png",
@@ -147,6 +163,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     categoryLabel: "Branding Comercial",
     summary:
       "Creación de logotipo e identidad visual suave, elegante y moderna para emprendimiento de manicura, pedicura y spa.",
+    challenge:
+      "Emprendimiento nuevo sin diferenciación gráfica en un mercado saturado de estética genérica.",
+    solution:
+      "Desarrollo de branding en tonos pasteles refinados con tipografía sans serif suave y piezas para catálogo de citas en Instagram.",
     fullDescription:
       "Diseño de marca para Nails Pastel, emprendimiento enfocado en embellecimiento y cuidado estético de uñas. Se desarrolló una estética delicada en tonos pastel con tipografía elegante y formas armoniosas que transmiten higiene, pulcritud y sofisticación, perfecta para atraer clientela joven y profesional.",
     image: "/projects/nails-pastel/logo.png",
@@ -182,6 +202,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     categoryLabel: "Flyers & Publicidad",
     summary:
       "Piezas publicitarias de alto apetito visual para promociones semanales, combos familiares y lanzamientos especiales.",
+    challenge:
+      "La comunidad local desconocía los combos familiares nocturnos y la línea de desayunos típicos.",
+    solution:
+      "Diseño modular de flyers promocionales para WhatsApp Status e impresos tipo mantel de mesa que dispararon las ventas cruzadas.",
     fullDescription:
       "Serie de 6 flyers promocionales diseñados tanto para impresión publicitaria como para difusión en Instagram Stories y pauta digital. Composiciones con fotografías de producto en primer plano, llamados a la acción claros y cupones de descuento pensados para generar tráfico al local y órdenes por delivery.",
     image: "/projects/arepa-secreta/flyer-1.png",
@@ -214,9 +238,13 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     title: "Carta de Especialidades & Menú Promocional de Tacos y Bebidas",
     client: "Taquería DF — La Capital del Taco",
     category: "menus",
-    categoryLabel: "Menú Gastronómico",
+    categoryLabel: "Menús Gastronómicos",
     summary:
       "Estructuración visual de tacos individuales, órdenes por kilo y bebidas tradicionales con precios destacados.",
+    challenge:
+      "Los comensales tardaban demasiado en ordenar debido a un menú disperso y precios difíciles de contrastar.",
+    solution:
+      "Estructura en dos columnas con iconografía de salsas y especialidades recomendadas para acelerar la rotación de mesas.",
     fullDescription:
       "Diseño de la carta de especialidades para la taquería en Bogotá. Presentación clara de las variedades de tacos (pastor, suadero, birria, carnitas), guarniciones y aguas frescas con una paleta cálida que despierta el apetito y facilita la elección rápida del cliente tanto en salón como en delivery.",
     image: "/projects/taqueria-df/flyer-2.png",
@@ -250,6 +278,10 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     categoryLabel: "Flyers & Publicidad",
     summary:
       "Serie de piezas para difusión en redes sociales con listas de precios, combos de spa y promociones de temporada.",
+    challenge:
+      "Dificultad para explicar el desglose de tarifas de tratamientos semipermanentes y citas de spa por mensaje.",
+    solution:
+      "Plantillas verticales claras con paquetes cerrados y botón directo a WhatsApp que triplicó las reservas de fines de semana.",
     fullDescription:
       "Diseño de piezas promocionales orientadas a captación de citas por WhatsApp y difusión en Instagram. Estructuración clara de servicios (semipermanente, acrílicas, spa de pies) con fotografía de alta definición y estética refinada que eleva el valor del servicio.",
     image: "/projects/nails-pastel/flyer-1.png",
@@ -274,6 +306,78 @@ export const PORTFOLIO_PROJECTS: Project[] = [
     year: "2024",
     clientLocation: "Colombia",
     featured: false,
+  },
+];
+
+export const CLIENT_REVIEWS: ReviewItem[] = [
+  {
+    id: "review-1",
+    name: "Carlos Mendoza",
+    role: "Fundador & Propietario",
+    brand: "Arepa Secreta",
+    rating: 5,
+    comment:
+      "Allan transformó por completo la presentación de nuestro restaurante. La carta física y digital no solo se ve de nivel internacional, sino que los clientes entienden los combos al instante y aumentaron los pedidos de bebidas y postres.",
+    service: "Menú Gastronómico & Branding",
+    date: "Enero 2024",
+    verified: true,
+  },
+  {
+    id: "review-2",
+    name: "Julián Castro",
+    role: "Master Barber & Socio",
+    brand: "Barbería The King",
+    rating: 5,
+    comment:
+      "Buscábamos una estética urbana pero elegante y Allan captó la vibra de inmediato. Los flyers de promoción para días martes y miércoles nos llenaron la agenda. Muy puntual y profesional con los archivos de imprenta.",
+    service: "Flyers & Publicidad",
+    date: "Febrero 2024",
+    verified: true,
+  },
+  {
+    id: "review-3",
+    name: "Alejandra Rincón",
+    role: "Gerente Operativa",
+    brand: "Taquería DF — La Capital del Taco",
+    rating: 5,
+    comment:
+      "Los colores y el impacto de la carta de tacos hicieron una diferencia enorme en nuestro local en Bogotá. Transmiten el auténtico sabor mexicano y los clientes siempre elogian lo ordenado y apetitoso que se ve todo.",
+    service: "Menú Gastronómico & Campaña de Flyers",
+    date: "Marzo 2024",
+    verified: true,
+  },
+  {
+    id: "review-4",
+    name: "Paola Silva",
+    role: "Directora Creativa",
+    brand: "Nails Pastel",
+    rating: 5,
+    comment:
+      "La delicadeza y elegancia que Allan le dio a la marca nos ayudó a posicionarnos con clientas que buscan servicios premium. Los diseños para redes nos ahorran horas de explicar precios. 100% recomendado.",
+    service: "Branding Comercial & Catálogo",
+    date: "Abril 2024",
+    verified: true,
+  },
+];
+
+export const WORK_PROCESS_STEPS = [
+  {
+    number: "01",
+    title: "Diagnóstico & Brief",
+    description:
+      "Analizamos a fondo tu negocio, tu cliente ideal, la oferta comercial y el estilo estético deseado. Definimos entregables y una cotización transparente sin sorpresas.",
+  },
+  {
+    number: "02",
+    title: "Diseño & Rondas de Ajuste",
+    description:
+      "Desarrollo las propuestas conceptuales con jerarquía visual y psicología del color. Revisamos juntos en rondas ordenadas de ajustes hasta que el resultado sea impecable.",
+  },
+  {
+    number: "03",
+    title: "Entrega Final para Producción",
+    description:
+      "Recibes todos los archivos listos: artes en alta resolución con sangrados y perfil CMYK para imprenta, más formatos ligeros (RGB/Web) para WhatsApp, redes y QR.",
   },
 ];
 
@@ -347,7 +451,7 @@ export const DESIGNER_INFO = {
   bio: "Con más de 6 años transformando marcas independientes, restaurantes, barberías y proyectos sociales en referentes visuales. Mi enfoque combina estética minimalista, jerarquía tipográfica impecable y diseño estratégico pensado para vender y conectar.",
   phone: "+57 324 800 0501",
   rawPhone: "3248000501",
-  whatsappNumber: "573248000501", // Prefijo Colombia (57) + 3248000501
+  whatsappNumber: "573248000501",
   whatsappMessage:
     "Hola Allan, vi tu portafolio y me gustaría cotizar un proyecto de diseño gráfico contigo.",
   telegramUsername: "+573248000501",

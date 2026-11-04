@@ -1,4 +1,4 @@
-export type ProjectCategory = "all" | "branding" | "menus" | "flyers" | "campanas";
+export type ProjectCategory = "all" | "menus" | "branding" | "flyers";
 
 export interface ColorSwatch {
   name: string;
@@ -12,6 +12,8 @@ export interface Project {
   category: ProjectCategory;
   categoryLabel: string;
   summary: string;
+  challenge?: string;
+  solution?: string;
   fullDescription: string;
   image: string;
   gallery?: string[];
@@ -33,4 +35,16 @@ export interface ServiceItem {
   features: string[];
   badge?: string;
   popular?: boolean;
+}
+
+export interface ReviewItem {
+  id: string;
+  name: string;
+  role: string;
+  brand: string;
+  rating: number;
+  comment: string;
+  service: string;
+  date: string;
+  verified?: boolean;
 }

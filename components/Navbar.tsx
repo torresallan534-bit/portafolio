@@ -18,6 +18,8 @@ export default function Navbar() {
     { label: "Inicio", href: "#inicio" },
     { label: "Proyectos", href: "#proyectos" },
     { label: "Servicios", href: "#servicios" },
+    { label: "Proceso", href: "#proceso" },
+    { label: "Reseñas", href: "#resenas" },
     { label: "Contacto", href: "#contacto" },
   ];
 
@@ -54,7 +56,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-sm text-[#A1A1AA] hover:text-[#F5F5F7] rounded-lg transition-colors duration-200"
+                className="px-3.5 py-1.5 text-xs lg:text-sm text-[#A1A1AA] hover:text-[#F5F5F7] rounded-lg transition-colors duration-200"
               >
                 {link.label}
               </a>

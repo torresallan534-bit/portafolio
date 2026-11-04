@@ -12,10 +12,10 @@ export default function ProjectGallery() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const categories: { key: ProjectCategory; label: string }[] = [
-    { key: "all", label: "Todos los Trabajos" },
+    { key: "all", label: "Todos" },
     { key: "menus", label: "Menús Gastronómicos" },
+    { key: "branding", label: "Branding Comercial" },
     { key: "flyers", label: "Flyers & Publicidad" },
-    { key: "branding", label: "Branding & Marcas" },
   ];
 
   const filteredProjects =
@@ -26,44 +26,53 @@ export default function ProjectGallery() {
   return (
     <section id="proyectos" className="py-20 max-w-6xl mx-auto px-5 sm:px-8">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
         <div>
-          <div className="text-xs font-mono text-accent uppercase tracking-wider mb-2">
+          <div className="text-xs font-mono text-[#E8A023] uppercase tracking-wider mb-2">
             Galería Seleccionada &bull; Trabajos Reales
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F5F5F7] tracking-tight">
             Diseños que Capturan Clientes
           </h2>
           <p className="text-[#A1A1AA] text-sm sm:text-base mt-2 max-w-xl">
-            Explora cartas gastronómicas, identidades y piezas publicitarias para negocios reales. Haz clic en cualquiera para explorar el proyecto completo en alta resolución.
+            Explora cartas gastronómicas, identidades de marca y campañas publicitarias. Haz clic en cualquiera para abrir la ficha técnica y ver todas las piezas en alta definición.
           </p>
         </div>
 
-        {/* Filter Pills */}
-        <div className="flex flex-wrap items-center gap-1.5 bg-surface p-1.5 rounded-xl border border-border">
-          {categories.map((cat) => (
-            <button
-              key={cat.key}
-              onClick={() => setActiveCategory(cat.key)}
-              className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                activeCategory === cat.key
-                  ? "bg-accent text-[#0A0A0B] font-semibold"
-                  : "text-[#A1A1AA] hover:text-[#F5F5F7] hover:bg-surface-elevated"
-              }`}
-            >
-              {cat.label}
-            </button>
-          ))}
+        {/* Filter Tabs Bar */}
+        <div
+          role="tablist"
+          aria-label="Filtrar proyectos por categoría"
+          className="flex flex-wrap items-center gap-1.5 bg-[#141416] p-1.5 rounded-xl border border-[#2A2A2E]"
+        >
+          {categories.map((cat) => {
+            const isSelected = activeCategory === cat.key;
+            return (
+              <button
+                key={cat.key}
+                role="tab"
+                aria-selected={isSelected}
+                onClick={() => setActiveCategory(cat.key)}
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+                  isSelected
+                    ? "bg-[#E8A023] text-[#0A0A0B] font-semibold shadow-sm scale-100"
+                    : "text-[#A1A1AA] hover:text-[#F5F5F7] hover:bg-[#1C1C1F]"
+                }`}
+              >
+                {cat.label}
+              </button>
+            );
+          })}
         </div>
       </div>
 
-      {/* Grid Layout - Clean Visual Cards */}
+      {/* Grid Layout with smooth client-side rendering */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
         {filteredProjects.map((project, idx) => (
           <article
             key={project.id}
             onClick={() => setSelectedProject(project)}
-            className="group flex flex-col rounded-xl bg-surface border border-border hover:border-accent/40 transition-all duration-300 cursor-pointer overflow-hidden"
+            className="group flex flex-col rounded-xl bg-[#141416] border border-[#2A2A2E] hover:border-[#E8A023]/50 transition-all duration-300 cursor-pointer overflow-hidden shadow-sm hover:shadow-lg hover:shadow-[#E8A023]/5"
           >
             {/* Visual Container */}
             <div className="relative w-full aspect-[1/1.25] overflow-hidden bg-[#0A0A0B] flex items-center justify-center">
@@ -78,14 +87,14 @@ export default function ProjectGallery() {
 
               {/* Floating Category Pill */}
               <div className="absolute top-3 left-3 z-20">
-                <span className="text-[11px] font-mono tracking-wide px-2.5 py-1 rounded-md bg-[#0A0A0B]/85 border border-border text-[#F5F5F7]">
+                <span className="text-[11px] font-mono tracking-wide px-2.5 py-1 rounded-md bg-[#0A0A0B]/85 border border-[#2A2A2E] text-[#F5F5F7]">
                   {project.categoryLabel}
                 </span>
               </div>
 
               {/* Hover Indicator */}
               <div className="absolute inset-0 bg-[#0A0A0B]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20">
-                <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg bg-accent text-[#0A0A0B] font-semibold text-xs shadow-lg">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#E8A023] text-[#0A0A0B] font-semibold text-xs shadow-lg transform translate-y-1 group-hover:translate-y-0 transition-transform">
                   <Eye className="w-3.5 h-3.5" />
                   Ver Proyecto
                 </span>
@@ -93,10 +102,10 @@ export default function ProjectGallery() {
             </div>
 
             {/* Information Card */}
-            <div className="p-5 flex flex-col flex-1 justify-between bg-surface text-left border-t border-border">
+            <div className="p-5 flex flex-col flex-1 justify-between bg-[#141416] text-left border-t border-[#2A2A2E]">
               <div>
                 <div className="flex items-center justify-between mb-1.5">
-                  <span className="text-xs uppercase tracking-wider text-accent font-mono font-medium">
+                  <span className="text-xs uppercase tracking-wider text-[#E8A023] font-mono font-medium">
                     {project.client}
                   </span>
                   <span className="text-[11px] font-mono text-[#71717A]">
@@ -104,7 +113,7 @@ export default function ProjectGallery() {
                   </span>
                 </div>
 
-                <h3 className="text-[15px] font-display font-bold text-[#F5F5F7] leading-snug group-hover:text-accent transition-colors">
+                <h3 className="text-[15px] font-display font-bold text-[#F5F5F7] leading-snug group-hover:text-[#E8A023] transition-colors">
                   {project.title}
                 </h3>
 
@@ -113,14 +122,14 @@ export default function ProjectGallery() {
                 </p>
               </div>
 
-              {/* Footer row */}
-              <div className="mt-4 pt-3 border-t border-border/60 flex items-center justify-between">
+              {/* Footer row with Color Swatches & Details trigger */}
+              <div className="mt-4 pt-3 border-t border-[#2A2A2E]/60 flex items-center justify-between">
                 {project.palette && (
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-1.5" title="Paleta de color del proyecto">
                     {project.palette.slice(0, 4).map((c, i) => (
                       <span
                         key={i}
-                        className="w-3 h-3 rounded-full border border-border"
+                        className="w-3 h-3 rounded-full border border-[#2A2A2E]"
                         style={{ backgroundColor: c.hex }}
                         title={`${c.name} (${c.hex})`}
                       />
@@ -128,7 +137,7 @@ export default function ProjectGallery() {
                   </div>
                 )}
 
-                <div className="flex items-center gap-1 text-xs font-medium text-[#71717A] group-hover:text-accent ml-auto transition-colors">
+                <div className="flex items-center gap-1 text-xs font-medium text-[#71717A] group-hover:text-[#E8A023] ml-auto transition-colors">
                   <span>Detalles</span>
                   <ArrowUpRight className="w-3.5 h-3.5" />
                 </div>
@@ -138,7 +147,7 @@ export default function ProjectGallery() {
         ))}
       </div>
 
-      {/* Lightbox / Modal */}
+      {/* Accessible Lightbox / Modal */}
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}

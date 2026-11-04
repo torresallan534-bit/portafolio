@@ -23,26 +23,47 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Allan Torres — Diseño Gráfico & Branding Visual",
+  title: "Allan Torres | Identidad Visual & Menús Gastronómicos",
   description:
-    "Portafolio profesional de Allan Torres. Especialista en diseño de marcas, menús gastronómicos, flyers promocionales y piezas visuales de alto impacto comercial.",
+    "Diseño gráfico estratégico para gastronomía, barberías y marcas comerciales. Bogotá y proyectos remotos internacionales.",
   keywords: [
     "Allan Torres",
     "Diseño Gráfico",
     "Identidad Visual",
+    "Menús Gastronómicos",
     "Branding Comercial",
-    "Diseño de Menús",
     "Flyers Publicitarios",
+    "Diseñador Gráfico Bogotá",
+    "Cartas Restaurantes",
     "Portafolio de Diseño",
   ],
   authors: [{ name: "Allan Torres" }],
   creator: "Allan Torres",
+  metadataBase: new URL("https://portafolio-mu-nine-11.vercel.app"),
   openGraph: {
-    title: "Allan Torres — Diseño Gráfico & Branding Visual",
+    title: "Allan Torres | Identidad Visual & Menús Gastronómicos",
     description:
-      "Portafolio moderno y visual: creación de marcas, cartas gastronómicas y material publicitario para impulsar negocios.",
+      "Diseño gráfico estratégico para gastronomía, barberías y marcas comerciales. Bogotá y proyectos remotos internacionales.",
+    url: "https://portafolio-mu-nine-11.vercel.app",
+    siteName: "Allan Torres Portfolio",
+    locale: "es_CO",
     type: "website",
-    locale: "es_ES",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Allan Torres - Identidad Visual y Menús Gastronómicos",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Allan Torres | Identidad Visual & Menús Gastronómicos",
+    description:
+      "Diseño gráfico estratégico para gastronomía, barberías y marcas comerciales. Bogotá y proyectos remotos internacionales.",
+    images: ["/og-image.png"],
+    creator: "@torresallan",
   },
 };
 
