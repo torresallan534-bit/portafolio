@@ -1,37 +1,4 @@
-export type ProjectCategory = "all" | "multimedia" | "menus" | "branding" | "flyers";
-
-export interface ColorSwatch {
-  name: string;
-  hex: string;
-}
-
-export interface ProjectVideo {
-  title: string;
-  url: string;
-  poster?: string;
-}
-
-export interface Project {
-  id: string;
-  title: string;
-  client: string;
-  category: ProjectCategory;
-  categoryLabel: string;
-  summary: string;
-  challenge?: string;
-  solution?: string;
-  fullDescription: string;
-  image: string;
-  gallery?: string[];
-  videos?: ProjectVideo[];
-  aspectRatioClass: string;
-  tags: string[];
-  palette?: ColorSwatch[];
-  deliverables: string[];
-  year: string;
-  clientLocation?: string;
-  featured?: boolean;
-}
+export * from './projects';
 
 export interface ServiceItem {
   id: string;
