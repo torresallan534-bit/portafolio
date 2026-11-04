@@ -1,10 +1,22 @@
-import { ArrowDown, MessageCircle, Send, Play } from "lucide-react";
+import { ArrowDown, MessageCircle, Send } from "lucide-react";
 import { DESIGNER_INFO } from "@/data/portfolio-data";
+import statsData from "@/data/stats.json";
 
 export default function Hero() {
   const whatsappUrl = `https://wa.me/${DESIGNER_INFO.whatsappNumber}?text=${encodeURIComponent(
     DESIGNER_INFO.whatsappMessage
   )}`;
+
+  // Métricas dinámicas calculadas desde stats.json
+  const totalDeliverablesCount = statsData?.totalDeliverables || 77;
+  const totalClientsCount = statsData?.totalClients || 6;
+
+  const heroStats = [
+    { value: `${totalDeliverablesCount}`, label: "Entregables & Piezas Creadas" },
+    { value: `${totalClientsCount}`, label: "Marcas & Clientes Gestionados" },
+    { value: "24h-48h", label: "Tiempo de Respuesta Inicial" },
+    { value: "3", label: "Países con Clientes Activos" },
+  ];
 
   return (
     <section
@@ -43,7 +55,7 @@ export default function Hero() {
           href="#proyectos"
           className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-[#F5F5F7] text-[#0A0A0B] font-semibold text-sm hover:bg-accent hover:text-[#0A0A0B] transition-colors duration-200"
         >
-          Ver Trabajos
+          Ver Casos de Estudio
           <ArrowDown className="w-4 h-4" />
         </a>
 
@@ -68,9 +80,9 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Stats actualizadas: 6 proyectos, 3 países */}
+      {/* Stats dinámicas alimentadas desde data/stats.json */}
       <div className="mt-16 pt-8 border-t border-border grid grid-cols-2 md:grid-cols-4 gap-8">
-        {DESIGNER_INFO.stats.map((stat, i) => (
+        {heroStats.map((stat, i) => (
           <div key={i}>
             <span className="text-2xl sm:text-3xl font-display font-bold text-[#F5F5F7] tracking-tight">
               {stat.value}
