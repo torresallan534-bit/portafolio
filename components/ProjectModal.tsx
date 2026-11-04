@@ -85,54 +85,45 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
         <div className="p-6 sm:p-8 space-y-8">
           {/* Main Visual Showcase */}
-          <div className="space-y-3">
-            <div className="relative w-full overflow-hidden rounded-xl bg-zinc-900 border border-zinc-800/80 shadow-inner group">
-              <div className="relative w-full h-[340px] sm:h-[480px]">
-                <Image
-                  src={currentDisplayImage}
-                  alt={project.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 850px"
-                  className="object-contain sm:object-cover transition-transform duration-500"
-                  priority
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-xs text-zinc-300">
-                <span className="bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10">
-                  Cliente: {project.client}
-                </span>
-                {project.clientLocation && (
-                  <span className="flex items-center gap-1 bg-black/60 backdrop-blur px-3 py-1.5 rounded-full border border-white/10">
-                    <MapPin className="w-3 h-3 text-amber-400" />
-                    {project.clientLocation}
-                  </span>
-                )}
-              </div>
+          <div className="space-y-4">
+            <div className="relative w-full h-[420px] sm:h-[620px] overflow-hidden rounded-xl bg-zinc-950 border border-zinc-800 shadow-inner flex items-center justify-center p-2">
+              <Image
+                src={currentDisplayImage}
+                alt={project.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 900px"
+                className="object-contain transition-transform duration-300"
+                priority
+              />
             </div>
 
             {/* Gallery Thumbnails Strip */}
             {allImages.length > 1 && (
-              <div className="flex items-center gap-2.5 overflow-x-auto py-2 px-1">
-                {allImages.map((img, idx) => (
-                  <button
-                    key={idx}
-                    type="button"
-                    onClick={() => setActiveImage(img)}
-                    className={`relative w-16 h-20 sm:w-20 sm:h-24 rounded-lg overflow-hidden border-2 shrink-0 transition-all ${
-                      currentDisplayImage === img
-                        ? "border-amber-400 ring-2 ring-amber-400/30 scale-95"
-                        : "border-zinc-800 opacity-60 hover:opacity-100"
-                    }`}
-                  >
-                    <Image
-                      src={img}
-                      alt={`Miniatura ${idx + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
+              <div className="space-y-1.5">
+                <span className="text-[11px] font-mono uppercase tracking-wider text-zinc-400">
+                  Páginas y Variantes del Proyecto (Haz clic para ampliar):
+                </span>
+                <div className="flex items-center gap-3 overflow-x-auto py-2 px-1">
+                  {allImages.map((img, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={() => setActiveImage(img)}
+                      className={`relative w-16 h-22 sm:w-20 sm:h-28 rounded-xl overflow-hidden border-2 shrink-0 transition-all ${
+                        currentDisplayImage === img
+                          ? "border-amber-400 ring-4 ring-amber-400/20 scale-95"
+                          : "border-zinc-800 opacity-60 hover:opacity-100"
+                      }`}
+                    >
+                      <Image
+                        src={img}
+                        alt={`Miniatura ${idx + 1}`}
+                        fill
+                        className="object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
               </div>
             )}
           </div>
