@@ -14,7 +14,7 @@ export default function ClientReviews() {
   // Form State
   const [fullName, setFullName] = useState("");
   const [brandName, setBrandName] = useState("");
-  const [serviceType, setServiceType] = useState("Menú Gastronómico");
+  const [serviceType, setServiceType] = useState("Edición de Video / Contenido");
   const [rating, setRating] = useState(5);
   const [hoverRating, setHoverRating] = useState(0);
   const [comment, setComment] = useState("");
@@ -45,22 +45,19 @@ export default function ClientReviews() {
     };
 
     try {
-      // Simulación de envío o llamada a endpoint /api/reviews
       await new Promise((resolve) => setTimeout(resolve, 800));
 
-      // Añadimos la reseña al estado local para feedback inmediato
       setReviews((prev) => [newReview, ...prev]);
       setSubmittedSuccess(true);
       setIsSubmitting(false);
 
-      // Limpiar formulario tras unos segundos
       setTimeout(() => {
         setFullName("");
         setBrandName("");
         setComment("");
         setRating(5);
         setIsModalOpen(false);
-      }, 2400);
+      }, 2200);
     } catch {
       setIsSubmitting(false);
     }
@@ -68,7 +65,7 @@ export default function ClientReviews() {
 
   return (
     <section id="resenas" className="py-20 max-w-6xl mx-auto px-5 sm:px-8">
-      {/* Header with Title and "Dejar una Reseña" CTA */}
+      {/* Header con Título y Botón Destacado */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-6">
         <div>
           <div className="text-xs font-mono text-[#E8A023] uppercase tracking-wider mb-2 flex items-center gap-2">
@@ -79,22 +76,22 @@ export default function ClientReviews() {
             Reseñas de Clientes
           </h2>
           <p className="text-[#A1A1AA] text-sm sm:text-base mt-2 max-w-xl">
-            La confianza de los negocios gastronómicos, marcas y barberías que han elevado su facturación e identidad visual con nuestro trabajo.
+            La confianza de creadores, canales de YouTube, negocios gastronómicos y barberías que han elevado sus métricas con nuestro trabajo.
           </p>
         </div>
 
-        {/* CTA to open review modal */}
+        {/* Botón Destacado e Interactivo para Abrir Modal */}
         <button
           type="button"
           onClick={handleOpenModal}
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#1C1C1F] border border-[#2A2A2E] hover:border-[#E8A023]/60 text-[#F5F5F7] text-xs font-semibold transition-all duration-200 hover:bg-[#2A2A2E] active:scale-95 shrink-0"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#E8A023] hover:bg-[#F0B847] text-[#0A0A0B] text-xs font-bold transition-all duration-200 shadow-md shadow-[#E8A023]/20 active:scale-95 shrink-0"
         >
-          <MessageSquarePlus className="w-4 h-4 text-[#E8A023]" />
+          <MessageSquarePlus className="w-4 h-4 text-[#0A0A0B]" />
           <span>⭐ Dejar una reseña</span>
         </button>
       </div>
 
-      {/* Grid of Reviews */}
+      {/* Grid de Reseñas */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {reviews.map((rev) => (
           <div
@@ -102,7 +99,7 @@ export default function ClientReviews() {
             className="flex flex-col justify-between p-6 sm:p-7 rounded-2xl bg-[#141416] border border-[#2A2A2E] hover:border-[#3f3f46] transition-colors"
           >
             <div>
-              {/* Top Row: Stars and Service Badge */}
+              {/* Estrellas y Badge de Servicio */}
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
@@ -125,13 +122,13 @@ export default function ClientReviews() {
                 </span>
               </div>
 
-              {/* Comment */}
+              {/* Comentario */}
               <p className="text-sm text-[#F5F5F7]/90 leading-relaxed italic mb-6">
                 &ldquo;{rev.comment}&rdquo;
               </p>
             </div>
 
-            {/* Author info */}
+            {/* Datos del Cliente */}
             <div className="pt-4 border-t border-[#2A2A2E] flex items-center justify-between">
               <div>
                 <div className="flex items-center gap-2">
@@ -159,7 +156,7 @@ export default function ClientReviews() {
         ))}
       </div>
 
-      {/* Review Submission Modal */}
+      {/* Modal Interactivo para Dejar una Reseña */}
       {isModalOpen && (
         <div
           role="dialog"
@@ -175,8 +172,7 @@ export default function ClientReviews() {
           />
 
           {/* Dialog Container */}
-          <div className="relative w-full max-w-lg bg-[#141416] border border-[#2A2A2E] rounded-2xl shadow-2xl z-10 text-[#F5F5F7] p-6 sm:p-8 animate-scale-in">
-            {/* Close button */}
+          <div className="relative w-full max-w-lg bg-[#141416] border border-[#2A2A2E] rounded-2xl shadow-2xl z-10 text-[#F5F5F7] p-6 sm:p-8">
             <button
               onClick={handleCloseModal}
               className="absolute top-5 right-5 p-1.5 text-[#A1A1AA] hover:text-[#F5F5F7] rounded-lg bg-[#1C1C1F] hover:bg-[#2A2A2E] transition-colors"
@@ -207,12 +203,12 @@ export default function ClientReviews() {
                     Dejar una Reseña
                   </h3>
                   <p className="text-xs text-[#A1A1AA] mt-1">
-                    Tu opinión ayuda a otros negocios a conocer el impacto de trabajar con Allan Torres.
+                    Tu opinión ayuda a otros negocios a conocer el impacto y la agilidad de trabajar con Allan Torres.
                   </p>
                 </div>
 
                 <form onSubmit={handleSubmitReview} className="space-y-4 text-xs">
-                  {/* Rating Selector */}
+                  {/* Selector de Estrellas */}
                   <div>
                     <label className="block text-[#A1A1AA] mb-1.5 font-mono">
                       Calificación general:
@@ -246,7 +242,7 @@ export default function ClientReviews() {
                     </div>
                   </div>
 
-                  {/* Name and Brand in 2 cols */}
+                  {/* Nombre y Marca */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <label className="block text-[#A1A1AA] mb-1 font-mono flex items-center gap-1">
@@ -279,24 +275,26 @@ export default function ClientReviews() {
                     </div>
                   </div>
 
-                  {/* Service Type */}
+                  {/* Servicio */}
                   <div>
                     <label className="block text-[#A1A1AA] mb-1 font-mono">
-                      Servicio Contratado
+                      Tipo de Servicio Contratado
                     </label>
                     <select
                       value={serviceType}
                       onChange={(e) => setServiceType(e.target.value)}
                       className="w-full px-3 py-2.5 rounded-lg bg-[#0A0A0B] border border-[#2A2A2E] text-[#F5F5F7] focus:outline-none focus:border-[#E8A023] transition-colors"
                     >
-                      <option value="Menú Gastronómico">Menú Gastronómico</option>
-                      <option value="Branding Comercial & Identidad">Branding Comercial & Identidad</option>
-                      <option value="Flyers & Campaña Publicitaria">Flyers & Campaña Publicitaria</option>
-                      <option value="Pack Integral (Branding + Menú + Flyers)">Pack Integral (Branding + Menú + Flyers)</option>
+                      <option value="Edición de Video / Demos">Edición de Video / Demos</option>
+                      <option value="Miniaturas de YouTube & Carruseles">Miniaturas de YouTube & Carruseles</option>
+                      <option value="Menú Gastronómico (Impreso y QR)">Menú Gastronómico (Impreso y QR)</option>
+                      <option value="Flyers & Campañas Publicitarias">Flyers & Campañas Publicitarias</option>
+                      <option value="Ebooks & Diseño Editorial">Ebooks & Diseño Editorial</option>
+                      <option value="Branding & Identidad para Negocios">Branding & Identidad para Negocios</option>
                     </select>
                   </div>
 
-                  {/* Comment */}
+                  {/* Testimonio */}
                   <div>
                     <label className="block text-[#A1A1AA] mb-1 font-mono">
                       Tu Testimonio / Reseña
@@ -306,12 +304,11 @@ export default function ClientReviews() {
                       required
                       value={comment}
                       onChange={(e) => setComment(e.target.value)}
-                      placeholder="Cuéntanos cómo fue el proceso y qué impacto tuvo el diseño en tu negocio..."
+                      placeholder="Cuéntanos cómo fue el proceso y qué impacto tuvieron las piezas en tu negocio..."
                       className="w-full px-3 py-2.5 rounded-lg bg-[#0A0A0B] border border-[#2A2A2E] text-[#F5F5F7] placeholder:text-[#71717A] focus:outline-none focus:border-[#E8A023] transition-colors resize-none"
                     />
                   </div>
 
-                  {/* Submit Button */}
                   <div className="pt-2">
                     <button
                       type="submit"

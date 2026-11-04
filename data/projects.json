@@ -1,11 +1,495 @@
 [
   {
-    "id": "allan-zoo",
+    "id": "axis-pro-videos",
+    "clientId": "axis-pro",
+    "clientName": "Axis Pro",
+    "title": "Axis Pro — Videos Demostrativos & Comerciales",
+    "category": "videos",
+    "categoryLabel": "Videos Comerciales & Demo",
+    "summary": "Serie de 3 videos de demostración con edición dinámica, motion design y ritmo ágil para audiencias en Estados Unidos.",
+    "challenge": "Explicar funcionalidades de forma clara y retener la atención en los primeros segundos de visualización.",
+    "solution": "Edición con cortes acelerados, música rítmica y zooms estratégicos para maximizar el engagement en plataformas digitales.",
+    "coverAsset": "/projects/axis-pro-videos/1.mp4",
+    "coverMediaType": "video",
+    "previewVideoUrl": "/projects/axis-pro-videos/1.mp4",
+    "assets": [
+      {
+        "id": "axis-pro-videos-asset-1",
+        "title": "Axis Pro — Videos Demostrativos & Comerciales — 1",
+        "assetPath": "/projects/axis-pro-videos/1.mp4",
+        "mediaType": "video",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "axis-pro-videos-asset-2",
+        "title": "Axis Pro — Videos Demostrativos & Comerciales — 2",
+        "assetPath": "/projects/axis-pro-videos/2.mp4",
+        "mediaType": "video",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "axis-pro-videos-asset-3",
+        "title": "Axis Pro — Videos Demostrativos & Comerciales — 3",
+        "assetPath": "/projects/axis-pro-videos/3.mp4",
+        "mediaType": "video",
+        "aspectRatio": "16:9"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Azul Pro",
+        "hex": "#0284C7"
+      },
+      {
+        "name": "Cian Eléctrico",
+        "hex": "#38BDF8"
+      },
+      {
+        "name": "Grafito",
+        "hex": "#0F172A"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "axis-pro-carruseles",
+    "clientId": "axis-pro",
+    "clientName": "Axis Pro",
+    "title": "Axis Pro — Carruseles Educativos para Instagram",
+    "category": "carruseles",
+    "categoryLabel": "Carruseles para Redes",
+    "summary": "Secuencias informativas de diapositivas modulares con alto valor didáctico y diseño optimizado para guardados y compartidos.",
+    "challenge": "Sintetizar información técnica densa en láminas visualmente digeribles para redes sociales.",
+    "solution": "Diagramación paso a paso con jerarquía tipográfica, contrastes lumínicos e iconografía personalizada.",
+    "coverAsset": "/projects/axis-pro-carruseles/1.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "axis-pro-carruseles-asset-1",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 1",
+        "assetPath": "/projects/axis-pro-carruseles/1.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-2",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 2",
+        "assetPath": "/projects/axis-pro-carruseles/2.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-3",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 3",
+        "assetPath": "/projects/axis-pro-carruseles/3.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-4",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 4",
+        "assetPath": "/projects/axis-pro-carruseles/4.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-5",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 5",
+        "assetPath": "/projects/axis-pro-carruseles/5.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-6",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 6",
+        "assetPath": "/projects/axis-pro-carruseles/6.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-7",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 1",
+        "assetPath": "/projects/axis-pro-carruseles/1.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-8",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 2",
+        "assetPath": "/projects/axis-pro-carruseles/2.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-9",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 3",
+        "assetPath": "/projects/axis-pro-carruseles/3.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-10",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 4",
+        "assetPath": "/projects/axis-pro-carruseles/4.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-11",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 5",
+        "assetPath": "/projects/axis-pro-carruseles/5.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-12",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 6",
+        "assetPath": "/projects/axis-pro-carruseles/6.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-13",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 1",
+        "assetPath": "/projects/axis-pro-carruseles/1.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-14",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 2",
+        "assetPath": "/projects/axis-pro-carruseles/2.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-15",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 3",
+        "assetPath": "/projects/axis-pro-carruseles/3.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-16",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 4",
+        "assetPath": "/projects/axis-pro-carruseles/4.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-17",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 5",
+        "assetPath": "/projects/axis-pro-carruseles/5.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-18",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — 6",
+        "assetPath": "/projects/axis-pro-carruseles/6.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Azul Pro",
+        "hex": "#0284C7"
+      },
+      {
+        "name": "Cian Eléctrico",
+        "hex": "#38BDF8"
+      },
+      {
+        "name": "Grafito",
+        "hex": "#0F172A"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "axis-pro-ebooks",
+    "clientId": "axis-pro",
+    "clientName": "Axis Pro",
+    "title": "Axis Pro — Diseño Editorial de Ebooks & Guías",
+    "category": "ebooks",
+    "categoryLabel": "Ebooks & Editorial",
+    "summary": "Diseño y maquetación de guías digitales completas (Ebook 1 y Ebook 2) estructuradas página a página con acabado editorial prémium.",
+    "challenge": "Crear un lead magnet de alto valor percibido que refleje autoridad tecnológica en el mercado anglosajón.",
+    "solution": "Composición editorial limpia, balance de espacios en blanco y diagramación de más de 20 páginas especializadas.",
+    "coverAsset": "/projects/axis-pro-ebooks/1.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "axis-pro-ebooks-asset-1",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 1",
+        "assetPath": "/projects/axis-pro-ebooks/1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-2",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 10",
+        "assetPath": "/projects/axis-pro-ebooks/10.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-3",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 11",
+        "assetPath": "/projects/axis-pro-ebooks/11.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-4",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 2",
+        "assetPath": "/projects/axis-pro-ebooks/2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-5",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 3",
+        "assetPath": "/projects/axis-pro-ebooks/3.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-6",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 4",
+        "assetPath": "/projects/axis-pro-ebooks/4.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-7",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 5",
+        "assetPath": "/projects/axis-pro-ebooks/5.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-8",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 6",
+        "assetPath": "/projects/axis-pro-ebooks/6.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-9",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 7",
+        "assetPath": "/projects/axis-pro-ebooks/7.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-10",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 8",
+        "assetPath": "/projects/axis-pro-ebooks/8.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-11",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 9",
+        "assetPath": "/projects/axis-pro-ebooks/9.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-12",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 1",
+        "assetPath": "/projects/axis-pro-ebooks/1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-13",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 10",
+        "assetPath": "/projects/axis-pro-ebooks/10.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-14",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 2",
+        "assetPath": "/projects/axis-pro-ebooks/2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-15",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 3",
+        "assetPath": "/projects/axis-pro-ebooks/3.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-16",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 4",
+        "assetPath": "/projects/axis-pro-ebooks/4.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-17",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 5",
+        "assetPath": "/projects/axis-pro-ebooks/5.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-18",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 6",
+        "assetPath": "/projects/axis-pro-ebooks/6.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-19",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 7",
+        "assetPath": "/projects/axis-pro-ebooks/7.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-20",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 8",
+        "assetPath": "/projects/axis-pro-ebooks/8.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-21",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 9",
+        "assetPath": "/projects/axis-pro-ebooks/9.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Azul Pro",
+        "hex": "#0284C7"
+      },
+      {
+        "name": "Cian Eléctrico",
+        "hex": "#38BDF8"
+      },
+      {
+        "name": "Grafito",
+        "hex": "#0F172A"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "axis-pro-miniaturas",
+    "clientId": "axis-pro",
+    "clientName": "Axis Pro",
+    "title": "Axis Pro — Miniaturas de Alto CTR para YouTube",
+    "category": "miniaturas",
+    "categoryLabel": "Miniaturas YouTube (Alto CTR)",
+    "summary": "Portadas de alto impacto concebidas para maximizar la tasa de clics orgánicos en YouTube para el mercado estadounidense.",
+    "challenge": "Competir contra miniaturas con alta saturación en el nicho tech de YouTube USA.",
+    "solution": "Composiciones con contraste cromático cian/azul, expresiones faciales nítidas y textos de anclaje de máximo 3 palabras.",
+    "coverAsset": "/projects/axis-pro-miniaturas/1.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "axis-pro-miniaturas-asset-1",
+        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — 1",
+        "assetPath": "/projects/axis-pro-miniaturas/1.png",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "axis-pro-miniaturas-asset-2",
+        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — 2",
+        "assetPath": "/projects/axis-pro-miniaturas/2.png",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "axis-pro-miniaturas-asset-3",
+        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — 3",
+        "assetPath": "/projects/axis-pro-miniaturas/3.png",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Azul Pro",
+        "hex": "#0284C7"
+      },
+      {
+        "name": "Cian Eléctrico",
+        "hex": "#38BDF8"
+      },
+      {
+        "name": "Grafito",
+        "hex": "#0F172A"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "allan-zoo-miniaturas",
+    "clientId": "allan-zoo",
     "clientName": "Allan Zoo",
-    "year": 2024,
-    "summary": "Diseño y dirección visual de miniaturas documentales sobre felinos y fauna salvaje con alto contraste para YouTube.",
-    "challenge": "Competir contra canales globales de millones de suscriptores en la página principal de YouTube.",
-    "solution": "Fotomontajes dramáticos con corrección de color y tipografía bold para disparar el CTR.",
+    "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes",
+    "category": "miniaturas",
+    "categoryLabel": "Miniaturas YouTube (Alto CTR)",
+    "summary": "Miniaturas cinematográficas con fotomontajes dramáticos de felinos y animales imponentes para YouTube.",
+    "challenge": "Atrapar tráfico en la página de inicio frente a canales globales de naturaleza y fauna.",
+    "solution": "Corrección de color dramática, enfoque en miradas de felinos y tipografía bold de alta legibilidad en pantallas pequeñas.",
+    "coverAsset": "/projects/allan-zoo-miniaturas/1.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "allan-zoo-miniaturas-asset-1",
+        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — 1",
+        "assetPath": "/projects/allan-zoo-miniaturas/1.png",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "allan-zoo-miniaturas-asset-2",
+        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — 2",
+        "assetPath": "/projects/allan-zoo-miniaturas/2.png",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "allan-zoo-miniaturas-asset-3",
+        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — 3",
+        "assetPath": "/projects/allan-zoo-miniaturas/3.png",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      }
+    ],
     "colorPalette": [
       {
         "name": "Ámbar Furia",
@@ -24,520 +508,45 @@
         "hex": "#0A0A0B"
       }
     ],
-    "categories": [
-      "flyers"
-    ],
-    "coverAsset": "/projects/allan-zoo/flyers-1.png",
-    "deliverables": [
-      {
-        "id": "allan-zoo-flyers-1",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/allan-zoo/flyers-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "allan-zoo-flyers-2",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/allan-zoo/flyers-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "allan-zoo-flyers-3",
-        "category": "flyers",
-        "title": "FLYERS — 3",
-        "assetPath": "/projects/allan-zoo/flyers-3.png",
-        "mediaType": "image"
-      }
-    ]
+    "year": 2025,
+    "featured": true
   },
   {
-    "id": "arepa-secreta",
-    "clientName": "Arepa Secreta",
-    "year": 2024,
-    "summary": "Construcción integral de identidad visual, menús gastronómicos físicos y QR, empaques y campañas de flyers promocionales.",
-    "challenge": "La carta original saturaba a los comensales y el negocio carecía de identidad unificada para delivery.",
-    "solution": "Diagramación en 3 niveles de lectura, sistema gráfico en papel kraft y versión QR optimizada para móvil.",
-    "colorPalette": [
-      {
-        "name": "Maíz Dorado",
-        "hex": "#F59E0B"
-      },
-      {
-        "name": "Terracota Criollo",
-        "hex": "#DC2626"
-      },
-      {
-        "name": "Carbón Bistro",
-        "hex": "#18181B"
-      },
-      {
-        "name": "Blanco Crema",
-        "hex": "#FAFAF9"
-      }
-    ],
-    "categories": [
-      "branding",
-      "menus"
-    ],
-    "coverAsset": "/projects/arepa-secreta/branding-branding-1.png",
-    "deliverables": [
-      {
-        "id": "arepa-secreta-branding-1",
-        "category": "branding",
-        "title": "BRANDING — branding 1",
-        "assetPath": "/projects/arepa-secreta/branding-branding-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-branding-2",
-        "category": "branding",
-        "title": "BRANDING — 1",
-        "assetPath": "/projects/arepa-secreta/branding-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-branding-3",
-        "category": "branding",
-        "title": "BRANDING — 2",
-        "assetPath": "/projects/arepa-secreta/branding-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-branding-4",
-        "category": "branding",
-        "title": "BRANDING — 3",
-        "assetPath": "/projects/arepa-secreta/branding-3.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-menus-5",
-        "category": "menus",
-        "title": "MENUS — 1",
-        "assetPath": "/projects/arepa-secreta/menus-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-menus-6",
-        "category": "menus",
-        "title": "MENUS — 2",
-        "assetPath": "/projects/arepa-secreta/menus-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-menus-7",
-        "category": "menus",
-        "title": "MENUS — 1",
-        "assetPath": "/projects/arepa-secreta/menus-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-branding-8",
-        "category": "branding",
-        "title": "BRANDING — branding 2",
-        "assetPath": "/projects/arepa-secreta/branding-branding-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-branding-9",
-        "category": "branding",
-        "title": "BRANDING — 1",
-        "assetPath": "/projects/arepa-secreta/branding-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-branding-10",
-        "category": "branding",
-        "title": "BRANDING — 2",
-        "assetPath": "/projects/arepa-secreta/branding-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-branding-11",
-        "category": "branding",
-        "title": "BRANDING — 3",
-        "assetPath": "/projects/arepa-secreta/branding-3.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-menus-12",
-        "category": "menus",
-        "title": "MENUS — 1",
-        "assetPath": "/projects/arepa-secreta/menus-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-menus-13",
-        "category": "menus",
-        "title": "MENUS — 2",
-        "assetPath": "/projects/arepa-secreta/menus-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "arepa-secreta-menus-14",
-        "category": "menus",
-        "title": "MENUS — 3",
-        "assetPath": "/projects/arepa-secreta/menus-3.png",
-        "mediaType": "image"
-      }
-    ]
-  },
-  {
-    "id": "axis-pro",
-    "clientName": "Axis Pro",
-    "year": 2024,
-    "summary": "Producción de videos demostrativos, miniaturas de YouTube con alto CTR y carruseles informativos para el mercado de USA.",
-    "challenge": "Comunicar funcionalidad tecnológica y capturar tráfico calificado en Estados Unidos con alto estándar visual.",
-    "solution": "Videos demo de ritmo ágil, miniaturas con enfoque en clics y carruseles educativos modulares.",
-    "colorPalette": [
-      {
-        "name": "Azul Pro",
-        "hex": "#0284C7"
-      },
-      {
-        "name": "Cian Eléctrico",
-        "hex": "#38BDF8"
-      },
-      {
-        "name": "Grafito Oscuro",
-        "hex": "#0F172A"
-      },
-      {
-        "name": "Blanco Puro",
-        "hex": "#FFFFFF"
-      }
-    ],
-    "categories": [
-      "flyers",
-      "videos"
-    ],
-    "coverAsset": "/projects/axis-pro/flyers-1.png",
-    "deliverables": [
-      {
-        "id": "axis-pro-flyers-1",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/axis-pro/flyers-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-2",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/axis-pro/flyers-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-3",
-        "category": "flyers",
-        "title": "FLYERS — 3",
-        "assetPath": "/projects/axis-pro/flyers-3.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-4",
-        "category": "flyers",
-        "title": "FLYERS — 4",
-        "assetPath": "/projects/axis-pro/flyers-4.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-5",
-        "category": "flyers",
-        "title": "FLYERS — 5",
-        "assetPath": "/projects/axis-pro/flyers-5.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-6",
-        "category": "flyers",
-        "title": "FLYERS — 6",
-        "assetPath": "/projects/axis-pro/flyers-6.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-7",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/axis-pro/flyers-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-8",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/axis-pro/flyers-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-9",
-        "category": "flyers",
-        "title": "FLYERS — 3",
-        "assetPath": "/projects/axis-pro/flyers-3.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-10",
-        "category": "flyers",
-        "title": "FLYERS — 4",
-        "assetPath": "/projects/axis-pro/flyers-4.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-11",
-        "category": "flyers",
-        "title": "FLYERS — 5",
-        "assetPath": "/projects/axis-pro/flyers-5.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-12",
-        "category": "flyers",
-        "title": "FLYERS — 6",
-        "assetPath": "/projects/axis-pro/flyers-6.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-13",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/axis-pro/flyers-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-14",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/axis-pro/flyers-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-15",
-        "category": "flyers",
-        "title": "FLYERS — 3",
-        "assetPath": "/projects/axis-pro/flyers-3.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-16",
-        "category": "flyers",
-        "title": "FLYERS — 4",
-        "assetPath": "/projects/axis-pro/flyers-4.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-17",
-        "category": "flyers",
-        "title": "FLYERS — 5",
-        "assetPath": "/projects/axis-pro/flyers-5.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-18",
-        "category": "flyers",
-        "title": "FLYERS — 6",
-        "assetPath": "/projects/axis-pro/flyers-6.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-19",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/axis-pro/flyers-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-20",
-        "category": "flyers",
-        "title": "FLYERS — 10",
-        "assetPath": "/projects/axis-pro/flyers-10.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-21",
-        "category": "flyers",
-        "title": "FLYERS — 11",
-        "assetPath": "/projects/axis-pro/flyers-11.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-22",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/axis-pro/flyers-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-23",
-        "category": "flyers",
-        "title": "FLYERS — 3",
-        "assetPath": "/projects/axis-pro/flyers-3.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-24",
-        "category": "flyers",
-        "title": "FLYERS — 4",
-        "assetPath": "/projects/axis-pro/flyers-4.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-25",
-        "category": "flyers",
-        "title": "FLYERS — 5",
-        "assetPath": "/projects/axis-pro/flyers-5.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-26",
-        "category": "flyers",
-        "title": "FLYERS — 6",
-        "assetPath": "/projects/axis-pro/flyers-6.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-27",
-        "category": "flyers",
-        "title": "FLYERS — 7",
-        "assetPath": "/projects/axis-pro/flyers-7.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-28",
-        "category": "flyers",
-        "title": "FLYERS — 8",
-        "assetPath": "/projects/axis-pro/flyers-8.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-29",
-        "category": "flyers",
-        "title": "FLYERS — 9",
-        "assetPath": "/projects/axis-pro/flyers-9.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-30",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/axis-pro/flyers-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-31",
-        "category": "flyers",
-        "title": "FLYERS — 10",
-        "assetPath": "/projects/axis-pro/flyers-10.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-32",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/axis-pro/flyers-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-33",
-        "category": "flyers",
-        "title": "FLYERS — 3",
-        "assetPath": "/projects/axis-pro/flyers-3.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-34",
-        "category": "flyers",
-        "title": "FLYERS — 4",
-        "assetPath": "/projects/axis-pro/flyers-4.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-35",
-        "category": "flyers",
-        "title": "FLYERS — 5",
-        "assetPath": "/projects/axis-pro/flyers-5.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-36",
-        "category": "flyers",
-        "title": "FLYERS — 6",
-        "assetPath": "/projects/axis-pro/flyers-6.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-37",
-        "category": "flyers",
-        "title": "FLYERS — 7",
-        "assetPath": "/projects/axis-pro/flyers-7.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-38",
-        "category": "flyers",
-        "title": "FLYERS — 8",
-        "assetPath": "/projects/axis-pro/flyers-8.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-39",
-        "category": "flyers",
-        "title": "FLYERS — 9",
-        "assetPath": "/projects/axis-pro/flyers-9.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-40",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/axis-pro/flyers-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-41",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/axis-pro/flyers-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-flyers-42",
-        "category": "flyers",
-        "title": "FLYERS — 3",
-        "assetPath": "/projects/axis-pro/flyers-3.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "axis-pro-videos-43",
-        "category": "videos",
-        "title": "VIDEOS — 1",
-        "assetPath": "/projects/axis-pro/videos-1.mp4",
-        "mediaType": "video"
-      },
-      {
-        "id": "axis-pro-videos-44",
-        "category": "videos",
-        "title": "VIDEOS — 2",
-        "assetPath": "/projects/axis-pro/videos-2.mp4",
-        "mediaType": "video"
-      },
-      {
-        "id": "axis-pro-videos-45",
-        "category": "videos",
-        "title": "VIDEOS — 3",
-        "assetPath": "/projects/axis-pro/videos-3.mp4",
-        "mediaType": "video"
-      }
-    ]
-  },
-  {
-    "id": "barberia-the-king",
+    "id": "barberia-the-king-videos",
+    "clientId": "barberia-the-king",
     "clientName": "Barbería The King",
-    "year": 2024,
-    "summary": "Producción de videos comerciales dinámicos y cartelería publicitaria urbana de alto contraste para captación de clientes.",
-    "challenge": "Días de inicio de semana con baja afluencia y promociones desapercibidas en redes.",
-    "solution": "Campaña audiovisual con ritmo urbano para Reels/TikTok y afiches streetwear con cuponera 2x1.",
+    "title": "Barbería The King — Videos Promocionales Verticales (9:16)",
+    "category": "videos",
+    "categoryLabel": "Videos Comerciales & Demo",
+    "summary": "Trilogía de videos comerciales verticales diseñados para TikTok e Instagram Reels, resaltando técnica y ambiente prémium.",
+    "challenge": "Baja captación de nuevos clientes entre semana y promociones desapercibidas en redes.",
+    "solution": "Producción audiovisual rítmica con tomas de detalle en corte, música envolvente y llamados directos a reservar cita.",
+    "coverAsset": "/projects/barberia-the-king-videos/video-1.mp4",
+    "coverMediaType": "video",
+    "previewVideoUrl": "/projects/barberia-the-king-videos/video-1.mp4",
+    "assets": [
+      {
+        "id": "barberia-the-king-videos-asset-1",
+        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — video 1",
+        "assetPath": "/projects/barberia-the-king-videos/video-1.mp4",
+        "mediaType": "video",
+        "aspectRatio": "9:16"
+      },
+      {
+        "id": "barberia-the-king-videos-asset-2",
+        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — video 2",
+        "assetPath": "/projects/barberia-the-king-videos/video-2.mp4",
+        "mediaType": "video",
+        "aspectRatio": "9:16"
+      },
+      {
+        "id": "barberia-the-king-videos-asset-3",
+        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — VIDEO 3",
+        "assetPath": "/projects/barberia-the-king-videos/video-3.mp4",
+        "mediaType": "video",
+        "aspectRatio": "9:16"
+      }
+    ],
     "colorPalette": [
       {
         "name": "Dorado Rey",
@@ -556,118 +565,240 @@
         "hex": "#52525B"
       }
     ],
-    "categories": [
-      "flyers",
-      "videos"
-    ],
-    "coverAsset": "/projects/barberia-the-king/flyers-1.png",
-    "deliverables": [
-      {
-        "id": "barberia-the-king-flyers-1",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/barberia-the-king/flyers-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "barberia-the-king-flyers-2",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/barberia-the-king/flyers-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "barberia-the-king-videos-3",
-        "category": "videos",
-        "title": "VIDEOS — video 1",
-        "assetPath": "/projects/barberia-the-king/videos-video-1.mp4",
-        "mediaType": "video"
-      },
-      {
-        "id": "barberia-the-king-videos-4",
-        "category": "videos",
-        "title": "VIDEOS — video 2",
-        "assetPath": "/projects/barberia-the-king/videos-video-2.mp4",
-        "mediaType": "video"
-      },
-      {
-        "id": "barberia-the-king-videos-5",
-        "category": "videos",
-        "title": "VIDEOS — VIDEO 3",
-        "assetPath": "/projects/barberia-the-king/videos-video-3.mp4",
-        "mediaType": "video"
-      }
-    ]
+    "year": 2025,
+    "featured": true
   },
   {
-    "id": "nails-pastel",
-    "clientName": "Nails Pastel",
-    "year": 2024,
-    "summary": "Identidad visual delicada, video promocional de sesiones y catálogo de servicios y citas para spa de uñas.",
-    "challenge": "Emprendimiento nuevo que buscaba posicionarse como opción prémium frente a salones convencionales.",
-    "solution": "Video promocional con tomas de detalle, logo elegante y catálogo ordenado de tarifas en tonos pasteles.",
+    "id": "barberia-the-king-flyers",
+    "clientId": "barberia-the-king",
+    "clientName": "Barbería The King",
+    "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1",
+    "category": "flyers",
+    "categoryLabel": "Flyers & Publicidad",
+    "summary": "Afiches de alto contraste con estética streetwear y cupones de fidelización para clientes VIP.",
+    "challenge": "Diferenciarse de barberías tradicionales con una identidad visual contundente y moderna.",
+    "solution": "Tipografía contundente, paleta negro/oro y cuponera lista para volanteo físico y estados de WhatsApp.",
+    "coverAsset": "/projects/barberia-the-king-flyers/1.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "barberia-the-king-flyers-asset-1",
+        "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1 — 1",
+        "assetPath": "/projects/barberia-the-king-flyers/1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "barberia-the-king-flyers-asset-2",
+        "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1 — 2",
+        "assetPath": "/projects/barberia-the-king-flyers/2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
     "colorPalette": [
       {
-        "name": "Rosa Pastel",
-        "hex": "#F472B6"
+        "name": "Dorado Rey",
+        "hex": "#EAB308"
       },
       {
-        "name": "Lavanda Suave",
-        "hex": "#C084FC"
+        "name": "Negro Obsidiana",
+        "hex": "#09090B"
       },
       {
-        "name": "Blanco Nácar",
-        "hex": "#FDF4FF"
+        "name": "Plata Cromo",
+        "hex": "#E4E4E7"
       },
       {
-        "name": "Dorado Champagne",
-        "hex": "#FDE047"
+        "name": "Gris Plomo",
+        "hex": "#52525B"
       }
     ],
-    "categories": [
-      "flyers",
-      "branding",
-      "videos"
-    ],
-    "coverAsset": "/projects/nails-pastel/flyers-1.png",
-    "deliverables": [
-      {
-        "id": "nails-pastel-flyers-1",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/nails-pastel/flyers-1.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "nails-pastel-flyers-2",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/nails-pastel/flyers-2.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "nails-pastel-branding-3",
-        "category": "branding",
-        "title": "BRANDING — Nails Pastel",
-        "assetPath": "/projects/nails-pastel/branding-nails-pastel.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "nails-pastel-videos-4",
-        "category": "videos",
-        "title": "VIDEOS — video promocional",
-        "assetPath": "/projects/nails-pastel/videos-video-promocional.mp4",
-        "mediaType": "video"
-      }
-    ]
+    "year": 2025,
+    "featured": true
   },
   {
-    "id": "taqueria-df",
+    "id": "arepa-secreta-branding",
+    "clientId": "arepa-secreta",
+    "clientName": "Arepa Secreta",
+    "title": "Arepa Secreta — Identidad de Marca & Sistema de Empaques",
+    "category": "branding",
+    "categoryLabel": "Branding & Identidad",
+    "summary": "Desarrollo de identidad visual comercial (Branding 1 y 2), aplicaciones en bolsas térmicas, papel antigrasa y papelería.",
+    "challenge": "El negocio operaba sin un identificador unificado en los pedidos a domicilio.",
+    "solution": "Isotipo artesanal minimalista en papel kraft con contrastes cálidos que generan apetito y recordación.",
+    "coverAsset": "/projects/arepa-secreta-branding/branding-1.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "arepa-secreta-branding-asset-1",
+        "title": "Arepa Secreta — Identidad de Marca & Sistema de Empaques — branding 1",
+        "assetPath": "/projects/arepa-secreta-branding/branding-1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-branding-asset-2",
+        "title": "Arepa Secreta — Identidad de Marca & Sistema de Empaques — branding 2",
+        "assetPath": "/projects/arepa-secreta-branding/branding-2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Maíz Dorado",
+        "hex": "#F59E0B"
+      },
+      {
+        "name": "Terracota Criollo",
+        "hex": "#DC2626"
+      },
+      {
+        "name": "Carbón Bistro",
+        "hex": "#18181B"
+      },
+      {
+        "name": "Blanco Crema",
+        "hex": "#FAFAF9"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "arepa-secreta-flyers",
+    "clientId": "arepa-secreta",
+    "clientName": "Arepa Secreta",
+    "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales",
+    "category": "flyers",
+    "categoryLabel": "Flyers & Publicidad",
+    "summary": "Piezas publicitarias concebidas para WhatsApp Status e Instagram Stories para promocionar combos familiares y nocturnos.",
+    "challenge": "Comunicar promociones diarias sin depender de explicaciones largas en mensajes de texto.",
+    "solution": "Composiciones con producto en primer plano, precios destacados y llamados directos a pedir por WhatsApp.",
+    "coverAsset": "/projects/arepa-secreta-flyers/1.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "arepa-secreta-flyers-asset-1",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 1",
+        "assetPath": "/projects/arepa-secreta-flyers/1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-2",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 2",
+        "assetPath": "/projects/arepa-secreta-flyers/2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-3",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 3",
+        "assetPath": "/projects/arepa-secreta-flyers/3.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-4",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 1",
+        "assetPath": "/projects/arepa-secreta-flyers/1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-5",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 2",
+        "assetPath": "/projects/arepa-secreta-flyers/2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-6",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 3",
+        "assetPath": "/projects/arepa-secreta-flyers/3.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Maíz Dorado",
+        "hex": "#F59E0B"
+      },
+      {
+        "name": "Terracota Criollo",
+        "hex": "#DC2626"
+      },
+      {
+        "name": "Carbón Bistro",
+        "hex": "#18181B"
+      },
+      {
+        "name": "Blanco Crema",
+        "hex": "#FAFAF9"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "taqueria-df-flyers",
+    "clientId": "taqueria-df",
     "clientName": "Taquería DF — La Capital del Taco",
-    "year": 2024,
-    "summary": "Campaña publicitaria visualmente apetitosa de 6 afiches y cartas promocionales para salón y domicilio en Bogotá.",
-    "challenge": "Competencia agresiva en la zona gastronómica y necesidad de rotar mesas rápidamente.",
-    "solution": "Paleta viva y textos de gancho directo que aceleraron los pedidos de tacos y combos 2x1.",
+    "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones",
+    "category": "flyers",
+    "categoryLabel": "Flyers & Publicidad",
+    "summary": "Serie de 6 afiches comerciales y cartas promocionales con las ofertas 2x1 y combos taqueros en Bogotá.",
+    "challenge": "Competir en una zona gastronómica densa comunicando precios y ofertas de tacos al pastor de forma inmediata.",
+    "solution": "Paleta viva de inspiración mexicana (rojo chile, amarillo maíz) con textos gancho que aceleraron las órdenes.",
+    "coverAsset": "/projects/taqueria-df-flyers/1.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "taqueria-df-flyers-asset-1",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 1",
+        "assetPath": "/projects/taqueria-df-flyers/1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-2",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 2",
+        "assetPath": "/projects/taqueria-df-flyers/2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-3",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 3",
+        "assetPath": "/projects/taqueria-df-flyers/3.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-4",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 4",
+        "assetPath": "/projects/taqueria-df-flyers/4.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-5",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 5",
+        "assetPath": "/projects/taqueria-df-flyers/5.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-6",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 6",
+        "assetPath": "/projects/taqueria-df-flyers/6.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
     "colorPalette": [
       {
         "name": "Rojo Chile",
@@ -686,53 +817,106 @@
         "hex": "#18181B"
       }
     ],
-    "categories": [
-      "flyers"
-    ],
-    "coverAsset": "/projects/taqueria-df/flyers-1.png",
-    "deliverables": [
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "nails-pastel-branding",
+    "clientId": "nails-pastel",
+    "clientName": "Nails Pastel",
+    "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas",
+    "category": "branding",
+    "categoryLabel": "Branding & Identidad",
+    "summary": "Logotipo distintivo en tonos pasteles y catálogo comercial de servicios para manicura, pedicura y spa.",
+    "challenge": "Negocio nuevo sin identidad diferenciada en un sector saturado de gráficas genéricas.",
+    "solution": "Sistema visual suave y limpio con tarjetas de precios que facilitan el agendamiento rápido por redes sociales.",
+    "coverAsset": "/projects/nails-pastel-branding/nails-pastel.png",
+    "coverMediaType": "image",
+    "assets": [
       {
-        "id": "taqueria-df-flyers-1",
-        "category": "flyers",
-        "title": "FLYERS — 1",
-        "assetPath": "/projects/taqueria-df/flyers-1.png",
-        "mediaType": "image"
+        "id": "nails-pastel-branding-asset-1",
+        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — Nails Pastel",
+        "assetPath": "/projects/nails-pastel-branding/nails-pastel.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
       },
       {
-        "id": "taqueria-df-flyers-2",
-        "category": "flyers",
-        "title": "FLYERS — 2",
-        "assetPath": "/projects/taqueria-df/flyers-2.png",
-        "mediaType": "image"
+        "id": "nails-pastel-branding-asset-2",
+        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — 1",
+        "assetPath": "/projects/nails-pastel-branding/1.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
       },
       {
-        "id": "taqueria-df-flyers-3",
-        "category": "flyers",
-        "title": "FLYERS — 3",
-        "assetPath": "/projects/taqueria-df/flyers-3.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "taqueria-df-flyers-4",
-        "category": "flyers",
-        "title": "FLYERS — 4",
-        "assetPath": "/projects/taqueria-df/flyers-4.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "taqueria-df-flyers-5",
-        "category": "flyers",
-        "title": "FLYERS — 5",
-        "assetPath": "/projects/taqueria-df/flyers-5.png",
-        "mediaType": "image"
-      },
-      {
-        "id": "taqueria-df-flyers-6",
-        "category": "flyers",
-        "title": "FLYERS — 6",
-        "assetPath": "/projects/taqueria-df/flyers-6.png",
-        "mediaType": "image"
+        "id": "nails-pastel-branding-asset-3",
+        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — 2",
+        "assetPath": "/projects/nails-pastel-branding/2.png",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
       }
-    ]
+    ],
+    "colorPalette": [
+      {
+        "name": "Rosa Pastel",
+        "hex": "#F472B6"
+      },
+      {
+        "name": "Lavanda Suave",
+        "hex": "#C084FC"
+      },
+      {
+        "name": "Blanco Nácar",
+        "hex": "#FDF4FF"
+      },
+      {
+        "name": "Dorado Champagne",
+        "hex": "#FDE047"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "nails-pastel-video",
+    "clientId": "nails-pastel",
+    "clientName": "Nails Pastel",
+    "title": "Nails Pastel — Video Promocional de Tratamientos",
+    "category": "videos",
+    "categoryLabel": "Videos Comerciales & Demo",
+    "summary": "Video comercial con tomas de detalle de acabados en uñas y ambiente relajante para captación de clientas.",
+    "challenge": "Transmitir la calidad y el acabado minucioso de las sesiones estéticas a través de medios digitales.",
+    "solution": "Edición en video con música envolvente y primeros planos que generan deseo y reservas inmediatas.",
+    "coverAsset": "/projects/nails-pastel-video/video-promocional.mp4",
+    "coverMediaType": "video",
+    "previewVideoUrl": "/projects/nails-pastel-video/video-promocional.mp4",
+    "assets": [
+      {
+        "id": "nails-pastel-video-asset-1",
+        "title": "Nails Pastel — Video Promocional de Tratamientos — video promocional",
+        "assetPath": "/projects/nails-pastel-video/video-promocional.mp4",
+        "mediaType": "video",
+        "aspectRatio": "9:16"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Rosa Pastel",
+        "hex": "#F472B6"
+      },
+      {
+        "name": "Lavanda Suave",
+        "hex": "#C084FC"
+      },
+      {
+        "name": "Blanco Nácar",
+        "hex": "#FDF4FF"
+      },
+      {
+        "name": "Dorado Champagne",
+        "hex": "#FDE047"
+      }
+    ],
+    "year": 2025,
+    "featured": true
   }
 ]

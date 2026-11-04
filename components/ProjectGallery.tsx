@@ -1,205 +1,290 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Image from "next/image";
-import { ArrowUpRight, Eye, Film, Layers } from "lucide-react";
-import { ClientCaseStudy, DisciplineCategory } from "@/types/projects";
-import CaseStudyModal from "./CaseStudyModal";
+import {
+  ArrowUpRight,
+  Eye,
+  Play,
+  Film,
+  Layers,
+  Sparkles,
+} from "lucide-react";
+import { ProjectBlock, ProjectCategory } from "@/types/projects";
+import SpecializedModal from "./SpecializedModal";
 import projectsData from "@/data/projects.json";
 
 export default function ProjectGallery() {
-  const [activeFilter, setActiveFilter] = useState<DisciplineCategory | "all">("all");
-  const [selectedCase, setSelectedCase] = useState<ClientCaseStudy | null>(null);
+  const [activeCategory, setActiveCategory] = useState<ProjectCategory | "all">("all");
+  const [selectedClient, setSelectedClient] = useState<string>("all");
+  const [selectedProject, setSelectedProject] = useState<ProjectBlock | null>(null);
 
-  const caseStudies = projectsData as ClientCaseStudy[];
+  const projects = projectsData as ProjectBlock[];
 
-  const filterTabs: { key: DisciplineCategory | "all"; label: string }[] = [
-    { key: "all", label: "Todos" },
-    { key: "menus", label: "Menús Gastronómicos" },
-    { key: "branding", label: "Branding Comercial" },
-    { key: "flyers", label: "Flyers & Publicidad" },
-    { key: "videos", label: "Videos" },
-  ];
+  // Lista de Categorías con conteo dinámico
+  const categoryTabs: { key: ProjectCategory | "all"; label: string }[] = useMemo(() => {
+    return [
+      { key: "all", label: "Todos" },
+      { key: "videos", label: "Videos" },
+      { key: "menus", label: "Menús Gastronómicos" },
+      { key: "flyers", label: "Flyers & Promos" },
+      { key: "carruseles", label: "Carruseles" },
+      { key: "ebooks", label: "Ebooks & Editorial" },
+      { key: "miniaturas", label: "Miniaturas YouTube" },
+      { key: "branding", label: "Branding" },
+    ];
+  }, []);
 
-  // Filtrado: solo marcas que tengan la disciplina activa
-  const filteredCases = caseStudies.filter((item) => {
-    if (activeFilter === "all") return true;
-    return item.categories.includes(activeFilter);
-  });
+  // Lista de Clientes únicos para sub-filtro
+  const clientFilterList = useMemo(() => {
+    const map = new Map<string, string>();
+    projects.forEach((p) => {
+      map.set(p.clientId, p.clientName);
+    });
+    return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
+  }, [projects]);
 
-  // Selector dinámico de portada según la disciplina filtrada
-  const getCoverForCategory = (item: ClientCaseStudy, filter: DisciplineCategory | "all") => {
-    if (filter === "all") return item.coverAsset;
-    const match = item.deliverables?.find((d) => d.category === filter);
-    return match ? match.assetPath : item.coverAsset;
-  };
+  // Filtrado compuesto (Categoría + Cliente)
+  const filteredProjects = useMemo(() => {
+    return projects.filter((p) => {
+      const matchCat = activeCategory === "all" || p.category === activeCategory;
+      const matchClient = selectedClient === "all" || p.clientId === selectedClient;
+      return matchCat && matchClient;
+    });
+  }, [projects, activeCategory, selectedClient]);
 
-  const getBadgeLabel = (cat: DisciplineCategory) => {
-    switch (cat) {
-      case "menus":
-        return "Menús";
-      case "branding":
-        return "Branding";
-      case "flyers":
-        return "Flyers";
-      case "videos":
-        return "Video";
-      default:
-        return cat;
-    }
+  // Conteo de proyectos por categoría
+  const getCategoryCount = (catKey: ProjectCategory | "all") => {
+    if (catKey === "all") return projects.length;
+    return projects.filter((p) => p.category === catKey).length;
   };
 
   return (
     <section id="proyectos" className="py-20 max-w-6xl mx-auto px-5 sm:px-8">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
         <div>
           <div className="text-xs font-mono text-[#E8A023] uppercase tracking-wider mb-2 flex items-center gap-2">
             <Layers className="w-3.5 h-3.5" />
-            <span>Casos de Estudio por Marca &bull; Entregables Reales</span>
+            <span>Portafolio de Trabajos Seleccionados &bull; Subcarpetas & Piezas Reales</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F5F5F7] tracking-tight">
-            Casos de Estudio
+            Portafolio de Trabajos
           </h2>
           <p className="text-[#A1A1AA] text-sm sm:text-base mt-2 max-w-xl">
-            Explora las marcas gestionadas, sus piezas comerciales, cartas gastronómicas y producciones de video. Filtra por disciplina o entra al caso completo.
+            Cada tarjeta representa un trabajo especializado e independiente. Filtra por tipo de entregable o por marca sin mezclar formatos.
           </p>
         </div>
 
-        {/* Filter Tabs Bar */}
+        <div className="flex items-center gap-2 text-xs font-mono text-[#71717A] bg-[#141416] px-3.5 py-2 rounded-xl border border-[#2A2A2E] w-fit">
+          <Sparkles className="w-3.5 h-3.5 text-[#E8A023]" />
+          <span>
+            {filteredProjects.length} {filteredProjects.length === 1 ? "trabajo" : "trabajos"} encontrados
+          </span>
+        </div>
+      </div>
+
+      {/* Barra de Filtros por Disciplina (Horizontal Scroll suave en móvil) */}
+      <div className="space-y-3 mb-10">
         <div
           role="tablist"
-          aria-label="Filtrar por disciplina"
-          className="flex flex-wrap items-center gap-1.5 bg-[#141416] p-1.5 rounded-xl border border-[#2A2A2E]"
+          aria-label="Filtrar proyectos por categoría"
+          className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none"
         >
-          {filterTabs.map((tab) => {
-            const isSelected = activeFilter === tab.key;
+          {categoryTabs.map((tab) => {
+            const isSelected = activeCategory === tab.key;
+            const count = getCategoryCount(tab.key);
             return (
               <button
                 key={tab.key}
                 role="tab"
                 aria-selected={isSelected}
-                onClick={() => setActiveFilter(tab.key)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+                onClick={() => setActiveCategory(tab.key)}
+                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all duration-200 shrink-0 ${
                   isSelected
-                    ? "bg-[#E8A023] text-[#0A0A0B] font-semibold shadow-sm scale-100"
-                    : "text-[#A1A1AA] hover:text-[#F5F5F7] hover:bg-[#1C1C1F]"
+                    ? "bg-[#E8A023] text-[#0A0A0B] font-bold shadow-md shadow-[#E8A023]/20 scale-100"
+                    : "bg-[#141416] text-[#A1A1AA] border border-[#2A2A2E] hover:text-[#F5F5F7] hover:bg-[#1C1C1F]"
                 }`}
               >
-                {tab.label}
+                <span>{tab.label}</span>
+                <span
+                  className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                    isSelected ? "bg-[#0A0A0B] text-[#E8A023]" : "bg-[#1C1C1F] text-[#71717A]"
+                  }`}
+                >
+                  {count}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Sub-filtro discreto por Marca / Cliente */}
+        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+          <span className="text-[11px] font-mono uppercase text-[#71717A] mr-1 shrink-0">
+            Filtrar por marca:
+          </span>
+          <button
+            type="button"
+            onClick={() => setSelectedClient("all")}
+            className={`px-2.5 py-1 rounded-lg text-[11px] font-mono transition-colors shrink-0 ${
+              selectedClient === "all"
+                ? "bg-[#1C1C1F] text-[#F5F5F7] border border-[#E8A023]/50 font-semibold"
+                : "text-[#71717A] hover:text-[#F5F5F7]"
+            }`}
+          >
+            Todas
+          </button>
+          {clientFilterList.map((client) => {
+            const isSelected = selectedClient === client.id;
+            return (
+              <button
+                key={client.id}
+                type="button"
+                onClick={() => setSelectedClient(client.id)}
+                className={`px-2.5 py-1 rounded-lg text-[11px] font-mono transition-colors shrink-0 ${
+                  isSelected
+                    ? "bg-[#1C1C1F] text-[#E8A023] border border-[#E8A023]/50 font-bold"
+                    : "text-[#71717A] hover:text-[#F5F5F7]"
+                }`}
+              >
+                {client.name}
               </button>
             );
           })}
         </div>
       </div>
 
-      {/* Grid: 1 tarjeta por cliente/marca */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
-        {filteredCases.map((caseStudy) => {
-          const coverImage = getCoverForCategory(caseStudy, activeFilter);
-          const hasVideo = caseStudy.categories.includes("videos");
-          const deliverableCount = caseStudy.deliverables?.length || 0;
+      {/* Grilla de Tarjetas Especializadas */}
+      {filteredProjects.length === 0 ? (
+        <div className="py-16 text-center rounded-2xl bg-[#141416] border border-[#2A2A2E] p-8">
+          <p className="text-sm text-[#A1A1AA]">
+            No se encontraron proyectos para la combinación de categoría y marca seleccionada.
+          </p>
+          <button
+            type="button"
+            onClick={() => {
+              setActiveCategory("all");
+              setSelectedClient("all");
+            }}
+            className="mt-4 px-4 py-2 rounded-lg bg-[#E8A023] text-[#0A0A0B] text-xs font-semibold"
+          >
+            Restablecer Filtros
+          </button>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          {filteredProjects.map((project, idx) => {
+            const isVideo = project.category === "videos";
+            const assetCount = project.assets?.length || 0;
+            const priorityLoading = idx < 3; // LCP optimization
 
-          return (
-            <article
-              key={caseStudy.id}
-              onClick={() => setSelectedCase(caseStudy)}
-              className="group flex flex-col rounded-xl bg-[#141416] border border-[#2A2A2E] hover:border-[#E8A023]/50 transition-all duration-300 cursor-pointer overflow-hidden shadow-sm hover:shadow-lg hover:shadow-[#E8A023]/5"
-            >
-              {/* Cover Asset Box */}
-              <div className="relative w-full aspect-[1/1.2] overflow-hidden bg-[#0A0A0B] flex items-center justify-center">
-                <Image
-                  src={coverImage}
-                  alt={caseStudy.clientName}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
-                />
+            return (
+              <article
+                key={project.id}
+                onClick={() => setSelectedProject(project)}
+                className="group flex flex-col rounded-xl bg-[#141416] border border-[#2A2A2E] hover:border-[#E8A023]/50 transition-all duration-300 cursor-pointer overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#E8A023]/5 hover:scale-[1.01]"
+              >
+                {/* Visual Cover Asset */}
+                <div
+                  className={`relative w-full overflow-hidden bg-[#0A0A0B] flex items-center justify-center ${
+                    isVideo && project.assets[0]?.aspectRatio === "9:16"
+                      ? "aspect-[9/14]"
+                      : isVideo || project.category === "miniaturas"
+                      ? "aspect-video"
+                      : "aspect-[1/1.25]"
+                  }`}
+                >
+                  <Image
+                    src={project.coverAsset}
+                    alt={project.title}
+                    fill
+                    priority={priorityLoading}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
+                  />
 
-                {/* Floating Deliverable Count Badge */}
-                <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5">
-                  <span className="text-[11px] font-mono tracking-wide px-2.5 py-1 rounded-md bg-[#0A0A0B]/85 border border-[#2A2A2E] text-[#F5F5F7]">
-                    {deliverableCount} entregables
-                  </span>
-                  {hasVideo && (
-                    <span className="p-1 rounded-md bg-[#E8A023] text-[#0A0A0B]" title="Incluye Video">
-                      <Film className="w-3.5 h-3.5" />
+                  {/* Badges superiores */}
+                  <div className="absolute top-3 left-3 right-3 z-20 flex items-center justify-between">
+                    <span className="text-[11px] font-mono tracking-wide px-2.5 py-1 rounded-md bg-[#0A0A0B]/85 border border-[#2A2A2E] text-[#E8A023] font-semibold">
+                      {project.categoryLabel}
                     </span>
-                  )}
-                </div>
 
-                {/* Hover Action Overlay */}
-                <div className="absolute inset-0 bg-[#0A0A0B]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20">
-                  <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#E8A023] text-[#0A0A0B] font-semibold text-xs shadow-lg transform translate-y-1 group-hover:translate-y-0 transition-transform">
-                    <Eye className="w-3.5 h-3.5" />
-                    Ver Caso Completo
-                  </span>
-                </div>
-              </div>
-
-              {/* Information Body */}
-              <div className="p-5 flex flex-col flex-1 justify-between bg-[#141416] text-left border-t border-[#2A2A2E]">
-                <div>
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-xs uppercase tracking-wider text-[#E8A023] font-mono font-medium">
-                      Cliente
-                    </span>
-                    <span className="text-[11px] font-mono text-[#71717A]">
-                      {caseStudy.year}
+                    <span className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-[#0A0A0B]/85 border border-[#2A2A2E] text-[#F5F5F7]">
+                      {assetCount} {isVideo ? "videos" : "piezas"}
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-display font-bold text-[#F5F5F7] leading-snug group-hover:text-[#E8A023] transition-colors">
-                    {caseStudy.clientName}
-                  </h3>
-
-                  <p className="text-xs text-[#A1A1AA] mt-2 line-clamp-2 leading-relaxed">
-                    {caseStudy.summary}
-                  </p>
-                </div>
-
-                {/* Discipline Badges */}
-                <div className="mt-4 pt-3 border-t border-[#2A2A2E]/60 flex flex-wrap gap-1.5">
-                  {caseStudy.categories.map((cat) => (
-                    <span
-                      key={cat}
-                      className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#1C1C1F] text-[#A1A1AA] border border-[#2A2A2E]"
-                    >
-                      {getBadgeLabel(cat)}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Footer with Color Palette Circles + CTA */}
-                <div className="mt-3 pt-3 border-t border-[#2A2A2E]/60 flex items-center justify-between">
-                  {caseStudy.colorPalette && (
-                    <div className="flex items-center gap-1.5">
-                      {caseStudy.colorPalette.slice(0, 4).map((c, i) => (
-                        <span
-                          key={i}
-                          className="w-3.5 h-3.5 rounded-full border border-[#2A2A2E]"
-                          style={{ backgroundColor: c.hex }}
-                          title={`${c.name} (${c.hex})`}
-                        />
-                      ))}
+                  {/* Play Overlay para Videos */}
+                  {isVideo && (
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <div className="w-12 h-12 rounded-full bg-[#E8A023] text-[#0A0A0B] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                        <Play className="w-5 h-5 fill-current ml-0.5" />
+                      </div>
                     </div>
                   )}
 
-                  <div className="flex items-center gap-1 text-xs font-semibold text-[#71717A] group-hover:text-[#E8A023] ml-auto transition-colors">
-                    <span>Ver Caso</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  {/* Hover Action Indicator */}
+                  <div className="absolute inset-0 bg-[#0A0A0B]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20">
+                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#E8A023] text-[#0A0A0B] font-semibold text-xs shadow-lg transform translate-y-1 group-hover:translate-y-0 transition-transform">
+                      {isVideo ? <Film className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                      <span>{isVideo ? "Reproducir Video" : "Ver Trabajo Completo"}</span>
+                    </span>
                   </div>
                 </div>
-              </div>
-            </article>
-          );
-        })}
-      </div>
 
-      {/* Accessible Lightbox Modal */}
-      <CaseStudyModal
-        project={selectedCase}
-        onClose={() => setSelectedCase(null)}
+                {/* Information Card Body */}
+                <div className="p-5 flex flex-col flex-1 justify-between bg-[#141416] text-left border-t border-[#2A2A2E]">
+                  <div>
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="text-xs uppercase tracking-wider text-[#E8A023] font-mono font-bold">
+                        {project.clientName}
+                      </span>
+                      <span className="text-[11px] font-mono text-[#71717A]">
+                        {project.year}
+                      </span>
+                    </div>
+
+                    <h3 className="text-base font-display font-bold text-[#F5F5F7] leading-snug group-hover:text-[#E8A023] transition-colors">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-xs text-[#A1A1AA] mt-2 line-clamp-2 leading-relaxed">
+                      {project.summary}
+                    </p>
+                  </div>
+
+                  {/* Footer con Paleta y CTA */}
+                  <div className="mt-4 pt-3 border-t border-[#2A2A2E]/60 flex items-center justify-between">
+                    {project.colorPalette && (
+                      <div className="flex items-center gap-1.5" title="Paleta de color">
+                        {project.colorPalette.slice(0, 4).map((c, i) => (
+                          <span
+                            key={i}
+                            className="w-3 h-3 rounded-full border border-[#2A2A2E]"
+                            style={{ backgroundColor: c.hex }}
+                            title={`${c.name} (${c.hex})`}
+                          />
+                        ))}
+                      </div>
+                    )}
+
+                    <div className="flex items-center gap-1 text-xs font-semibold text-[#71717A] group-hover:text-[#E8A023] ml-auto transition-colors">
+                      <span>Explorar</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </div>
+                  </div>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      )}
+
+      {/* Modal Especializado */}
+      <SpecializedModal
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
       />
     </section>
   );

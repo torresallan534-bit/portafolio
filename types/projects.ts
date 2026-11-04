@@ -1,28 +1,48 @@
-export type DisciplineCategory = 'branding' | 'menus' | 'flyers' | 'videos';
+export type ProjectCategory =
+  | 'videos'
+  | 'menus'
+  | 'flyers'
+  | 'carruseles'
+  | 'ebooks'
+  | 'miniaturas'
+  | 'branding';
 
-export interface ProjectDeliverable {
-  id: string;
-  category: DisciplineCategory;
-  title: string;
-  assetPath: string; // ruta pública accesible en /projects/...
-  mediaType: 'image' | 'video';
+export interface ColorSwatch {
+  name: string;
+  hex: string;
 }
 
-export interface ClientCaseStudy {
-  id: string; // slug del cliente (ej. 'arepa-secreta')
-  clientName: string; // ej. 'Arepa Secreta'
-  year: number;
+export interface ProjectAsset {
+  id: string;
+  title: string;
+  assetPath: string; // /projects/...
+  mediaType: 'image' | 'video';
+  aspectRatio?: '9:16' | '16:9' | '1:1' | '3:4';
+  group?: string; // ej. 'carrusel-1', 'ebook-1'
+}
+
+export interface ProjectBlock {
+  id: string; // ej. 'axis-pro-videos'
+  clientId: string; // ej. 'axis-pro'
+  clientName: string; // ej. 'Axis Pro'
+  title: string; // ej. 'Videos Demostrativos & Comerciales'
+  category: ProjectCategory;
+  categoryLabel: string; // ej. 'Videos Comerciales'
   summary: string;
   challenge?: string;
   solution?: string;
-  colorPalette: { name: string; hex: string }[];
-  categories: DisciplineCategory[];
   coverAsset: string;
-  deliverables: ProjectDeliverable[];
+  coverMediaType: 'image' | 'video';
+  previewVideoUrl?: string; // Para hover preview en tarjetas de video
+  assets: ProjectAsset[];
+  colorPalette: ColorSwatch[];
+  year: number;
+  featured?: boolean;
 }
 
 export interface PortfolioStats {
-  totalClients: number;
+  totalProjects: number;
   totalDeliverables: number;
+  totalClients: number;
   lastUpdated: string;
 }

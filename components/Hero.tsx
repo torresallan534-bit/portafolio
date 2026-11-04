@@ -8,13 +8,14 @@ export default function Hero() {
   )}`;
 
   // Métricas dinámicas calculadas desde stats.json
-  const totalDeliverablesCount = statsData?.totalDeliverables || 77;
+  const totalProjectsCount = statsData?.totalProjects || 12;
+  const totalDeliverablesCount = statsData?.totalDeliverables || 71;
   const totalClientsCount = statsData?.totalClients || 6;
 
   const heroStats = [
+    { value: `${totalProjectsCount}`, label: "Proyectos Especializados" },
     { value: `${totalDeliverablesCount}`, label: "Entregables & Piezas Creadas" },
-    { value: `${totalClientsCount}`, label: "Marcas & Clientes Gestionados" },
-    { value: "24h-48h", label: "Tiempo de Respuesta Inicial" },
+    { value: `${totalClientsCount}`, label: "Marcas Gestionadas" },
     { value: "3", label: "Países con Clientes Activos" },
   ];
 
@@ -27,10 +28,10 @@ export default function Hero() {
       <div className="pointer-events-none absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full bg-accent/[0.04] blur-[120px]" />
 
       <div className="relative space-y-6 max-w-3xl">
-        {/* Badge */}
+        {/* Badge actualizado a 2025–2026 */}
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md bg-surface border border-border text-xs font-mono text-[#A1A1AA]">
           <span className="w-1.5 h-1.5 rounded-full bg-[#E8A023]" />
-          <span>Productor de Contenido Visual & Multimedia &bull; Portafolio 2024–2025</span>
+          <span>Productor de Contenido Visual & Multimedia &bull; Portafolio 2025–2026</span>
         </div>
 
         {/* Name */}
@@ -55,7 +56,7 @@ export default function Hero() {
           href="#proyectos"
           className="inline-flex items-center gap-2.5 px-6 py-3 rounded-lg bg-[#F5F5F7] text-[#0A0A0B] font-semibold text-sm hover:bg-accent hover:text-[#0A0A0B] transition-colors duration-200"
         >
-          Ver Casos de Estudio
+          Ver Trabajos
           <ArrowDown className="w-4 h-4" />
         </a>
 

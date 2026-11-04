@@ -29,10 +29,13 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid con simetría exacta en las 4 tarjetas */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {SERVICES_LIST.map((service) => {
             const Icon = iconMap[service.iconName] || Palette;
+            // Garantizamos badge en las 4 tarjetas para simetría visual
+            const badgeText = service.badge || (service.id === "branding-comercial" ? "Identidad Sólida" : "Garantizado");
+
             return (
               <div
                 key={service.id}
@@ -47,11 +50,9 @@ export default function Services() {
                     <div className="h-10 w-10 rounded-lg bg-surface-elevated border border-border flex items-center justify-center text-accent">
                       <Icon className="w-5 h-5" />
                     </div>
-                    {service.badge && (
-                      <span className="text-[11px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-surface-elevated text-[#A1A1AA] border border-border">
-                        {service.badge}
-                      </span>
-                    )}
+                    <span className="text-[11px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-surface-elevated text-[#A1A1AA] border border-border">
+                      {badgeText}
+                    </span>
                   </div>
 
                   <h3 className="text-xl font-display font-bold text-[#F5F5F7] tracking-tight">
