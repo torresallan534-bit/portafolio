@@ -26,6 +26,9 @@ yarn-error.log*
 # local env files
 .env*.local
 
+# binaries
+/scripts/bin/
+
 # vercel
 .vercel
 

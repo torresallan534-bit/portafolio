@@ -29,9 +29,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "py-3 bg-[#0A0A0B]/90 backdrop-blur-sm border-b border-border"
+          ? "py-3 bg-[#09090B]/90 backdrop-blur-md border-b border-white/[0.08]"
           : "py-5 bg-transparent"
       }`}
     >
@@ -40,23 +40,23 @@ export default function Navbar() {
           {/* Logo */}
           <a
             href="#inicio"
-            className="group flex items-center gap-3 transition-opacity hover:opacity-80"
+            className="group flex items-center gap-3 transition-opacity hover:opacity-85"
           >
-            <div className="h-9 w-9 rounded-lg bg-accent flex items-center justify-center font-display font-bold text-[#0A0A0B] text-sm tracking-wide">
+            <div className="h-9 w-9 rounded-xl bg-amber-500 flex items-center justify-center font-display font-extrabold text-[#09090B] text-sm tracking-wide shadow-md shadow-amber-500/20">
               AT
             </div>
-            <span className="font-display font-semibold text-[#F5F5F7] text-[15px] tracking-tight hidden sm:inline">
+            <span className="font-display font-bold text-zinc-50 text-[15px] tracking-tight hidden sm:inline">
               Allan Torres
             </span>
           </a>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden md:flex items-center gap-1 bg-zinc-900/60 p-1.5 rounded-full border border-white/[0.08] backdrop-blur-md">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3.5 py-1.5 text-xs lg:text-sm text-[#A1A1AA] hover:text-[#F5F5F7] rounded-lg transition-colors duration-200"
+                className="px-3.5 py-1 text-xs lg:text-sm text-zinc-400 hover:text-zinc-50 hover:bg-zinc-800/60 rounded-full transition-all duration-200"
               >
                 {link.label}
               </a>
@@ -65,18 +65,21 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden sm:flex items-center gap-3">
-            <div className="flex items-center gap-2 text-xs text-success font-mono">
-              <span className="w-1.5 h-1.5 rounded-full bg-success" />
-              Disponible
+            <div className="flex items-center gap-2 text-xs text-emerald-400 font-mono">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              </span>
+              <span>Disponible</span>
             </div>
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-accent text-[#0A0A0B] hover:bg-accent-hover transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-amber-500 text-zinc-950 hover:bg-amber-400 shadow-md shadow-amber-500/20 transition-all duration-200 active:scale-95"
             >
-              <MessageCircle className="w-4 h-4" />
-              Hablemos
+              <MessageCircle className="w-3.5 h-3.5" />
+              <span>Hablemos</span>
             </a>
           </div>
 
@@ -84,7 +87,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Abrir menú"
-            className="md:hidden p-2 text-[#A1A1AA] hover:text-[#F5F5F7] rounded-lg transition-colors"
+            className="md:hidden p-2 text-zinc-400 hover:text-zinc-50 rounded-lg transition-colors"
           >
             {isMobileMenuOpen ? (
               <X className="w-5 h-5" />
@@ -97,7 +100,37 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-surface border-b border-border px-5 py-5 mt-2 mx-4 rounded-xl animate-scale-in">
+        <div className="md:hidden bg-[#111114]/95 border border-white/[0.08] px-5 py-5 mt-2 mx-4 rounded-2xl backdrop-blur-md animate-scale-in">
+          <nav className="flex flex-col gap-2">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="px-3 py-2 text-sm text-zinc-400 hover:text-zinc-50 rounded-lg hover:bg-zinc-800/50 transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+            <div className="pt-3 border-t border-white/[0.08] flex items-center justify-between">
+              <div className="flex items-center gap-2 text-xs text-emerald-400 font-mono">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Disponible</span>
+              </div>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold bg-amber-500 text-zinc-950"
+              >
+                <MessageCircle className="w-3.5 h-3.5" />
+                <span>Hablemos</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      )}
+    </header>
           <nav className="flex flex-col gap-1">
             {navLinks.map((link) => (
               <a

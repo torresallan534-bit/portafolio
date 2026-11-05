@@ -12,13 +12,13 @@ export default function WorkProcess() {
     <section id="proceso" className="py-20 max-w-6xl mx-auto px-5 sm:px-8">
       {/* Header */}
       <div className="max-w-2xl mb-14">
-        <div className="text-xs font-mono text-[#E8A023] uppercase tracking-wider mb-2">
+        <div className="text-xs font-mono text-amber-500 uppercase tracking-wider mb-2">
           Metodología de Trabajo &bull; 3 Pasos
         </div>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F5F5F7] tracking-tight">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-zinc-50 tracking-tight">
           Cómo Trabajamos
         </h2>
-        <p className="text-[#A1A1AA] text-base mt-3 leading-relaxed">
+        <p className="text-zinc-400 text-base mt-3 leading-relaxed">
           Un proceso claro, ágil y sin complicaciones desde el primer mensaje hasta la entrega de los archivos listos para imprenta o publicación digital.
         </p>
       </div>
@@ -30,32 +30,32 @@ export default function WorkProcess() {
           return (
             <div
               key={step.number}
-              className="relative p-7 rounded-2xl bg-[#141416] border border-[#2A2A2E] hover:border-[#E8A023]/50 transition-all duration-300 flex flex-col justify-between group"
+              className="relative p-7 sm:p-8 rounded-2xl bg-[#111114] border border-white/[0.08] hover:border-amber-500/50 transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-lg hover:shadow-amber-500/5 hover:scale-[1.01]"
             >
               <div>
                 {/* Step number & Icon header */}
                 <div className="flex items-center justify-between mb-6">
-                  <span className="font-mono text-3xl font-extrabold text-[#E8A023]">
+                  <span className="font-mono text-3xl font-extrabold text-amber-500">
                     {step.number}
                   </span>
-                  <div className="w-10 h-10 rounded-xl bg-[#1C1C1F] border border-[#2A2A2E] flex items-center justify-center text-[#E8A023] group-hover:scale-105 transition-transform">
+                  <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-white/[0.08] flex items-center justify-center text-amber-400 group-hover:scale-105 transition-transform">
                     <Icon className="w-5 h-5" />
                   </div>
                 </div>
 
-                <h3 className="text-xl font-display font-bold text-[#F5F5F7] tracking-tight mb-3">
+                <h3 className="text-xl font-display font-bold text-zinc-50 tracking-tight mb-3">
                   {step.title}
                 </h3>
 
-                <p className="text-sm text-[#A1A1AA] leading-relaxed">
+                <p className="text-sm text-zinc-400 leading-relaxed">
                   {step.description}
                 </p>
               </div>
 
               {/* Step indicator footer */}
-              <div className="mt-6 pt-4 border-t border-[#2A2A2E]/70 flex items-center justify-between text-xs font-mono text-[#71717A]">
+              <div className="mt-6 pt-4 border-t border-white/[0.08] flex items-center justify-between text-xs font-mono text-zinc-400">
                 <span>Fase {idx + 1} de 3</span>
-                <span className="text-[#E8A023] opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-amber-400 opacity-0 group-hover:opacity-100 transition-opacity font-semibold">
                   Garantía 100%
                 </span>
               </div>
@@ -65,12 +65,12 @@ export default function WorkProcess() {
       </div>
 
       {/* Call to start banner */}
-      <div className="mt-10 p-6 rounded-2xl bg-[#1C1C1F] border border-[#2A2A2E] flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="mt-10 p-6 sm:p-7 rounded-2xl bg-zinc-900/60 border border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 backdrop-blur-md">
         <div>
-          <h4 className="text-sm font-semibold text-[#F5F5F7]">
+          <h4 className="text-sm font-semibold text-zinc-100">
             ¿Tienes un proyecto en mente y no sabes por dónde arrancar?
           </h4>
-          <p className="text-xs text-[#A1A1AA] mt-0.5">
+          <p className="text-xs text-zinc-400 mt-0.5">
             Escríbeme por WhatsApp y hacemos el diagnóstico inicial sin ningún compromiso.
           </p>
         </div>
@@ -78,7 +78,7 @@ export default function WorkProcess() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#E8A023] hover:bg-[#F0B847] text-[#0A0A0B] text-xs font-semibold transition-all shrink-0 active:scale-95"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-zinc-950 text-xs font-bold transition-all shrink-0 active:scale-95 shadow-md shadow-amber-500/20"
         >
           <span>Iniciar Diagnóstico</span>
           <ArrowRight className="w-3.5 h-3.5" />

@@ -92,23 +92,23 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
     >
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-[#0A0A0B]/90 backdrop-blur-md transition-opacity"
+        className="fixed inset-0 bg-[#09090B]/90 backdrop-blur-md transition-opacity"
         onClick={onClose}
         aria-hidden="true"
       />
 
       {/* Modal Dialog */}
-      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-[#141416] border border-[#2A2A2E] rounded-2xl shadow-2xl z-10 text-[#F5F5F7] flex flex-col">
+      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-[#111114] border border-white/[0.08] rounded-2xl shadow-2xl z-10 text-zinc-50 flex flex-col">
         {/* Sticky Header */}
-        <div className="sticky top-0 z-20 flex justify-between items-center px-6 py-4 bg-[#141416]/95 backdrop-blur border-b border-[#2A2A2E]">
+        <div className="sticky top-0 z-20 flex justify-between items-center px-6 py-4 bg-[#111114]/95 backdrop-blur-md border-b border-white/[0.08]">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-[#E8A023] bg-[#E8A023]/10 px-2.5 py-1 rounded">
+            <span className="text-xs font-mono uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-1 rounded-lg border border-amber-500/20">
               {project.categoryLabel}
             </span>
-            <span className="text-xs text-[#71717A] font-mono hidden sm:inline">
+            <span className="text-xs text-zinc-400 font-mono hidden sm:inline">
               &bull; {project.clientName}
             </span>
-            <span className="text-xs font-mono text-[#A1A1AA] bg-[#1C1C1F] px-2 py-0.5 rounded border border-[#2A2A2E]">
+            <span className="text-xs font-mono text-zinc-300 bg-zinc-800/80 px-2 py-0.5 rounded-lg border border-white/[0.08]">
               {assets.length}{" "}
               {isVideoMode
                 ? assets.length === 1
@@ -129,7 +129,7 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
               <button
                 type="button"
                 onClick={() => setIsFullscreen(!isFullscreen)}
-                className="p-1.5 text-[#A1A1AA] hover:text-[#F5F5F7] rounded-lg bg-[#1C1C1F] hover:bg-[#2A2A2E] transition-colors"
+                className="p-2 text-zinc-400 hover:text-white rounded-lg bg-zinc-800/80 hover:bg-zinc-700/80 transition-colors"
                 title="Alternar Pantalla Completa"
               >
                 <Maximize2 className="w-4 h-4" />
@@ -137,7 +137,7 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
             )}
             <button
               onClick={onClose}
-              className="p-1.5 text-[#A1A1AA] hover:text-[#F5F5F7] rounded-lg bg-[#1C1C1F] hover:bg-[#2A2A2E] transition-colors"
+              className="p-2 text-zinc-400 hover:text-white rounded-lg bg-zinc-800/80 hover:bg-zinc-700/80 transition-colors"
               aria-label="Cerrar modal (ESC)"
             >
               <X className="w-5 h-5" />
@@ -150,9 +150,9 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
           <div className="space-y-4">
             {/* Box Principal de Visualización */}
             <div
-              className={`relative w-full rounded-xl bg-[#0A0A0B] border border-[#2A2A2E] flex items-center justify-center p-2 transition-all ${
+              className={`relative w-full rounded-2xl bg-[#09090B] border border-white/[0.08] flex items-center justify-center p-2 transition-all ${
                 isFullscreen
-                  ? "fixed inset-4 z-50 bg-[#0A0A0B] max-h-none h-auto"
+                  ? "fixed inset-4 z-50 bg-[#09090B] max-h-none h-auto"
                   : isVideoMode && currentAsset?.aspectRatio === "9:16"
                   ? "h-[540px] sm:h-[620px]"
                   : "h-[400px] sm:h-[560px]"
@@ -187,7 +187,7 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                     type="button"
                     onClick={() => setActiveAssetIndex((prev) => (prev > 0 ? prev - 1 : prev))}
                     disabled={activeAssetIndex === 0}
-                    className="absolute left-3 p-2 rounded-full bg-[#0A0A0B]/80 border border-[#2A2A2E] text-[#F5F5F7] disabled:opacity-30 hover:bg-[#1C1C1F] transition-all"
+                    className="absolute left-3 p-2.5 rounded-full bg-[#09090B]/80 border border-white/[0.08] text-zinc-200 disabled:opacity-20 hover:bg-zinc-800 transition-all backdrop-blur-md"
                     aria-label="Anterior"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -199,7 +199,7 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                       setActiveAssetIndex((prev) => (prev < assets.length - 1 ? prev + 1 : prev))
                     }
                     disabled={activeAssetIndex === assets.length - 1}
-                    className="absolute right-3 p-2 rounded-full bg-[#0A0A0B]/80 border border-[#2A2A2E] text-[#F5F5F7] disabled:opacity-30 hover:bg-[#1C1C1F] transition-all"
+                    className="absolute right-3 p-2.5 rounded-full bg-[#09090B]/80 border border-white/[0.08] text-zinc-200 disabled:opacity-20 hover:bg-zinc-800 transition-all backdrop-blur-md"
                     aria-label="Siguiente"
                   >
                     <ChevronRight className="w-5 h-5" />
@@ -209,8 +209,11 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
 
               {/* Indicador de página para Ebooks / Carruseles */}
               {isEbookMode && (
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-[#0A0A0B]/90 border border-[#2A2A2E] text-xs font-mono text-[#F5F5F7] shadow-lg">
-                  Página {activeAssetIndex + 1} de {assets.length}
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-[#09090B]/85 border border-white/[0.08] text-xs font-mono text-zinc-300 backdrop-blur-md flex items-center gap-2">
+                  <BookOpen className="w-3.5 h-3.5 text-amber-400" />
+                  <span>
+                    Página {activeAssetIndex + 1} de {assets.length}
+                  </span>
                 </div>
               )}
             </div>
@@ -218,7 +221,7 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
             {/* Carrusel inferior de miniaturas para navegación rápida */}
             {assets.length > 1 && (
               <div className="space-y-1.5">
-                <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-[#71717A]">
+                <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-zinc-400">
                   <span>
                     {isVideoMode
                       ? "Selecciona el video para reproducir:"
@@ -226,12 +229,12 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                       ? "Páginas del documento (clic para saltar):"
                       : "Todas las piezas de este trabajo:"}
                   </span>
-                  <span>
+                  <span className="text-zinc-500">
                     {activeAssetIndex + 1} / {assets.length}
                   </span>
                 </div>
 
-                <div className="flex items-center gap-2.5 overflow-x-auto py-1">
+                <div className="flex items-center gap-2.5 overflow-x-auto py-1 scrollbar-none">
                   {assets.map((a, idx) => {
                     const isSelected = activeAssetIndex === idx;
                     return (
@@ -239,22 +242,22 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                         key={a.id}
                         type="button"
                         onClick={() => setActiveAssetIndex(idx)}
-                        className={`relative rounded-lg overflow-hidden border shrink-0 transition-all ${
+                        className={`relative rounded-xl overflow-hidden border shrink-0 transition-all ${
                           isVideoMode
-                            ? "w-28 h-16 bg-[#1C1C1F]"
+                            ? "w-28 h-16 bg-zinc-900"
                             : isEbookMode
-                            ? "w-14 h-20 bg-[#0A0A0B]"
-                            : "w-16 h-22 bg-[#0A0A0B]"
+                            ? "w-14 h-20 bg-[#09090B]"
+                            : "w-16 h-22 bg-[#09090B]"
                         } ${
                           isSelected
-                            ? "border-[#E8A023] ring-2 ring-[#E8A023]/30 scale-95"
-                            : "border-[#2A2A2E] opacity-60 hover:opacity-100"
+                            ? "border-amber-500 ring-2 ring-amber-500/30 scale-95"
+                            : "border-white/[0.08] opacity-60 hover:opacity-100"
                         }`}
                       >
                         {a.mediaType === "video" ? (
-                          <div className="w-full h-full flex flex-col items-center justify-center text-[#E8A023] p-1">
+                          <div className="w-full h-full flex flex-col items-center justify-center text-amber-400 p-1">
                             <Film className="w-4 h-4" />
-                            <span className="text-[10px] font-mono text-[#F5F5F7] mt-1">
+                            <span className="text-[10px] font-mono text-zinc-300 mt-1">
                               Video {idx + 1}
                             </span>
                           </div>
@@ -271,8 +274,8 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
 
           {/* Información del Proyecto */}
           <div className="space-y-3">
-            <div className="flex items-center gap-2 text-xs text-[#71717A] font-mono">
-              <span className="text-[#E8A023] font-semibold">{project.clientName}</span>
+            <div className="flex items-center gap-2 text-xs text-zinc-400 font-mono">
+              <span className="text-amber-400 font-bold">{project.clientName}</span>
               <span>&bull;</span>
               <span>Año {project.year}</span>
               <span>&bull;</span>
@@ -281,34 +284,34 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
 
             <h2
               id="modal-specialized-title"
-              className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-[#F5F5F7]"
+              className="text-2xl sm:text-3xl font-display font-extrabold tracking-tight text-zinc-50"
             >
               {project.title}
             </h2>
 
-            <p className="text-base text-[#A1A1AA] leading-relaxed">{project.summary}</p>
+            <p className="text-base text-zinc-400 leading-relaxed">{project.summary}</p>
           </div>
 
           {/* Ficha Técnica: Reto y Solución */}
           {(project.challenge || project.solution) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-xl bg-[#1C1C1F] border border-[#2A2A2E]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-2xl bg-zinc-900/60 border border-white/[0.08]">
               {project.challenge && (
                 <div className="space-y-1.5">
-                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#F0B847]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#E8A023]" />
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-amber-400">
+                    <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
                     El Reto
                   </div>
-                  <p className="text-sm text-[#A1A1AA] leading-relaxed">{project.challenge}</p>
+                  <p className="text-sm text-zinc-400 leading-relaxed">{project.challenge}</p>
                 </div>
               )}
 
               {project.solution && (
                 <div className="space-y-1.5">
-                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#34D399]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#34D399]" />
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-emerald-400">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                     La Solución Gráfica / Audiovisual
                   </div>
-                  <p className="text-sm text-[#A1A1AA] leading-relaxed">{project.solution}</p>
+                  <p className="text-sm text-zinc-400 leading-relaxed">{project.solution}</p>
                 </div>
               )}
             </div>
@@ -316,10 +319,10 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
 
           {/* Paleta de Color */}
           {project.colorPalette && project.colorPalette.length > 0 && (
-            <div className="p-4 rounded-xl bg-[#1C1C1F] border border-[#2A2A2E] space-y-3">
+            <div className="p-5 rounded-2xl bg-zinc-900/60 border border-white/[0.08] space-y-3">
               <div className="flex items-center justify-between">
-                <h3 className="text-xs uppercase tracking-wider font-mono text-[#A1A1AA] flex items-center gap-2">
-                  <Sparkles className="w-3.5 h-3.5 text-[#E8A023]" />
+                <h3 className="text-xs uppercase tracking-wider font-mono text-zinc-400 flex items-center gap-2">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-400" />
                   Paleta Cromática (Clic para copiar HEX)
                 </h3>
               </div>
@@ -329,21 +332,21 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                     key={idx}
                     type="button"
                     onClick={() => copyToClipboard(color.hex)}
-                    className="flex items-center gap-2.5 p-2 rounded-lg bg-[#0A0A0B] border border-[#2A2A2E] hover:border-[#E8A023]/60 transition-colors text-left group"
+                    className="flex items-center gap-2.5 p-2 rounded-xl bg-[#09090B] border border-white/[0.08] hover:border-amber-500/60 transition-colors text-left group"
                   >
                     <span
-                      className="w-6 h-6 rounded-md border border-[#2A2A2E] shrink-0"
+                      className="w-6 h-6 rounded-md border border-white/10 shrink-0"
                       style={{ backgroundColor: color.hex }}
                     />
                     <div className="flex flex-col min-w-0">
-                      <span className="text-xs font-medium text-[#F5F5F7] truncate group-hover:text-[#E8A023]">
+                      <span className="text-xs font-medium text-zinc-200 truncate group-hover:text-amber-400">
                         {color.name}
                       </span>
-                      <span className="text-[11px] font-mono text-[#71717A] flex items-center gap-1">
+                      <span className="text-[11px] font-mono text-zinc-500 flex items-center gap-1">
                         {copiedHex === color.hex ? (
                           <>
-                            <Check className="w-3 h-3 text-[#34D399]" />
-                            <span className="text-[#34D399]">Copiado</span>
+                            <Check className="w-3 h-3 text-emerald-400" />
+                            <span className="text-emerald-400">Copiado</span>
                           </>
                         ) : (
                           <>
@@ -360,12 +363,12 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
           )}
 
           {/* Footer CTA contextual a WhatsApp */}
-          <div className="p-5 rounded-xl bg-gradient-to-r from-[#E8A023]/10 via-[#1C1C1F] to-[#1C1C1F] border border-[#E8A023]/30 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="p-5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-zinc-900/80 to-zinc-900/80 border border-amber-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <h4 className="text-sm font-semibold text-[#F5F5F7]">
+              <h4 className="text-sm font-semibold text-zinc-100">
                 ¿Quieres un trabajo similar de {project.categoryLabel}?
               </h4>
-              <p className="text-xs text-[#A1A1AA] mt-0.5">
+              <p className="text-xs text-zinc-400 mt-0.5">
                 Escríbeme con los detalles de tu negocio y te preparo una propuesta personalizada con entrega ágil.
               </p>
             </div>
@@ -373,7 +376,7 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
               href={projectWhatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#E8A023] text-[#0A0A0B] font-semibold text-xs hover:bg-[#F0B847] transition-all duration-200 shadow-md shrink-0 active:scale-95"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-amber-500 text-zinc-950 font-bold text-xs hover:bg-amber-400 transition-all duration-200 shadow-md shadow-amber-500/20 shrink-0 active:scale-95"
             >
               <MessageCircle className="w-4 h-4" />
               <span>Cotizar proyecto similar</span>

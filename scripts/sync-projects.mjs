@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +13,7 @@ const PUBLIC_PROJECTS_DIR = path.join(projectRoot, 'public', 'projects');
 const DATA_DIR = path.join(projectRoot, 'data');
 const PROJECTS_JSON = path.join(DATA_DIR, 'projects.json');
 const STATS_JSON = path.join(DATA_DIR, 'stats.json');
+const CWEBP_BIN = path.join(__dirname, 'bin', 'cwebp.exe');
 
 // Opcional sharp
 let sharp = null;
@@ -380,24 +382,52 @@ async function syncProjects() {
         const targetPath = path.join(targetProjectDir, cleanFileName);
 
         let finalRelativePath = `/projects/${def.id}/${cleanFileName}`;
-        if (!isVideo && sharp && ext !== '.webp') {
+
+        if (!isVideo) {
           const webpName = `${path.basename(cleanFileName, ext)}.webp`;
           const webpPath = path.join(targetProjectDir, webpName);
-          if (!fs.existsSync(webpPath)) {
+          let converted = false;
+
+          if (sharp) {
             try {
-              await sharp(sourceFilePath).webp({ quality: 85 }).toFile(webpPath);
+              await sharp(sourceFilePath)
+                .resize({ width: 1600, withoutEnlargement: true })
+                .webp({ quality: 85 })
+                .toFile(webpPath);
+              converted = true;
               totalOptimized++;
-            } catch {
+            } catch (err) {
+              console.warn(`[sharp] Error en ${sourceFilePath}:`, err.message);
+            }
+          }
+
+          if (!converted && fs.existsSync(CWEBP_BIN)) {
+            try {
+              execFileSync(CWEBP_BIN, ['-q', '85', '-resize', '1600', '0', sourceFilePath, '-o', webpPath], { stdio: 'pipe' });
+              converted = true;
+              totalOptimized++;
+            } catch (err) {
+              console.warn(`[cwebp] Error en ${sourceFilePath}:`, err.message);
+            }
+          }
+
+          if (converted) {
+            finalRelativePath = `/projects/${def.id}/${webpName}`;
+          } else {
+            // Fallback copia original si fallaron ambos
+            if (!fs.existsSync(targetPath)) {
               fs.copyFileSync(sourceFilePath, targetPath);
               totalCopied++;
             }
+            finalRelativePath = `/projects/${def.id}/${cleanFileName}`;
           }
-          finalRelativePath = `/projects/${def.id}/${webpName}`;
         } else {
+          // Video MP4 intacto
           if (!fs.existsSync(targetPath)) {
             fs.copyFileSync(sourceFilePath, targetPath);
             totalCopied++;
           }
+          finalRelativePath = `/projects/${def.id}/${cleanFileName}`;
         }
 
         const isEbook = def.category === 'ebooks' || def.category === 'carruseles';
@@ -419,10 +449,14 @@ async function syncProjects() {
 
     totalDeliverablesCount += assets.length;
 
-    // Portada
-    const firstImage = assets.find((a) => a.mediaType === 'image');
+    // Portada: si es video prioriza el video; si es imagen, la primera imagen optimizada
+    const isVideoCategory = def.category === 'videos';
     const firstVideo = assets.find((a) => a.mediaType === 'video');
-    const coverAsset = firstImage ? firstImage.assetPath : firstVideo?.assetPath || '';
+    const primaryCover = isVideoCategory
+      ? firstVideo || assets[0]
+      : assets.find((a) => a.mediaType === 'image') || assets[0];
+    const coverAsset = primaryCover?.assetPath || '';
+    const coverMediaType = primaryCover?.mediaType || (isVideoCategory ? 'video' : 'image');
 
     finalProjects.push({
       id: def.id,
@@ -435,7 +469,7 @@ async function syncProjects() {
       challenge: def.challenge,
       solution: def.solution,
       coverAsset,
-      coverMediaType: firstImage ? 'image' : 'video',
+      coverMediaType,
       previewVideoUrl: firstVideo ? firstVideo.assetPath : undefined,
       assets,
       colorPalette: CLIENT_PALETTES[def.clientId] || [

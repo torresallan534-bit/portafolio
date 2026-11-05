@@ -3,20 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --foreground: #F5F5F7;
-  --background: #0A0A0B;
+  --foreground: #FAFAFA;
+  --background: #09090B;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #0A0A0B;
-  color: #F5F5F7;
+  background-color: #09090B;
+  color: #FAFAFA;
   color-scheme: dark;
 }
 
 body {
   overflow-x: hidden;
+  background-color: #09090B;
+  color: #FAFAFA;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Ambient glow para tarjetas de proyectos */
+.project-card-glow {
+  transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card-glow:hover {
+  border-color: color-mix(in srgb, var(--project-accent, #F59E0B) 50%, rgba(255, 255, 255, 0.15));
+  box-shadow: 0 12px 35px -10px color-mix(in srgb, var(--project-accent, #F59E0B) 25%, transparent);
 }
 
 /* Clean scrollbar */
@@ -25,22 +39,22 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0A0A0B;
+  background: #09090B;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2A2A2E;
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: rgba(255, 255, 255, 0.22);
 }
 
 /* Selection */
 ::selection {
-  background: rgba(232, 160, 35, 0.2);
-  color: #F0B847;
+  background: rgba(245, 158, 11, 0.25);
+  color: #FBBF24;
 }
 
 /* Masonry column break avoidance */

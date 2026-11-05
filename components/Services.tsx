@@ -14,17 +14,17 @@ export default function Services() {
   };
 
   return (
-    <section id="servicios" className="py-20 border-y border-border bg-surface/40">
+    <section id="servicios" className="py-20 border-y border-white/[0.08] bg-zinc-950/40">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         {/* Section title */}
         <div className="max-w-2xl mb-14">
-          <span className="text-xs font-mono text-accent uppercase tracking-wider">
+          <span className="text-xs font-mono text-amber-500 uppercase tracking-wider">
             Servicios Profesionales
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F5F5F7] tracking-tight mt-2">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-zinc-50 tracking-tight mt-2">
             Producción Visual & Piezas Comerciales
           </h2>
-          <p className="text-[#A1A1AA] text-base mt-3 leading-relaxed">
+          <p className="text-zinc-400 text-base mt-3 leading-relaxed">
             Soluciones visuales y multimedia creadas para generar resultados medibles, capturar atención inmediata y acelerar conversiones con una entrega ágil.
           </p>
         </div>
@@ -39,56 +39,56 @@ export default function Services() {
             return (
               <div
                 key={service.id}
-                className={`relative rounded-xl p-7 flex flex-col justify-between transition-colors ${
+                className={`relative rounded-2xl p-7 sm:p-8 flex flex-col justify-between transition-colors bg-[#111114] border ${
                   service.popular
-                    ? "bg-surface border border-accent/40 shadow-sm"
-                    : "bg-surface border border-border hover:border-[#3f3f46]"
+                    ? "border-amber-500/40 shadow-lg shadow-amber-500/5"
+                    : "border-white/[0.08] hover:border-white/20"
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-5">
-                    <div className="h-10 w-10 rounded-lg bg-surface-elevated border border-border flex items-center justify-center text-accent">
+                    <div className="h-11 w-11 rounded-xl bg-zinc-900 border border-white/[0.08] flex items-center justify-center text-amber-500">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-[11px] font-mono uppercase tracking-wider px-2.5 py-1 rounded bg-surface-elevated text-[#A1A1AA] border border-border">
+                    <span className="text-[11px] font-mono uppercase tracking-wider px-2.5 py-1 rounded-lg bg-zinc-900 text-zinc-400 border border-white/[0.08]">
                       {badgeText}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-[#F5F5F7] tracking-tight">
+                  <h3 className="text-xl font-display font-bold text-zinc-50 tracking-tight">
                     {service.title}
                   </h3>
-                  <p className="text-xs font-mono text-accent mt-1">
+                  <p className="text-xs font-mono text-amber-400 mt-1 font-semibold">
                     {service.subtitle}
                   </p>
 
-                  <p className="text-sm text-[#A1A1AA] mt-3 leading-relaxed">
+                  <p className="text-sm text-zinc-400 mt-3 leading-relaxed">
                     {service.description}
                   </p>
 
                   {/* Checklist */}
-                  <div className="mt-5 pt-5 border-t border-border space-y-2">
-                    <span className="text-xs font-mono uppercase tracking-wider text-[#71717A] block mb-2">
+                  <div className="mt-5 pt-5 border-t border-white/[0.08] space-y-2.5">
+                    <span className="text-xs font-mono uppercase tracking-wider text-zinc-400 block mb-2">
                       Incluye:
                     </span>
                     {service.features.map((item, idx) => (
-                      <div key={idx} className="flex items-start gap-2 text-xs text-[#A1A1AA]">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-accent shrink-0 mt-0.5" />
+                      <div key={idx} className="flex items-start gap-2.5 text-xs text-zinc-300">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-amber-500 shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className="mt-6 pt-5 border-t border-border flex items-center justify-between">
-                  <span className="text-xs text-[#71717A] font-mono">
+                <div className="mt-6 pt-5 border-t border-white/[0.08] flex items-center justify-between">
+                  <span className="text-xs text-zinc-400 font-mono">
                     Entrega ágil y personalizada
                   </span>
                   <a
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-accent hover:text-accent-hover transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors"
                   >
                     <span>Cotizar servicio</span>
                     <ArrowRight className="w-3.5 h-3.5" />

@@ -10,16 +10,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#0A0A0B",
-        surface: "#141416",
-        "surface-elevated": "#1C1C1F",
-        border: "#2A2A2E",
+        background: "#09090B",
+        surface: "#111114",
+        "surface-elevated": "#18181B",
+        border: "rgba(255, 255, 255, 0.08)",
         accent: {
-          DEFAULT: "#E8A023",
-          hover: "#F0B847",
-          muted: "rgba(232, 160, 35, 0.12)",
+          DEFAULT: "#F59E0B",
+          hover: "#D97706",
+          muted: "rgba(245, 158, 11, 0.12)",
         },
-        success: "#34D399",
+        success: "#10B981",
         brand: {
           whatsapp: "#25D366",
           telegram: "#229ED9",
