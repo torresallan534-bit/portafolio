@@ -66,7 +66,7 @@ export default function ProjectGallery() {
         <div>
           <div className="text-xs font-mono text-[#E8A023] uppercase tracking-wider mb-2 flex items-center gap-2">
             <Layers className="w-3.5 h-3.5" />
-            <span>Portafolio de Trabajos Seleccionados &bull; Subcarpetas & Piezas Reales</span>
+            <span>Portafolio de Trabajos Seleccionados &bull; Formatos Especializados & Piezas Reales</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#F5F5F7] tracking-tight">
             Portafolio de Trabajos
@@ -175,9 +175,9 @@ export default function ProjectGallery() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
           {filteredProjects.map((project, idx) => {
-            const isVideo = project.category === "videos";
+            const isVideo = project.category === "videos" || project.coverMediaType === "video" || project.coverAsset.endsWith(".mp4");
             const assetCount = project.assets?.length || 0;
-            const priorityLoading = idx < 3; // LCP optimization
+            const priorityLoading = idx < 3 && !isVideo; // LCP optimization (no videos en Image preload)
 
             return (
               <article
@@ -187,6 +187,17 @@ export default function ProjectGallery() {
               >
                 {/* Visual Cover Asset */}
                 <div
+                  onMouseEnter={(e) => {
+                    const vid = e.currentTarget.querySelector("video");
+                    if (vid) vid.play().catch(() => {});
+                  }}
+                  onMouseLeave={(e) => {
+                    const vid = e.currentTarget.querySelector("video");
+                    if (vid) {
+                      vid.pause();
+                      vid.currentTime = 0.1;
+                    }
+                  }}
                   className={`relative w-full overflow-hidden bg-[#0A0A0B] flex items-center justify-center ${
                     isVideo && project.assets[0]?.aspectRatio === "9:16"
                       ? "aspect-[9/14]"
@@ -195,29 +206,40 @@ export default function ProjectGallery() {
                       : "aspect-[1/1.25]"
                   }`}
                 >
-                  <Image
-                    src={project.coverAsset}
-                    alt={project.title}
-                    fill
-                    priority={priorityLoading}
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
-                  />
+                  {isVideo ? (
+                    <video
+                      src={`${project.coverAsset}#t=0.1`}
+                      muted
+                      playsInline
+                      preload="metadata"
+                      loop
+                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
+                    />
+                  ) : (
+                    <Image
+                      src={project.coverAsset}
+                      alt={project.title}
+                      fill
+                      priority={priorityLoading}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
+                    />
+                  )}
 
                   {/* Badges superiores */}
-                  <div className="absolute top-3 left-3 right-3 z-20 flex items-center justify-between">
+                  <div className="absolute top-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none">
                     <span className="text-[11px] font-mono tracking-wide px-2.5 py-1 rounded-md bg-[#0A0A0B]/85 border border-[#2A2A2E] text-[#E8A023] font-semibold">
                       {project.categoryLabel}
                     </span>
 
                     <span className="text-[11px] font-mono px-2 py-0.5 rounded-md bg-[#0A0A0B]/85 border border-[#2A2A2E] text-[#F5F5F7]">
-                      {assetCount} {isVideo ? "videos" : "piezas"}
+                      {assetCount} {isVideo ? (assetCount === 1 ? "video" : "videos") : (assetCount === 1 ? "pieza" : "piezas")}
                     </span>
                   </div>
 
                   {/* Play Overlay para Videos */}
                   {isVideo && (
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 group-hover:opacity-0">
                       <div className="w-12 h-12 rounded-full bg-[#E8A023] text-[#0A0A0B] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
                         <Play className="w-5 h-5 fill-current ml-0.5" />
                       </div>
@@ -225,7 +247,7 @@ export default function ProjectGallery() {
                   )}
 
                   {/* Hover Action Indicator */}
-                  <div className="absolute inset-0 bg-[#0A0A0B]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20">
+                  <div className="absolute inset-0 bg-[#0A0A0B]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20 pointer-events-none">
                     <span className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#E8A023] text-[#0A0A0B] font-semibold text-xs shadow-lg transform translate-y-1 group-hover:translate-y-0 transition-transform">
                       {isVideo ? <Film className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
                       <span>{isVideo ? "Reproducir Video" : "Ver Trabajo Completo"}</span>

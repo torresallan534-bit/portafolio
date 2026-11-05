@@ -89,7 +89,8 @@ const CATEGORY_LABELS = {
   branding: 'Branding & Identidad',
 };
 
-// Definición estricta de proyectos especializados por subcarpeta
+// Definición estricta de proyectos especializados
+// Arepa Secreta ahora tiene: branding-1 (Fase 1), branding-2 (Fase 2), menus (Cartas gastronómicas) y flyers
 const SPECIALIZED_PROJECT_DEFS = [
   // AXIS PRO
   {
@@ -181,31 +182,52 @@ const SPECIALIZED_PROJECT_DEFS = [
     aspectRatio: '3:4',
   },
 
-  // AREPA SECRETA
+  // AREPA SECRETA - SEPARACIÓN QUIRÚRGICA:
+  // 1. Branding 1 (Fase 1)
+  {
+    id: 'arepa-secreta-branding-1',
+    clientId: 'arepa-secreta',
+    clientName: 'Arepa Secreta',
+    title: 'Arepa Secreta — Identidad Visual & Concepto (Fase 1)',
+    category: 'branding',
+    summary: 'Construcción del concepto gráfico primario, imagotipo artesanal del fogón y el maíz, y directrices de color cálido.',
+    challenge: 'Diseñar desde cero una marca que transmita tradición culinaria venezolana con presentación contemporánea.',
+    solution: 'Desarrollo del imagotipo central, texturas en papel kraft y primeros lineamientos de identidad visual.',
+    scanDirs: ['Arepa Secreta/branding 1'], // El archivo raíz branding 1.png
+    aspectRatio: '3:4',
+  },
+  // 2. Branding 2 (Fase 2)
+  {
+    id: 'arepa-secreta-branding-2',
+    clientId: 'arepa-secreta',
+    clientName: 'Arepa Secreta',
+    title: 'Arepa Secreta — Sistema de Marca & Empaques (Fase 2)',
+    category: 'branding',
+    summary: 'Evolución de identidad, sistema de packaging para delivery (bolsas térmicas, papel antigrasa) y papelería comercial.',
+    challenge: 'Extender la identidad gráfica al packaging de domicilio manteniendo la comida caliente y la marca reconocible.',
+    solution: 'Diseño modular de empaques, bolsas con mensajes de marca y etiquetas adhesivas de seguridad.',
+    scanDirs: ['Arepa Secreta/branding 2'], // El archivo raíz branding 2.png
+    aspectRatio: '3:4',
+  },
+  // 3. Menús Gastronómicos (Recuperados de branding 1 y 2)
   {
     id: 'arepa-secreta-menus',
     clientId: 'arepa-secreta',
     clientName: 'Arepa Secreta',
     title: 'Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR',
     category: 'menus',
-    summary: 'Diseño y diagramación de cartas completas (Menú 1 y Menú 2) estructurando rellenos típicos, desayunos y combos.',
+    summary: 'Diseño y diagramación de cartas completas (Menú 1 y Menú 2) estructurando rellenos tradicionales, bebidas y combos.',
     challenge: 'La carta original saturaba a los clientes y dificultaba la rotación rápida de mesas en horas pico.',
-    solution: 'Jerarquía en tres niveles de lectura, fotografía apetitosa y versión digital ultraligera para lectura por código QR.',
-    scanDirs: ['Arepa Secreta/branding 1/menus', 'Arepa Secreta/branding 2/menus'],
+    solution: 'Diagramación en tres niveles de lectura, fotografía apetitosa y versión digital ultraligera para lectura por código QR.',
+    scanDirs: [
+      'Arepa Secreta/branding 1/menus/menu 1',
+      'Arepa Secreta/branding 1/menus/menu 2',
+      'Arepa Secreta/branding 2/menus/menu 1',
+      'Arepa Secreta/branding 2/menus/menu 2',
+    ],
     aspectRatio: '3:4',
   },
-  {
-    id: 'arepa-secreta-branding',
-    clientId: 'arepa-secreta',
-    clientName: 'Arepa Secreta',
-    title: 'Arepa Secreta — Identidad de Marca & Sistema de Empaques',
-    category: 'branding',
-    summary: 'Desarrollo de identidad visual comercial (Branding 1 y 2), aplicaciones en bolsas térmicas, papel antigrasa y papelería.',
-    challenge: 'El negocio operaba sin un identificador unificado en los pedidos a domicilio.',
-    solution: 'Isotipo artesanal minimalista en papel kraft con contrastes cálidos que generan apetito y recordación.',
-    scanDirs: ['Arepa Secreta/branding 1', 'Arepa Secreta/branding 2'],
-    aspectRatio: '3:4',
-  },
+  // 4. Flyers Promocionales
   {
     id: 'arepa-secreta-flyers',
     clientId: 'arepa-secreta',
@@ -215,7 +237,10 @@ const SPECIALIZED_PROJECT_DEFS = [
     summary: 'Piezas publicitarias concebidas para WhatsApp Status e Instagram Stories para promocionar combos familiares y nocturnos.',
     challenge: 'Comunicar promociones diarias sin depender de explicaciones largas en mensajes de texto.',
     solution: 'Composiciones con producto en primer plano, precios destacados y llamados directos a pedir por WhatsApp.',
-    scanDirs: ['Arepa Secreta/branding 1/flayers', 'Arepa Secreta/branding 2/flayers'],
+    scanDirs: [
+      'Arepa Secreta/branding 1/flayers',
+      'Arepa Secreta/branding 2/flayers',
+    ],
     aspectRatio: '3:4',
   },
 
@@ -250,20 +275,49 @@ const SPECIALIZED_PROJECT_DEFS = [
     id: 'nails-pastel-video',
     clientId: 'nails-pastel',
     clientName: 'Nails Pastel',
-    title: 'Nails Pastel — Video Promocional de Tratamientos',
+    title: 'Nails Pastel — Video Promocional de Tratamientos (9:16)',
     category: 'videos',
     summary: 'Video comercial con tomas de detalle de acabados en uñas y ambiente relajante para captación de clientas.',
     challenge: 'Transmitir la calidad y el acabado minucioso de las sesiones estéticas a través de medios digitales.',
-    solution: 'Edición en video con música envolvente y primeros planos que generan deseo y reservas inmediatas.',
+    solution: 'Edición en video vertical con música envolvente y primeros planos que generan deseo y reservas inmediatas.',
     scanDirs: ['NAils Pastel/videos promocional'],
     aspectRatio: '9:16',
   },
 ];
 
+function getCleanAssetFileName(subDirRel, rawStem, ext, assetSeq, defScanDirsLength) {
+  if (defScanDirsLength <= 1) {
+    return `${rawStem || assetSeq}${ext}`;
+  }
+
+  const norm = subDirRel.toLowerCase().replace(/\\/g, '/');
+
+  if (norm.includes('carrusel 1')) return `carrusel-1-${rawStem || assetSeq}${ext}`;
+  if (norm.includes('carrusel 2')) return `carrusel-2-${rawStem || assetSeq}${ext}`;
+  if (norm.includes('carrusel 3')) return `carrusel-3-${rawStem || assetSeq}${ext}`;
+
+  if (norm.includes('ebook 1')) return `ebook-1-${rawStem || assetSeq}${ext}`;
+  if (norm.includes('ebook 2')) return `ebook-2-${rawStem || assetSeq}${ext}`;
+
+  if (norm.includes('branding 1/flayers')) return `flayers-fase-1-${rawStem || assetSeq}${ext}`;
+  if (norm.includes('branding 2/flayers')) return `flayers-fase-2-${rawStem || assetSeq}${ext}`;
+
+  if (norm.includes('branding 1/menus/menu 1')) return `menu-fase-1-carta-1-${rawStem || assetSeq}${ext}`;
+  if (norm.includes('branding 1/menus/menu 2')) return `menu-fase-1-carta-2-${rawStem || assetSeq}${ext}`;
+  if (norm.includes('branding 2/menus/menu 1')) return `menu-fase-2-carta-1-${rawStem || assetSeq}${ext}`;
+  if (norm.includes('branding 2/menus/menu 2')) return `menu-fase-2-carta-2-${rawStem || assetSeq}${ext}`;
+
+  if (norm.includes('nails pastel flyers')) return `flyers-${rawStem || assetSeq}${ext}`;
+  if (norm.includes('nails pastel logo')) return `logo-${rawStem || assetSeq}${ext}`;
+
+  const lastPart = slugify(path.basename(subDirRel));
+  return `${lastPart}-${rawStem || assetSeq}${ext}`;
+}
+
 async function syncProjects() {
   console.log('\n======================================================');
-  console.log('🚀 [sync-projects] Iniciando reestructuración total...');
-  console.log('   - Paradigma: Proyectos especializados por subcarpeta');
+  console.log('🚀 [sync-projects] Sincronización precisa y deduplicación...');
+  console.log('   - Separación estricta de Branding 1, Branding 2 y Menús');
   console.log('   - Deduplicación estricta por hash SHA-256');
   console.log('======================================================\n');
 
@@ -272,12 +326,11 @@ async function syncProjects() {
     return;
   }
 
-  // Limpiar destino en public/projects
   fs.mkdirSync(PUBLIC_PROJECTS_DIR, { recursive: true });
   fs.mkdirSync(DATA_DIR, { recursive: true });
 
   const finalProjects = [];
-  const globalSeenHashes = new Map(); // hash -> targetPath para deduplicación
+  const globalSeenHashes = new Map();
   let totalOptimized = 0;
   let totalCopied = 0;
   let totalIgnoredDuplicates = 0;
@@ -287,15 +340,18 @@ async function syncProjects() {
   for (const def of SPECIALIZED_PROJECT_DEFS) {
     uniqueClients.add(def.clientId);
     const targetProjectDir = path.join(PUBLIC_PROJECTS_DIR, def.id);
+    fs.rmSync(targetProjectDir, { recursive: true, force: true });
     fs.mkdirSync(targetProjectDir, { recursive: true });
 
     const assets = [];
+    const usedNamesInProject = new Set();
     let assetSeq = 1;
 
     for (const subDirRel of def.scanDirs) {
       const fullSubDirPath = path.join(SOURCE_DIR, subDirRel);
       if (!fs.existsSync(fullSubDirPath)) continue;
 
+      // Si es un directorio, leer archivos que están directamente en él (no recursivo en carpetas de nivel superior para evitar tomar subcarpetas de menús en branding)
       const entries = fs.readdirSync(fullSubDirPath, { withFileTypes: true });
       for (const entry of entries) {
         if (!entry.isFile()) continue;
@@ -313,14 +369,19 @@ async function syncProjects() {
         globalSeenHashes.set(`${def.id}-${hash}`, true);
 
         const isVideo = ext === '.mp4';
-        const fileStem = slugify(path.basename(entry.name, ext));
-        const cleanFileName = `${fileStem || assetSeq}${ext}`;
+        const rawStem = slugify(path.basename(entry.name, ext));
+
+        let cleanFileName = getCleanAssetFileName(subDirRel, rawStem, ext, assetSeq, def.scanDirs.length);
+        if (usedNamesInProject.has(cleanFileName)) {
+          cleanFileName = `${path.basename(cleanFileName, ext)}-${assetSeq}${ext}`;
+        }
+        usedNamesInProject.add(cleanFileName);
+
         const targetPath = path.join(targetProjectDir, cleanFileName);
 
-        // Si tenemos Sharp y es imagen, convertir a WebP
         let finalRelativePath = `/projects/${def.id}/${cleanFileName}`;
         if (!isVideo && sharp && ext !== '.webp') {
-          const webpName = `${fileStem || assetSeq}.webp`;
+          const webpName = `${path.basename(cleanFileName, ext)}.webp`;
           const webpPath = path.join(targetProjectDir, webpName);
           if (!fs.existsSync(webpPath)) {
             try {
@@ -339,15 +400,15 @@ async function syncProjects() {
           }
         }
 
-        const groupName = path.basename(path.dirname(sourceFilePath));
+        const isEbook = def.category === 'ebooks' || def.category === 'carruseles';
+        const assetLabel = isVideo ? `Video ${assetSeq}` : isEbook ? `Página ${assetSeq}` : `Pieza ${assetSeq}`;
 
         assets.push({
           id: `${def.id}-asset-${assetSeq}`,
-          title: `${def.title} — ${path.basename(entry.name, ext)}`,
+          title: `${def.title} — ${assetLabel}`,
           assetPath: finalRelativePath.replace(/\\/g, '/'),
           mediaType: isVideo ? 'video' : 'image',
           aspectRatio: def.aspectRatio,
-          group: groupName !== path.basename(subDirRel) ? groupName : undefined,
         });
 
         assetSeq++;
@@ -387,10 +448,10 @@ async function syncProjects() {
     });
   }
 
-  // Guardar projects.json
+  // Guardar data/projects.json
   fs.writeFileSync(PROJECTS_JSON, JSON.stringify(finalProjects, null, 2), 'utf-8');
 
-  // Guardar stats.json
+  // Guardar data/stats.json
   const stats = {
     totalProjects: finalProjects.length,
     totalDeliverables: totalDeliverablesCount,
@@ -403,9 +464,7 @@ async function syncProjects() {
   console.log(`   - Tarjetas de Proyectos Especializados: ${finalProjects.length}`);
   console.log(`   - Entregables únicos procesados: ${totalDeliverablesCount}`);
   console.log(`   - Marcas / Clientes únicos: ${uniqueClients.size}`);
-  console.log(`   - Duplicados eliminados por hash: ${totalIgnoredDuplicates}`);
-  console.log(`   - Archivos optimizados: ${totalOptimized}`);
-  console.log(`   - Archivos y videos transferidos: ${totalCopied}`);
+  console.log(`   - Duplicados ignorados por hash: ${totalIgnoredDuplicates}`);
   console.log(`   - Guardado en: ${PROJECTS_JSON}`);
   console.log(`   - Métricas en: ${STATS_JSON}\n`);
 }

@@ -15,21 +15,21 @@
     "assets": [
       {
         "id": "axis-pro-videos-asset-1",
-        "title": "Axis Pro — Videos Demostrativos & Comerciales — 1",
+        "title": "Axis Pro — Videos Demostrativos & Comerciales — Video 1",
         "assetPath": "/projects/axis-pro-videos/1.mp4",
         "mediaType": "video",
         "aspectRatio": "16:9"
       },
       {
         "id": "axis-pro-videos-asset-2",
-        "title": "Axis Pro — Videos Demostrativos & Comerciales — 2",
+        "title": "Axis Pro — Videos Demostrativos & Comerciales — Video 2",
         "assetPath": "/projects/axis-pro-videos/2.mp4",
         "mediaType": "video",
         "aspectRatio": "16:9"
       },
       {
         "id": "axis-pro-videos-asset-3",
-        "title": "Axis Pro — Videos Demostrativos & Comerciales — 3",
+        "title": "Axis Pro — Videos Demostrativos & Comerciales — Video 3",
         "assetPath": "/projects/axis-pro-videos/3.mp4",
         "mediaType": "video",
         "aspectRatio": "16:9"
@@ -66,132 +66,132 @@
     "summary": "Secuencias informativas de diapositivas modulares con alto valor didáctico y diseño optimizado para guardados y compartidos.",
     "challenge": "Sintetizar información técnica densa en láminas visualmente digeribles para redes sociales.",
     "solution": "Diagramación paso a paso con jerarquía tipográfica, contrastes lumínicos e iconografía personalizada.",
-    "coverAsset": "/projects/axis-pro-carruseles/1.png",
+    "coverAsset": "/projects/axis-pro-carruseles/carrusel-1-1.png",
     "coverMediaType": "image",
     "assets": [
       {
         "id": "axis-pro-carruseles-asset-1",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 1",
-        "assetPath": "/projects/axis-pro-carruseles/1.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 1",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-1.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-2",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 2",
-        "assetPath": "/projects/axis-pro-carruseles/2.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 2",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-2.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-3",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 3",
-        "assetPath": "/projects/axis-pro-carruseles/3.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 3",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-3.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-4",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 4",
-        "assetPath": "/projects/axis-pro-carruseles/4.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 4",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-4.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-5",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 5",
-        "assetPath": "/projects/axis-pro-carruseles/5.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 5",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-5.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-6",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 6",
-        "assetPath": "/projects/axis-pro-carruseles/6.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 6",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-6.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-7",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 1",
-        "assetPath": "/projects/axis-pro-carruseles/1.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 7",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-1.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-8",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 2",
-        "assetPath": "/projects/axis-pro-carruseles/2.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 8",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-2.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-9",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 3",
-        "assetPath": "/projects/axis-pro-carruseles/3.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 9",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-3.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-10",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 4",
-        "assetPath": "/projects/axis-pro-carruseles/4.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 10",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-4.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-11",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 5",
-        "assetPath": "/projects/axis-pro-carruseles/5.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 11",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-5.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-12",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 6",
-        "assetPath": "/projects/axis-pro-carruseles/6.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 12",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-6.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-13",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 1",
-        "assetPath": "/projects/axis-pro-carruseles/1.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 13",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-1.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-14",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 2",
-        "assetPath": "/projects/axis-pro-carruseles/2.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 14",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-2.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-15",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 3",
-        "assetPath": "/projects/axis-pro-carruseles/3.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 15",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-3.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-16",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 4",
-        "assetPath": "/projects/axis-pro-carruseles/4.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 16",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-4.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-17",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 5",
-        "assetPath": "/projects/axis-pro-carruseles/5.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 17",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-5.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "axis-pro-carruseles-asset-18",
-        "title": "Axis Pro — Carruseles Educativos para Instagram — 6",
-        "assetPath": "/projects/axis-pro-carruseles/6.png",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 18",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-6.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       }
@@ -227,153 +227,153 @@
     "summary": "Diseño y maquetación de guías digitales completas (Ebook 1 y Ebook 2) estructuradas página a página con acabado editorial prémium.",
     "challenge": "Crear un lead magnet de alto valor percibido que refleje autoridad tecnológica en el mercado anglosajón.",
     "solution": "Composición editorial limpia, balance de espacios en blanco y diagramación de más de 20 páginas especializadas.",
-    "coverAsset": "/projects/axis-pro-ebooks/1.png",
+    "coverAsset": "/projects/axis-pro-ebooks/ebook-1-1.png",
     "coverMediaType": "image",
     "assets": [
       {
         "id": "axis-pro-ebooks-asset-1",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 1",
-        "assetPath": "/projects/axis-pro-ebooks/1.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 1",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-1.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-2",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 10",
-        "assetPath": "/projects/axis-pro-ebooks/10.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 2",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-10.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-3",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 11",
-        "assetPath": "/projects/axis-pro-ebooks/11.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 3",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-11.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-4",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 2",
-        "assetPath": "/projects/axis-pro-ebooks/2.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 4",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-2.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-5",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 3",
-        "assetPath": "/projects/axis-pro-ebooks/3.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 5",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-3.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-6",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 4",
-        "assetPath": "/projects/axis-pro-ebooks/4.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 6",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-4.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-7",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 5",
-        "assetPath": "/projects/axis-pro-ebooks/5.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 7",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-5.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-8",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 6",
-        "assetPath": "/projects/axis-pro-ebooks/6.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 8",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-6.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-9",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 7",
-        "assetPath": "/projects/axis-pro-ebooks/7.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 9",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-7.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-10",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 8",
-        "assetPath": "/projects/axis-pro-ebooks/8.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 10",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-8.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-11",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 9",
-        "assetPath": "/projects/axis-pro-ebooks/9.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 11",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-9.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-12",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 1",
-        "assetPath": "/projects/axis-pro-ebooks/1.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 12",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-1.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-13",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 10",
-        "assetPath": "/projects/axis-pro-ebooks/10.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 13",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-10.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-14",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 2",
-        "assetPath": "/projects/axis-pro-ebooks/2.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 14",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-2.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-15",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 3",
-        "assetPath": "/projects/axis-pro-ebooks/3.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 15",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-3.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-16",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 4",
-        "assetPath": "/projects/axis-pro-ebooks/4.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 16",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-4.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-17",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 5",
-        "assetPath": "/projects/axis-pro-ebooks/5.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 17",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-5.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-18",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 6",
-        "assetPath": "/projects/axis-pro-ebooks/6.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 18",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-6.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-19",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 7",
-        "assetPath": "/projects/axis-pro-ebooks/7.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 19",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-7.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-20",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 8",
-        "assetPath": "/projects/axis-pro-ebooks/8.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 20",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-8.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "axis-pro-ebooks-asset-21",
-        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — 9",
-        "assetPath": "/projects/axis-pro-ebooks/9.png",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 21",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-9.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       }
@@ -414,21 +414,21 @@
     "assets": [
       {
         "id": "axis-pro-miniaturas-asset-1",
-        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — 1",
+        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — Pieza 1",
         "assetPath": "/projects/axis-pro-miniaturas/1.png",
         "mediaType": "image",
         "aspectRatio": "16:9"
       },
       {
         "id": "axis-pro-miniaturas-asset-2",
-        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — 2",
+        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — Pieza 2",
         "assetPath": "/projects/axis-pro-miniaturas/2.png",
         "mediaType": "image",
         "aspectRatio": "16:9"
       },
       {
         "id": "axis-pro-miniaturas-asset-3",
-        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — 3",
+        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — Pieza 3",
         "assetPath": "/projects/axis-pro-miniaturas/3.png",
         "mediaType": "image",
         "aspectRatio": "16:9"
@@ -470,21 +470,21 @@
     "assets": [
       {
         "id": "allan-zoo-miniaturas-asset-1",
-        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — 1",
+        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — Pieza 1",
         "assetPath": "/projects/allan-zoo-miniaturas/1.png",
         "mediaType": "image",
         "aspectRatio": "16:9"
       },
       {
         "id": "allan-zoo-miniaturas-asset-2",
-        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — 2",
+        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — Pieza 2",
         "assetPath": "/projects/allan-zoo-miniaturas/2.png",
         "mediaType": "image",
         "aspectRatio": "16:9"
       },
       {
         "id": "allan-zoo-miniaturas-asset-3",
-        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — 3",
+        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — Pieza 3",
         "assetPath": "/projects/allan-zoo-miniaturas/3.png",
         "mediaType": "image",
         "aspectRatio": "16:9"
@@ -527,21 +527,21 @@
     "assets": [
       {
         "id": "barberia-the-king-videos-asset-1",
-        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — video 1",
+        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — Video 1",
         "assetPath": "/projects/barberia-the-king-videos/video-1.mp4",
         "mediaType": "video",
         "aspectRatio": "9:16"
       },
       {
         "id": "barberia-the-king-videos-asset-2",
-        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — video 2",
+        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — Video 2",
         "assetPath": "/projects/barberia-the-king-videos/video-2.mp4",
         "mediaType": "video",
         "aspectRatio": "9:16"
       },
       {
         "id": "barberia-the-king-videos-asset-3",
-        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — VIDEO 3",
+        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — Video 3",
         "assetPath": "/projects/barberia-the-king-videos/video-3.mp4",
         "mediaType": "video",
         "aspectRatio": "9:16"
@@ -583,14 +583,14 @@
     "assets": [
       {
         "id": "barberia-the-king-flyers-asset-1",
-        "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1 — 1",
+        "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1 — Pieza 1",
         "assetPath": "/projects/barberia-the-king-flyers/1.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "barberia-the-king-flyers-asset-2",
-        "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1 — 2",
+        "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1 — Pieza 2",
         "assetPath": "/projects/barberia-the-king-flyers/2.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
@@ -618,29 +618,141 @@
     "featured": true
   },
   {
-    "id": "arepa-secreta-branding",
+    "id": "arepa-secreta-branding-1",
     "clientId": "arepa-secreta",
     "clientName": "Arepa Secreta",
-    "title": "Arepa Secreta — Identidad de Marca & Sistema de Empaques",
+    "title": "Arepa Secreta — Identidad Visual & Concepto (Fase 1)",
     "category": "branding",
     "categoryLabel": "Branding & Identidad",
-    "summary": "Desarrollo de identidad visual comercial (Branding 1 y 2), aplicaciones en bolsas térmicas, papel antigrasa y papelería.",
-    "challenge": "El negocio operaba sin un identificador unificado en los pedidos a domicilio.",
-    "solution": "Isotipo artesanal minimalista en papel kraft con contrastes cálidos que generan apetito y recordación.",
-    "coverAsset": "/projects/arepa-secreta-branding/branding-1.png",
+    "summary": "Construcción del concepto gráfico primario, imagotipo artesanal del fogón y el maíz, y directrices de color cálido.",
+    "challenge": "Diseñar desde cero una marca que transmita tradición culinaria venezolana con presentación contemporánea.",
+    "solution": "Desarrollo del imagotipo central, texturas en papel kraft y primeros lineamientos de identidad visual.",
+    "coverAsset": "/projects/arepa-secreta-branding-1/branding-1.png",
     "coverMediaType": "image",
     "assets": [
       {
-        "id": "arepa-secreta-branding-asset-1",
-        "title": "Arepa Secreta — Identidad de Marca & Sistema de Empaques — branding 1",
-        "assetPath": "/projects/arepa-secreta-branding/branding-1.png",
+        "id": "arepa-secreta-branding-1-asset-1",
+        "title": "Arepa Secreta — Identidad Visual & Concepto (Fase 1) — Pieza 1",
+        "assetPath": "/projects/arepa-secreta-branding-1/branding-1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Maíz Dorado",
+        "hex": "#F59E0B"
+      },
+      {
+        "name": "Terracota Criollo",
+        "hex": "#DC2626"
+      },
+      {
+        "name": "Carbón Bistro",
+        "hex": "#18181B"
+      },
+      {
+        "name": "Blanco Crema",
+        "hex": "#FAFAF9"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "arepa-secreta-branding-2",
+    "clientId": "arepa-secreta",
+    "clientName": "Arepa Secreta",
+    "title": "Arepa Secreta — Sistema de Marca & Empaques (Fase 2)",
+    "category": "branding",
+    "categoryLabel": "Branding & Identidad",
+    "summary": "Evolución de identidad, sistema de packaging para delivery (bolsas térmicas, papel antigrasa) y papelería comercial.",
+    "challenge": "Extender la identidad gráfica al packaging de domicilio manteniendo la comida caliente y la marca reconocible.",
+    "solution": "Diseño modular de empaques, bolsas con mensajes de marca y etiquetas adhesivas de seguridad.",
+    "coverAsset": "/projects/arepa-secreta-branding-2/branding-2.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "arepa-secreta-branding-2-asset-1",
+        "title": "Arepa Secreta — Sistema de Marca & Empaques (Fase 2) — Pieza 1",
+        "assetPath": "/projects/arepa-secreta-branding-2/branding-2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Maíz Dorado",
+        "hex": "#F59E0B"
+      },
+      {
+        "name": "Terracota Criollo",
+        "hex": "#DC2626"
+      },
+      {
+        "name": "Carbón Bistro",
+        "hex": "#18181B"
+      },
+      {
+        "name": "Blanco Crema",
+        "hex": "#FAFAF9"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "arepa-secreta-menus",
+    "clientId": "arepa-secreta",
+    "clientName": "Arepa Secreta",
+    "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR",
+    "category": "menus",
+    "categoryLabel": "Menús Gastronómicos",
+    "summary": "Diseño y diagramación de cartas completas (Menú 1 y Menú 2) estructurando rellenos tradicionales, bebidas y combos.",
+    "challenge": "La carta original saturaba a los clientes y dificultaba la rotación rápida de mesas en horas pico.",
+    "solution": "Diagramación en tres niveles de lectura, fotografía apetitosa y versión digital ultraligera para lectura por código QR.",
+    "coverAsset": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-1.png",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "arepa-secreta-menus-asset-1",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 1",
+        "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-1.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
-        "id": "arepa-secreta-branding-asset-2",
-        "title": "Arepa Secreta — Identidad de Marca & Sistema de Empaques — branding 2",
-        "assetPath": "/projects/arepa-secreta-branding/branding-2.png",
+        "id": "arepa-secreta-menus-asset-2",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 2",
+        "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-menus-asset-3",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 3",
+        "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-2-1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-menus-asset-4",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 4",
+        "assetPath": "/projects/arepa-secreta-menus/menu-fase-2-carta-1-1.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-menus-asset-5",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 5",
+        "assetPath": "/projects/arepa-secreta-menus/menu-fase-2-carta-1-2.png",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-menus-asset-6",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 6",
+        "assetPath": "/projects/arepa-secreta-menus/menu-fase-2-carta-2-3.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       }
@@ -676,48 +788,48 @@
     "summary": "Piezas publicitarias concebidas para WhatsApp Status e Instagram Stories para promocionar combos familiares y nocturnos.",
     "challenge": "Comunicar promociones diarias sin depender de explicaciones largas en mensajes de texto.",
     "solution": "Composiciones con producto en primer plano, precios destacados y llamados directos a pedir por WhatsApp.",
-    "coverAsset": "/projects/arepa-secreta-flyers/1.png",
+    "coverAsset": "/projects/arepa-secreta-flyers/flayers-fase-1-1.png",
     "coverMediaType": "image",
     "assets": [
       {
         "id": "arepa-secreta-flyers-asset-1",
-        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 1",
-        "assetPath": "/projects/arepa-secreta-flyers/1.png",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 1",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-1-1.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "arepa-secreta-flyers-asset-2",
-        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 2",
-        "assetPath": "/projects/arepa-secreta-flyers/2.png",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 2",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-1-2.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "arepa-secreta-flyers-asset-3",
-        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 3",
-        "assetPath": "/projects/arepa-secreta-flyers/3.png",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 3",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-1-3.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "arepa-secreta-flyers-asset-4",
-        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 1",
-        "assetPath": "/projects/arepa-secreta-flyers/1.png",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 4",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-2-1.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "arepa-secreta-flyers-asset-5",
-        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 2",
-        "assetPath": "/projects/arepa-secreta-flyers/2.png",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 5",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-2-2.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "arepa-secreta-flyers-asset-6",
-        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — 3",
-        "assetPath": "/projects/arepa-secreta-flyers/3.png",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 6",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-2-3.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       }
@@ -758,42 +870,42 @@
     "assets": [
       {
         "id": "taqueria-df-flyers-asset-1",
-        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 1",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 1",
         "assetPath": "/projects/taqueria-df-flyers/1.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "taqueria-df-flyers-asset-2",
-        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 2",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 2",
         "assetPath": "/projects/taqueria-df-flyers/2.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "taqueria-df-flyers-asset-3",
-        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 3",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 3",
         "assetPath": "/projects/taqueria-df-flyers/3.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "taqueria-df-flyers-asset-4",
-        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 4",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 4",
         "assetPath": "/projects/taqueria-df-flyers/4.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "taqueria-df-flyers-asset-5",
-        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 5",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 5",
         "assetPath": "/projects/taqueria-df-flyers/5.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
         "id": "taqueria-df-flyers-asset-6",
-        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — 6",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 6",
         "assetPath": "/projects/taqueria-df-flyers/6.png",
         "mediaType": "image",
         "aspectRatio": "3:4"
@@ -830,27 +942,27 @@
     "summary": "Logotipo distintivo en tonos pasteles y catálogo comercial de servicios para manicura, pedicura y spa.",
     "challenge": "Negocio nuevo sin identidad diferenciada en un sector saturado de gráficas genéricas.",
     "solution": "Sistema visual suave y limpio con tarjetas de precios que facilitan el agendamiento rápido por redes sociales.",
-    "coverAsset": "/projects/nails-pastel-branding/nails-pastel.png",
+    "coverAsset": "/projects/nails-pastel-branding/logo-nails-pastel.png",
     "coverMediaType": "image",
     "assets": [
       {
         "id": "nails-pastel-branding-asset-1",
-        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — Nails Pastel",
-        "assetPath": "/projects/nails-pastel-branding/nails-pastel.png",
+        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — Pieza 1",
+        "assetPath": "/projects/nails-pastel-branding/logo-nails-pastel.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "nails-pastel-branding-asset-2",
-        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — 1",
-        "assetPath": "/projects/nails-pastel-branding/1.png",
+        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — Pieza 2",
+        "assetPath": "/projects/nails-pastel-branding/flyers-1.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       },
       {
         "id": "nails-pastel-branding-asset-3",
-        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — 2",
-        "assetPath": "/projects/nails-pastel-branding/2.png",
+        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — Pieza 3",
+        "assetPath": "/projects/nails-pastel-branding/flyers-2.png",
         "mediaType": "image",
         "aspectRatio": "1:1"
       }
@@ -880,19 +992,19 @@
     "id": "nails-pastel-video",
     "clientId": "nails-pastel",
     "clientName": "Nails Pastel",
-    "title": "Nails Pastel — Video Promocional de Tratamientos",
+    "title": "Nails Pastel — Video Promocional de Tratamientos (9:16)",
     "category": "videos",
     "categoryLabel": "Videos Comerciales & Demo",
     "summary": "Video comercial con tomas de detalle de acabados en uñas y ambiente relajante para captación de clientas.",
     "challenge": "Transmitir la calidad y el acabado minucioso de las sesiones estéticas a través de medios digitales.",
-    "solution": "Edición en video con música envolvente y primeros planos que generan deseo y reservas inmediatas.",
+    "solution": "Edición en video vertical con música envolvente y primeros planos que generan deseo y reservas inmediatas.",
     "coverAsset": "/projects/nails-pastel-video/video-promocional.mp4",
     "coverMediaType": "video",
     "previewVideoUrl": "/projects/nails-pastel-video/video-promocional.mp4",
     "assets": [
       {
         "id": "nails-pastel-video-asset-1",
-        "title": "Nails Pastel — Video Promocional de Tratamientos — video promocional",
+        "title": "Nails Pastel — Video Promocional de Tratamientos (9:16) — Video 1",
         "assetPath": "/projects/nails-pastel-video/video-promocional.mp4",
         "mediaType": "video",
         "aspectRatio": "9:16"

@@ -109,7 +109,18 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
               &bull; {project.clientName}
             </span>
             <span className="text-xs font-mono text-[#A1A1AA] bg-[#1C1C1F] px-2 py-0.5 rounded border border-[#2A2A2E]">
-              {assets.length} {isVideoMode ? "videos" : isEbookMode ? "páginas" : "piezas"}
+              {assets.length}{" "}
+              {isVideoMode
+                ? assets.length === 1
+                  ? "video"
+                  : "videos"
+                : isEbookMode
+                ? assets.length === 1
+                  ? "página"
+                  : "páginas"
+                : assets.length === 1
+                ? "pieza"
+                : "piezas"}
             </span>
           </div>
 
@@ -147,15 +158,15 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                   : "h-[400px] sm:h-[560px]"
               }`}
             >
-              {currentAsset?.mediaType === "video" ? (
+              {currentAsset?.mediaType === "video" || currentAsset?.assetPath?.endsWith(".mp4") ? (
                 <video
-                  key={currentAsset.assetPath}
-                  src={currentAsset.assetPath}
+                  key={currentAsset?.assetPath}
+                  src={currentAsset?.assetPath}
                   controls
                   autoPlay
                   playsInline
                   className={`max-h-full rounded-lg object-contain ${
-                    currentAsset.aspectRatio === "9:16" ? "max-w-[340px]" : "max-w-full"
+                    currentAsset?.aspectRatio === "9:16" ? "max-w-[340px]" : "max-w-full"
                   }`}
                 />
               ) : (
