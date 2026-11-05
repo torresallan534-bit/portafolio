@@ -1,6 +1,5 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
 export const alt = "Allan Torres — Productor de Contenido Visual & Multimedia";
 export const size = {
   width: 1200,
@@ -8,7 +7,7 @@ export const size = {
 };
 export const contentType = "image/png";
 
-export default async function Image() {
+export default function Image() {
   return new ImageResponse(
     (
       <div
@@ -21,9 +20,8 @@ export default async function Image() {
           padding: "64px 80px",
           backgroundColor: "#09090B",
           backgroundImage:
-            "radial-gradient(circle at 15% 20%, rgba(245, 158, 11, 0.12) 0%, transparent 40%), radial-gradient(circle at 85% 80%, rgba(24, 24, 27, 0.6) 0%, transparent 50%)",
+            "linear-gradient(135deg, #09090B 0%, #111114 55%, #18181B 100%)",
           color: "#FAFAFA",
-          fontFamily: "system-ui, -apple-system, sans-serif",
         }}
       >
         {/* Top Header Strip */}
@@ -60,6 +58,8 @@ export default async function Image() {
             </div>
             <div
               style={{
+                display: "flex",
+                alignItems: "center",
                 fontSize: "20px",
                 letterSpacing: "0.05em",
                 textTransform: "uppercase",
@@ -67,7 +67,7 @@ export default async function Image() {
                 fontWeight: 600,
               }}
             >
-              Allan Torres &bull; Portafolio 2025–2026
+              Allan Torres • Portafolio 2025–2026
             </div>
           </div>
 
@@ -76,7 +76,7 @@ export default async function Image() {
               display: "flex",
               alignItems: "center",
               gap: "10px",
-              padding: "8px 20px",
+              padding: "10px 22px",
               borderRadius: "9999px",
               backgroundColor: "rgba(255, 255, 255, 0.05)",
               border: "1px solid rgba(255, 255, 255, 0.1)",
@@ -103,33 +103,35 @@ export default async function Image() {
             display: "flex",
             flexDirection: "column",
             gap: "20px",
-            maxWidth: "960px",
+            maxWidth: "980px",
           }}
         >
-          <h1
+          <div
             style={{
-              fontSize: "58px",
+              display: "flex",
+              fontSize: "56px",
               fontWeight: 900,
               letterSpacing: "-0.03em",
               lineHeight: 1.1,
-              margin: 0,
               color: "#FAFAFA",
             }}
           >
-            Productor de Contenido Visual & Multimedia
-          </h1>
+            Productor de Contenido Visual &amp; Multimedia
+          </div>
 
-          <p
+          <div
             style={{
-              fontSize: "26px",
+              display: "flex",
+              fontSize: "24px",
               color: "#A1A1AA",
-              margin: 0,
-              lineHeight: 1.35,
+              lineHeight: 1.4,
               fontWeight: 400,
             }}
           >
-            Piezas comerciales de alto rendimiento y edición de video con entrega ágil para negocios y creadores digitales.
-          </p>
+            Diseño de piezas comerciales de alto rendimiento (menús, flyers,
+            identidad de marca) y edición de video con entrega ágil para
+            negocios y creadores digitales.
+          </div>
         </div>
 
         {/* Bottom Specialties & Stats Strip */}
@@ -151,8 +153,9 @@ export default async function Image() {
               fontWeight: 700,
             }}
           >
-            <span
+            <div
               style={{
+                display: "flex",
                 padding: "8px 18px",
                 borderRadius: "8px",
                 backgroundColor: "rgba(245, 158, 11, 0.15)",
@@ -161,9 +164,10 @@ export default async function Image() {
               }}
             >
               Videos Comerciales
-            </span>
-            <span
+            </div>
+            <div
               style={{
+                display: "flex",
                 padding: "8px 18px",
                 borderRadius: "8px",
                 backgroundColor: "rgba(255, 255, 255, 0.05)",
@@ -172,9 +176,10 @@ export default async function Image() {
               }}
             >
               Menús Gastronómicos
-            </span>
-            <span
+            </div>
+            <div
               style={{
+                display: "flex",
                 padding: "8px 18px",
                 borderRadius: "8px",
                 backgroundColor: "rgba(255, 255, 255, 0.05)",
@@ -182,10 +187,11 @@ export default async function Image() {
                 border: "1px solid rgba(255, 255, 255, 0.1)",
               }}
             >
-              Flyers & Promos
-            </span>
-            <span
+              Flyers &amp; Promos
+            </div>
+            <div
               style={{
+                display: "flex",
                 padding: "8px 18px",
                 borderRadius: "8px",
                 backgroundColor: "rgba(255, 255, 255, 0.05)",
@@ -194,7 +200,7 @@ export default async function Image() {
               }}
             >
               Identidad de Marca
-            </span>
+            </div>
           </div>
 
           <div
@@ -207,9 +213,9 @@ export default async function Image() {
               fontWeight: 600,
             }}
           >
-            <span>14 Proyectos</span>
-            <span>&bull;</span>
-            <span>77 Entregables Reales</span>
+            <div>14 Proyectos</div>
+            <div>•</div>
+            <div>77 Entregables Reales</div>
           </div>
         </div>
       </div>
