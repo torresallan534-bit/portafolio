@@ -94,27 +94,6 @@ export default function Hero() {
           </div>
         ))}
       </div>
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-3 text-[#71717A] hover:text-brand-telegram text-sm font-medium transition-colors"
-        >
-          <Send className="w-4 h-4" />
-          Telegram
-        </a>
-      </div>
-
-      {/* Stats dinámicas alimentadas desde data/stats.json */}
-      <div className="mt-16 pt-8 border-t border-border grid grid-cols-2 md:grid-cols-4 gap-8">
-        {heroStats.map((stat, i) => (
-          <div key={i}>
-            <span className="text-2xl sm:text-3xl font-display font-bold text-[#F5F5F7] tracking-tight">
-              {stat.value}
-            </span>
-            <span className="block text-xs text-[#71717A] mt-1 font-mono">
-              {stat.label}
-            </span>
-          </div>
-        ))}
-      </div>
     </section>
   );
 }

@@ -302,30 +302,6 @@ export default function ProjectGallery() {
           })}
         </div>
       )}
-                    {project.colorPalette && (
-                      <div className="flex items-center gap-1.5" title="Paleta de color">
-                        {project.colorPalette.slice(0, 4).map((c, i) => (
-                          <span
-                            key={i}
-                            className="w-3 h-3 rounded-full border border-[#2A2A2E]"
-                            style={{ backgroundColor: c.hex }}
-                            title={`${c.name} (${c.hex})`}
-                          />
-                        ))}
-                      </div>
-                    )}
-
-                    <div className="flex items-center gap-1 text-xs font-semibold text-[#71717A] group-hover:text-[#E8A023] ml-auto transition-colors">
-                      <span>Explorar</span>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                    </div>
-                  </div>
-                </div>
-              </article>
-            );
-          })}
-        </div>
-      )}
 
       {/* Modal Especializado */}
       <SpecializedModal

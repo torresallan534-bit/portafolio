@@ -131,32 +131,5 @@ export default function Navbar() {
         </div>
       )}
     </header>
-          <nav className="flex flex-col gap-1">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="px-3 py-2.5 text-[15px] text-[#A1A1AA] hover:text-[#F5F5F7] hover:bg-surface-elevated rounded-lg transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-            <div className="mt-3 pt-3 border-t border-border">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full py-2.5 rounded-lg bg-accent text-[#0A0A0B] font-semibold text-sm flex items-center justify-center gap-2 hover:bg-accent-hover transition-colors"
-              >
-                <MessageCircle className="w-4 h-4" />
-                Contactar por WhatsApp
-              </a>
-            </div>
-          </nav>
-        </div>
-      )}
-    </header>
   );
 }
