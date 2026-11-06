@@ -1,53 +1,47 @@
 import type { Metadata } from "next";
-import { Inter, Sora, JetBrains_Mono } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  weight: ["400", "500", "600"],
 });
 
-const sora = Sora({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-sora",
+  variable: "--font-space-grotesk",
   display: "swap",
-  weight: ["400", "600", "700", "800"],
-});
-
-const jetbrains = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains",
-  display: "swap",
-  weight: ["400", "500"],
+  weight: ["500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Allan Torres | Productor de Contenido Visual & Multimedia",
+  title: "Panda Haus | Diseño Visual, Menús Digitales y Landing Pages",
   description:
-    "Productor de contenido visual y multimedia. Especializado en diseño de piezas comerciales (menús, flyers, identidad para negocios) y edición de video enfocada en resultados claros y entrega ágil.",
+    "Estudio de diseño visual y desarrollo de páginas web comerciales para restaurantes, marcas y negocios locales. Ayudamos a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.",
   keywords: [
-    "Allan Torres",
-    "Productor de Contenido Visual",
-    "Multimedia",
-    "Edición de Video",
-    "Miniaturas YouTube",
-    "Diseño de Piezas Comerciales",
-    "Menús Gastronómicos",
-    "Flyers Publicitarios",
-    "Identidad para Negocios",
-    "Axis Pro USA",
-    "Allan Zoo",
+    "Panda Haus",
+    "Estudio de Diseño Visual",
+    "Desarrollo Web Comercial",
+    "Menús Digitales QR",
+    "Flyers para Restaurantes",
+    "Landing Pages de Conversión",
+    "Identidad de Marca",
+    "Branding para Negocios",
+    "Diseño Gastronómico",
+    "Bogotá",
+    "Colombia",
   ],
-  authors: [{ name: "Allan Torres" }],
-  creator: "Allan Torres",
-  metadataBase: new URL("https://portafolio-mu-nine-11.vercel.app"),
+  authors: [{ name: "Panda Haus" }],
+  creator: "Panda Haus",
+  metadataBase: new URL("https://pandahaus.co"),
   openGraph: {
-    title: "Allan Torres | Productor de Contenido Visual & Multimedia",
+    title: "Panda Haus | Diseño Visual, Menús Digitales y Landing Pages",
     description:
-      "Productor de contenido visual y multimedia. Especializado en diseño de piezas comerciales (menús, flyers, identidad para negocios) y edición de video enfocada en resultados claros y entrega ágil.",
-    url: "https://portafolio-mu-nine-11.vercel.app",
-    siteName: "Allan Torres Portfolio",
+      "Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.",
+    url: "https://pandahaus.co",
+    siteName: "Panda Haus",
     locale: "es_CO",
     type: "website",
     images: [
@@ -55,17 +49,16 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Allan Torres - Productor de Contenido Visual y Multimedia",
+        alt: "Panda Haus - Estudio de Diseño Visual y Web Comercial",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Allan Torres | Productor de Contenido Visual & Multimedia",
+    title: "Panda Haus | Diseño Visual, Menús Digitales y Landing Pages",
     description:
-      "Productor de contenido visual y multimedia. Especializado en diseño de piezas comerciales (menús, flyers, identidad para negocios) y edición de video enfocada en resultados claros y entrega ágil.",
+      "Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.",
     images: ["/og-image.png"],
-    creator: "@torresallan",
   },
 };
 
@@ -77,9 +70,9 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`dark ${inter.variable} ${sora.variable} ${jetbrains.variable}`}
+      className={`dark ${inter.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="min-h-screen bg-background text-[#F5F5F7] antialiased font-sans">
+      <body className="min-h-screen bg-[#0D0D0D] text-[#F2F4F3] antialiased font-sans selection:bg-[#3DDC97] selection:text-[#0D0D0D]">
         {children}
       </body>
     </html>

@@ -3,25 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --foreground: #FAFAFA;
-  --background: #09090B;
+  --foreground: #F2F4F3;
+  --background: #0D0D0D;
 }
 
 html {
   scroll-behavior: smooth;
-  background-color: #09090B;
-  color: #FAFAFA;
+  background-color: #0D0D0D;
+  color: #F2F4F3;
   color-scheme: dark;
 }
 
 body {
   overflow-x: hidden;
-  background-color: #09090B;
-  color: #FAFAFA;
+  background-color: #0D0D0D;
+  color: #F2F4F3;
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-/* Ambient glow para tarjetas de proyectos */
+/* Ambient glow para tarjetas de proyectos Panda Haus */
 .project-card-glow {
   transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
               box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
@@ -29,32 +29,32 @@ body {
 }
 
 .project-card-glow:hover {
-  border-color: color-mix(in srgb, var(--project-accent, #F59E0B) 50%, rgba(255, 255, 255, 0.15));
-  box-shadow: 0 12px 35px -10px color-mix(in srgb, var(--project-accent, #F59E0B) 25%, transparent);
+  border-color: color-mix(in srgb, var(--project-accent, #3DDC97) 50%, rgba(61, 220, 151, 0.3));
+  box-shadow: 0 14px 40px -10px color-mix(in srgb, var(--project-accent, #3DDC97) 25%, transparent);
 }
 
-/* Clean scrollbar */
+/* Scrollbar corporativo Panda Haus */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #09090B;
+  background: #0D0D0D;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
+  background: #2B2F33;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.22);
+  background: #3DDC97;
 }
 
 /* Selection */
 ::selection {
-  background: rgba(245, 158, 11, 0.25);
-  color: #FBBF24;
+  background: #3DDC97;
+  color: #0D0D0D;
 }
 
 /* Masonry column break avoidance */

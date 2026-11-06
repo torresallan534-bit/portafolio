@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Allan Torres — Productor de Contenido Visual & Multimedia";
+export const alt = "Panda Haus — Estudio de Diseño Visual & Web Comercial";
 export const size = {
   width: 1200,
   height: 630,
@@ -18,10 +18,11 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "64px 80px",
-          backgroundColor: "#09090B",
+          backgroundColor: "#0D0D0D",
           backgroundImage:
-            "linear-gradient(135deg, #09090B 0%, #111114 55%, #18181B 100%)",
-          color: "#FAFAFA",
+            "linear-gradient(135deg, #0D0D0D 0%, #16181A 55%, #2B2F33 100%)",
+          color: "#F2F4F3",
+          fontFamily: "sans-serif",
         }}
       >
         {/* Top Header Strip */}
@@ -37,37 +38,52 @@ export default function Image() {
             style={{
               display: "flex",
               alignItems: "center",
-              gap: "16px",
+              gap: "18px",
             }}
           >
             <div
               style={{
                 width: "48px",
                 height: "48px",
-                borderRadius: "12px",
-                backgroundColor: "#F59E0B",
+                borderRadius: "14px",
+                backgroundColor: "#3DDC97",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
                 fontWeight: 900,
                 fontSize: "24px",
-                color: "#09090B",
+                color: "#0D0D0D",
               }}
             >
-              AT
+              PH
             </div>
             <div
               style={{
                 display: "flex",
-                alignItems: "center",
-                fontSize: "20px",
-                letterSpacing: "0.05em",
-                textTransform: "uppercase",
-                color: "#A1A1AA",
-                fontWeight: 600,
+                flexDirection: "column",
               }}
             >
-              Allan Torres • Portafolio 2025–2026
+              <span
+                style={{
+                  fontSize: "24px",
+                  fontWeight: 800,
+                  color: "#FFFFFF",
+                  letterSpacing: "-0.02em",
+                }}
+              >
+                Panda Haus
+              </span>
+              <span
+                style={{
+                  fontSize: "14px",
+                  color: "#3DDC97",
+                  fontWeight: 600,
+                  letterSpacing: "0.05em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Estudio Visual &amp; Web Comercial
+              </span>
             </div>
           </div>
 
@@ -78,10 +94,10 @@ export default function Image() {
               gap: "10px",
               padding: "10px 22px",
               borderRadius: "9999px",
-              backgroundColor: "rgba(255, 255, 255, 0.05)",
-              border: "1px solid rgba(255, 255, 255, 0.1)",
+              backgroundColor: "rgba(61, 220, 151, 0.12)",
+              border: "1px solid rgba(61, 220, 151, 0.3)",
               fontSize: "15px",
-              color: "#10B981",
+              color: "#3DDC97",
               fontWeight: 600,
             }}
           >
@@ -90,10 +106,10 @@ export default function Image() {
                 width: "8px",
                 height: "8px",
                 borderRadius: "9999px",
-                backgroundColor: "#10B981",
+                backgroundColor: "#3DDC97",
               }}
             />
-            Disponible para Proyectos
+            Cupos Abiertos para Proyectos
           </div>
         </div>
 
@@ -109,39 +125,39 @@ export default function Image() {
           <div
             style={{
               display: "flex",
-              fontSize: "56px",
-              fontWeight: 900,
+              fontSize: "54px",
+              fontWeight: 800,
               letterSpacing: "-0.03em",
-              lineHeight: 1.1,
-              color: "#FAFAFA",
+              lineHeight: 1.15,
+              color: "#FFFFFF",
             }}
           >
-            Productor de Contenido Visual &amp; Multimedia
+            Diseño visual y páginas web que hacen destacar tu negocio.
           </div>
 
           <div
             style={{
               display: "flex",
-              fontSize: "24px",
-              color: "#A1A1AA",
-              lineHeight: 1.4,
+              fontSize: "22px",
+              color: "#F2F4F3",
+              opacity: 0.85,
+              lineHeight: 1.45,
               fontWeight: 400,
             }}
           >
-            Diseño de piezas comerciales de alto rendimiento (menús, flyers,
-            identidad de marca) y edición de video con entrega ágil para
-            negocios y creadores digitales.
+            Ayudamos a restaurantes, marcas y negocios locales a captar clientes
+            con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.
           </div>
         </div>
 
-        {/* Bottom Specialties & Stats Strip */}
+        {/* Bottom Specialties Strip */}
         <div
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             paddingTop: "28px",
-            borderTop: "1px solid rgba(255, 255, 255, 0.1)",
+            borderTop: "1px solid rgba(242, 244, 243, 0.1)",
             width: "100%",
           }}
         >
@@ -149,7 +165,7 @@ export default function Image() {
             style={{
               display: "flex",
               gap: "12px",
-              fontSize: "16px",
+              fontSize: "15px",
               fontWeight: 700,
             }}
           >
@@ -157,49 +173,49 @@ export default function Image() {
               style={{
                 display: "flex",
                 padding: "8px 18px",
-                borderRadius: "8px",
-                backgroundColor: "rgba(245, 158, 11, 0.15)",
-                color: "#F59E0B",
-                border: "1px solid rgba(245, 158, 11, 0.3)",
+                borderRadius: "10px",
+                backgroundColor: "rgba(61, 220, 151, 0.15)",
+                color: "#3DDC97",
+                border: "1px solid rgba(61, 220, 151, 0.35)",
               }}
             >
-              Videos Comerciales
+              Flyers &amp; Redes
             </div>
             <div
               style={{
                 display: "flex",
                 padding: "8px 18px",
-                borderRadius: "8px",
-                backgroundColor: "rgba(255, 255, 255, 0.05)",
-                color: "#FAFAFA",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderRadius: "10px",
+                backgroundColor: "rgba(43, 47, 51, 0.6)",
+                color: "#FFFFFF",
+                border: "1px solid rgba(242, 244, 243, 0.12)",
               }}
             >
-              Menús Gastronómicos
+              Menús &amp; Cartas QR
             </div>
             <div
               style={{
                 display: "flex",
                 padding: "8px 18px",
-                borderRadius: "8px",
-                backgroundColor: "rgba(255, 255, 255, 0.05)",
-                color: "#FAFAFA",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderRadius: "10px",
+                backgroundColor: "rgba(43, 47, 51, 0.6)",
+                color: "#FFFFFF",
+                border: "1px solid rgba(242, 244, 243, 0.12)",
               }}
             >
-              Flyers &amp; Promos
+              Landing Pages de Conversión
             </div>
             <div
               style={{
                 display: "flex",
                 padding: "8px 18px",
-                borderRadius: "8px",
-                backgroundColor: "rgba(255, 255, 255, 0.05)",
-                color: "#FAFAFA",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                borderRadius: "10px",
+                backgroundColor: "rgba(43, 47, 51, 0.6)",
+                color: "#FFFFFF",
+                border: "1px solid rgba(242, 244, 243, 0.12)",
               }}
             >
-              Identidad de Marca
+              Branding &amp; Identidad
             </div>
           </div>
 
@@ -208,14 +224,14 @@ export default function Image() {
               display: "flex",
               alignItems: "center",
               gap: "8px",
-              fontSize: "16px",
-              color: "#A1A1AA",
-              fontWeight: 600,
+              fontSize: "15px",
+              color: "#3DDC97",
+              fontWeight: 700,
             }}
           >
-            <div>14 Proyectos</div>
-            <div>•</div>
-            <div>77 Entregables Reales</div>
+            <span>Entrega 24-48h</span>
+            <span style={{ color: "rgba(242, 244, 243, 0.4)" }}>•</span>
+            <span>100% Optimizado</span>
           </div>
         </div>
       </div>

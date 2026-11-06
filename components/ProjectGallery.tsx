@@ -7,33 +7,24 @@ import {
   Eye,
   Play,
   Film,
-  Layers,
   Sparkles,
+  Smartphone,
+  Globe,
 } from "lucide-react";
 import { ProjectBlock, ProjectCategory } from "@/types/projects";
+import DeviceMockup from "./DeviceMockup";
 import SpecializedModal from "./SpecializedModal";
 import projectsData from "@/data/projects.json";
 
 const ALL_PROJECTS = projectsData as ProjectBlock[];
 
+// 4 Categorías Oficiales de Filtro
 const CATEGORY_TABS: { key: ProjectCategory | "all"; label: string }[] = [
   { key: "all", label: "Todos" },
-  { key: "videos", label: "Videos" },
-  { key: "menus", label: "Menús Gastronómicos" },
-  { key: "flyers", label: "Flyers & Promos" },
-  { key: "carruseles", label: "Carruseles" },
-  { key: "ebooks", label: "Ebooks & Editorial" },
-  { key: "miniaturas", label: "Miniaturas YouTube" },
+  { key: "flyers-menus", label: "Flyers & Menús" },
+  { key: "landing-pages", label: "Landing Pages" },
   { key: "branding", label: "Branding" },
 ];
-
-const STATIC_CLIENTS = (() => {
-  const map = new Map<string, string>();
-  ALL_PROJECTS.forEach((p) => {
-    map.set(p.clientId, p.clientName);
-  });
-  return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
-})();
 
 const CATEGORY_COUNTS = (() => {
   const counts: Record<string, number> = { all: ALL_PROJECTS.length };
@@ -45,49 +36,46 @@ const CATEGORY_COUNTS = (() => {
 
 export default function ProjectGallery() {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory | "all">("all");
-  const [selectedClient, setSelectedClient] = useState<string>("all");
   const [selectedProject, setSelectedProject] = useState<ProjectBlock | null>(null);
 
-  // Filtrado compuesto sincrónico (Categoría + Cliente)
+  // Filtrado compuesto sincrónico (cero useEffect vacío, cero CLS)
   const filteredProjects = useMemo(() => {
     return ALL_PROJECTS.filter((p) => {
-      const matchCat = activeCategory === "all" || p.category === activeCategory;
-      const matchClient = selectedClient === "all" || p.clientId === selectedClient;
-      return matchCat && matchClient;
+      return activeCategory === "all" || p.category === activeCategory;
     });
-  }, [activeCategory, selectedClient]);
+  }, [activeCategory]);
 
   return (
-    <section id="proyectos" className="py-20 max-w-6xl mx-auto px-5 sm:px-8">
+    <section id="portafolio" className="py-24 max-w-6xl mx-auto px-5 sm:px-8">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
         <div>
-          <div className="text-xs font-mono text-amber-500 uppercase tracking-wider mb-2 flex items-center gap-2">
-            <Layers className="w-3.5 h-3.5" />
-            <span>Portafolio de Trabajos Seleccionados &bull; Formatos Especializados & Piezas Reales</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#2B2F33]/40 border border-[#2B2F33] text-xs font-mono text-[#3DDC97] uppercase tracking-wider mb-3">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Casos Reales con Impacto Comercial Comprobado</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-zinc-50 tracking-tight">
-            Portafolio de Trabajos
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-extrabold text-[#FFFFFF] tracking-tight">
+            Portafolio Comercial
           </h2>
-          <p className="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl">
-            Cada tarjeta representa un trabajo especializado e independiente. Filtra por tipo de entregable o por marca sin mezclar formatos.
+          <p className="text-[#F2F4F3]/70 text-sm sm:text-base mt-2 max-w-xl font-sans">
+            Explora nuestros trabajos visuales, menús interactivos, identidades de marca y páginas web diseñadas para captar clientes en minutos.
           </p>
         </div>
 
-        <div className="flex items-center gap-2 text-xs font-mono text-zinc-400 bg-zinc-900/60 px-3.5 py-2 rounded-xl border border-white/[0.08] backdrop-blur-md w-fit">
-          <Sparkles className="w-3.5 h-3.5 text-amber-500" />
+        <div className="flex items-center gap-2 text-xs font-mono text-[#F2F4F3]/80 bg-[#2B2F33]/40 px-4 py-2.5 rounded-xl border border-[#2B2F33] backdrop-blur-md w-fit">
+          <span className="w-2 h-2 rounded-full bg-[#3DDC97]" />
           <span>
-            {filteredProjects.length} {filteredProjects.length === 1 ? "trabajo" : "trabajos"} encontrados
+            {filteredProjects.length} {filteredProjects.length === 1 ? "proyecto comercial" : "proyectos comerciales"}
           </span>
         </div>
       </div>
 
-      {/* Barra de Filtros por Disciplina (SSR sincrónico, cero CLS) */}
-      <div className="space-y-3 mb-10">
+      {/* Barra de Filtros SSR Oficial: Todos, Flyers & Menús, Landing Pages, Branding */}
+      <div className="mb-12">
         <div
           role="tablist"
-          aria-label="Filtrar proyectos por categoría"
-          className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-none"
+          aria-label="Filtrar portafolio comercial por categoría"
+          className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none"
         >
           {CATEGORY_TABS.map((tab) => {
             const isSelected = activeCategory === tab.key;
@@ -98,16 +86,16 @@ export default function ProjectGallery() {
                 role="tab"
                 aria-selected={isSelected}
                 onClick={() => setActiveCategory(tab.key)}
-                className={`flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-medium whitespace-nowrap transition-all duration-200 shrink-0 ${
+                className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-display font-semibold whitespace-nowrap transition-all duration-200 shrink-0 ${
                   isSelected
-                    ? "bg-amber-500 text-zinc-950 font-bold shadow-md shadow-amber-500/20 scale-100"
-                    : "bg-zinc-900/60 text-zinc-400 border border-white/[0.08] hover:text-zinc-50 hover:bg-zinc-800/60"
+                    ? "bg-[#3DDC97] text-[#0D0D0D] shadow-lg shadow-[#3DDC97]/20 scale-100"
+                    : "bg-[#2B2F33]/40 text-[#F2F4F3]/70 border border-[#2B2F33] hover:text-[#FFFFFF] hover:bg-[#2B2F33]/70 hover:border-[#3DDC97]/40"
                 }`}
               >
                 <span>{tab.label}</span>
                 <span
                   className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
-                    isSelected ? "bg-zinc-950 text-amber-400" : "bg-zinc-800/80 text-zinc-400"
+                    isSelected ? "bg-[#0D0D0D] text-[#3DDC97]" : "bg-[#0D0D0D]/60 text-[#F2F4F3]/60"
                   }`}
                 >
                   {count}
@@ -116,174 +104,159 @@ export default function ProjectGallery() {
             );
           })}
         </div>
-
-        {/* Sub-filtro discreto por Marca / Cliente (SSR sincrónico) */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
-          <span className="text-[11px] font-mono uppercase text-zinc-500 mr-1 shrink-0">
-            Filtrar por marca:
-          </span>
-          <button
-            type="button"
-            onClick={() => setSelectedClient("all")}
-            className={`px-2.5 py-1 rounded-lg text-[11px] font-mono transition-colors shrink-0 ${
-              selectedClient === "all"
-                ? "bg-zinc-800 text-amber-400 border border-amber-500/40 font-bold"
-                : "text-zinc-400 hover:text-zinc-200"
-            }`}
-          >
-            Todas
-          </button>
-          {STATIC_CLIENTS.map((client) => {
-            const isSelected = selectedClient === client.id;
-            return (
-              <button
-                key={client.id}
-                type="button"
-                onClick={() => setSelectedClient(client.id)}
-                className={`px-2.5 py-1 rounded-lg text-[11px] font-mono transition-colors shrink-0 ${
-                  isSelected
-                    ? "bg-zinc-800 text-amber-400 border border-amber-500/40 font-bold"
-                    : "text-zinc-400 hover:text-zinc-200"
-                }`}
-              >
-                {client.name}
-              </button>
-            );
-          })}
-        </div>
       </div>
 
-      {/* Grilla de Tarjetas Especializadas con Ambient Glow */}
+      {/* Grilla de Tarjetas con Mockups CSS de Dispositivos en Vivo */}
       {filteredProjects.length === 0 ? (
-        <div className="py-16 text-center rounded-2xl bg-[#111114] border border-white/[0.08] p-8">
-          <p className="text-sm text-zinc-400">
-            No se encontraron proyectos para la combinación de categoría y marca seleccionada.
+        <div className="py-16 text-center rounded-2xl bg-[#141618] border border-[#2B2F33] p-8">
+          <p className="text-sm text-[#F2F4F3]/70">
+            No se encontraron proyectos para la categoría seleccionada.
           </p>
           <button
             type="button"
-            onClick={() => {
-              setActiveCategory("all");
-              setSelectedClient("all");
-            }}
-            className="mt-4 px-4 py-2 rounded-xl bg-amber-500 text-zinc-950 text-xs font-bold shadow-md shadow-amber-500/20"
+            onClick={() => setActiveCategory("all")}
+            className="mt-4 px-4 py-2 rounded-xl bg-[#3DDC97] text-[#0D0D0D] text-xs font-display font-bold shadow-md shadow-[#3DDC97]/20"
           >
-            Restablecer Filtros
+            Ver Todos los Trabajos
           </button>
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {filteredProjects.map((project, idx) => {
-            const isVideo = project.category === "videos" || project.coverMediaType === "video" || project.coverAsset.endsWith(".mp4");
+            const isVideo = project.coverMediaType === "video" || project.coverAsset.endsWith(".mp4");
             const assetCount = project.assets?.length || 0;
-            const priorityLoading = idx < 3 && !isVideo; // LCP optimization (no videos en Image preload)
-            const projectAccent = project.colorPalette?.[0]?.hex || "#F59E0B";
+            const priorityLoading = idx < 3 && !isVideo;
+            const deviceType = project.deviceType || (project.category === "landing-pages" ? "browser" : "smartphone");
 
             return (
               <article
                 key={project.id}
-                style={{ "--project-accent": projectAccent } as React.CSSProperties}
                 onClick={() => setSelectedProject(project)}
-                className="group project-card-glow flex flex-col rounded-2xl bg-[#111114] border border-white/[0.08] cursor-pointer overflow-hidden shadow-sm hover:scale-[1.01]"
+                className="group flex flex-col rounded-2xl bg-[#141618] border border-[#2B2F33] hover:border-[#3DDC97]/60 cursor-pointer overflow-hidden shadow-sm hover:shadow-xl hover:shadow-[#3DDC97]/5 transition-all duration-300 hover:-translate-y-1"
               >
-                {/* Visual Cover Asset */}
-                <div
-                  onMouseEnter={(e) => {
-                    const vid = e.currentTarget.querySelector("video");
-                    if (vid) vid.play().catch(() => {});
-                  }}
-                  onMouseLeave={(e) => {
-                    const vid = e.currentTarget.querySelector("video");
-                    if (vid) {
-                      vid.pause();
-                      vid.currentTime = 0.1;
-                    }
-                  }}
-                  className={`relative w-full overflow-hidden bg-[#09090B] flex items-center justify-center ${
-                    isVideo && project.assets[0]?.aspectRatio === "9:16"
-                      ? "aspect-[9/14]"
-                      : isVideo || project.category === "miniaturas"
-                      ? "aspect-video"
-                      : "aspect-[1/1.25]"
-                  }`}
-                >
-                  {isVideo ? (
-                    <video
-                      src={`${project.coverAsset}#t=0.1`}
-                      muted
-                      playsInline
-                      preload="metadata"
-                      loop
-                      className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
-                    />
-                  ) : (
-                    <Image
-                      src={project.coverAsset}
-                      alt={project.title}
-                      fill
-                      priority={priorityLoading}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
-                    />
-                  )}
+                {/* Previsualización Envuelta en Mockup de Dispositivo */}
+                <div className="p-4 bg-[#0D0D0D] border-b border-[#2B2F33] flex items-center justify-center overflow-hidden">
+                  <DeviceMockup
+                    type={deviceType}
+                    urlTitle={deviceType === "browser" ? `${project.clientId}.com` : undefined}
+                    className="w-full"
+                  >
+                    <div
+                      onMouseEnter={(e) => {
+                        const vid = e.currentTarget.querySelector("video");
+                        if (vid) vid.play().catch(() => {});
+                      }}
+                      onMouseLeave={(e) => {
+                        const vid = e.currentTarget.querySelector("video");
+                        if (vid) {
+                          vid.pause();
+                          vid.currentTime = 0.1;
+                        }
+                      }}
+                      className={`relative w-full overflow-hidden bg-[#0D0D0D] flex items-center justify-center ${
+                        deviceType === "browser"
+                          ? "aspect-[16/10]"
+                          : "aspect-[9/15]"
+                      }`}
+                    >
+                      {isVideo ? (
+                        <video
+                          src={`${project.coverAsset}#t=0.1`}
+                          muted
+                          playsInline
+                          preload="metadata"
+                          loop
+                          className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
+                        />
+                      ) : (
+                        <Image
+                          src={project.coverAsset}
+                          alt={project.title}
+                          fill
+                          priority={priorityLoading}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-102"
+                        />
+                      )}
 
-                  {/* Badges superiores */}
-                  <div className="absolute top-3 left-3 right-3 z-20 flex items-center justify-between pointer-events-none">
-                    <span className="text-[11px] font-mono tracking-wide px-2.5 py-1 rounded-lg bg-[#09090B]/85 border border-white/[0.08] text-amber-400 font-bold backdrop-blur-md">
-                      {project.categoryLabel}
-                    </span>
+                      {/* Badges superiores flotantes */}
+                      <div className="absolute top-2.5 left-2.5 right-2.5 z-20 flex items-center justify-between pointer-events-none">
+                        <span className="text-[10px] font-mono tracking-wide px-2 py-0.5 rounded-md bg-[#0D0D0D]/90 border border-white/[0.08] text-[#3DDC97] font-bold backdrop-blur-md">
+                          {project.categoryLabel}
+                        </span>
 
-                    <span className="text-[11px] font-mono px-2 py-0.5 rounded-lg bg-[#09090B]/85 border border-white/[0.08] text-zinc-300 backdrop-blur-md">
-                      {assetCount} {isVideo ? (assetCount === 1 ? "video" : "videos") : (assetCount === 1 ? "pieza" : "piezas")}
-                    </span>
-                  </div>
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-[#0D0D0D]/90 border border-white/[0.08] text-[#F2F4F3]/80 backdrop-blur-md">
+                          {assetCount} {assetCount === 1 ? "pieza" : "piezas"}
+                        </span>
+                      </div>
 
-                  {/* Play Overlay para Videos */}
-                  {isVideo && (
-                    <div className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 group-hover:opacity-0">
-                      <div className="w-12 h-12 rounded-full bg-amber-500 text-zinc-950 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                        <Play className="w-5 h-5 fill-current ml-0.5" />
+                      {/* Play Overlay para Videos */}
+                      {isVideo && (
+                        <div className="absolute inset-0 flex items-center justify-center pointer-events-none transition-opacity duration-300 group-hover:opacity-0">
+                          <div className="w-11 h-11 rounded-full bg-[#3DDC97] text-[#0D0D0D] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                            <Play className="w-4 h-4 fill-current ml-0.5" />
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Hover Action Indicator */}
+                      <div className="absolute inset-0 bg-[#0D0D0D]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20 pointer-events-none">
+                        <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#3DDC97] text-[#0D0D0D] font-display font-bold text-xs shadow-lg transform translate-y-1 group-hover:translate-y-0 transition-transform">
+                          {isVideo ? <Film className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                          <span>{isVideo ? "Reproducir Video" : "Ver Trabajo"}</span>
+                        </span>
                       </div>
                     </div>
-                  )}
-
-                  {/* Hover Action Indicator */}
-                  <div className="absolute inset-0 bg-[#09090B]/30 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex items-center justify-center z-20 pointer-events-none">
-                    <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500 text-zinc-950 font-bold text-xs shadow-lg transform translate-y-1 group-hover:translate-y-0 transition-transform">
-                      {isVideo ? <Film className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-                      <span>{isVideo ? "Reproducir Video" : "Ver Trabajo Completo"}</span>
-                    </span>
-                  </div>
+                  </DeviceMockup>
                 </div>
 
                 {/* Information Card Body */}
-                <div className="p-5 flex flex-col flex-1 justify-between bg-[#111114] text-left border-t border-white/[0.08]">
+                <div className="p-5 flex flex-col flex-1 justify-between text-left">
                   <div>
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-xs uppercase tracking-wider text-amber-400 font-mono font-bold">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs uppercase tracking-wider text-[#3DDC97] font-mono font-bold">
                         {project.clientName}
                       </span>
-                      <span className="text-[11px] font-mono text-zinc-500">
-                        {project.year}
-                      </span>
+                      <div className="flex items-center gap-1 text-[11px] font-mono text-[#F2F4F3]/50">
+                        {deviceType === "browser" ? (
+                          <>
+                            <Globe className="w-3 h-3 text-[#3DDC97]" />
+                            <span>Web</span>
+                          </>
+                        ) : (
+                          <>
+                            <Smartphone className="w-3 h-3 text-[#3DDC97]" />
+                            <span>Móvil</span>
+                          </>
+                        )}
+                      </div>
                     </div>
 
-                    <h3 className="text-base font-display font-bold text-zinc-50 leading-snug group-hover:text-amber-400 transition-colors">
+                    <h3 className="text-base font-display font-bold text-[#FFFFFF] leading-snug group-hover:text-[#3DDC97] transition-colors">
                       {project.title}
                     </h3>
 
-                    <p className="text-xs text-zinc-400 mt-2 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-[#F2F4F3]/70 mt-2 line-clamp-2 leading-relaxed font-sans">
                       {project.summary}
                     </p>
+
+                    {/* Beneficio comercial destacado */}
+                    {project.businessBenefit && (
+                      <div className="mt-3 p-2.5 rounded-lg bg-[#2B2F33]/40 border border-[#2B2F33] text-[11px] text-[#3DDC97] font-sans flex items-start gap-1.5">
+                        <span className="font-bold shrink-0">Impacto:</span>
+                        <span className="text-[#F2F4F3]/80">{project.businessBenefit}</span>
+                      </div>
+                    )}
                   </div>
 
-                  {/* Footer con Paleta y CTA */}
-                  <div className="mt-4 pt-3 border-t border-white/[0.06] flex items-center justify-between">
+                  {/* Footer con Paleta de Colores y CTA */}
+                  <div className="mt-4 pt-3 border-t border-[#2B2F33] flex items-center justify-between">
                     {project.colorPalette && (
-                      <div className="flex items-center gap-1.5" title="Paleta de color">
+                      <div className="flex items-center gap-1.5" title="Paleta de color corporativa">
                         {project.colorPalette.slice(0, 4).map((c, i) => (
                           <span
                             key={i}
-                            className="w-3 h-3 rounded-full border border-white/10"
+                            className="w-3 h-3 rounded-full border border-white/20"
                             style={{ backgroundColor: c.hex }}
                             title={`${c.name} (${c.hex})`}
                           />
@@ -291,8 +264,8 @@ export default function ProjectGallery() {
                       </div>
                     )}
 
-                    <div className="flex items-center gap-1 text-xs font-semibold text-zinc-400 group-hover:text-amber-400 ml-auto transition-colors">
-                      <span>Explorar</span>
+                    <div className="flex items-center gap-1 text-xs font-display font-bold text-[#F2F4F3]/70 group-hover:text-[#3DDC97] ml-auto transition-colors">
+                      <span>Ver Detalles</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />
                     </div>
                   </div>
@@ -303,7 +276,7 @@ export default function ProjectGallery() {
         </div>
       )}
 
-      {/* Modal Especializado */}
+      {/* Modal Especializado Panda Haus */}
       <SpecializedModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panda Haus Logo Test</title>
+  <style>
+    body {
+      background-color: #0D0D0D;
+      color: #F2F4F3;
+      font-family: sans-serif;
+      padding: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background-color: #2B2F33;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .card h3 {
+      margin: 0;
+      font-size: 16px;
+      color: #3DDC97;
+    }
+    .img-wrap {
+      width: 100%;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0D0D0D;
+      border-radius: 12px;
+      overflow: hidden;
+      padding: 16px;
+      border: 1px solid #2B2F33;
+    }
+    .img-wrap img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <h1>Panda Haus Brand Asset Inspection on #0D0D0D</h1>
+  <div class="grid">
+    <div class="card">
+      <h3>1. Original Vectorized SVG (viewBox full)</h3>
+      <div class="img-wrap">
+        <img src="/brand/panda-haus-logo.svg" alt="Panda Haus Logo">
+      </div>
+    </div>
+    <div class="card">
+      <h3>2. Dark Adapted Cropped SVG</h3>
+      <div class="img-wrap">
+        <img src="/brand/panda-haus-logo-dark.svg" alt="Panda Haus Dark Logo">
+      </div>
+    </div>
+    <div class="card">
+      <h3>3. Avatar PNG (sin fondo)</h3>
+      <div class="img-wrap">
+        <img src="/brand/panda-haus-avatar.png" alt="Panda Haus Avatar">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

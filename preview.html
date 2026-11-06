@@ -1,71 +1,40 @@
-<!-- Copia local del preview interactivo -->
 <!DOCTYPE html>
 <html lang="es" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allan Torres — Diseñador Gráfico & Identidad Visual</title>
+  <title>Panda Haus | Diseño Visual, Menús Digitales y Landing Pages</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { background-color: #09090b; color: #f4f4f5; font-family: system-ui, sans-serif; }
-    .masonry-item { break-inside: avoid; margin-bottom: 1.5rem; }
-    .glass-card { background: rgba(24, 24, 27, 0.6); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); transition: all 0.3s; }
-    .glass-card:hover { background: rgba(30, 30, 36, 0.9); border-color: rgba(245, 158, 11, 0.4); transform: translateY(-4px); }
+    body { font-family: 'Inter', sans-serif; background-color: #0D0D0D; color: #F2F4F3; }
+    h1, h2, h3, .font-display { font-family: 'Space Grotesk', sans-serif; }
   </style>
 </head>
-<body class="min-h-screen antialiased">
-  <header class="fixed top-0 left-0 right-0 z-40 bg-zinc-950/85 backdrop-blur border-b border-zinc-800 py-4 px-4 sm:px-8">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
+<body class="min-h-screen bg-[#0D0D0D] text-[#F2F4F3] antialiased">
+  <nav class="border-b border-[#2B2F33] bg-[#0D0D0D]/90 backdrop-blur-md sticky top-0 z-50 py-4 px-6">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center font-bold text-zinc-950 text-sm">AT</div>
-        <div>
-          <span class="font-bold text-white text-base">Allan Torres</span>
-          <span class="block text-[11px] uppercase tracking-wider text-zinc-400 font-mono">Diseñador Gráfico</span>
-        </div>
+        <img src="/brand/panda-haus-logo.svg" alt="Panda Haus" class="h-9 w-9 object-contain" />
+        <span class="font-display font-bold text-lg text-[#FFFFFF]">Panda<span class="text-[#3DDC97]">Haus</span></span>
       </div>
-      <div class="flex items-center gap-3">
-        <a href="https://wa.me/573248000501" target="_blank" class="px-4 py-2 rounded-full text-xs font-semibold bg-amber-400 text-zinc-950 hover:bg-amber-300">WhatsApp</a>
-      </div>
+      <a href="https://wa.me/573248000501" target="_blank" class="px-4 py-2 rounded-xl text-xs font-display font-bold bg-[#3DDC97] text-[#0D0D0D]">
+        Escríbenos por WhatsApp
+      </a>
     </div>
-  </header>
+  </nav>
 
-  <main class="pt-32 pb-20 px-4 sm:px-8 max-w-7xl mx-auto">
-    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-300 mb-6">
-      <span class="text-amber-400">✦</span> Portafolio Profesional &bull; Allan Torres
+  <main class="max-w-6xl mx-auto px-6 py-20 text-center space-y-6">
+    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#2B2F33]/40 border border-[#2B2F33] text-xs font-mono text-[#3DDC97]">
+      <span class="w-2 h-2 rounded-full bg-[#3DDC97] animate-pulse"></span>
+      Estudio de Diseño Visual &amp; Web Comercial
     </div>
-    <h1 class="text-5xl sm:text-7xl font-black text-white">Allan Torres</h1>
-    <p class="text-xl sm:text-2xl text-zinc-300 mt-4 max-w-3xl">
-      Identidades visuales, menús gastronómicos para areperas y restobares, y flyers publicitarios para barberías.
+    <h1 class="text-4xl sm:text-6xl font-display font-extrabold text-[#FFFFFF]">
+      Diseño visual y páginas web que hacen destacar tu negocio.
+    </h1>
+    <p class="text-lg text-[#F2F4F3]/80 max-w-2xl mx-auto">
+      Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.
     </p>
-
-    <div class="mt-8 flex flex-wrap gap-4">
-      <a href="https://wa.me/573248000501" target="_blank" class="px-6 py-3.5 rounded-full bg-[#25D366] text-zinc-950 font-bold text-sm">WhatsApp: +57 324 800 0501</a>
-      <a href="https://t.me/+573248000501" target="_blank" class="px-6 py-3.5 rounded-full bg-[#229ED9] text-white font-bold text-sm">Telegram: +57 324 800 0501</a>
-      <a href="mailto:torresaallan534@gmail.com" class="px-6 py-3.5 rounded-full bg-zinc-800 text-zinc-200 text-sm font-mono">torresaallan534@gmail.com</a>
-    </div>
-
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="glass-card p-6 rounded-2xl">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover rounded-xl mb-4" />
-        <span class="text-xs font-mono text-amber-400">Menús Gastronómicos</span>
-        <h3 class="text-lg font-bold text-white mt-1">Arepa Brava Gastrobar</h3>
-        <p class="text-xs text-zinc-400 mt-2">Menú editorial de 3 cuerpos y versión QR para arepera venezolana.</p>
-      </div>
-
-      <div class="glass-card p-6 rounded-2xl">
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover rounded-xl mb-4" />
-        <span class="text-xs font-mono text-amber-400">Flyers Promocionales</span>
-        <h3 class="text-lg font-bold text-white mt-1">The Gentleman's Blade Barber</h3>
-        <p class="text-xs text-zinc-400 mt-2">Flyers de apertura para barbería urbana con cuponera de descuento.</p>
-      </div>
-
-      <div class="glass-card p-6 rounded-2xl">
-        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=600&q=80" class="w-full h-48 object-cover rounded-xl mb-4" />
-        <span class="text-xs font-mono text-amber-400">Causa Social</span>
-        <h3 class="text-lg font-bold text-white mt-1">Campaña 'Cada Plato Cuenta'</h3>
-        <p class="text-xs text-zinc-400 mt-2">Piezas visuales e infografías de transparencia para colecta de alimentos.</p>
-      </div>
-    </div>
   </main>
 </body>
 </html>

@@ -1,33 +1,26 @@
-# Skills Operativas del Proyecto
+# Skills Operativas del Proyecto — Panda Haus
 
-Guía de habilidades y protocolos de ejecución técnica para el desarrollo y mantenimiento del portafolio.
+Guía de habilidades y protocolos de ejecución técnica para el desarrollo y mantenimiento de la Landing Page Comercial de Panda Haus.
 
 ---
 
-## 1. Skill: Sincronización y Auditoría de Proyectos (`sync-projects-audit`)
+## 1. Skill: Sincronización y Auditoría Comercial (`sync-projects-audit`)
 
-> **Descripción:** Escanea carpetas locales de clientes, elimina duplicados por hash y actualiza JSON y estadísticas sin alucinar rutas.
+> **Descripción:** Audita y actualiza `data/projects.json` bajo las 4 categorías comerciales oficiales (`Todos`, `Flyers & Menús`, `Landing Pages`, `Branding`) validando rutas reales en disco y enfoque de conversión.
 
 ### Protocolo de Ejecución:
-1. **Inspección Real:** Lista las carpetas dentro del directorio fuente de clientes para verificar qué archivos existen realmente en disco.
-2. **Ejecución del Script:** Corre `npm run sync-projects` en la terminal integrada.
-3. **Auditoría de Duplicados y Rutas:**
-   - Abre el archivo `data/projects.json` generado.
-   - Verifica que todas las rutas `assetPath` comiencen con `/projects/...` (usando `/` y no `\`) y que no existan prefijos repetidos como `branding-branding-`.
-   - Comprueba que cada archivo listado en el JSON exista físicamente dentro de `public/projects/`.
-4. **Verificación de Estadísticas:** Revisa `data/stats.json` y confirma que `totalClients`, `totalProjects` y `totalDeliverables` coincidan matemáticamente con la longitud de los arreglos en `data/projects.json`.
-5. **Prueba de Compilación:** Ejecuta `npx tsc --noEmit` para asegurar que el JSON cumple al 100% con las interfaces de `types/projects.ts`.
+1. **Inspección Real:** Valida siempre en disco que los archivos existan en `public/projects/`.
+2. **Categorización Oficial:** Todo proyecto debe pertenecer a `flyers-menus`, `landing-pages` o `branding`.
+3. **Copy Orientado a Negocio:** Prohibido mencionar tecnologías internas ("Next.js", "MongoDB", "Payload", "React"). Expresar retorno comercial tangible.
+4. **Prueba de Compilación:** Ejecuta `npx tsc --noEmit` para asegurar que el JSON cumple al 100% con las interfaces de `types/projects.ts`.
 
 ---
 
 ## 2. Skill: Calidad Visual y Arquitectura UI en Next.js (`nextjs-ui-quality`)
 
-> **Descripción:** Modifica componentes visuales en Next.js garantizando tipado estricto, simetría visual y cero errores de compilación.
+> **Descripción:** Modifica componentes visuales en Next.js garantizando la paleta oficial de Panda Haus (`#0D0D0D`, `#2B2F33`, `#F2F4F3`, `#FFFFFF`, `#3DDC97`), tipografías `Space_Grotesk` e `Inter`, simetría en tarjetas y cero errores de compilación.
 
 ### Protocolo de Ejecución:
-1. **Lectura Previa:** Lee siempre el contenido completo del componente actual y de `types/projects.ts` antes de escribir código nuevo. No reescribas a ciegas.
-2. **Consistencia Visual:**
-   - Verifica que todas las tarjetas de una misma grilla tengan exactamente la misma estructura de elementos (badge superior, título, descripción, footer alineado con `mt-auto`).
-   - En modales: respeta siempre la proporción del archivo (`aspect-video` para 16:9, `aspect-[9/16]` para reels/shorts verticales, paginador para carruseles/ebooks).
-3. **Control de Hidratación y Directivas:** Si usas `useState`, `useEffect` o eventos `onClick`, verifica que `'use client'` esté en la línea 1 del archivo.
-4. **Cierre Determinista:** Ejecuta `npm run build`. Si hay algún warning de imágenes o error de TypeScript, corrígelo inmediatamente antes de finalizar tu turno.
+1. **Paleta Inmutable:** Prohibido usar ámbar/dorado. Acento primario en verde menta `#3DDC97`.
+2. **Mockups de Dispositivos:** Usar `<DeviceMockup>` (smartphone para menús/flyers verticales; browser para landing pages).
+3. **Cierre Determinista:** Ejecutar `npm run build` y confirmar **0 errores** antes de entregar.

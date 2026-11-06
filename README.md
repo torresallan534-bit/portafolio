@@ -1,80 +1,25 @@
-# Portafolio Personal — Allan Torres (Diseñador Gráfico & Brand Identity)
+# Panda Haus — Landing Page Comercial de Conversión
 
-Portafolio web moderno, minimalista y ultra visual diseñado y desarrollado para **Allan Torres**, enfocado en la captación de clientes para diseño de identidad de marca, cartas de menú gastronómicas (especialidad en areperas y restobares), flyers publicitarios para barberías y campañas de impacto social.
+Landing page comercial de alta conversión de **Panda Haus**, estudio de diseño visual y desarrollo de páginas web comerciales para restaurantes, marcas y negocios locales.
 
----
+## Stack Tecnológico
+- **Framework:** Next.js (App Router)
+- **Tipografía Oficial:** `Space_Grotesk` (titulares, precios, navbar) e `Inter` (cuerpo, microcopy)
+- **Estilos:** Tailwind CSS con la paleta oficial única:
+  - Negro Profundo (`#0D0D0D`)
+  - Grafito (`#2B2F33`)
+  - Gris Humo (`#F2F4F3`)
+  - Blanco Puro (`#FFFFFF`)
+  - Verde Menta / Acento Primario (`#3DDC97`)
+- **Iconografía:** `lucide-react`
+- **Optimización de Medios:** Next/Image y WebP
 
-## 🚀 Tecnologías Utilizadas
-
-- **Next.js 15 (App Router)**: Renderizado optimizado, modularidad y rendimiento superior.
-- **Tailwind CSS 3**: Paleta visual refinada (obsidiana, grafito, toques de ámbar cálido y acentos esmeralda), cuadrícula mampostería (*masonry*), y microinteracciones de alta gama.
-- **TypeScript**: Tipado estricto para proyectos, servicios, paletas cromáticas y entregables.
-- **Lucide React**: Iconografía minimalista y moderna.
-- **Next/Image**: Optimización responsiva de imágenes.
-
----
-
-## 📁 Estructura del Proyecto
-
-```text
-allan-torres-portfolio/
-├── app/
-│   ├── globals.css         # Directivas Tailwind, estilos de masonry y animaciones
-│   ├── layout.tsx          # Metadata SEO, OpenGraph y configuración base
-│   └── page.tsx            # Ensamblado principal de secciones
-├── components/
-│   ├── Navbar.tsx          # Barra de navegación flotante con blur y CTA rápido
-│   ├── Hero.tsx            # Sección Inicio: Allan Torres & propuesta de valor
-│   ├── ProjectGallery.tsx  # Cuadrícula Masonry con filtros interactivos
-│   ├── ProjectModal.tsx    # Lightbox interactivo con paleta copiable y entregables
-│   ├── Services.tsx        # Sección de Servicios con entregables y alcances
-│   ├── Contact.tsx         # Botones directos a WhatsApp & Telegram + brief rápido
-│   └── Footer.tsx          # Pie de página y estado de disponibilidad
-├── data/
-│   └── portfolio-data.ts   # Datos de proyectos, servicios y configuración del diseñador
-├── types/
-│   └── index.ts            # Interfaces TypeScript
-├── next.config.ts
-├── tailwind.config.ts
-├── tsconfig.json
-└── package.json
-```
-
----
-
-## 🛠️ Instalación y Puesta en Marcha
-
-1. **Abrir la carpeta en tu terminal o editor preferido**:
-   ```bash
-   cd C:\Users\Usuario\.gemini\antigravity\scratch\allan-torres-portfolio
-   ```
-
-2. **Instalar dependencias**:
-   ```bash
-   npm install
-   # o con pnpm / yarn / bun
-   ```
-
-3. **Iniciar el servidor de desarrollo**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Abrir en el navegador**:
-   Visita [http://localhost:3000](http://localhost:3000)
-
----
-
-## 📞 Canales de Contacto Integrados
-
-Toda la información del diseñador está centralizada y configurada en `data/portfolio-data.ts`:
-
-- **WhatsApp Directo**: `+57 324 800 0501` (`https://wa.me/573248000501`) con mensaje de apertura personalizado.
-- **Telegram Directo**: `+57 324 800 0501` (`https://t.me/+573248000501`).
-- **Correo Electrónico**: `torresaallan534@gmail.com`.
-- **Proyectos**: Agrega o edita los objetos en `PORTFOLIO_PROJECTS`. Cada proyecto cuenta con soporte para:
-  - Nombre del cliente y ubicación.
-  - Categoría (`menus`, `flyers`, `branding`, `campanas`).
-  - Proporción de aspecto (`aspect-[3/4]`, `aspect-[4/5]`, `aspect-[16/10]`) para generar el ritmo natural de la cuadrícula *masonry*.
-  - Paleta cromática interactiva con copia de códigos HEX al hacer clic.
-  - Lista de entregables y descripción completa.
+## Arquitectura de Secciones
+- `Navbar` con logotipo oficial de Panda Haus (`/brand/panda-haus-logo.svg`) y 4 enlaces exactos: Servicios, Portafolio, Precios, Contacto.
+- `Hero` con titular comercial y badges de garantías de entrega (24-48h, 100% optimizado móvil/QR, revisiones incluidas).
+- `Servicios` en grid simétrico de 4 tarjetas comerciales.
+- `Portafolio` con mockups CSS de dispositivos (`<DeviceMockup>` para smartphone y navegador) y filtros SSR: `Todos`, `Flyers & Menús`, `Landing Pages`, `Branding`.
+- `Precios` con 3 paquetes comparativos en pesos colombianos (`Pack Arranque Visual`, `Pack Menú Pro`, `Pack Web Comercial`).
+- `Contacto` con brief directo hacia WhatsApp.
+- `Botón Flotante de WhatsApp` fijo en `bottom-6 right-6`.
+- `Footer` corporativo con copyright exacto 2026, redes sociales (Instagram, TikTok) y acceso discreto a `/admin`.

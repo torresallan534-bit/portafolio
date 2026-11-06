@@ -10,31 +10,31 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#09090B",
-        surface: "#111114",
-        "surface-elevated": "#18181B",
-        border: "rgba(255, 255, 255, 0.08)",
-        accent: {
-          DEFAULT: "#F59E0B",
-          hover: "#D97706",
-          muted: "rgba(245, 158, 11, 0.12)",
+        background: "#0D0D0D", // Negro Profundo
+        graphite: "#2B2F33",   // Grafito
+        smoke: "#F2F4F3",      // Gris Humo
+        white: "#FFFFFF",      // Blanco Puro
+        mint: {
+          DEFAULT: "#3DDC97",  // Verde Menta (Acento Primario)
+          hover: "#34C788",
+          muted: "rgba(61, 220, 151, 0.12)",
         },
-        success: "#10B981",
+        surface: "#141618",
+        "surface-elevated": "#1A1D20",
+        border: "rgba(242, 244, 243, 0.08)",
         brand: {
           whatsapp: "#25D366",
-          telegram: "#229ED9",
         },
       },
       fontFamily: {
-        display: ["var(--font-sora)", "system-ui", "sans-serif"],
+        display: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        mono: ["var(--font-jetbrains)", "monospace"],
+        mono: ["monospace"],
       },
       animation: {
-        "fade-in-up":
-          "fadeInUp 0.5s ease-out forwards",
-        "scale-in":
-          "scaleIn 0.3s ease-out forwards",
+        "fade-in-up": "fadeInUp 0.5s ease-out forwards",
+        "scale-in": "scaleIn 0.3s ease-out forwards",
+        pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       keyframes: {
         fadeInUp: {
