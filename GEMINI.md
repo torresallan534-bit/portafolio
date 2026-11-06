@@ -1,15 +1,35 @@
-# PANDA HAUS — DIRECTRICES Y NORMAS DEL PROYECTO
+# DIRECTRICES INMUTABLES Y REGLAS DEL PROYECTO — PANDA HAUS
 
-1. **Voz e Identidad Corporativa:** Prohibido usar primera persona singular ("soy", "mi portafolio", "Allan Torres"). Toda la comunicación es institucional de estudio/agencia ("Panda Haus", "ayudamos", "escríbenos").
-2. **Sistema de Diseño Inmutable:**
-   - Paleta oficial única:
-     * Negro Profundo: `#0D0D0D` (fondo principal y textos sobre acento menta)
-     * Grafito: `#2B2F33` (superficies de tarjetas, marcos de dispositivos y bordes estructurales)
-     * Gris Humo: `#F2F4F3` (textos secundarios suaves / bloques de alto contraste)
-     * Blanco Puro: `#FFFFFF` (titulares principales y elementos destacados)
-     * Verde Menta (Acento Primario): `#3DDC97` (CTAs principales, badges activos, iconos de valor, indicadores y bordes destacados). Elimina por completo cualquier rastro del color ámbar/dorado anterior.
-   - Tipografía oficial vía `next/font/google`:
-     * `Space_Grotesk` (pesos 500, 600, 700) para `H1`, `H2`, `H3`, precios, botones y navbar.
-     * `Inter` (pesos 400, 500, 600) para párrafos, descripciones comerciales, listas y microcopy.
-3. **Enfoque Comercial en Portafolio:** Prohibido mencionar tecnologías internas (Next.js, MongoDB, Payload, React) en las tarjetas visibles al cliente. Todo texto debe expresar beneficios comerciales reales (ventas, reservas, agilidad en WhatsApp/QR).
-4. **Categorías Oficiales de Filtro:** `Todos`, `Flyers & Menús`, `Landing Pages`, `Branding`.
+## 1. Voz e Identidad Corporativa (Anti-Personal / Pro-Estudio)
+- PROHIBIDO usar primera persona singular ("soy", "mi portafolio", "yo diseñé", "Allan Torres").
+- Toda la comunicación debe ser institucional, de agencia y estudio de diseño visual y desarrollo web: **"Panda Haus"**, **"ayudamos"**, **"diseñamos"**, **"nuestros servicios"**, **"escríbenos"**.
+- Cero menciones a nombres personales en la interfaz pública, metadatos SEO o textos comerciales.
+
+## 2. Sistema de Diseño Inmutable y Paleta Cromática
+- **Paleta Oficial Única (Cero Ámbar / Cero Dorado):**
+  * **Negro Profundo (`#0D0D0D`):** Fondo principal y textos de contraste sobre verde menta.
+  * **Grafito (`#2B2F33`):** Superficies de tarjetas, marcos de dispositivos y bordes estructurales.
+  * **Gris Humo (`#F2F4F3`):** Textos secundarios suaves, microcopy y bloques de alto contraste.
+  * **Blanco Puro (`#FFFFFF`):** Titulares principales (H1, H2, H3), precios destacados y elementos primarios.
+  * **Verde Menta (`#3DDC97` - Acento Primario):** CTAs principales, badges activos, iconos de valor, indicadores de pulso y bordes destacados.
+- **Tipografía Oficial (next/font/google):**
+  * `Space_Grotesk` (pesos 500, 600, 700): H1, H2, H3, precios, botones destacados y navbar.
+  * `Inter` (pesos 400, 500, 600): párrafos, descripciones comerciales, listas de beneficios y microcopy.
+
+## 3. Enfoque Comercial en Portafolio y Servicios
+- PROHIBIDO mencionar tecnologías internas como "Next.js", "MongoDB", "Payload", "React" o jerga técnica de desarrollo en las tarjetas visibles al cliente.
+- Todo texto debe expresar **beneficios comerciales tangibles**: incremento en ventas, captación de comensales, agilidad en pedidos por WhatsApp, cartas QR instantáneas y velocidad de carga.
+
+## 4. Categorías Oficiales de Filtro en Portafolio
+- `Todos`, `Videos`, `Menús Gastronómicos`, `Flyers & Promos`, `Carruseles`, `Ebooks & Editorial`, `Miniaturas YouTube`, `Branding`.
+- Prohibido inventar proyectos de landing pages hasta que existan los activos reales del cliente.
+
+## 5. Verificación de Sistema de Archivos y Cero Suposiciones
+- PROHIBIDO inventar rutas falsas. Todo archivo referenciado debe validarse en disco.
+- El logotipo oficial de la marca reside en `public/brand/panda-haus-logo.svg`.
+- Toda compilación debe finalizar con `npm run build` con **0 errores** de TypeScript y ESLint.
+
+## 6. Sincronización Continua e Inmediata con Vercel (Regla Obligatoria)
+- Tras CADA modificación, arreglo o nueva funcionalidad validada en código, se DEBE ejecutar inmediatamente `git add -A`, crear un `git commit` descriptivo y hacer `git push origin main`.
+- El repositorio está conectado a Vercel con despliegue continuo automático. Todo push a `main` actualiza la web de producción en tiempo real (`https://portafolio-mu-nine-11.vercel.app/`).
+- PROHIBIDO dejar cambios locales pendientes sin sincronizar con Vercel.

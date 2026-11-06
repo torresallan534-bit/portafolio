@@ -30,3 +30,8 @@
 - PROHIBIDO inventar rutas falsas. Todo archivo referenciado debe validarse en disco.
 - El logotipo oficial de la marca reside en `public/brand/panda-haus-logo.svg`.
 - Toda compilación debe finalizar con `npm run build` con **0 errores** de TypeScript y ESLint.
+
+## 6. Sincronización Continua e Inmediata con Vercel (Regla Obligatoria)
+- Tras CADA modificación, arreglo o nueva funcionalidad validada en código, se DEBE ejecutar inmediatamente `git add -A`, crear un `git commit` descriptivo y hacer `git push origin main`.
+- El repositorio está conectado a Vercel con despliegue continuo automático. Todo push a `main` actualiza la web de producción en tiempo real (`https://portafolio-mu-nine-11.vercel.app/`).
+- PROHIBIDO dejar cambios locales pendientes sin sincronizar con Vercel.
