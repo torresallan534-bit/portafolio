@@ -13,10 +13,9 @@ import {
   Sparkles,
   Maximize2,
   Film,
-  Globe,
+  BookOpen,
 } from "lucide-react";
 import { ProjectBlock, ProjectAsset } from "@/types/projects";
-import { PANDA_HAUS_INFO } from "@/data/portfolio-data";
 
 interface SpecializedModalProps {
   project: ProjectBlock | null;
@@ -67,7 +66,8 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
 
   const assets = project.assets || [];
   const currentAsset: ProjectAsset | undefined = assets[activeAssetIndex] || assets[0];
-  const isVideoMode = currentAsset?.mediaType === "video" || currentAsset?.assetPath?.endsWith(".mp4");
+  const isVideoMode = project.category === "videos";
+  const isEbookMode = project.category === "ebooks" || project.category === "carruseles";
 
   const copyToClipboard = (hex: string) => {
     if (navigator?.clipboard) {
@@ -77,8 +77,8 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
     }
   };
 
-  const projectWhatsappUrl = `https://wa.me/${PANDA_HAUS_INFO.whatsappNumber}?text=${encodeURIComponent(
-    `Hola Panda Haus, vi su trabajo de ${project.categoryLabel} para ${project.clientName} y me interesa cotizar un proyecto similar para mi negocio.`
+  const projectWhatsappUrl = `https://wa.me/573248000501?text=${encodeURIComponent(
+    `Hola Panda Haus, vi su trabajo de ${project.categoryLabel} para ${project.clientName} y me interesa cotizar un servicio similar para mi negocio.`
   )}`;
 
   return (
@@ -96,18 +96,29 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
       />
 
       {/* Modal Dialog */}
-      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-[#141618] border border-[#2B2F33] rounded-2xl shadow-2xl z-10 text-[#F2F4F3] flex flex-col">
+      <div className="relative w-full max-w-4xl max-h-[92vh] overflow-y-auto bg-[#181B1E] border border-[#2B2F33] rounded-2xl shadow-2xl z-10 text-[#FFFFFF] flex flex-col">
         {/* Sticky Header */}
-        <div className="sticky top-0 z-20 flex justify-between items-center px-6 py-4 bg-[#141618]/95 backdrop-blur-md border-b border-[#2B2F33]">
+        <div className="sticky top-0 z-20 flex justify-between items-center px-6 py-4 bg-[#181B1E]/95 backdrop-blur-md border-b border-[#2B2F33]">
           <div className="flex items-center gap-2">
-            <span className="text-xs font-mono uppercase tracking-wider text-[#3DDC97] bg-[#3DDC97]/10 px-2.5 py-1 rounded-lg border border-[#3DDC97]/25 font-bold">
+            <span className="text-xs font-mono uppercase tracking-wider text-[#3DDC97] bg-[#3DDC97]/10 px-2.5 py-1 rounded-lg border border-[#3DDC97]/20 font-bold">
               {project.categoryLabel}
             </span>
-            <span className="text-xs text-[#F2F4F3]/60 font-mono hidden sm:inline">
+            <span className="text-xs text-[#F2F4F3]/70 font-mono hidden sm:inline">
               &bull; {project.clientName}
             </span>
-            <span className="text-xs font-mono text-[#F2F4F3]/80 bg-[#2B2F33] px-2 py-0.5 rounded-lg border border-[#2B2F33]">
-              {assets.length} {assets.length === 1 ? "entregable" : "entregables"}
+            <span className="text-xs font-mono text-[#F2F4F3]/80 bg-[#2B2F33]/80 px-2 py-0.5 rounded-lg border border-[#2B2F33]">
+              {assets.length}{" "}
+              {isVideoMode
+                ? assets.length === 1
+                  ? "video"
+                  : "videos"
+                : isEbookMode
+                ? assets.length === 1
+                  ? "página"
+                  : "páginas"
+                : assets.length === 1
+                ? "pieza"
+                : "piezas"}
             </span>
           </div>
 
@@ -116,7 +127,7 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
               <button
                 type="button"
                 onClick={() => setIsFullscreen(!isFullscreen)}
-                className="p-2 text-[#F2F4F3]/70 hover:text-[#FFFFFF] rounded-lg bg-[#2B2F33] hover:bg-[#3DDC97]/20 transition-colors"
+                className="p-2 text-[#F2F4F3]/70 hover:text-white rounded-lg bg-[#2B2F33]/60 hover:bg-[#2B2F33] transition-colors"
                 title="Alternar Pantalla Completa"
               >
                 <Maximize2 className="w-4 h-4" />
@@ -124,7 +135,7 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
             )}
             <button
               onClick={onClose}
-              className="p-2 text-[#F2F4F3]/70 hover:text-[#FFFFFF] rounded-lg bg-[#2B2F33] hover:bg-[#3DDC97]/20 transition-colors"
+              className="p-2 text-[#F2F4F3]/70 hover:text-white rounded-lg bg-[#2B2F33]/60 hover:bg-[#2B2F33] transition-colors"
               aria-label="Cerrar modal (ESC)"
             >
               <X className="w-5 h-5" />
@@ -133,18 +144,19 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
         </div>
 
         <div className="p-6 sm:p-8 space-y-7">
-          {/* Main Viewer */}
+          {/* Main Viewer - Formato Especializado */}
           <div className="space-y-4">
+            {/* Box Principal de Visualización */}
             <div
-              className={`relative w-full rounded-2xl bg-[#0D0D0D] border border-[#2B2F33] flex items-center justify-center p-3 transition-all ${
+              className={`relative w-full rounded-2xl bg-[#0D0D0D] border border-[#2B2F33] flex items-center justify-center p-2 transition-all ${
                 isFullscreen
                   ? "fixed inset-4 z-50 bg-[#0D0D0D] max-h-none h-auto"
                   : isVideoMode && currentAsset?.aspectRatio === "9:16"
-                  ? "h-[500px] sm:h-[580px]"
-                  : "h-[380px] sm:h-[520px]"
+                  ? "h-[540px] sm:h-[620px]"
+                  : "h-[400px] sm:h-[560px]"
               }`}
             >
-              {isVideoMode ? (
+              {currentAsset?.mediaType === "video" || currentAsset?.assetPath?.endsWith(".mp4") ? (
                 <video
                   key={currentAsset?.assetPath}
                   src={currentAsset?.assetPath}
@@ -152,7 +164,7 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                   autoPlay
                   playsInline
                   className={`max-h-full rounded-lg object-contain ${
-                    currentAsset?.aspectRatio === "9:16" ? "max-w-[320px]" : "max-w-full"
+                    currentAsset?.aspectRatio === "9:16" ? "max-w-[340px]" : "max-w-full"
                   }`}
                 />
               ) : (
@@ -166,14 +178,14 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                 />
               )}
 
-              {/* Botones de navegación Anterior/Siguiente */}
+              {/* Botones de navegación Anterior/Siguiente si hay varias piezas */}
               {assets.length > 1 && (
                 <>
                   <button
                     type="button"
                     onClick={() => setActiveAssetIndex((prev) => (prev > 0 ? prev - 1 : prev))}
                     disabled={activeAssetIndex === 0}
-                    className="absolute left-3 p-2.5 rounded-full bg-[#0D0D0D]/85 border border-[#2B2F33] text-[#F2F4F3] disabled:opacity-20 hover:bg-[#2B2F33] hover:border-[#3DDC97] transition-all backdrop-blur-md"
+                    className="absolute left-3 p-2.5 rounded-full bg-[#0D0D0D]/80 border border-[#2B2F33] text-[#F2F4F3] disabled:opacity-20 hover:bg-[#2B2F33] transition-all backdrop-blur-md"
                     aria-label="Anterior"
                   >
                     <ChevronLeft className="w-5 h-5" />
@@ -185,21 +197,37 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                       setActiveAssetIndex((prev) => (prev < assets.length - 1 ? prev + 1 : prev))
                     }
                     disabled={activeAssetIndex === assets.length - 1}
-                    className="absolute right-3 p-2.5 rounded-full bg-[#0D0D0D]/85 border border-[#2B2F33] text-[#F2F4F3] disabled:opacity-20 hover:bg-[#2B2F33] hover:border-[#3DDC97] transition-all backdrop-blur-md"
+                    className="absolute right-3 p-2.5 rounded-full bg-[#0D0D0D]/80 border border-[#2B2F33] text-[#F2F4F3] disabled:opacity-20 hover:bg-[#2B2F33] transition-all backdrop-blur-md"
                     aria-label="Siguiente"
                   >
                     <ChevronRight className="w-5 h-5" />
                   </button>
                 </>
               )}
+
+              {/* Indicador de página para Ebooks / Carruseles */}
+              {isEbookMode && (
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-[#0D0D0D]/85 border border-[#2B2F33] text-xs font-mono text-[#F2F4F3] backdrop-blur-md flex items-center gap-2">
+                  <BookOpen className="w-3.5 h-3.5 text-[#3DDC97]" />
+                  <span>
+                    Página {activeAssetIndex + 1} de {assets.length}
+                  </span>
+                </div>
+              )}
             </div>
 
-            {/* Carrusel inferior de miniaturas */}
+            {/* Carrusel inferior de miniaturas para navegación rápida */}
             {assets.length > 1 && (
               <div className="space-y-1.5">
                 <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-wider text-[#F2F4F3]/60">
-                  <span>Piezas de este proyecto comercial:</span>
-                  <span className="text-[#3DDC97] font-semibold">
+                  <span>
+                    {isVideoMode
+                      ? "Selecciona el video para reproducir:"
+                      : isEbookMode
+                      ? "Páginas del documento (clic para saltar):"
+                      : "Todas las piezas de este trabajo:"}
+                  </span>
+                  <span className="text-[#F2F4F3]/40">
                     {activeAssetIndex + 1} / {assets.length}
                   </span>
                 </div>
@@ -213,19 +241,21 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
                         type="button"
                         onClick={() => setActiveAssetIndex(idx)}
                         className={`relative rounded-xl overflow-hidden border shrink-0 transition-all ${
-                          a.mediaType === "video"
-                            ? "w-24 h-16 bg-[#2B2F33]"
-                            : "w-16 h-20 bg-[#0D0D0D]"
+                          isVideoMode
+                            ? "w-28 h-16 bg-[#0D0D0D]"
+                            : isEbookMode
+                            ? "w-14 h-20 bg-[#0D0D0D]"
+                            : "w-16 h-22 bg-[#0D0D0D]"
                         } ${
                           isSelected
-                            ? "border-[#3DDC97] ring-2 ring-[#3DDC97]/40 scale-95"
+                            ? "border-[#3DDC97] ring-2 ring-[#3DDC97]/30 scale-95"
                             : "border-[#2B2F33] opacity-60 hover:opacity-100"
                         }`}
                       >
                         {a.mediaType === "video" ? (
                           <div className="w-full h-full flex flex-col items-center justify-center text-[#3DDC97] p-1">
                             <Film className="w-4 h-4" />
-                            <span className="text-[10px] font-mono text-[#F2F4F3] mt-1">
+                            <span className="text-[10px] font-mono text-[#F2F4F3]/80 mt-1">
                               Video {idx + 1}
                             </span>
                           </div>
@@ -245,7 +275,9 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
             <div className="flex items-center gap-2 text-xs text-[#F2F4F3]/60 font-mono">
               <span className="text-[#3DDC97] font-bold">{project.clientName}</span>
               <span>&bull;</span>
-              <span>Entrega Verificada Panda Haus</span>
+              <span>Año {project.year}</span>
+              <span>&bull;</span>
+              <span>{assets.length} Entregables específicos</span>
             </div>
 
             <h2
@@ -255,39 +287,29 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
               {project.title}
             </h2>
 
-            <p className="text-base text-[#F2F4F3]/80 leading-relaxed font-sans">{project.summary}</p>
-
-            {project.businessBenefit && (
-              <div className="p-3.5 rounded-xl bg-[#3DDC97]/10 border border-[#3DDC97]/30 text-xs text-[#F2F4F3] font-sans flex items-start gap-2">
-                <Sparkles className="w-4 h-4 text-[#3DDC97] shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-[#3DDC97]">Retorno Comercial: </strong>
-                  <span>{project.businessBenefit}</span>
-                </div>
-              </div>
-            )}
+            <p className="text-base text-[#F2F4F3]/80 leading-relaxed">{project.summary}</p>
           </div>
 
-          {/* Ficha Técnica Comercial: Reto y Solución */}
+          {/* Ficha Técnica: Reto y Solución */}
           {(project.challenge || project.solution) && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#2B2F33]/30 border border-[#2B2F33]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#0D0D0D] border border-[#2B2F33]">
               {project.challenge && (
                 <div className="space-y-1.5">
-                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#F2F4F3]/60 font-bold">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]" />
-                    El Reto del Negocio
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#3DDC97]">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#3DDC97]" />
+                    El Reto
                   </div>
-                  <p className="text-sm text-[#F2F4F3]/80 leading-relaxed font-sans">{project.challenge}</p>
+                  <p className="text-sm text-[#F2F4F3]/70 leading-relaxed">{project.challenge}</p>
                 </div>
               )}
 
               {project.solution && (
                 <div className="space-y-1.5">
-                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#3DDC97] font-bold">
+                  <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-[#3DDC97]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#3DDC97]" />
-                    La Solución de Panda Haus
+                    La Solución Gráfica / Audiovisual
                   </div>
-                  <p className="text-sm text-[#F2F4F3]/80 leading-relaxed font-sans">{project.solution}</p>
+                  <p className="text-sm text-[#F2F4F3]/70 leading-relaxed">{project.solution}</p>
                 </div>
               )}
             </div>
@@ -295,25 +317,27 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
 
           {/* Paleta de Color */}
           {project.colorPalette && project.colorPalette.length > 0 && (
-            <div className="p-5 rounded-2xl bg-[#2B2F33]/30 border border-[#2B2F33] space-y-3">
-              <h3 className="text-xs uppercase tracking-wider font-mono text-[#F2F4F3]/60 flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-[#3DDC97]" />
-                Paleta Cromática (Clic para copiar HEX)
-              </h3>
+            <div className="p-5 rounded-2xl bg-[#0D0D0D] border border-[#2B2F33] space-y-3">
+              <div className="flex items-center justify-between">
+                <h3 className="text-xs uppercase tracking-wider font-mono text-[#F2F4F3]/70 flex items-center gap-2">
+                  <Sparkles className="w-3.5 h-3.5 text-[#3DDC97]" />
+                  Paleta Cromática (Clic para copiar HEX)
+                </h3>
+              </div>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                 {project.colorPalette.map((color, idx) => (
                   <button
                     key={idx}
                     type="button"
                     onClick={() => copyToClipboard(color.hex)}
-                    className="flex items-center gap-2.5 p-2 rounded-xl bg-[#0D0D0D] border border-[#2B2F33] hover:border-[#3DDC97] transition-colors text-left group"
+                    className="flex items-center gap-2.5 p-2 rounded-xl bg-[#181B1E] border border-[#2B2F33] hover:border-[#3DDC97]/60 transition-colors text-left group"
                   >
                     <span
-                      className="w-6 h-6 rounded-md border border-white/20 shrink-0"
+                      className="w-6 h-6 rounded-md border border-white/10 shrink-0"
                       style={{ backgroundColor: color.hex }}
                     />
                     <div className="flex flex-col min-w-0">
-                      <span className="text-xs font-medium text-[#F2F4F3] truncate group-hover:text-[#3DDC97]">
+                      <span className="text-xs font-medium text-[#FFFFFF] truncate group-hover:text-[#3DDC97]">
                         {color.name}
                       </span>
                       <span className="text-[11px] font-mono text-[#F2F4F3]/50 flex items-center gap-1">
@@ -336,24 +360,24 @@ export default function SpecializedModal({ project, onClose }: SpecializedModalP
             </div>
           )}
 
-          {/* Footer CTA directo: "Cotizar un proyecto así con Panda Haus" */}
-          <div className="p-6 rounded-2xl bg-gradient-to-r from-[#3DDC97]/15 via-[#2B2F33]/40 to-[#2B2F33]/40 border border-[#3DDC97]/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+          {/* Footer CTA contextual a WhatsApp */}
+          <div className="p-5 rounded-2xl bg-gradient-to-r from-[#3DDC97]/10 via-[#181B1E] to-[#181B1E] border border-[#3DDC97]/30 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-              <h4 className="text-base font-display font-bold text-[#FFFFFF]">
-                ¿Quieres un proyecto así para tu negocio?
+              <h4 className="text-sm font-semibold text-[#FFFFFF]">
+                ¿Quieres un trabajo similar de {project.categoryLabel}?
               </h4>
-              <p className="text-xs text-[#F2F4F3]/70 mt-1 font-sans">
-                Escríbenos directamente por WhatsApp y coordinamos tu entrega en 24 a 48 horas.
+              <p className="text-xs text-[#F2F4F3]/70 mt-0.5">
+                Escríbenos con los detalles de tu negocio y te preparamos una propuesta personalizada con entrega ágil.
               </p>
             </div>
             <a
               href={projectWhatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#3DDC97] text-[#0D0D0D] font-display font-bold text-xs hover:bg-[#34C788] transition-all duration-200 shadow-lg shadow-[#3DDC97]/20 shrink-0 active:scale-95"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#3DDC97] text-[#0D0D0D] font-bold text-xs hover:bg-[#3DDC97]/90 transition-all duration-200 shadow-md shadow-[#3DDC97]/20 shrink-0 active:scale-95"
             >
-              <MessageCircle className="w-4 h-4 fill-current" />
-              <span>Cotizar un proyecto así con Panda Haus</span>
+              <MessageCircle className="w-4 h-4" />
+              <span>Cotizar proyecto similar</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </div>

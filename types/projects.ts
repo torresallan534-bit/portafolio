@@ -1,4 +1,11 @@
-export type ProjectCategory = 'flyers-menus' | 'landing-pages' | 'branding';
+export type ProjectCategory =
+  | 'videos'
+  | 'menus'
+  | 'flyers'
+  | 'carruseles'
+  | 'ebooks'
+  | 'miniaturas'
+  | 'branding';
 
 export interface ColorSwatch {
   name: string;
@@ -11,24 +18,22 @@ export interface ProjectAsset {
   assetPath: string; // /projects/...
   mediaType: 'image' | 'video';
   aspectRatio?: '9:16' | '16:9' | '1:1' | '3:4';
-  group?: string;
+  group?: string; // ej. 'carrusel-1', 'ebook-1'
 }
 
 export interface ProjectBlock {
-  id: string;
-  clientId: string;
-  clientName: string;
-  title: string;
+  id: string; // ej. 'axis-pro-videos'
+  clientId: string; // ej. 'axis-pro'
+  clientName: string; // ej. 'Axis Pro'
+  title: string; // ej. 'Videos Demostrativos & Comerciales'
   category: ProjectCategory;
-  categoryLabel: string;
+  categoryLabel: string; // ej. 'Videos Comerciales'
   summary: string;
-  businessBenefit?: string; // Beneficio comercial tangible
   challenge?: string;
   solution?: string;
   coverAsset: string;
   coverMediaType: 'image' | 'video';
-  previewVideoUrl?: string;
-  deviceType?: 'smartphone' | 'browser'; // Para componente DeviceMockup
+  previewVideoUrl?: string; // Para hover preview en tarjetas de video
   assets: ProjectAsset[];
   colorPalette: ColorSwatch[];
   year: number;

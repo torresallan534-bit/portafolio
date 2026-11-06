@@ -1,20 +1,643 @@
 [
   {
-    "id": "arepa-secreta-menus",
+    "id": "axis-pro-videos",
+    "clientId": "axis-pro",
+    "clientName": "Axis Pro",
+    "title": "Axis Pro — Videos Demostrativos & Comerciales",
+    "category": "videos",
+    "categoryLabel": "Videos Comerciales & Demo",
+    "summary": "Serie de 3 videos de demostración con edición dinámica, motion design y ritmo ágil para audiencias en Estados Unidos.",
+    "challenge": "Explicar funcionalidades de forma clara y retener la atención en los primeros segundos de visualización.",
+    "solution": "Edición con cortes acelerados, música rítmica y zooms estratégicos para maximizar el engagement en plataformas digitales.",
+    "coverAsset": "/projects/axis-pro-videos/1.mp4",
+    "coverMediaType": "video",
+    "previewVideoUrl": "/projects/axis-pro-videos/1.mp4",
+    "assets": [
+      {
+        "id": "axis-pro-videos-asset-1",
+        "title": "Axis Pro — Videos Demostrativos & Comerciales — Video 1",
+        "assetPath": "/projects/axis-pro-videos/1.mp4",
+        "mediaType": "video",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "axis-pro-videos-asset-2",
+        "title": "Axis Pro — Videos Demostrativos & Comerciales — Video 2",
+        "assetPath": "/projects/axis-pro-videos/2.mp4",
+        "mediaType": "video",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "axis-pro-videos-asset-3",
+        "title": "Axis Pro — Videos Demostrativos & Comerciales — Video 3",
+        "assetPath": "/projects/axis-pro-videos/3.mp4",
+        "mediaType": "video",
+        "aspectRatio": "16:9"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Azul Pro",
+        "hex": "#0284C7"
+      },
+      {
+        "name": "Cian Eléctrico",
+        "hex": "#38BDF8"
+      },
+      {
+        "name": "Grafito",
+        "hex": "#0F172A"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "axis-pro-carruseles",
+    "clientId": "axis-pro",
+    "clientName": "Axis Pro",
+    "title": "Axis Pro — Carruseles Educativos para Instagram",
+    "category": "carruseles",
+    "categoryLabel": "Carruseles para Redes",
+    "summary": "Secuencias informativas de diapositivas modulares con alto valor didáctico y diseño optimizado para guardados y compartidos.",
+    "challenge": "Sintetizar información técnica densa en láminas visualmente digeribles para redes sociales.",
+    "solution": "Diagramación paso a paso con jerarquía tipográfica, contrastes lumínicos e iconografía personalizada.",
+    "coverAsset": "/projects/axis-pro-carruseles/carrusel-1-1.webp",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "axis-pro-carruseles-asset-1",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 1",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-1.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-2",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 2",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-2.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-3",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 3",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-3.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-4",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 4",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-4.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-5",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 5",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-5.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-6",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 6",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-6.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-7",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 7",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-1.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-8",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 8",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-2.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-9",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 9",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-3.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-10",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 10",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-4.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-11",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 11",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-5.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-12",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 12",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-6.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-13",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 13",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-1.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-14",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 14",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-2.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-15",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 15",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-3.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-16",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 16",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-4.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-17",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 17",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-5.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "axis-pro-carruseles-asset-18",
+        "title": "Axis Pro — Carruseles Educativos para Instagram — Página 18",
+        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-6.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Azul Pro",
+        "hex": "#0284C7"
+      },
+      {
+        "name": "Cian Eléctrico",
+        "hex": "#38BDF8"
+      },
+      {
+        "name": "Grafito",
+        "hex": "#0F172A"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "axis-pro-ebooks",
+    "clientId": "axis-pro",
+    "clientName": "Axis Pro",
+    "title": "Axis Pro — Diseño Editorial de Ebooks & Guías",
+    "category": "ebooks",
+    "categoryLabel": "Ebooks & Editorial",
+    "summary": "Diseño y maquetación de guías digitales completas (Ebook 1 y Ebook 2) estructuradas página a página con acabado editorial prémium.",
+    "challenge": "Crear un lead magnet de alto valor percibido que refleje autoridad tecnológica en el mercado anglosajón.",
+    "solution": "Composición editorial limpia, balance de espacios en blanco y diagramación de más de 20 páginas especializadas.",
+    "coverAsset": "/projects/axis-pro-ebooks/ebook-1-1.webp",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "axis-pro-ebooks-asset-1",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 1",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-1.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-2",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 2",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-10.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-3",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 3",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-11.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-4",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 4",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-2.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-5",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 5",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-3.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-6",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 6",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-4.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-7",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 7",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-5.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-8",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 8",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-6.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-9",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 9",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-7.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-10",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 10",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-8.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-11",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 11",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-1-9.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-12",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 12",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-1.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-13",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 13",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-10.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-14",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 14",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-2.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-15",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 15",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-3.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-16",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 16",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-4.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-17",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 17",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-5.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-18",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 18",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-6.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-19",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 19",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-7.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-20",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 20",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-8.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "axis-pro-ebooks-asset-21",
+        "title": "Axis Pro — Diseño Editorial de Ebooks & Guías — Página 21",
+        "assetPath": "/projects/axis-pro-ebooks/ebook-2-9.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Azul Pro",
+        "hex": "#0284C7"
+      },
+      {
+        "name": "Cian Eléctrico",
+        "hex": "#38BDF8"
+      },
+      {
+        "name": "Grafito",
+        "hex": "#0F172A"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "axis-pro-miniaturas",
+    "clientId": "axis-pro",
+    "clientName": "Axis Pro",
+    "title": "Axis Pro — Miniaturas de Alto CTR para YouTube",
+    "category": "miniaturas",
+    "categoryLabel": "Miniaturas YouTube (Alto CTR)",
+    "summary": "Portadas de alto impacto concebidas para maximizar la tasa de clics orgánicos en YouTube para el mercado estadounidense.",
+    "challenge": "Competir contra miniaturas con alta saturación en el nicho tech de YouTube USA.",
+    "solution": "Composiciones con contraste cromático cian/azul, expresiones faciales nítidas y textos de anclaje de máximo 3 palabras.",
+    "coverAsset": "/projects/axis-pro-miniaturas/1.webp",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "axis-pro-miniaturas-asset-1",
+        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — Pieza 1",
+        "assetPath": "/projects/axis-pro-miniaturas/1.webp",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "axis-pro-miniaturas-asset-2",
+        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — Pieza 2",
+        "assetPath": "/projects/axis-pro-miniaturas/2.webp",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "axis-pro-miniaturas-asset-3",
+        "title": "Axis Pro — Miniaturas de Alto CTR para YouTube — Pieza 3",
+        "assetPath": "/projects/axis-pro-miniaturas/3.webp",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Azul Pro",
+        "hex": "#0284C7"
+      },
+      {
+        "name": "Cian Eléctrico",
+        "hex": "#38BDF8"
+      },
+      {
+        "name": "Grafito",
+        "hex": "#0F172A"
+      },
+      {
+        "name": "Blanco Puro",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "allan-zoo-miniaturas",
+    "clientId": "allan-zoo",
+    "clientName": "Allan Zoo",
+    "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes",
+    "category": "miniaturas",
+    "categoryLabel": "Miniaturas YouTube (Alto CTR)",
+    "summary": "Miniaturas cinematográficas con fotomontajes dramáticos de felinos y animales imponentes para YouTube.",
+    "challenge": "Atrapar tráfico en la página de inicio frente a canales globales de naturaleza y fauna.",
+    "solution": "Corrección de color dramática, enfoque en miradas de felinos y tipografía bold de alta legibilidad en pantallas pequeñas.",
+    "coverAsset": "/projects/allan-zoo-miniaturas/1.webp",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "allan-zoo-miniaturas-asset-1",
+        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — Pieza 1",
+        "assetPath": "/projects/allan-zoo-miniaturas/1.webp",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "allan-zoo-miniaturas-asset-2",
+        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — Pieza 2",
+        "assetPath": "/projects/allan-zoo-miniaturas/2.webp",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      },
+      {
+        "id": "allan-zoo-miniaturas-asset-3",
+        "title": "Allan Zoo — Miniaturas Documentales de Animales Salvajes — Pieza 3",
+        "assetPath": "/projects/allan-zoo-miniaturas/3.webp",
+        "mediaType": "image",
+        "aspectRatio": "16:9"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Ámbar Furia",
+        "hex": "#F59E0B"
+      },
+      {
+        "name": "Rojo Alerta",
+        "hex": "#DC2626"
+      },
+      {
+        "name": "Verde Selva",
+        "hex": "#15803D"
+      },
+      {
+        "name": "Negro Profundo",
+        "hex": "#0A0A0B"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "barberia-the-king-videos",
+    "clientId": "barberia-the-king",
+    "clientName": "Barbería The King",
+    "title": "Barbería The King — Videos Promocionales Verticales (9:16)",
+    "category": "videos",
+    "categoryLabel": "Videos Comerciales & Demo",
+    "summary": "Trilogía de videos comerciales verticales diseñados para TikTok e Instagram Reels, resaltando técnica y ambiente prémium.",
+    "challenge": "Baja captación de nuevos clientes entre semana y promociones desapercibidas en redes.",
+    "solution": "Producción audiovisual rítmica con tomas de detalle en corte, música envolvente y llamados directos a reservar cita.",
+    "coverAsset": "/projects/barberia-the-king-videos/video-1.mp4",
+    "coverMediaType": "video",
+    "previewVideoUrl": "/projects/barberia-the-king-videos/video-1.mp4",
+    "assets": [
+      {
+        "id": "barberia-the-king-videos-asset-1",
+        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — Video 1",
+        "assetPath": "/projects/barberia-the-king-videos/video-1.mp4",
+        "mediaType": "video",
+        "aspectRatio": "9:16"
+      },
+      {
+        "id": "barberia-the-king-videos-asset-2",
+        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — Video 2",
+        "assetPath": "/projects/barberia-the-king-videos/video-2.mp4",
+        "mediaType": "video",
+        "aspectRatio": "9:16"
+      },
+      {
+        "id": "barberia-the-king-videos-asset-3",
+        "title": "Barbería The King — Videos Promocionales Verticales (9:16) — Video 3",
+        "assetPath": "/projects/barberia-the-king-videos/video-3.mp4",
+        "mediaType": "video",
+        "aspectRatio": "9:16"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Dorado Rey",
+        "hex": "#EAB308"
+      },
+      {
+        "name": "Negro Obsidiana",
+        "hex": "#09090B"
+      },
+      {
+        "name": "Plata Cromo",
+        "hex": "#E4E4E7"
+      },
+      {
+        "name": "Gris Plomo",
+        "hex": "#52525B"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "barberia-the-king-flyers",
+    "clientId": "barberia-the-king",
+    "clientName": "Barbería The King",
+    "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1",
+    "category": "flyers",
+    "categoryLabel": "Flyers & Publicidad",
+    "summary": "Afiches de alto contraste con estética streetwear y cupones de fidelización para clientes VIP.",
+    "challenge": "Diferenciarse de barberías tradicionales con una identidad visual contundente y moderna.",
+    "solution": "Tipografía contundente, paleta negro/oro y cuponera lista para volanteo físico y estados de WhatsApp.",
+    "coverAsset": "/projects/barberia-the-king-flyers/1.webp",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "barberia-the-king-flyers-asset-1",
+        "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1 — Pieza 1",
+        "assetPath": "/projects/barberia-the-king-flyers/1.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "barberia-the-king-flyers-asset-2",
+        "title": "Barbería The King — Cartelería Urbana & Cuponeras 2x1 — Pieza 2",
+        "assetPath": "/projects/barberia-the-king-flyers/2.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Dorado Rey",
+        "hex": "#EAB308"
+      },
+      {
+        "name": "Negro Obsidiana",
+        "hex": "#09090B"
+      },
+      {
+        "name": "Plata Cromo",
+        "hex": "#E4E4E7"
+      },
+      {
+        "name": "Gris Plomo",
+        "hex": "#52525B"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "arepa-secreta-branding-1",
     "clientId": "arepa-secreta",
     "clientName": "Arepa Secreta",
-    "title": "Menú Digital Interactivo Optimizado para Pedidos por WhatsApp",
-    "category": "flyers-menus",
-    "categoryLabel": "Flyers & Menús",
-    "summary": "Diagramación de carta gastronómica modular con lectura rápida en 3 niveles, fotografía apetitosa y versión digital ultraligera para lectura por código QR en mesa.",
-    "businessBenefit": "Redujo el tiempo de decisión de los comensales en horas pico y aumentó un 35% los pedidos de bebidas y postres.",
-    "challenge": "La carta original saturaba a los clientes y dificultaba la rotación rápida de mesas en horas pico.",
-    "solution": "Diagramación en tres niveles de lectura, fotografía apetitosa y versión digital ultraligera para lectura por código QR.",
-    "coverAsset": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-1.webp",
+    "title": "Arepa Secreta — Identidad Visual & Concepto (Fase 1)",
+    "category": "branding",
+    "categoryLabel": "Branding & Identidad",
+    "summary": "Construcción del concepto gráfico primario, imagotipo artesanal del fogón y el maíz, y directrices de color cálido.",
+    "challenge": "Diseñar desde cero una marca que transmita tradición culinaria venezolana con presentación contemporánea.",
+    "solution": "Desarrollo del imagotipo central, texturas en papel kraft y primeros lineamientos de identidad visual.",
+    "coverAsset": "/projects/arepa-secreta-branding-1/branding-1.webp",
     "coverMediaType": "image",
-    "deviceType": "smartphone",
-    "year": 2026,
-    "featured": true,
+    "assets": [
+      {
+        "id": "arepa-secreta-branding-1-asset-1",
+        "title": "Arepa Secreta — Identidad Visual & Concepto (Fase 1) — Pieza 1",
+        "assetPath": "/projects/arepa-secreta-branding-1/branding-1.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
     "colorPalette": [
       {
         "name": "Maíz Dorado",
@@ -33,67 +656,261 @@
         "hex": "#FAFAF9"
       }
     ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "arepa-secreta-branding-2",
+    "clientId": "arepa-secreta",
+    "clientName": "Arepa Secreta",
+    "title": "Arepa Secreta — Sistema de Marca & Empaques (Fase 2)",
+    "category": "branding",
+    "categoryLabel": "Branding & Identidad",
+    "summary": "Evolución de identidad, sistema de packaging para delivery (bolsas térmicas, papel antigrasa) y papelería comercial.",
+    "challenge": "Extender la identidad gráfica al packaging de domicilio manteniendo la comida caliente y la marca reconocible.",
+    "solution": "Diseño modular de empaques, bolsas con mensajes de marca y etiquetas adhesivas de seguridad.",
+    "coverAsset": "/projects/arepa-secreta-branding-2/branding-2.webp",
+    "coverMediaType": "image",
     "assets": [
       {
-        "id": "asm-1",
-        "title": "Carta Gastronómica — Fase 1, Página 1",
+        "id": "arepa-secreta-branding-2-asset-1",
+        "title": "Arepa Secreta — Sistema de Marca & Empaques (Fase 2) — Pieza 1",
+        "assetPath": "/projects/arepa-secreta-branding-2/branding-2.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Maíz Dorado",
+        "hex": "#F59E0B"
+      },
+      {
+        "name": "Terracota Criollo",
+        "hex": "#DC2626"
+      },
+      {
+        "name": "Carbón Bistro",
+        "hex": "#18181B"
+      },
+      {
+        "name": "Blanco Crema",
+        "hex": "#FAFAF9"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "arepa-secreta-menus",
+    "clientId": "arepa-secreta",
+    "clientName": "Arepa Secreta",
+    "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR",
+    "category": "menus",
+    "categoryLabel": "Menús Gastronómicos",
+    "summary": "Diseño y diagramación de cartas completas (Menú 1 y Menú 2) estructurando rellenos tradicionales, bebidas y combos.",
+    "challenge": "La carta original saturaba a los clientes y dificultaba la rotación rápida de mesas en horas pico.",
+    "solution": "Diagramación en tres niveles de lectura, fotografía apetitosa y versión digital ultraligera para lectura por código QR.",
+    "coverAsset": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-1.webp",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "arepa-secreta-menus-asset-1",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 1",
         "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-1.webp",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
-        "id": "asm-2",
-        "title": "Carta Gastronómica — Fase 1, Página 2",
+        "id": "arepa-secreta-menus-asset-2",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 2",
         "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-2.webp",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
-        "id": "asm-3",
-        "title": "Carta Gastronómica — Fase 1, Página 3",
-        "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-3.webp",
+        "id": "arepa-secreta-menus-asset-3",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 3",
+        "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-2-1.webp",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
-        "id": "asm-4",
-        "title": "Carta Gastronómica — Fase 2, Página 1",
+        "id": "arepa-secreta-menus-asset-4",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 4",
         "assetPath": "/projects/arepa-secreta-menus/menu-fase-2-carta-1-1.webp",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
-        "id": "asm-5",
-        "title": "Carta Gastronómica — Fase 2, Página 2",
+        "id": "arepa-secreta-menus-asset-5",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 5",
         "assetPath": "/projects/arepa-secreta-menus/menu-fase-2-carta-1-2.webp",
         "mediaType": "image",
         "aspectRatio": "3:4"
       },
       {
-        "id": "asm-6",
-        "title": "Carta Gastronómica — Fase 2, Página 3",
-        "assetPath": "/projects/arepa-secreta-menus/menu-fase-2-carta-1-3.webp",
+        "id": "arepa-secreta-menus-asset-6",
+        "title": "Arepa Secreta — Menús Gastronómicos & Cartas Físicas / QR — Pieza 6",
+        "assetPath": "/projects/arepa-secreta-menus/menu-fase-2-carta-2-3.webp",
         "mediaType": "image",
         "aspectRatio": "3:4"
       }
-    ]
+    ],
+    "colorPalette": [
+      {
+        "name": "Maíz Dorado",
+        "hex": "#F59E0B"
+      },
+      {
+        "name": "Terracota Criollo",
+        "hex": "#DC2626"
+      },
+      {
+        "name": "Carbón Bistro",
+        "hex": "#18181B"
+      },
+      {
+        "name": "Blanco Crema",
+        "hex": "#FAFAF9"
+      }
+    ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "arepa-secreta-flyers",
+    "clientId": "arepa-secreta",
+    "clientName": "Arepa Secreta",
+    "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales",
+    "category": "flyers",
+    "categoryLabel": "Flyers & Publicidad",
+    "summary": "Piezas publicitarias concebidas para WhatsApp Status e Instagram Stories para promocionar combos familiares y nocturnos.",
+    "challenge": "Comunicar promociones diarias sin depender de explicaciones largas en mensajes de texto.",
+    "solution": "Composiciones con producto en primer plano, precios destacados y llamados directos a pedir por WhatsApp.",
+    "coverAsset": "/projects/arepa-secreta-flyers/flayers-fase-1-1.webp",
+    "coverMediaType": "image",
+    "assets": [
+      {
+        "id": "arepa-secreta-flyers-asset-1",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 1",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-1-1.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-2",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 2",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-1-2.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-3",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 3",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-1-3.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-4",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 4",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-2-1.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-5",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 5",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-2-2.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "arepa-secreta-flyers-asset-6",
+        "title": "Arepa Secreta — Flyers Promocionales & Ofertas Semanales — Pieza 6",
+        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-2-3.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
+    "colorPalette": [
+      {
+        "name": "Maíz Dorado",
+        "hex": "#F59E0B"
+      },
+      {
+        "name": "Terracota Criollo",
+        "hex": "#DC2626"
+      },
+      {
+        "name": "Carbón Bistro",
+        "hex": "#18181B"
+      },
+      {
+        "name": "Blanco Crema",
+        "hex": "#FAFAF9"
+      }
+    ],
+    "year": 2025,
+    "featured": true
   },
   {
     "id": "taqueria-df-flyers",
     "clientId": "taqueria-df",
     "clientName": "Taquería DF — La Capital del Taco",
-    "title": "Campaña de Cartas Promocionales & Ofertas 2x1 en Bogotá",
-    "category": "flyers-menus",
-    "categoryLabel": "Flyers & Menús",
-    "summary": "Serie de 6 afiches comerciales y cartas de combos taqueros con paleta viva de alta apetitosidad para activación de consumo en días flojos.",
-    "businessBenefit": "Aceleró un 40% las órdenes directas entre semana y posicionó los combos familiares como líderes de venta.",
+    "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones",
+    "category": "flyers",
+    "categoryLabel": "Flyers & Publicidad",
+    "summary": "Serie de 6 afiches comerciales y cartas promocionales con las ofertas 2x1 y combos taqueros en Bogotá.",
     "challenge": "Competir en una zona gastronómica densa comunicando precios y ofertas de tacos al pastor de forma inmediata.",
     "solution": "Paleta viva de inspiración mexicana (rojo chile, amarillo maíz) con textos gancho que aceleraron las órdenes.",
     "coverAsset": "/projects/taqueria-df-flyers/1.webp",
     "coverMediaType": "image",
-    "deviceType": "smartphone",
-    "year": 2026,
-    "featured": true,
+    "assets": [
+      {
+        "id": "taqueria-df-flyers-asset-1",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 1",
+        "assetPath": "/projects/taqueria-df-flyers/1.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-2",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 2",
+        "assetPath": "/projects/taqueria-df-flyers/2.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-3",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 3",
+        "assetPath": "/projects/taqueria-df-flyers/3.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-4",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 4",
+        "assetPath": "/projects/taqueria-df-flyers/4.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-5",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 5",
+        "assetPath": "/projects/taqueria-df-flyers/5.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      },
+      {
+        "id": "taqueria-df-flyers-asset-6",
+        "title": "Taquería DF — Campaña Publicitaria & Cartas de Promociones — Pieza 6",
+        "assetPath": "/projects/taqueria-df-flyers/6.webp",
+        "mediaType": "image",
+        "aspectRatio": "3:4"
+      }
+    ],
     "colorPalette": [
       {
         "name": "Rojo Chile",
@@ -112,640 +929,44 @@
         "hex": "#18181B"
       }
     ],
-    "assets": [
-      {
-        "id": "tdf-1",
-        "title": "Afiche Comercial — Combos Al Pastor",
-        "assetPath": "/projects/taqueria-df-flyers/1.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "tdf-2",
-        "title": "Carta de Promociones — Días 2x1",
-        "assetPath": "/projects/taqueria-df-flyers/2.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "tdf-3",
-        "title": "Flyer Digital — Especial Taquero",
-        "assetPath": "/projects/taqueria-df-flyers/3.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "tdf-4",
-        "title": "Afiche Promocional — Gringas & Bebidas",
-        "assetPath": "/projects/taqueria-df-flyers/4.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "tdf-5",
-        "title": "Banner de Combos Familiares",
-        "assetPath": "/projects/taqueria-df-flyers/5.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "tdf-6",
-        "title": "Afiche Nocturno — Órdenes Express",
-        "assetPath": "/projects/taqueria-df-flyers/6.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      }
-    ]
-  },
-  {
-    "id": "arepa-secreta-flyers",
-    "clientId": "arepa-secreta",
-    "clientName": "Arepa Secreta",
-    "title": "Flyers Promocionales de Alto Impacto para Estados de WhatsApp",
-    "category": "flyers-menus",
-    "categoryLabel": "Flyers & Menús",
-    "summary": "Piezas publicitarias concebidas para estados de WhatsApp e historias de Instagram con producto en primer plano y precios destacados.",
-    "businessBenefit": "Cierre directo de ventas por mensajería sin requerir explicaciones manuales de precios a clientes.",
-    "challenge": "Comunicar promociones diarias sin depender de explicaciones largas en mensajes de texto.",
-    "solution": "Composiciones con producto en primer plano, precios destacados y llamados directos a pedir por WhatsApp.",
-    "coverAsset": "/projects/arepa-secreta-flyers/flayers-fase-1-1.webp",
-    "coverMediaType": "image",
-    "deviceType": "smartphone",
-    "year": 2026,
-    "featured": false,
-    "colorPalette": [
-      {
-        "name": "Maíz Dorado",
-        "hex": "#F59E0B"
-      },
-      {
-        "name": "Terracota Criollo",
-        "hex": "#DC2626"
-      },
-      {
-        "name": "Carbón Bistro",
-        "hex": "#18181B"
-      },
-      {
-        "name": "Blanco Crema",
-        "hex": "#FAFAF9"
-      }
-    ],
-    "assets": [
-      {
-        "id": "asf-1",
-        "title": "Flyer Promocional — Combo Familiar",
-        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-1-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "asf-2",
-        "title": "Flyer Promocional — Arepa Reina Pepiada",
-        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-1-2.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "asf-3",
-        "title": "Flyer Promocional — Desayunos Criollos",
-        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-1-3.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "asf-4",
-        "title": "Flyer Fase 2 — Oferta Nocturna",
-        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-2-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "asf-5",
-        "title": "Flyer Fase 2 — Especial Delivery",
-        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-2-2.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "asf-6",
-        "title": "Flyer Fase 2 — Combo Fin de Semana",
-        "assetPath": "/projects/arepa-secreta-flyers/flayers-fase-2-3.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      }
-    ]
-  },
-  {
-    "id": "barberia-the-king-flyers",
-    "clientId": "barberia-the-king",
-    "clientName": "Barbería The King",
-    "title": "Campaña de Flyers Promocionales para Captación en Barbería",
-    "category": "flyers-menus",
-    "categoryLabel": "Flyers & Menús",
-    "summary": "Afiches de alto contraste con estética urbana contemporánea y cupones de fidelización concebidos para llenar la agenda en salón.",
-    "businessBenefit": "Multiplicó las citas agendadas los días lunes y martes a través de cuponeras digitales compartidas en redes.",
-    "challenge": "Diferenciarse de barberías tradicionales con una identidad visual contundente y moderna.",
-    "solution": "Tipografía contundente, paleta negro/oro y cuponera lista para volanteo físico y estados de WhatsApp.",
-    "coverAsset": "/projects/barberia-the-king-flyers/1.webp",
-    "coverMediaType": "image",
-    "deviceType": "smartphone",
-    "year": 2026,
-    "featured": true,
-    "colorPalette": [
-      {
-        "name": "Dorado Rey",
-        "hex": "#EAB308"
-      },
-      {
-        "name": "Negro Obsidiana",
-        "hex": "#09090B"
-      },
-      {
-        "name": "Plata Cromo",
-        "hex": "#E4E4E7"
-      },
-      {
-        "name": "Gris Plomo",
-        "hex": "#52525B"
-      }
-    ],
-    "assets": [
-      {
-        "id": "btk-f1",
-        "title": "Cartel Promocional — Experiencia VIP",
-        "assetPath": "/projects/barberia-the-king-flyers/1.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      },
-      {
-        "id": "btk-f2",
-        "title": "Cuponera Digital — Días 2x1 en Corte",
-        "assetPath": "/projects/barberia-the-king-flyers/2.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      }
-    ]
-  },
-  {
-    "id": "barberia-the-king-videos",
-    "clientId": "barberia-the-king",
-    "clientName": "Barbería The King",
-    "title": "Videos Comerciales Verticales (9:16) para Impulso de Reservas",
-    "category": "flyers-menus",
-    "categoryLabel": "Flyers & Menús",
-    "summary": "Trilogía audiovisual en formato 9:16 optimizada para TikTok e Instagram Reels, diseñada para detonar reservas directas a WhatsApp.",
-    "businessBenefit": "Más de 30 reservas confirmadas directamente desde el enlace de WhatsApp en su primer mes de publicación.",
-    "challenge": "Baja captación de nuevos clientes entre semana y promociones desapercibidas en redes.",
-    "solution": "Producción audiovisual rítmica con tomas de detalle en corte, música envolvente y llamados directos a reservar cita.",
-    "coverAsset": "/projects/barberia-the-king-videos/video-1.mp4",
-    "coverMediaType": "video",
-    "deviceType": "smartphone",
-    "year": 2026,
-    "featured": false,
-    "colorPalette": [
-      {
-        "name": "Dorado Rey",
-        "hex": "#EAB308"
-      },
-      {
-        "name": "Negro Obsidiana",
-        "hex": "#09090B"
-      },
-      {
-        "name": "Plata Cromo",
-        "hex": "#E4E4E7"
-      },
-      {
-        "name": "Gris Plomo",
-        "hex": "#52525B"
-      }
-    ],
-    "assets": [
-      {
-        "id": "btk-v1",
-        "title": "Spot Comercial 01 — Técnica & Precisión",
-        "assetPath": "/projects/barberia-the-king-videos/video-1.mp4",
-        "mediaType": "video",
-        "aspectRatio": "9:16"
-      },
-      {
-        "id": "btk-v2",
-        "title": "Spot Comercial 02 — Ambiente de Barbería",
-        "assetPath": "/projects/barberia-the-king-videos/video-2.mp4",
-        "mediaType": "video",
-        "aspectRatio": "9:16"
-      },
-      {
-        "id": "btk-v3",
-        "title": "Spot Comercial 03 — Agendamiento de Citas",
-        "assetPath": "/projects/barberia-the-king-videos/video-3.mp4",
-        "mediaType": "video",
-        "aspectRatio": "9:16"
-      }
-    ]
-  },
-  {
-    "id": "axis-pro-carruseles",
-    "clientId": "axis-pro",
-    "clientName": "Axis Pro",
-    "title": "Carruseles Visuales Modulares de Alto Engagement en Redes",
-    "category": "flyers-menus",
-    "categoryLabel": "Flyers & Menús",
-    "summary": "Secuencias informativas de láminas modulares con alto valor didáctico, diseñadas para disparar las métricas de guardados y compartidos.",
-    "businessBenefit": "Triplicó los compartidos orgánicos y generó leads calificados a través de mensajes directos.",
-    "challenge": "Sintetizar información técnica densa en láminas visualmente digeribles para redes sociales.",
-    "solution": "Diagramación paso a paso con jerarquía tipográfica, contrastes lumínicos e iconografía personalizada.",
-    "coverAsset": "/projects/axis-pro-carruseles/carrusel-1-1.webp",
-    "coverMediaType": "image",
-    "deviceType": "smartphone",
-    "year": 2026,
-    "featured": false,
-    "colorPalette": [
-      {
-        "name": "Azul Pro",
-        "hex": "#0284C7"
-      },
-      {
-        "name": "Cian Eléctrico",
-        "hex": "#38BDF8"
-      },
-      {
-        "name": "Grafito",
-        "hex": "#0F172A"
-      },
-      {
-        "name": "Blanco Puro",
-        "hex": "#FFFFFF"
-      }
-    ],
-    "assets": [
-      {
-        "id": "apc-1",
-        "title": "Carrusel 1 — Lámina de Apertura",
-        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "1:1"
-      },
-      {
-        "id": "apc-2",
-        "title": "Carrusel 1 — Desarrollo de Solución",
-        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-2.webp",
-        "mediaType": "image",
-        "aspectRatio": "1:1"
-      },
-      {
-        "id": "apc-3",
-        "title": "Carrusel 1 — Llamado a la Acción",
-        "assetPath": "/projects/axis-pro-carruseles/carrusel-1-3.webp",
-        "mediaType": "image",
-        "aspectRatio": "1:1"
-      },
-      {
-        "id": "apc-4",
-        "title": "Carrusel 2 — Diagnóstico Visual",
-        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "1:1"
-      },
-      {
-        "id": "apc-5",
-        "title": "Carrusel 2 — Puntos Clave",
-        "assetPath": "/projects/axis-pro-carruseles/carrusel-2-2.webp",
-        "mediaType": "image",
-        "aspectRatio": "1:1"
-      },
-      {
-        "id": "apc-6",
-        "title": "Carrusel 3 — Cierre Comercial",
-        "assetPath": "/projects/axis-pro-carruseles/carrusel-3-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "1:1"
-      }
-    ]
-  },
-  {
-    "id": "nails-pastel-video",
-    "clientId": "nails-pastel",
-    "clientName": "Nails Pastel",
-    "title": "Video Comercial Vertical para Activación de Citas en Salón Spa",
-    "category": "flyers-menus",
-    "categoryLabel": "Flyers & Menús",
-    "summary": "Video vertical con tomas de detalle en tratamientos estéticos y música envolvente para captación de clientas que buscan servicios prémium.",
-    "businessBenefit": "Atracción continua de clientas recurrentes mediante campañas en historias de WhatsApp e Instagram.",
-    "challenge": "Transmitir la calidad y el acabado minucioso de las sesiones estéticas a través de medios digitales.",
-    "solution": "Edición en video vertical con música envolvente y primeros planos que generan deseo y reservas inmediatas.",
-    "coverAsset": "/projects/nails-pastel-video/video-promocional.mp4",
-    "coverMediaType": "video",
-    "deviceType": "smartphone",
-    "year": 2026,
-    "featured": false,
-    "colorPalette": [
-      {
-        "name": "Rosa Pastel",
-        "hex": "#F472B6"
-      },
-      {
-        "name": "Lavanda Suave",
-        "hex": "#C084FC"
-      },
-      {
-        "name": "Blanco Nácar",
-        "hex": "#FDF4FF"
-      },
-      {
-        "name": "Dorado Champagne",
-        "hex": "#FDE047"
-      }
-    ],
-    "assets": [
-      {
-        "id": "npv-1",
-        "title": "Spot Promocional — Experiencia Spa",
-        "assetPath": "/projects/nails-pastel-video/video-promocional.mp4",
-        "mediaType": "video",
-        "aspectRatio": "9:16"
-      }
-    ]
-  },
-  {
-    "id": "landing-arepa-secreta",
-    "clientId": "arepa-secreta",
-    "clientName": "Arepa Secreta",
-    "title": "Menú Web y Portal Comercial de Pedidos Gastronómicos",
-    "category": "landing-pages",
-    "categoryLabel": "Landing Pages",
-    "summary": "Página web ultra-rápida concebida para abrirse al instante tras escanear el código QR en mesa, permitiendo consultar precios y solicitar pedidos directo a WhatsApp.",
-    "businessBenefit": "Cero fricción de carga en celulares y aumento directo en la facturación de domicilios y pedidos en mesa.",
-    "challenge": "Reducir el tiempo de espera del cliente para acceder a la carta sin obligar a descargar PDFs pesados de 20MB.",
-    "solution": "Diseño web comercial ligero con tiempo de carga inferior a 800ms y conexión directa a WhatsApp con el pedido prellenado.",
-    "coverAsset": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-1.webp",
-    "coverMediaType": "image",
-    "deviceType": "browser",
-    "year": 2026,
-    "featured": true,
-    "colorPalette": [
-      {
-        "name": "Maíz Dorado",
-        "hex": "#F59E0B"
-      },
-      {
-        "name": "Terracota Criollo",
-        "hex": "#DC2626"
-      },
-      {
-        "name": "Carbón Bistro",
-        "hex": "#18181B"
-      },
-      {
-        "name": "Blanco Crema",
-        "hex": "#FAFAF9"
-      }
-    ],
-    "assets": [
-      {
-        "id": "lpas-1",
-        "title": "Vista Web — Carta de Especialidades",
-        "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "lpas-2",
-        "title": "Vista Web — Combos y Bebidas",
-        "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-2.webp",
-        "mediaType": "image",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "lpas-3",
-        "title": "Vista Web — Desayunos y Promociones",
-        "assetPath": "/projects/arepa-secreta-menus/menu-fase-1-carta-1-3.webp",
-        "mediaType": "image",
-        "aspectRatio": "16:9"
-      }
-    ]
-  },
-  {
-    "id": "landing-axis-pro",
-    "clientId": "axis-pro",
-    "clientName": "Axis Pro",
-    "title": "Landing Page Comercial para Captación de Clientes y Recursos Digitales",
-    "category": "landing-pages",
-    "categoryLabel": "Landing Pages",
-    "summary": "Página web comercial estructurada con copy de alta conversión, descarga de recursos editoriales y formulario de contacto directo para agendamiento.",
-    "businessBenefit": "Tasa de conversión de visita a lead del 18% en campañas de pauta digital para el mercado internacional.",
-    "challenge": "Crear un lead magnet de alto valor percibido que refleje autoridad tecnológica en el mercado anglosajón.",
-    "solution": "Composición editorial limpia, balance de espacios en blanco y diagramación de más de 20 páginas especializadas.",
-    "coverAsset": "/projects/axis-pro-ebooks/ebook-1-1.webp",
-    "coverMediaType": "image",
-    "deviceType": "browser",
-    "year": 2026,
-    "featured": true,
-    "colorPalette": [
-      {
-        "name": "Azul Pro",
-        "hex": "#0284C7"
-      },
-      {
-        "name": "Cian Eléctrico",
-        "hex": "#38BDF8"
-      },
-      {
-        "name": "Grafito",
-        "hex": "#0F172A"
-      },
-      {
-        "name": "Blanco Puro",
-        "hex": "#FFFFFF"
-      }
-    ],
-    "assets": [
-      {
-        "id": "lpa-1",
-        "title": "Página Web — Portada de Guía Comercial",
-        "assetPath": "/projects/axis-pro-ebooks/ebook-1-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "lpa-2",
-        "title": "Página Web — Presentación de Beneficios",
-        "assetPath": "/projects/axis-pro-ebooks/ebook-1-2.webp",
-        "mediaType": "image",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "lpa-3",
-        "title": "Página Web — Módulo de Cierre Comercial",
-        "assetPath": "/projects/axis-pro-ebooks/ebook-2-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "16:9"
-      }
-    ]
-  },
-  {
-    "id": "landing-panda-haus-conversion",
-    "clientId": "panda-haus",
-    "clientName": "Panda Haus Studio",
-    "title": "Landing Page Comercial de Conversión de Alta Velocidad (48h)",
-    "category": "landing-pages",
-    "categoryLabel": "Landing Pages",
-    "summary": "Arquitectura web comercial diseñada para negocios que necesitan presentar sus paquetes, mostrar garantías claras y recibir cotizaciones directas en WhatsApp en menos de 48 horas.",
-    "businessBenefit": "Cero dependencias innecesarias, tiempo de respuesta instantáneo y estructura probada de conversión comercial.",
-    "challenge": "Negocios locales perdiendo clientes por páginas web lentas, confusas o sin llamados directos a WhatsApp.",
-    "solution": "Landing page ultra-rápida, con diseño visual de alto nivel y botones directos que inician conversaciones con un solo clic.",
-    "coverAsset": "/projects/axis-pro-miniaturas/1.webp",
-    "coverMediaType": "image",
-    "deviceType": "browser",
-    "year": 2026,
-    "featured": true,
-    "colorPalette": [
-      {
-        "name": "Negro Profundo",
-        "hex": "#0D0D0D"
-      },
-      {
-        "name": "Verde Menta",
-        "hex": "#3DDC97"
-      },
-      {
-        "name": "Grafito",
-        "hex": "#2B2F33"
-      },
-      {
-        "name": "Blanco Puro",
-        "hex": "#FFFFFF"
-      }
-    ],
-    "assets": [
-      {
-        "id": "lph-1",
-        "title": "Estructura Web — Hero Comercial y Precios",
-        "assetPath": "/projects/axis-pro-miniaturas/1.webp",
-        "mediaType": "image",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "lph-2",
-        "title": "Estructura Web — Catálogo Visual de Entregables",
-        "assetPath": "/projects/axis-pro-miniaturas/2.webp",
-        "mediaType": "image",
-        "aspectRatio": "16:9"
-      },
-      {
-        "id": "lph-3",
-        "title": "Estructura Web — Flujo Directo de Contacto WhatsApp",
-        "assetPath": "/projects/axis-pro-miniaturas/3.webp",
-        "mediaType": "image",
-        "aspectRatio": "16:9"
-      }
-    ]
-  },
-  {
-    "id": "arepa-secreta-branding-2",
-    "clientId": "arepa-secreta",
-    "clientName": "Arepa Secreta",
-    "title": "Sistema de Identidad Comercial y Empaques Listos para Delivery",
-    "category": "branding",
-    "categoryLabel": "Branding",
-    "summary": "Evolución de identidad gráfica, diseño de empaques térmicos para delivery (bolsas kraft, papel antigrasa, adhesivos de seguridad) y papelería comercial.",
-    "businessBenefit": "Posicionó la marca como opción gastronómica prémium en delivery, permitiendo aumentar un 20% el precio promedio por pedido.",
-    "challenge": "Extender la identidad gráfica al packaging de domicilio manteniendo la comida caliente y la marca reconocible.",
-    "solution": "Diseño modular de empaques, bolsas con mensajes de marca y etiquetas adhesivas de seguridad.",
-    "coverAsset": "/projects/arepa-secreta-branding-2/branding-2.webp",
-    "coverMediaType": "image",
-    "deviceType": "smartphone",
-    "year": 2026,
-    "featured": true,
-    "colorPalette": [
-      {
-        "name": "Maíz Dorado",
-        "hex": "#F59E0B"
-      },
-      {
-        "name": "Terracota Criollo",
-        "hex": "#DC2626"
-      },
-      {
-        "name": "Carbón Bistro",
-        "hex": "#18181B"
-      },
-      {
-        "name": "Blanco Crema",
-        "hex": "#FAFAF9"
-      }
-    ],
-    "assets": [
-      {
-        "id": "asb2-1",
-        "title": "Sistema de Packaging & Empaques Delivery",
-        "assetPath": "/projects/arepa-secreta-branding-2/branding-2.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      }
-    ]
-  },
-  {
-    "id": "arepa-secreta-branding-1",
-    "clientId": "arepa-secreta",
-    "clientName": "Arepa Secreta",
-    "title": "Concepto de Marca y Directrices Visuales de Alto Reconocimiento",
-    "category": "branding",
-    "categoryLabel": "Branding",
-    "summary": "Construcción del concepto gráfico primario, imagotipo artesanal del fogón y el maíz, y directrices de color cálido para locales y redes.",
-    "businessBenefit": "Creó un identificador visual memorable que unificó la comunicación de sucursales físicas y canales digitales.",
-    "challenge": "Diseñar desde cero una marca que transmita tradición culinaria venezolana con presentación contemporánea.",
-    "solution": "Desarrollo del imagotipo central, texturas en papel kraft y primeros lineamientos de identidad visual.",
-    "coverAsset": "/projects/arepa-secreta-branding-1/branding-1.webp",
-    "coverMediaType": "image",
-    "deviceType": "browser",
-    "year": 2026,
-    "featured": false,
-    "colorPalette": [
-      {
-        "name": "Maíz Dorado",
-        "hex": "#F59E0B"
-      },
-      {
-        "name": "Terracota Criollo",
-        "hex": "#DC2626"
-      },
-      {
-        "name": "Carbón Bistro",
-        "hex": "#18181B"
-      },
-      {
-        "name": "Blanco Crema",
-        "hex": "#FAFAF9"
-      }
-    ],
-    "assets": [
-      {
-        "id": "asb1-1",
-        "title": "Identidad Visual & Concepto Gráfico",
-        "assetPath": "/projects/arepa-secreta-branding-1/branding-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "3:4"
-      }
-    ]
+    "year": 2025,
+    "featured": true
   },
   {
     "id": "nails-pastel-branding",
     "clientId": "nails-pastel",
     "clientName": "Nails Pastel",
-    "title": "Identidad de Marca y Catálogo Comercial de Tarifas para Spa",
+    "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas",
     "category": "branding",
-    "categoryLabel": "Branding",
-    "summary": "Logotipo distintivo en tonos pasteles y catálogo comercial de servicios para manicura, pedicura y spa, listo para agendamiento directo.",
-    "businessBenefit": "Diferenció el negocio frente a competidores informales y permitió cerrar reservas anticipadas de paquetes completos.",
+    "categoryLabel": "Branding & Identidad",
+    "summary": "Logotipo distintivo en tonos pasteles y catálogo comercial de servicios para manicura, pedicura y spa.",
     "challenge": "Negocio nuevo sin identidad diferenciada en un sector saturado de gráficas genéricas.",
     "solution": "Sistema visual suave y limpio con tarjetas de precios que facilitan el agendamiento rápido por redes sociales.",
-    "coverAsset": "/projects/nails-pastel-branding/flyers-1.webp",
+    "coverAsset": "/projects/nails-pastel-branding/logo-nails-pastel.webp",
     "coverMediaType": "image",
-    "deviceType": "smartphone",
-    "year": 2026,
-    "featured": true,
+    "assets": [
+      {
+        "id": "nails-pastel-branding-asset-1",
+        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — Pieza 1",
+        "assetPath": "/projects/nails-pastel-branding/logo-nails-pastel.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "nails-pastel-branding-asset-2",
+        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — Pieza 2",
+        "assetPath": "/projects/nails-pastel-branding/flyers-1.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      },
+      {
+        "id": "nails-pastel-branding-asset-3",
+        "title": "Nails Pastel — Identidad de Marca & Catálogo de Tarifas — Pieza 3",
+        "assetPath": "/projects/nails-pastel-branding/flyers-2.webp",
+        "mediaType": "image",
+        "aspectRatio": "1:1"
+      }
+    ],
     "colorPalette": [
       {
         "name": "Rosa Pastel",
@@ -764,28 +985,50 @@
         "hex": "#FDE047"
       }
     ],
+    "year": 2025,
+    "featured": true
+  },
+  {
+    "id": "nails-pastel-video",
+    "clientId": "nails-pastel",
+    "clientName": "Nails Pastel",
+    "title": "Nails Pastel — Video Promocional de Tratamientos (9:16)",
+    "category": "videos",
+    "categoryLabel": "Videos Comerciales & Demo",
+    "summary": "Video comercial con tomas de detalle de acabados en uñas y ambiente relajante para captación de clientas.",
+    "challenge": "Transmitir la calidad y el acabado minucioso de las sesiones estéticas a través de medios digitales.",
+    "solution": "Edición en video vertical con música envolvente y primeros planos que generan deseo y reservas inmediatas.",
+    "coverAsset": "/projects/nails-pastel-video/video-promocional.mp4",
+    "coverMediaType": "video",
+    "previewVideoUrl": "/projects/nails-pastel-video/video-promocional.mp4",
     "assets": [
       {
-        "id": "npb-1",
-        "title": "Catálogo de Tarifas — Combos Manicura",
-        "assetPath": "/projects/nails-pastel-branding/flyers-1.webp",
-        "mediaType": "image",
-        "aspectRatio": "1:1"
-      },
-      {
-        "id": "npb-2",
-        "title": "Catálogo de Tarifas — Tratamientos Spa",
-        "assetPath": "/projects/nails-pastel-branding/flyers-2.webp",
-        "mediaType": "image",
-        "aspectRatio": "1:1"
-      },
-      {
-        "id": "npb-3",
-        "title": "Logotipo Vectorial Oficial",
-        "assetPath": "/projects/nails-pastel-branding/logo-nails-pastel.webp",
-        "mediaType": "image",
-        "aspectRatio": "1:1"
+        "id": "nails-pastel-video-asset-1",
+        "title": "Nails Pastel — Video Promocional de Tratamientos (9:16) — Video 1",
+        "assetPath": "/projects/nails-pastel-video/video-promocional.mp4",
+        "mediaType": "video",
+        "aspectRatio": "9:16"
       }
-    ]
+    ],
+    "colorPalette": [
+      {
+        "name": "Rosa Pastel",
+        "hex": "#F472B6"
+      },
+      {
+        "name": "Lavanda Suave",
+        "hex": "#C084FC"
+      },
+      {
+        "name": "Blanco Nácar",
+        "hex": "#FDF4FF"
+      },
+      {
+        "name": "Dorado Champagne",
+        "hex": "#FDE047"
+      }
+    ],
+    "year": 2025,
+    "featured": true
   }
 ]
