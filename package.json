@@ -10,8 +10,13 @@
     "sync-projects": "node scripts/sync-projects.mjs"
   },
   "dependencies": {
+    "@payloadcms/db-mongodb": "^3.93.0",
+    "@payloadcms/next": "^3.91.0",
+    "@payloadcms/richtext-lexical": "^3.91.0",
+    "graphql": "^17.1.0",
     "lucide-react": "^0.460.0",
     "next": "^15.0.3",
+    "payload": "^3.91.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "sharp": "^0.33.5"
