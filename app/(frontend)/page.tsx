@@ -10,12 +10,14 @@ import ClientReviews from "@/components/ClientReviews";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { ProjectBlock } from "@/types/projects";
 
 // Forzar renderizado dinámico para reflejar cambios de Payload al instante
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
   let settings: any = null;
+  let dynamicProjects: ProjectBlock[] = [];
   let dynamicPackages: any[] = [];
   let dynamicReviews: any[] = [];
 
@@ -26,7 +28,46 @@ export default async function Home() {
     // 1. Ajustes Generales del Sitio (Global)
     settings = await payload.findGlobal({ slug: "site-settings" }).catch(() => null);
 
-    // 2. Paquetes y Precios Comerciales
+    // 2. Proyectos Comerciales
+    const projectsRes = await payload
+      .find({
+        collection: "projects",
+        sort: "order",
+        limit: 100,
+      })
+      .catch(() => null);
+
+    if (projectsRes && projectsRes.docs?.length > 0) {
+      dynamicProjects = projectsRes.docs.map((doc: any) => ({
+        id: String(doc.id),
+        clientId: doc.clientId || doc.clientName?.toLowerCase().replace(/\s+/g, "-") || "cliente",
+        clientName: doc.clientName || "Cliente",
+        title: doc.title,
+        category: doc.category,
+        categoryLabel: doc.categoryLabel || doc.category,
+        summary: doc.summary || "",
+        challenge: doc.challenge || "",
+        solution: doc.solution || "",
+        coverAsset: doc.coverAsset || "",
+        coverMediaType: doc.coverMediaType || "image",
+        previewVideoUrl: doc.previewVideoUrl || undefined,
+        assets: (doc.assets || []).map((a: any, idx: number) => ({
+          id: a.id || `asset-${idx}`,
+          title: a.title,
+          assetPath: a.assetPath,
+          mediaType: a.mediaType || "image",
+          aspectRatio: a.aspectRatio || "1:1",
+        })),
+        colorPalette: (doc.colorPalette || []).map((c: any) => ({
+          name: c.name,
+          hex: c.hex,
+        })),
+        year: doc.year || 2026,
+        featured: doc.featured ?? true,
+      }));
+    }
+
+    // 3. Paquetes y Precios Comerciales
     const packagesRes = await payload
       .find({
         collection: "packages",
@@ -39,7 +80,7 @@ export default async function Home() {
       dynamicPackages = packagesRes.docs;
     }
 
-    // 3. Reseñas y Testimonios de Clientes (solo aprobadas)
+    // 4. Reseñas y Testimonios de Clientes (solo aprobadas)
     const reviewsRes = await payload
       .find({
         collection: "reviews",
@@ -52,13 +93,13 @@ export default async function Home() {
       dynamicReviews = reviewsRes.docs.map((r: any) => ({
         id: r.id,
         name: r.authorName,
-        role: "Cliente Comercial",
+        role: r.role || "Cliente Comercial",
         brand: r.businessName,
         rating: r.rating || 5,
         comment: r.comment,
-        service: "Servicio Comercial Panda Haus",
-        date: "Reciente",
-        verified: true,
+        service: r.service || "Servicio Comercial Panda Haus",
+        date: r.date || "Reciente",
+        verified: r.verified !== undefined ? r.verified : true,
       }));
     }
   } catch (error) {
@@ -95,7 +136,7 @@ export default async function Home() {
           whatsappNumber={whatsappNumber}
         />
         <Services />
-        <ProjectGallery />
+        <ProjectGallery initialProjects={dynamicProjects} />
         <Pricing packages={dynamicPackages} whatsappNumber={whatsappNumber} />
         <WorkProcess />
         <ClientReviews initialReviews={dynamicReviews} />

@@ -9,7 +9,7 @@ export const Packages: CollectionConfig = {
   },
   admin: {
     useAsTitle: 'name',
-    defaultColumns: ['name', 'priceCOP', 'isPopular'],
+    defaultColumns: ['name', 'price', 'popular', 'order'],
   },
   access: {
     read: () => true,
@@ -42,15 +42,32 @@ export const Packages: CollectionConfig = {
       required: true,
     },
     {
-      name: 'priceCOP',
+      name: 'price',
       type: 'text',
-      label: 'Precio en COP (ej. $180.000 COP)',
+      label: 'Precio (ej. $180.000)',
       required: true,
+    },
+    {
+      name: 'currency',
+      type: 'text',
+      label: 'Moneda (ej. COP)',
+      defaultValue: 'COP',
+    },
+    {
+      name: 'period',
+      type: 'text',
+      label: 'Período / Plazo (ej. entrega ágil)',
+      defaultValue: 'entrega ágil',
+    },
+    {
+      name: 'description',
+      type: 'textarea',
+      label: 'Descripción Corta del Paquete',
     },
     {
       name: 'features',
       type: 'array',
-      label: 'Lo que Incluye (Beneficios)',
+      label: 'Características y Beneficios Incluidos',
       required: true,
       fields: [
         {
@@ -62,21 +79,27 @@ export const Packages: CollectionConfig = {
       ],
     },
     {
-      name: 'isPopular',
+      name: 'popular',
       type: 'checkbox',
       label: 'Destacar como "Más Solicitado" (Borde Verde Menta)',
       defaultValue: false,
     },
     {
-      name: 'whatsappMessage',
+      name: 'ctaText',
       type: 'text',
+      label: 'Texto del Botón (ej. Elegir Pack Menú Pro)',
+      defaultValue: 'Elegir Plan',
+    },
+    {
+      name: 'whatsappMessage',
+      type: 'textarea',
       label: 'Mensaje Prellenado para WhatsApp',
       required: true,
     },
     {
       name: 'order',
       type: 'number',
-      label: 'Orden de Visualización',
+      label: 'Orden de Aparición',
       defaultValue: 0,
     },
   ],

@@ -6,9 +6,14 @@ import { PRICING_PACKS, PANDA_HAUS_INFO } from "@/data/portfolio-data";
 export interface DynamicPackage {
   id?: string;
   name: string;
-  priceCOP: string;
+  price?: string;
+  priceCOP?: string;
+  currency?: string;
+  description?: string;
   features: Array<{ text: string } | string>;
+  popular?: boolean;
   isPopular?: boolean;
+  ctaText?: string;
   whatsappMessage: string;
 }
 
@@ -26,12 +31,12 @@ export default function Pricing({ packages, whatsappNumber }: PricingProps = {})
       ? packages.map((p, idx) => ({
           id: p.id || `pack-${idx}`,
           name: p.name,
-          price: p.priceCOP,
-          currency: "COP",
-          description: "Paquete comercial autogestionado con entrega ágil y revisiones incluidas.",
+          price: p.price || p.priceCOP || "$120.000",
+          currency: p.currency || "COP",
+          description: p.description || "Paquete comercial autogestionado con entrega ágil y revisiones incluidas.",
           features: (p.features || []).map((f) => (typeof f === "string" ? f : f.text)),
-          popular: !!p.isPopular,
-          ctaText: `Elegir ${p.name}`,
+          popular: !!(p.popular ?? p.isPopular),
+          ctaText: p.ctaText || `Elegir ${p.name}`,
           whatsappMessage: p.whatsappMessage,
         }))
       : PRICING_PACKS;

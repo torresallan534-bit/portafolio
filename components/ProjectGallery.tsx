@@ -14,8 +14,6 @@ import { ProjectBlock, ProjectCategory } from "@/types/projects";
 import SpecializedModal from "./SpecializedModal";
 import projectsData from "@/data/projects.json";
 
-const ALL_PROJECTS = projectsData as ProjectBlock[];
-
 const CATEGORY_TABS: { key: ProjectCategory | "all"; label: string }[] = [
   { key: "all", label: "Todos" },
   { key: "videos", label: "Videos" },
@@ -27,23 +25,34 @@ const CATEGORY_TABS: { key: ProjectCategory | "all"; label: string }[] = [
   { key: "branding", label: "Branding" },
 ];
 
-const STATIC_CLIENTS = (() => {
-  const map = new Map<string, string>();
-  ALL_PROJECTS.forEach((p) => {
-    map.set(p.clientId, p.clientName);
-  });
-  return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
-})();
+interface ProjectGalleryProps {
+  initialProjects?: ProjectBlock[];
+}
 
-const CATEGORY_COUNTS = (() => {
-  const counts: Record<string, number> = { all: ALL_PROJECTS.length };
-  ALL_PROJECTS.forEach((p) => {
-    counts[p.category] = (counts[p.category] || 0) + 1;
-  });
-  return counts;
-})();
+export default function ProjectGallery({ initialProjects }: ProjectGalleryProps = {}) {
+  const ALL_PROJECTS = useMemo(() => {
+    return initialProjects && initialProjects.length > 0
+      ? initialProjects
+      : (projectsData as ProjectBlock[]);
+  }, [initialProjects]);
 
-export default function ProjectGallery() {
+  const STATIC_CLIENTS = useMemo(() => {
+    const map = new Map<string, string>();
+    ALL_PROJECTS.forEach((p) => {
+      const clientId = p.clientId || p.clientName.toLowerCase().replace(/\s+/g, '-');
+      map.set(clientId, p.clientName);
+    });
+    return Array.from(map.entries()).map(([id, name]) => ({ id, name }));
+  }, [ALL_PROJECTS]);
+
+  const CATEGORY_COUNTS = useMemo(() => {
+    const counts: Record<string, number> = { all: ALL_PROJECTS.length };
+    ALL_PROJECTS.forEach((p) => {
+      counts[p.category] = (counts[p.category] || 0) + 1;
+    });
+    return counts;
+  }, [ALL_PROJECTS]);
+
   const [activeCategory, setActiveCategory] = useState<ProjectCategory | "all">("all");
   const [selectedClient, setSelectedClient] = useState<string>("all");
   const [selectedProject, setSelectedProject] = useState<ProjectBlock | null>(null);
@@ -52,10 +61,11 @@ export default function ProjectGallery() {
   const filteredProjects = useMemo(() => {
     return ALL_PROJECTS.filter((p) => {
       const matchCat = activeCategory === "all" || p.category === activeCategory;
-      const matchClient = selectedClient === "all" || p.clientId === selectedClient;
+      const projectClientId = p.clientId || p.clientName.toLowerCase().replace(/\s+/g, '-');
+      const matchClient = selectedClient === "all" || projectClientId === selectedClient;
       return matchCat && matchClient;
     });
-  }, [activeCategory, selectedClient]);
+  }, [ALL_PROJECTS, activeCategory, selectedClient]);
 
   return (
     <section id="portafolio" className="py-24 max-w-6xl mx-auto px-5 sm:px-8">
