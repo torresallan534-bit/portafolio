@@ -3,7 +3,39 @@
 import { CheckCircle2, MessageCircle, Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
 import { PRICING_PACKS, PANDA_HAUS_INFO } from "@/data/portfolio-data";
 
-export default function Pricing() {
+export interface DynamicPackage {
+  id?: string;
+  name: string;
+  priceCOP: string;
+  features: Array<{ text: string } | string>;
+  isPopular?: boolean;
+  whatsappMessage: string;
+}
+
+interface PricingProps {
+  packages?: DynamicPackage[];
+  whatsappNumber?: string;
+}
+
+export default function Pricing({ packages, whatsappNumber }: PricingProps = {}) {
+  const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
+
+  // Use dynamic packages from Payload CMS if available, else static defaults
+  const activePackages =
+    packages && packages.length > 0
+      ? packages.map((p, idx) => ({
+          id: p.id || `pack-${idx}`,
+          name: p.name,
+          price: p.priceCOP,
+          currency: "COP",
+          description: "Paquete comercial autogestionado con entrega ágil y revisiones incluidas.",
+          features: (p.features || []).map((f) => (typeof f === "string" ? f : f.text)),
+          popular: !!p.isPopular,
+          ctaText: `Elegir ${p.name}`,
+          whatsappMessage: p.whatsappMessage,
+        }))
+      : PRICING_PACKS;
+
   return (
     <section id="precios" className="py-24 max-w-6xl mx-auto px-5 sm:px-8">
       {/* Section Header */}
@@ -20,11 +52,11 @@ export default function Pricing() {
         </p>
       </div>
 
-      {/* 3 Pricing Cards Grid */}
+      {/* Pricing Cards Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-7 items-stretch">
-        {PRICING_PACKS.map((plan) => {
+        {activePackages.map((plan) => {
           const isFeatured = plan.popular;
-          const whatsappUrl = `https://wa.me/${PANDA_HAUS_INFO.whatsappNumber}?text=${encodeURIComponent(
+          const whatsappUrl = `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(
             plan.whatsappMessage
           )}`;
 
@@ -48,38 +80,37 @@ export default function Pricing() {
               )}
 
               <div>
-                {/* Plan Header */}
+                {/* Header Card */}
                 <div className="mb-6">
-                  <h3 className="text-xl sm:text-2xl font-display font-bold text-[#FFFFFF] tracking-tight">
+                  <h3 className="text-xl font-display font-bold text-[#FFFFFF]">
                     {plan.name}
                   </h3>
-                  <p className="text-xs text-[#F2F4F3]/70 mt-2 leading-relaxed font-sans min-h-[36px]">
-                    {plan.description}
-                  </p>
+                  <div className="mt-4 flex items-baseline gap-2">
+                    <span className="text-3xl sm:text-4xl font-display font-extrabold text-[#FFFFFF] tracking-tight">
+                      {plan.price}
+                    </span>
+                    <span className="text-xs text-[#F2F4F3]/50 font-mono">
+                      /entrega ágil
+                    </span>
+                  </div>
                 </div>
 
-                {/* Price Display */}
-                <div className="mb-8 pb-6 border-b border-[#2B2F33] flex items-baseline gap-2">
-                  <span className="text-4xl sm:text-5xl font-display font-extrabold text-[#FFFFFF] tracking-tight">
-                    {plan.price}
-                  </span>
-                  <span className="text-xs font-mono uppercase tracking-wider text-[#3DDC97] font-semibold">
-                    {plan.currency}
-                  </span>
-                </div>
+                {/* Divider */}
+                <div className="w-full h-px bg-[#2B2F33] mb-6" />
 
                 {/* Features List */}
-                <div className="space-y-3.5 mb-8">
-                  <span className="text-[11px] font-mono uppercase tracking-wider text-[#F2F4F3]/50 block font-semibold">
-                    Incluye exactamente:
-                  </span>
-                  {plan.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-[#F2F4F3]/90 font-sans">
-                      <CheckCircle2 className="w-4 h-4 text-[#3DDC97] shrink-0 mt-0.5" />
+                <ul className="space-y-3.5 mb-8">
+                  {plan.features.map((feature, i) => (
+                    <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-[#F2F4F3]/80 font-sans">
+                      <CheckCircle2
+                        className={`w-4 h-4 shrink-0 mt-0.5 ${
+                          isFeatured ? "text-[#3DDC97]" : "text-[#3DDC97]/80"
+                        }`}
+                      />
                       <span>{feature}</span>
-                    </div>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
 
               {/* Action Button */}
@@ -88,46 +119,25 @@ export default function Pricing() {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl font-display font-bold text-sm transition-all duration-200 active:scale-95 shadow-md ${
+                  className={`w-full py-3.5 px-5 rounded-2xl font-display font-bold text-xs flex items-center justify-center gap-2 transition-all duration-200 shadow-md ${
                     isFeatured
-                      ? "bg-[#3DDC97] hover:bg-[#34C788] text-[#0D0D0D] shadow-[#3DDC97]/25"
-                      : "bg-[#2B2F33] hover:bg-[#3DDC97] hover:text-[#0D0D0D] text-[#FFFFFF]"
+                      ? "bg-[#3DDC97] text-[#0D0D0D] hover:bg-[#34C788] shadow-[#3DDC97]/25 hover:shadow-[#3DDC97]/40 active:scale-95"
+                      : "bg-[#2B2F33]/50 text-[#FFFFFF] hover:bg-[#2B2F33] border border-[#2B2F33] hover:border-[#3DDC97]/40 active:scale-95"
                   }`}
                 >
-                  <MessageCircle className="w-4 h-4 fill-current" />
+                  <MessageCircle className="w-4 h-4 shrink-0" />
                   <span>{plan.ctaText}</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-3.5 h-3.5 shrink-0" />
                 </a>
 
-                <div className="mt-4 flex items-center justify-center gap-1.5 text-[11px] font-mono text-[#F2F4F3]/50">
+                <div className="mt-3 flex items-center justify-center gap-1.5 text-[11px] font-mono text-[#F2F4F3]/40">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#3DDC97]" />
-                  <span>Revisiones y garantía incluidas</span>
+                  <span>Garantía de satisfacción y soporte ágil</span>
                 </div>
               </div>
             </div>
           );
         })}
-      </div>
-
-      {/* Trust banner below pricing */}
-      <div className="mt-14 p-6 sm:p-7 rounded-2xl bg-[#2B2F33]/30 border border-[#2B2F33] flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>
-          <h4 className="text-sm font-display font-bold text-[#FFFFFF]">
-            ¿Tu negocio requiere un requerimiento personalizado o volumen mensual?
-          </h4>
-          <p className="text-xs text-[#F2F4F3]/70 mt-0.5 font-sans">
-            Preparamos cotizaciones a la medida para cadenas, múltiples sedes y activaciones comerciales continuas.
-          </p>
-        </div>
-        <a
-          href={PANDA_HAUS_INFO.whatsappDirectUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#2B2F33] hover:bg-[#3DDC97] hover:text-[#0D0D0D] text-[#FFFFFF] text-xs font-display font-bold transition-all duration-200 shrink-0"
-        >
-          <span>Cotizar plan a la medida</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </a>
       </div>
     </section>
   );

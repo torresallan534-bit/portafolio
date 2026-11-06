@@ -5,6 +5,10 @@ import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
+import { Projects } from './collections/Projects'
+import { Packages } from './collections/Packages'
+import { Reviews } from './collections/Reviews'
+import { SiteSettings } from './globals/SiteSettings'
 import sharp from 'sharp'
 
 const filename = fileURLToPath(import.meta.url)
@@ -17,7 +21,8 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Projects, Packages, Reviews],
+  globals: [SiteSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || 'panda_haus_secret_key_produccion_segura_2026_x9k2m',
   typescript: {

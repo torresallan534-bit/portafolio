@@ -4,12 +4,14 @@ import { useState } from "react";
 import { MessageCircle, Mail, Phone, Clock, ShieldCheck, ArrowRight, Check, Copy } from "lucide-react";
 import { PANDA_HAUS_INFO } from "@/data/portfolio-data";
 
-export default function Contact() {
+export default function Contact({ whatsappNumber }: { whatsappNumber?: string } = {}) {
   const [businessName, setBusinessName] = useState("");
   const [serviceRequired, setServiceRequired] = useState("Pack Web Comercial ($390.000 COP)");
   const [projectBrief, setProjectBrief] = useState("");
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
 
   const handleCopyPhone = () => {
     navigator.clipboard.writeText(PANDA_HAUS_INFO.phone);
@@ -28,7 +30,7 @@ export default function Contact() {
     const customText = `Hola Panda Haus, soy ${businessName || "un cliente"}. Me interesa cotizar: ${serviceRequired}.${
       projectBrief ? ` Detalles de mi negocio: ${projectBrief}` : ""
     }`;
-    const url = `https://wa.me/${PANDA_HAUS_INFO.whatsappNumber}?text=${encodeURIComponent(customText)}`;
+    const url = `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(customText)}`;
     window.open(url, "_blank");
   };
 

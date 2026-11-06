@@ -3,8 +3,22 @@
 import { ArrowDown, MessageCircle, Zap, Smartphone, RefreshCw, CheckCircle2 } from "lucide-react";
 import { PANDA_HAUS_INFO, TRUST_GUARANTEES } from "@/data/portfolio-data";
 
-export default function Hero() {
-  const whatsappUrl = PANDA_HAUS_INFO.whatsappDirectUrl;
+interface HeroProps {
+  title?: string;
+  subtitle?: string;
+  whatsappNumber?: string;
+  accentColor?: string;
+}
+
+export default function Hero({ title, subtitle, whatsappNumber }: HeroProps = {}) {
+  const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
+  const whatsappUrl = `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(
+    PANDA_HAUS_INFO.whatsappMessage
+  )}`;
+  const finalTitle = title || "Diseño visual y páginas web que hacen destacar tu negocio.";
+  const finalSubtitle =
+    subtitle ||
+    "Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.";
 
   const guaranteeIcons: Record<string, any> = {
     Zap: Zap,
@@ -32,13 +46,12 @@ export default function Hero() {
 
         {/* Titular comercial H1 en Space Grotesk */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-[#FFFFFF] leading-[1.08]">
-          Diseño visual y páginas web que hacen destacar tu negocio.
+          {finalTitle}
         </h1>
 
         {/* Subtítulo H2 en Inter, color #F2F4F3/80 */}
         <h2 className="text-lg sm:text-xl md:text-2xl text-[#F2F4F3]/80 font-sans font-normal tracking-tight leading-relaxed max-w-2xl">
-          Ayudamos a restaurantes, marcas y negocios locales a captar clientes con
-          flyers de alto impacto, menús digitales y landing pages ultra-rápidas.
+          {finalSubtitle}
         </h2>
 
         {/* Micro-puntos de valor */}

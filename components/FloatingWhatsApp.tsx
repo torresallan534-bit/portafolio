@@ -3,8 +3,11 @@
 import { MessageCircle } from "lucide-react";
 import { PANDA_HAUS_INFO } from "@/data/portfolio-data";
 
-export default function FloatingWhatsApp() {
-  const whatsappUrl = PANDA_HAUS_INFO.whatsappDirectUrl;
+export default function FloatingWhatsApp({ whatsappNumber }: { whatsappNumber?: string } = {}) {
+  const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
+  const whatsappUrl = `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(
+    PANDA_HAUS_INFO.whatsappMessage
+  )}`;
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 group">

@@ -5,8 +5,10 @@ import { Star, MessageSquarePlus, X, Check, CheckCircle2, ShieldCheck, Sparkles,
 import { CLIENT_REVIEWS } from "@/data/portfolio-data";
 import { ReviewItem } from "@/types";
 
-export default function ClientReviews() {
-  const [reviews, setReviews] = useState<ReviewItem[]>(CLIENT_REVIEWS);
+export default function ClientReviews({ initialReviews }: { initialReviews?: ReviewItem[] } = {}) {
+  const [reviews, setReviews] = useState<ReviewItem[]>(
+    initialReviews && initialReviews.length > 0 ? initialReviews : CLIENT_REVIEWS
+  );
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittedSuccess, setSubmittedSuccess] = useState(false);

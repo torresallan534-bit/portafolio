@@ -5,7 +5,7 @@ import Image from "next/image";
 import { MessageCircle, Menu, X } from "lucide-react";
 import { PANDA_HAUS_INFO } from "@/data/portfolio-data";
 
-export default function Navbar() {
+export default function Navbar({ whatsappNumber }: { whatsappNumber?: string } = {}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -22,7 +22,10 @@ export default function Navbar() {
     { label: "Contacto", href: "#contacto" },
   ];
 
-  const whatsappUrl = PANDA_HAUS_INFO.whatsappDirectUrl;
+  const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
+  const whatsappUrl = `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(
+    PANDA_HAUS_INFO.whatsappMessage
+  )}`;
 
   return (
     <header
