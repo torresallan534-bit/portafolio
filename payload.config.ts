@@ -24,7 +24,9 @@ export default buildConfig({
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: mongooseAdapter({
-    url: process.env.MONGODB_URI || '',
+    url:
+      process.env.MONGODB_URI ||
+      'mongodb+srv://pandahaus_admin:allen2209@panda-haus-db.5dfnfpr.mongodb.net/panda-haus?retryWrites=true&w=majority',
   }),
   sharp,
 })
