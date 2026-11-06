@@ -5,7 +5,12 @@ import Image from "next/image";
 import { MessageCircle, Menu, X } from "lucide-react";
 import { PANDA_HAUS_INFO } from "@/data/portfolio-data";
 
-export default function Navbar({ whatsappNumber }: { whatsappNumber?: string } = {}) {
+interface NavbarProps {
+  whatsappNumber?: string;
+  ctaText?: string;
+}
+
+export default function Navbar({ whatsappNumber, ctaText }: NavbarProps = {}) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -23,6 +28,7 @@ export default function Navbar({ whatsappNumber }: { whatsappNumber?: string } =
   ];
 
   const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
+  const finalCtaText = ctaText || "Escríbenos por WhatsApp";
   const whatsappUrl = `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(
     PANDA_HAUS_INFO.whatsappMessage
   )}`;
@@ -93,7 +99,7 @@ export default function Navbar({ whatsappNumber }: { whatsappNumber?: string } =
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-display font-semibold text-xs bg-[#3DDC97] text-[#0D0D0D] hover:bg-[#34C788] shadow-lg shadow-[#3DDC97]/20 transition-all duration-200 active:scale-95"
             >
               <MessageCircle className="w-3.5 h-3.5 fill-current" />
-              <span>Escríbenos por WhatsApp</span>
+              <span>{finalCtaText}</span>
             </a>
           </div>
 
@@ -139,7 +145,7 @@ export default function Navbar({ whatsappNumber }: { whatsappNumber?: string } =
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-display font-semibold bg-[#3DDC97] text-[#0D0D0D]"
               >
                 <MessageCircle className="w-3.5 h-3.5 fill-current" />
-                <span>Escríbenos por WhatsApp</span>
+                <span>{finalCtaText}</span>
               </a>
             </div>
           </nav>

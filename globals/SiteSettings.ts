@@ -20,10 +20,10 @@ export const SiteSettings: GlobalConfig = {
   },
   fields: [
     {
-      name: 'whatsappNumber',
+      name: 'heroBadgeText',
       type: 'text',
-      label: 'Número de WhatsApp (con código de país, ej. 573248000501)',
-      defaultValue: '573248000501',
+      label: 'Texto del Badge Superior (Hero)',
+      defaultValue: 'Estudio de Diseño Visual & Web Comercial',
       required: true,
     },
     {
@@ -39,6 +39,34 @@ export const SiteSettings: GlobalConfig = {
       label: 'Subtítulo Principal (H2)',
       defaultValue:
         'Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.',
+      required: true,
+    },
+    {
+      name: 'heroPrimaryCtaText',
+      type: 'text',
+      label: 'Texto del Botón Primario (Hero)',
+      defaultValue: 'Ver Servicios y Precios',
+      required: true,
+    },
+    {
+      name: 'heroSecondaryCtaText',
+      type: 'text',
+      label: 'Texto del Botón Secundario (Hero - WhatsApp)',
+      defaultValue: 'Cotizar por WhatsApp',
+      required: true,
+    },
+    {
+      name: 'navbarCtaText',
+      type: 'text',
+      label: 'Texto del Botón en Navbar (WhatsApp)',
+      defaultValue: 'Escríbenos por WhatsApp',
+      required: true,
+    },
+    {
+      name: 'whatsappNumber',
+      type: 'text',
+      label: 'Número de WhatsApp (con código de país, ej. 573248000501)',
+      defaultValue: '573248000501',
       required: true,
     },
     {

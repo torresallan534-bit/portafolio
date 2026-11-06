@@ -4,21 +4,34 @@ import { ArrowDown, MessageCircle, Zap, Smartphone, RefreshCw, CheckCircle2 } fr
 import { PANDA_HAUS_INFO, TRUST_GUARANTEES } from "@/data/portfolio-data";
 
 interface HeroProps {
+  badge?: string;
   title?: string;
   subtitle?: string;
+  primaryCtaText?: string;
+  secondaryCtaText?: string;
   whatsappNumber?: string;
   accentColor?: string;
 }
 
-export default function Hero({ title, subtitle, whatsappNumber }: HeroProps = {}) {
+export default function Hero({
+  badge,
+  title,
+  subtitle,
+  primaryCtaText,
+  secondaryCtaText,
+  whatsappNumber,
+}: HeroProps = {}) {
   const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
   const whatsappUrl = `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(
     PANDA_HAUS_INFO.whatsappMessage
   )}`;
+  const finalBadge = badge || "Estudio de Diseño Visual & Web Comercial";
   const finalTitle = title || "Diseño visual y páginas web que hacen destacar tu negocio.";
   const finalSubtitle =
     subtitle ||
     "Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.";
+  const finalPrimaryCta = primaryCtaText || "Ver Servicios y Precios";
+  const finalSecondaryCta = secondaryCtaText || "Cotizar por WhatsApp";
 
   const guaranteeIcons: Record<string, any> = {
     Zap: Zap,
@@ -41,7 +54,7 @@ export default function Hero({ title, subtitle, whatsappNumber }: HeroProps = {}
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3DDC97] opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3DDC97]"></span>
           </span>
-          <span className="font-medium">Estudio de Diseño Visual &amp; Web Comercial</span>
+          <span className="font-medium">{finalBadge}</span>
         </div>
 
         {/* Titular comercial H1 en Space Grotesk */}
@@ -78,7 +91,7 @@ export default function Hero({ title, subtitle, whatsappNumber }: HeroProps = {}
           href="#precios"
           className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#3DDC97] hover:bg-[#34C788] text-[#0D0D0D] font-display font-bold text-sm shadow-lg shadow-[#3DDC97]/20 transition-all duration-200 active:scale-95"
         >
-          <span>Ver Servicios y Precios</span>
+          <span>{finalPrimaryCta}</span>
           <ArrowDown className="w-4 h-4" />
         </a>
 
@@ -90,7 +103,7 @@ export default function Hero({ title, subtitle, whatsappNumber }: HeroProps = {}
           className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#2B2F33]/30 border border-[#2B2F33] text-[#FFFFFF] hover:text-[#3DDC97] hover:border-[#3DDC97]/50 hover:bg-[#2B2F33]/60 font-display font-semibold text-sm transition-all duration-200 backdrop-blur-md active:scale-95"
         >
           <MessageCircle className="w-4 h-4 text-[#3DDC97]" />
-          <span>Cotizar por WhatsApp</span>
+          <span>{finalSecondaryCta}</span>
         </a>
       </div>
 

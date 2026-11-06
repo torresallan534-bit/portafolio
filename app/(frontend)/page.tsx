@@ -11,18 +11,22 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
+// Forzar renderizado dinámico para reflejar cambios de Payload al instante
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   let settings: any = null;
   let dynamicPackages: any[] = [];
   let dynamicReviews: any[] = [];
 
+  // Bloque robusto de extracción con try-catch y fallbacks automáticos
   try {
     const payload = await getPayload({ config: configPromise });
 
-    // 1. Ajustes Generales
+    // 1. Ajustes Generales del Sitio (Global)
     settings = await payload.findGlobal({ slug: "site-settings" }).catch(() => null);
 
-    // 2. Paquetes y Precios
+    // 2. Paquetes y Precios Comerciales
     const packagesRes = await payload
       .find({
         collection: "packages",
@@ -35,7 +39,7 @@ export default async function Home() {
       dynamicPackages = packagesRes.docs;
     }
 
-    // 3. Reseñas y Testimonios (solo aprobados)
+    // 3. Reseñas y Testimonios de Clientes (solo aprobadas)
     const reviewsRes = await payload
       .find({
         collection: "reviews",
@@ -58,21 +62,36 @@ export default async function Home() {
       }));
     }
   } catch (error) {
-    console.error("Payload CMS local fetch fallback:", error);
+    // Si la BD está vacía o hay latencia en conexión, no se rompe la web pública
+    console.error("Payload CMS local fetch fallback to default values:", error);
   }
 
-  const whatsappNumber = settings?.whatsappNumber;
-  const heroTitle = settings?.heroTitle;
-  const heroSubtitle = settings?.heroSubtitle;
+  // Textos y configuraciones dinámicas con respaldo 100% garantizado
+  const heroBadge = settings?.heroBadgeText || "Estudio de Diseño Visual & Web Comercial";
+  const heroTitle = settings?.heroTitle || "Diseño visual y páginas web que hacen destacar tu negocio.";
+  const heroSubtitle =
+    settings?.heroSubtitle ||
+    "Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.";
+  const heroPrimaryCta = settings?.heroPrimaryCtaText || "Ver Servicios y Precios";
+  const heroSecondaryCta = settings?.heroSecondaryCtaText || "Cotizar por WhatsApp";
+  const navbarCta = settings?.navbarCtaText || "Escríbenos por WhatsApp";
+  const whatsappNumber = settings?.whatsappNumber || "573248000501";
+  const brandAccentColor = settings?.brandAccentColor || "#3DDC97";
   const socialLinks = settings?.socialLinks;
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0D0D0D] text-[#F2F4F3]">
-      <Navbar whatsappNumber={whatsappNumber} />
+    <div
+      className="flex flex-col min-h-screen bg-[#0D0D0D] text-[#F2F4F3]"
+      style={{ "--brand-accent": brandAccentColor } as React.CSSProperties}
+    >
+      <Navbar whatsappNumber={whatsappNumber} ctaText={navbarCta} />
       <main className="flex-1">
         <Hero
+          badge={heroBadge}
           title={heroTitle}
           subtitle={heroSubtitle}
+          primaryCtaText={heroPrimaryCta}
+          secondaryCtaText={heroSecondaryCta}
           whatsappNumber={whatsappNumber}
         />
         <Services />
