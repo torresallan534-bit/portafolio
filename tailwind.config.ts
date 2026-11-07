@@ -29,12 +29,15 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
         sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
         mono: ["monospace"],
       },
       animation: {
         "fade-in-up": "fadeInUp 0.5s ease-out forwards",
         "scale-in": "scaleIn 0.3s ease-out forwards",
         pulse: "pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite",
+        marquee: "marquee 28s linear infinite",
+        "marquee-slow": "marquee 40s linear infinite",
       },
       keyframes: {
         fadeInUp: {
@@ -44,6 +47,10 @@ const config: Config = {
         scaleIn: {
           "0%": { opacity: "0", transform: "scale(0.95)" },
           "100%": { opacity: "1", transform: "scale(1)" },
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
       },
     },

@@ -37,11 +37,11 @@ export default function Navbar({ whatsappNumber, ctaText }: NavbarProps = {}) {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "py-3 bg-[#0D0D0D]/90 backdrop-blur-md border-b border-[#2B2F33]"
+          ? "py-3 bg-[#0D0D0D]/90 backdrop-blur-md border-b border-white/[0.08]"
           : "py-5 bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-5 sm:px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         <div className="flex items-center justify-between">
           {/* Logo Panda Haus */}
           <a

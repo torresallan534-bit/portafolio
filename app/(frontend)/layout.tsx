@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { Inter, Space_Grotesk, Playfair_Display } from "next/font/google";
 import "@/app/globals.css";
 
 const inter = Inter({
@@ -14,6 +14,14 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
   display: "swap",
   weight: ["500", "600", "700"],
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -70,7 +78,7 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`dark ${inter.variable} ${spaceGrotesk.variable}`}
+      className={`dark ${inter.variable} ${spaceGrotesk.variable} ${playfair.variable}`}
     >
       <body className="min-h-screen bg-[#0D0D0D] text-[#F2F4F3] antialiased font-sans selection:bg-[#3DDC97] selection:text-[#0D0D0D]">
         {children}
