@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Space_Grotesk, Playfair_Display } from "next/font/google";
 import "@/app/globals.css";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,33 +22,31 @@ const playfair = Playfair_Display({
   variable: "--font-serif",
   display: "swap",
   style: ["normal", "italic"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Panda Haus | Diseño Visual, Menús Digitales y Landing Pages",
+  title: "Panda Haus | Soluciones Visuales & Digitales para Restaurantes y Negocios Locales",
   description:
-    "Estudio de diseño visual y desarrollo de páginas web comerciales para restaurantes, marcas y negocios locales. Ayudamos a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.",
+    "Flyers de alto impacto entregados en 24 horas, menús interactivos con código QR y sucursales web para recibir pedidos directos a tu WhatsApp sin pagar comisiones.",
   keywords: [
     "Panda Haus",
-    "Estudio de Diseño Visual",
-    "Desarrollo Web Comercial",
     "Menús Digitales QR",
+    "Sucursal Web WhatsApp",
     "Flyers para Restaurantes",
-    "Landing Pages de Conversión",
-    "Identidad de Marca",
-    "Branding para Negocios",
-    "Diseño Gastronómico",
-    "Bogotá",
+    "Restaurantes Bogotá",
+    "Catálogo de Pedidos WhatsApp",
+    "Branding Gastronómico",
+    "Habladores QR Restaurante",
     "Colombia",
   ],
   authors: [{ name: "Panda Haus" }],
   creator: "Panda Haus",
   metadataBase: new URL("https://pandahaus.co"),
   openGraph: {
-    title: "Panda Haus | Diseño Visual, Menús Digitales y Landing Pages",
+    title: "Panda Haus | Soluciones Visuales & Digitales para Restaurantes",
     description:
-      "Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.",
+      "Hacemos que tu restaurante se vea profesional y venda más en digital. Flyers en 24h, menús QR y pedidos a WhatsApp sin comisiones.",
     url: "https://pandahaus.co",
     siteName: "Panda Haus",
     locale: "es_CO",
@@ -57,15 +56,15 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Panda Haus - Estudio de Diseño Visual y Web Comercial",
+        alt: "Panda Haus - Soluciones Visuales & Digitales para Restaurantes",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Panda Haus | Diseño Visual, Menús Digitales y Landing Pages",
+    title: "Panda Haus | Soluciones Visuales & Digitales para Restaurantes",
     description:
-      "Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.",
+      "Flyers en 24h, menús interactivos QR y sucursales web para recibir pedidos directos a tu WhatsApp sin comisiones.",
     images: ["/og-image.png"],
   },
 };
@@ -82,6 +81,8 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-[#0D0D0D] text-[#F2F4F3] antialiased font-sans selection:bg-[#3DDC97] selection:text-[#0D0D0D]">
         {children}
+        {/* Botón flotante de WhatsApp persistente con tooltip en esquina inferior derecha */}
+        <FloatingWhatsApp />
       </body>
     </html>
   );

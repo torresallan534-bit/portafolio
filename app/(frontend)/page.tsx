@@ -2,14 +2,14 @@ import { getPayload } from "payload";
 import configPromise from "@payload-config";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
+import SucursalDigital from "@/components/SucursalDigital";
+import ServiceCatalog from "@/components/ServiceCatalog";
 import ProjectGallery from "@/components/ProjectGallery";
 import Pricing from "@/components/Pricing";
 import WorkProcess from "@/components/WorkProcess";
 import ClientReviews from "@/components/ClientReviews";
-import Contact from "@/components/Contact";
+import WorkPoliciesBanner from "@/components/WorkPoliciesBanner";
 import Footer from "@/components/Footer";
-import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { ProjectBlock } from "@/types/projects";
 
 // Forzar renderizado dinámico para reflejar cambios de Payload al instante
@@ -103,19 +103,22 @@ export default async function Home() {
       }));
     }
   } catch (error) {
-    // Si la BD está vacía o hay latencia en conexión, no se rompe la web pública
     console.error("Payload CMS local fetch fallback to default values:", error);
   }
 
-  // Textos y configuraciones dinámicas con respaldo 100% garantizado
-  const heroBadge = settings?.heroBadgeText || "Estudio de Diseño Visual & Web Comercial";
-  const heroTitle = settings?.heroTitle || "Diseño visual y páginas web que hacen destacar tu negocio.";
+  // Textos y configuraciones dinámicas alineados con el posicionamiento gastronómico
+  const heroBadge =
+    settings?.heroBadgeText ||
+    "Soluciones Visuales & Digitales para Restaurantes y Negocios Locales";
+  const heroTitle =
+    settings?.heroTitle ||
+    "Hacemos que tu restaurante se vea profesional y venda más en digital.";
   const heroSubtitle =
     settings?.heroSubtitle ||
-    "Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.";
-  const heroPrimaryCta = settings?.heroPrimaryCtaText || "Ver Servicios y Precios";
+    "Flyers de alto impacto entregados en 24 horas, menús interactivos con código QR y sucursales web para recibir pedidos directos a tu WhatsApp sin pagar comisiones.";
+  const heroPrimaryCta = settings?.heroPrimaryCtaText || "Ver Catálogo y Precios Oficiales";
   const heroSecondaryCta = settings?.heroSecondaryCtaText || "Cotizar por WhatsApp";
-  const navbarCta = settings?.navbarCtaText || "Escríbenos por WhatsApp";
+  const navbarCta = settings?.navbarCtaText || "Pedir por WhatsApp";
   const whatsappNumber = settings?.whatsappNumber || "573248000501";
   const brandAccentColor = settings?.brandAccentColor || "#3DDC97";
   const socialLinks = settings?.socialLinks;
@@ -125,8 +128,11 @@ export default async function Home() {
       className="flex flex-col min-h-screen bg-[#0D0D0D] text-[#F2F4F3]"
       style={{ "--brand-accent": brandAccentColor } as React.CSSProperties}
     >
+      {/* 1. Barra de navegación con badge 24-72h y botón Pedir por WhatsApp */}
       <Navbar whatsappNumber={whatsappNumber} ctaText={navbarCta} />
+
       <main className="flex-1">
+        {/* 2. Hero Section con H1, badges de confianza y CTAs directos */}
         <Hero
           badge={heroBadge}
           title={heroTitle}
@@ -135,15 +141,31 @@ export default async function Home() {
           secondaryCtaText={heroSecondaryCta}
           whatsappNumber={whatsappNumber}
         />
-        <Services />
+
+        {/* 3. Nueva Sección Destacada: Sucursal Digital Autogestionable ($390.000 COP) */}
+        <SucursalDigital />
+
+        {/* 4. Catálogo de Servicios A la Carta (Tabla comparativa responsive) */}
+        <ServiceCatalog />
+
+        {/* 5. Portafolio Gastronómico: Arepa Secreta, Taquería DF, The King + Demo en Vivo */}
         <ProjectGallery initialProjects={dynamicProjects} />
+
+        {/* 6. Sección de Combos y Planes Recurrentes */}
         <Pricing packages={dynamicPackages} whatsappNumber={whatsappNumber} />
+
+        {/* Proceso de Trabajo Ágil */}
         <WorkProcess />
+
+        {/* Reseñas y Testimonios Reales */}
         <ClientReviews initialReviews={dynamicReviews} />
-        <Contact whatsappNumber={whatsappNumber} />
+
+        {/* 7. Franja de Políticas y Condiciones de Trabajo Claras */}
+        <WorkPoliciesBanner />
       </main>
+
+      {/* Footer Institucional */}
       <Footer socialLinks={socialLinks} />
-      <FloatingWhatsApp whatsappNumber={whatsappNumber} />
     </div>
   );
 }

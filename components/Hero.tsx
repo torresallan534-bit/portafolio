@@ -1,8 +1,17 @@
 "use client";
 
 import React from "react";
-import { ArrowDown, MessageCircle, Zap, Smartphone, RefreshCw, CheckCircle2, Sparkles, MoveRight } from "lucide-react";
-import { PANDA_HAUS_INFO, TRUST_GUARANTEES } from "@/data/portfolio-data";
+import {
+  MessageCircle,
+  Zap,
+  Smartphone,
+  Coins,
+  Sparkles,
+  MoveRight,
+  ShieldCheck,
+  Flame,
+} from "lucide-react";
+import { PANDA_HAUS_INFO } from "@/data/portfolio-data";
 import LogoMarquee from "./LogoMarquee";
 
 interface HeroProps {
@@ -12,7 +21,6 @@ interface HeroProps {
   primaryCtaText?: string;
   secondaryCtaText?: string;
   whatsappNumber?: string;
-  accentColor?: string;
 }
 
 export default function Hero({
@@ -25,37 +33,55 @@ export default function Hero({
 }: HeroProps = {}) {
   const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
   const whatsappUrl = `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(
-    PANDA_HAUS_INFO.whatsappMessage
+    "Hola Panda Haus, quiero mejorar la imagen y ventas de mi negocio. ¿Cómo empezamos?"
   )}`;
-  const finalBadge = badge || "Estudio de Diseño Visual & Web Comercial";
-  const finalTitle = title || "Diseño visual y páginas web que hacen destacar tu negocio.";
+
+  const finalBadge = badge || "Soluciones Visuales & Digitales para Restaurantes y Negocios Locales";
+  const finalTitle = title || "Hacemos que tu restaurante se vea profesional y venda más en digital.";
   const finalSubtitle =
     subtitle ||
-    "Ayudamos a restaurantes, marcas y negocios locales a captar clientes con flyers de alto impacto, menús digitales y landing pages ultra-rápidas.";
-  const finalPrimaryCta = primaryCtaText || "Ver Servicios y Precios";
+    "Flyers de alto impacto entregados en 24 horas, menús interactivos con código QR y sucursales web para recibir pedidos directos a tu WhatsApp sin pagar comisiones.";
+  const finalPrimaryCta = primaryCtaText || "Ver Catálogo y Precios Oficiales";
   const finalSecondaryCta = secondaryCtaText || "Cotizar por WhatsApp";
 
-  const guaranteeIcons: Record<string, any> = {
-    Zap: Zap,
-    Smartphone: Smartphone,
-    RefreshCw: RefreshCw,
-  };
+  // Badges de confianza destacados para restaurantes y negocios locales
+  const trustBadges = [
+    {
+      icon: Zap,
+      text: "Entregas récord en 24 a 72 horas.",
+      accent: "#3DDC97",
+    },
+    {
+      icon: Smartphone,
+      text: "100% autogestionable desde tu celular.",
+      accent: "#38BDF8",
+    },
+    {
+      icon: Coins,
+      text: "Precios claros desde $30.000 COP.",
+      accent: "#EAB308",
+    },
+  ];
 
-  // Helper para renderizar tipografía editorial combinada (Sans moderna + Serif elegante)
-  const renderHeroTitle = (rawTitle: string) => {
-    if (
-      rawTitle === "Diseño visual y páginas web que hacen destacar tu negocio." ||
-      rawTitle.toLowerCase().includes("diseño visual y páginas web")
-    ) {
+  // Renderizado tipográfico del H1
+  const renderHeroHeadline = (rawTitle: string) => {
+    if (rawTitle.toLowerCase().includes("hacemos que tu restaurante")) {
       return (
         <>
-          Diseño <span className="font-serif italic font-normal text-[#3DDC97]">visual</span> &amp; páginas{" "}
-          <span className="font-serif italic font-normal text-white/95">web</span> que hacen{" "}
+          Hacemos que tu{" "}
+          <span className="font-serif italic font-normal text-[#3DDC97]">
+            restaurante
+          </span>{" "}
+          se vea{" "}
+          <span className="font-serif italic font-normal text-white/95">
+            profesional
+          </span>{" "}
+          y{" "}
           <span className="relative inline-block">
-            <span className="relative z-10 text-white">destacar</span>
+            <span className="relative z-10 text-white">venda más</span>
             <span className="absolute bottom-1.5 left-0 right-0 h-2.5 sm:h-3.5 bg-[#3DDC97]/25 -rotate-1 rounded-sm -z-0" />
           </span>{" "}
-          tu negocio.
+          en digital.
         </>
       );
     }
@@ -63,7 +89,7 @@ export default function Hero({
     const words = rawTitle.split(" ");
     return words.map((word, i) => {
       const clean = word.toLowerCase().replace(/[^a-záéíóúñ]/g, "");
-      const isSerif = ["visual", "web", "destacar", "diseño", "marca", "negocio"].includes(clean);
+      const isSerif = ["restaurante", "profesional", "venda", "digital", "comercial"].includes(clean);
       if (isSerif) {
         return (
           <span key={i} className="font-serif italic font-normal text-[#3DDC97]">
@@ -78,61 +104,62 @@ export default function Hero({
   return (
     <section
       id="inicio"
-      className="relative pt-36 pb-20 md:pt-48 md:pb-28 lg:pt-56 lg:pb-36 px-5 sm:px-8 max-w-7xl mx-auto overflow-hidden"
+      className="relative pt-36 pb-16 md:pt-48 md:pb-24 lg:pt-52 lg:pb-28 px-5 sm:px-8 max-w-7xl mx-auto overflow-hidden"
     >
-      {/* Luz radial cenital ultra-suave inspirada en Godly/Awwwards */}
+      {/* Luz radial cenital ultra-suave */}
       <div className="pointer-events-none absolute -top-48 left-1/2 -translate-x-1/2 w-[900px] h-[600px] rounded-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#3DDC97]/[0.09] via-[#2B2F33]/25 to-transparent blur-3xl -z-10" />
 
-      {/* Grid de fondo ultra sutil para textura de estudio */}
+      {/* Grid de textura de fondo sutil */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] -z-10" />
 
-      {/* Contenido Principal con Whitespace Generoso */}
-      <div className="relative space-y-8 max-w-5xl">
-        {/* Metadatos superiores de estudio boutique */}
-        <div className="flex flex-wrap items-center gap-3">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#181B1E]/80 border border-white/[0.08] text-xs font-mono text-white/90 backdrop-blur-md shadow-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3DDC97] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3DDC97]"></span>
-            </span>
-            <span className="font-semibold tracking-wide uppercase text-[11px]">{finalBadge}</span>
-          </div>
-
-          <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.03] border border-white/[0.06] text-[11px] font-mono text-white/50">
-            <Sparkles className="w-3 h-3 text-[#3DDC97]" />
-            <span>Entregas ágiles 24-48h</span>
-          </div>
+      <div className="relative space-y-7 max-w-5xl">
+        {/* Kicker / Badge superior */}
+        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#181B1E]/90 border border-white/[0.08] text-xs font-mono text-white/90 backdrop-blur-md shadow-sm">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3DDC97] opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#3DDC97]"></span>
+          </span>
+          <span className="font-semibold tracking-wide uppercase text-[11px] sm:text-xs text-[#3DDC97]">
+            {finalBadge}
+          </span>
         </div>
 
-        {/* Titular H1 "Oversized" con Jerarquía Extrema & Contraste Serif/Sans */}
-        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[5.8rem] 2xl:text-[6.4rem] font-display font-extrabold tracking-[-0.04em] text-white leading-[0.96] max-w-5xl">
-          {renderHeroTitle(finalTitle)}
+        {/* H1 "Oversized" con Jerarquía Extrema & Contraste Serif/Sans */}
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-[5.4rem] 2xl:text-[6rem] font-display font-extrabold tracking-[-0.038em] text-white leading-[1.0] max-w-5xl">
+          {renderHeroHeadline(finalTitle)}
         </h1>
 
-        {/* Subtítulo H2 con respiración y peso visual equilibrado */}
-        <p className="text-lg sm:text-xl md:text-2xl text-white/70 font-sans font-light tracking-tight leading-relaxed max-w-2xl">
+        {/* Subtítulo enfocado en gastronomía y comercios */}
+        <p className="text-base sm:text-lg md:text-xl text-white/75 font-sans font-light tracking-tight leading-relaxed max-w-3xl">
           {finalSubtitle}
         </p>
 
-        {/* Micro-puntos de valor de alta conversión */}
-        <div className="flex flex-wrap items-center gap-y-2 gap-x-6 pt-2 text-xs sm:text-sm text-white/75 font-sans">
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#3DDC97]" />
-            <span>Restaurantes &amp; Gastronomía</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#3DDC97]" />
-            <span>Barberías &amp; Negocios Locales</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#3DDC97]" />
-            <span>Marcas de Consumo &amp; Delivery</span>
-          </div>
+        {/* Badges de Confianza Clave (Diseño en fila o cuadrícula pequeña) */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 max-w-3xl">
+          {trustBadges.map((badgeItem, idx) => {
+            const Icon = badgeItem.icon;
+            return (
+              <div
+                key={idx}
+                className="flex items-center gap-2.5 p-3 rounded-xl bg-[#141619]/80 border border-white/[0.07] backdrop-blur-sm"
+              >
+                <div
+                  className="w-7 h-7 rounded-lg bg-[#0D0D0D] border border-white/[0.08] flex items-center justify-center shrink-0"
+                  style={{ color: badgeItem.accent }}
+                >
+                  <Icon className="w-4 h-4" />
+                </div>
+                <span className="text-xs font-sans font-medium text-white/90 leading-tight">
+                  {badgeItem.text}
+                </span>
+              </div>
+            );
+          })}
         </div>
 
-        {/* Botones de acción CTA de alta conversión */}
-        <div className="pt-4 flex flex-wrap items-center gap-4">
-          {/* CTA Primario */}
+        {/* Botones de acción CTA */}
+        <div className="pt-3 flex flex-wrap items-center gap-4">
+          {/* CTA Primario: Ver Catálogo y Precios Oficiales */}
           <a
             href="#precios"
             className="group relative inline-flex items-center gap-3 px-7 py-4 rounded-xl bg-[#3DDC97] hover:bg-[#34C788] text-[#0D0D0D] font-display font-bold text-sm tracking-tight shadow-xl shadow-[#3DDC97]/20 transition-all duration-300 hover:scale-[1.02] active:scale-95"
@@ -141,7 +168,7 @@ export default function Hero({
             <MoveRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
 
-          {/* CTA Secundario WhatsApp */}
+          {/* CTA Secundario: Cotizar por WhatsApp */}
           <a
             href={whatsappUrl}
             target="_blank"
@@ -154,38 +181,8 @@ export default function Hero({
         </div>
       </div>
 
-      {/* 2. Prueba Social Temprana: Infinite Logo Marquee */}
+      {/* Prueba Social Temprana: Infinite Logo Marquee */}
       <LogoMarquee />
-
-      {/* Franja de Garantías de Entrega (Sellos de Confianza Institucional) */}
-      <div className="mt-14 pt-10 border-t border-white/[0.06] grid grid-cols-1 sm:grid-cols-3 gap-5">
-        {TRUST_GUARANTEES.map((item, idx) => {
-          const Icon = guaranteeIcons[item.icon] || Zap;
-          return (
-            <div
-              key={idx}
-              className="p-5 sm:p-6 rounded-2xl bg-[#141619]/40 border border-white/[0.06] hover:border-[#3DDC97]/30 flex items-start gap-4 transition-all duration-300 backdrop-blur-sm group hover:-translate-y-0.5"
-            >
-              <div className="h-10 w-10 rounded-xl bg-[#0D0D0D] border border-white/[0.08] flex items-center justify-center text-[#3DDC97] shrink-0 mt-0.5 group-hover:border-[#3DDC97]/40 transition-colors shadow-inner">
-                <Icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <h3 className="font-display font-bold text-white text-sm sm:text-base tracking-tight">
-                    {item.title}
-                  </h3>
-                  <span className="text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded bg-[#3DDC97]/10 text-[#3DDC97] border border-[#3DDC97]/20">
-                    {item.highlight}
-                  </span>
-                </div>
-                <p className="text-xs sm:text-sm text-white/60 mt-1 font-sans leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
     </section>
   );
 }
