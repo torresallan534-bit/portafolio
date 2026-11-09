@@ -3,7 +3,7 @@ import configPromise from "@payload-config";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import SucursalDigital from "@/components/SucursalDigital";
-import ServiceCatalog from "@/components/ServiceCatalog";
+import ServiceCatalog, { ServiceItem } from "@/components/ServiceCatalog";
 import ProjectGallery from "@/components/ProjectGallery";
 import Pricing from "@/components/Pricing";
 import WorkProcess from "@/components/WorkProcess";
@@ -20,6 +20,7 @@ export default async function Home() {
   let dynamicProjects: ProjectBlock[] = [];
   let dynamicPackages: any[] = [];
   let dynamicReviews: any[] = [];
+  let dynamicServices: ServiceItem[] = [];
 
   // Bloque robusto de extracción con try-catch y fallbacks automáticos
   try {
@@ -102,6 +103,29 @@ export default async function Home() {
         verified: r.verified !== undefined ? r.verified : true,
       }));
     }
+
+    // 5. Catálogo de Servicios A la Carta
+    const servicesRes = await (payload as any)
+      .find({
+        collection: "services",
+        where: { active: { not_equals: false } },
+        sort: "order",
+        limit: 100,
+      })
+      .catch(() => null);
+
+    if (servicesRes && servicesRes.docs?.length > 0) {
+      dynamicServices = servicesRes.docs.map((s: any) => ({
+        id: String(s.id),
+        name: s.name,
+        deliverable: s.deliverable,
+        time: s.time,
+        price: s.price,
+        badge: s.badge || undefined,
+        highlight: Boolean(s.highlight),
+        whatsappMessage: s.whatsappMessage || undefined,
+      }));
+    }
   } catch (error) {
     console.error("Payload CMS local fetch fallback to default values:", error);
   }
@@ -146,7 +170,15 @@ export default async function Home() {
         <SucursalDigital />
 
         {/* 4. Catálogo de Servicios A la Carta (Tabla comparativa responsive) */}
-        <ServiceCatalog />
+        <ServiceCatalog
+          services={dynamicServices.length > 0 ? dynamicServices : undefined}
+          whatsappNumber={whatsappNumber}
+          kicker={settings?.serviceCatalogKicker}
+          title={settings?.serviceCatalogTitle}
+          subtitle={settings?.serviceCatalogSubtitle}
+          guaranteePrimary={settings?.serviceCatalogGuaranteePrimary}
+          guaranteeSecondary={settings?.serviceCatalogGuaranteeSecondary}
+        />
 
         {/* 5. Portafolio Gastronómico: Arepa Secreta, Taquería DF, The King + Demo en Vivo */}
         <ProjectGallery initialProjects={dynamicProjects} />

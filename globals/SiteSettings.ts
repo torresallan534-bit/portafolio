@@ -99,5 +99,36 @@ export const SiteSettings: GlobalConfig = {
         },
       ],
     },
+    {
+      name: 'serviceCatalogKicker',
+      type: 'text',
+      label: 'Badge / Kicker del Catálogo de Servicios',
+      defaultValue: 'Transparencia Total • Sin Letra Pequeña',
+    },
+    {
+      name: 'serviceCatalogTitle',
+      type: 'text',
+      label: 'Título de la Sección de Servicios',
+      defaultValue: 'Catálogo de Servicios A la Carta',
+    },
+    {
+      name: 'serviceCatalogSubtitle',
+      type: 'textarea',
+      label: 'Descripción / Subtítulo del Catálogo',
+      defaultValue:
+        'Paga únicamente por lo que necesitas para tu negocio. Entregas ultra-rápidas en 24 a 48 horas con archivos en alta resolución listos para publicar o imprimir.',
+    },
+    {
+      name: 'serviceCatalogGuaranteePrimary',
+      type: 'text',
+      label: 'Texto de Garantía Principal',
+      defaultValue: '50% anticipo al iniciar • 50% contra entrega final aprobada.',
+    },
+    {
+      name: 'serviceCatalogGuaranteeSecondary',
+      type: 'text',
+      label: 'Texto de Garantía Secundaria',
+      defaultValue: 'Revisiones incluidas en cada servicio.',
+    },
   ],
 }

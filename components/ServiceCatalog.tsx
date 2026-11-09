@@ -12,14 +12,25 @@ import {
 } from "lucide-react";
 import { PANDA_HAUS_INFO } from "@/data/portfolio-data";
 
-interface ServiceItem {
-  id: string;
+export interface ServiceItem {
+  id?: string;
   name: string;
   deliverable: string;
   time: string;
   price: string;
   badge?: string;
   highlight?: boolean;
+  whatsappMessage?: string;
+}
+
+export interface ServiceCatalogProps {
+  services?: ServiceItem[];
+  whatsappNumber?: string;
+  kicker?: string;
+  title?: string;
+  subtitle?: string;
+  guaranteePrimary?: string;
+  guaranteeSecondary?: string;
 }
 
 const CATALOG_ITEMS: ServiceItem[] = [
@@ -78,10 +89,23 @@ const CATALOG_ITEMS: ServiceItem[] = [
   },
 ];
 
-export default function ServiceCatalog() {
+export default function ServiceCatalog({
+  services,
+  whatsappNumber,
+  kicker,
+  title,
+  subtitle,
+  guaranteePrimary,
+  guaranteeSecondary,
+}: ServiceCatalogProps = {}) {
+  const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
+  const items = services && services.length > 0 ? services : CATALOG_ITEMS;
+
   const getWhatsAppLink = (service: ServiceItem) => {
-    const text = `Hola Panda Haus, me interesa pedir el servicio a la carta de "${service.name}" (${service.price} COP).`;
-    return `https://wa.me/${PANDA_HAUS_INFO.whatsappNumber}?text=${encodeURIComponent(text)}`;
+    const text =
+      service.whatsappMessage ||
+      `Hola Panda Haus, me interesa pedir el servicio a la carta de "${service.name}" (${service.price} COP).`;
+    return `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(text)}`;
   };
 
   return (
@@ -92,16 +116,23 @@ export default function ServiceCatalog() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#181B1E] border border-white/[0.08] text-xs font-mono text-[#3DDC97] uppercase tracking-wider mb-4 shadow-sm">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Transparencia Total &bull; Sin Letra Pequeña</span>
+              <span>{kicker || "Transparencia Total • Sin Letra Pequeña"}</span>
             </div>
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-extrabold text-white tracking-tight leading-[1.05]">
-              Catálogo de Servicios{" "}
-              <span className="font-serif italic font-normal text-[#3DDC97]">
-                A la Carta
-              </span>
+              {title ? (
+                title
+              ) : (
+                <>
+                  Catálogo de Servicios{" "}
+                  <span className="font-serif italic font-normal text-[#3DDC97]">
+                    A la Carta
+                  </span>
+                </>
+              )}
             </h2>
             <p className="text-white/65 text-base sm:text-lg mt-3 font-sans font-light leading-relaxed">
-              Paga únicamente por lo que necesitas para tu negocio. Entregas ultra-rápidas en 24 a 48 horas con archivos en alta resolución listos para publicar o imprimir.
+              {subtitle ||
+                "Paga únicamente por lo que necesitas para tu negocio. Entregas ultra-rápidas en 24 a 48 horas con archivos en alta resolución listos para publicar o imprimir."}
             </p>
           </div>
 
@@ -122,9 +153,9 @@ export default function ServiceCatalog() {
           </div>
 
           <div className="divide-y divide-white/[0.06]">
-            {CATALOG_ITEMS.map((item) => (
+            {items.map((item, idx) => (
               <div
-                key={item.id}
+                key={item.id || `catalog-item-${idx}`}
                 className={`grid grid-cols-12 items-center p-5 transition-colors duration-200 group ${
                   item.highlight
                     ? "bg-[#3DDC97]/[0.03] hover:bg-[#3DDC97]/[0.08]"
@@ -180,9 +211,9 @@ export default function ServiceCatalog() {
 
         {/* Grilla de Tarjetas para Móviles (Diseño ultra-legible y táctil) */}
         <div className="md:hidden space-y-3.5">
-          {CATALOG_ITEMS.map((item) => (
+          {items.map((item, idx) => (
             <div
-              key={item.id}
+              key={item.id || `catalog-card-${idx}`}
               className={`p-5 rounded-2xl border transition-all ${
                 item.highlight
                   ? "bg-[#141816] border-[#3DDC97]/40 shadow-lg shadow-[#3DDC97]/5"
@@ -236,9 +267,9 @@ export default function ServiceCatalog() {
         <div className="mt-10 p-5 rounded-2xl bg-[#131518] border border-white/[0.06] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-white/70">
           <div className="flex items-center gap-2.5">
             <ShieldCheck className="w-4 h-4 text-[#3DDC97]" />
-            <span>50% anticipo al iniciar &bull; 50% contra entrega final aprobada.</span>
+            <span>{guaranteePrimary || "50% anticipo al iniciar • 50% contra entrega final aprobada."}</span>
           </div>
-          <span className="text-white/40">Revisiones incluidas en cada servicio.</span>
+          <span className="text-white/40">{guaranteeSecondary || "Revisiones incluidas en cada servicio."}</span>
         </div>
       </div>
     </section>

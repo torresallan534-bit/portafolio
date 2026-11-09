@@ -8,6 +8,7 @@ import { Media } from './collections/Media'
 import { Projects } from './collections/Projects'
 import { Packages } from './collections/Packages'
 import { Reviews } from './collections/Reviews'
+import { Services } from './collections/Services'
 import { SiteSettings } from './globals/SiteSettings'
 import sharp from 'sharp'
 
@@ -21,7 +22,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Projects, Packages, Reviews],
+  collections: [Users, Media, Projects, Packages, Reviews, Services],
   globals: [SiteSettings],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || 'panda_haus_secret_key_produccion_segura_2026_x9k2m',
