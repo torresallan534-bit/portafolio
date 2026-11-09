@@ -43,6 +43,17 @@ export const metadata: Metadata = {
   authors: [{ name: "Panda Haus" }],
   creator: "Panda Haus",
   metadataBase: new URL("https://pandahaus.co"),
+  icons: {
+    icon: [
+      { url: "/brand/panda-haus-logo.svg", type: "image/svg+xml" },
+      { url: "/brand/panda-haus-avatar.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    shortcut: "/brand/panda-haus-logo.svg",
+    apple: [
+      { url: "/brand/panda-haus-avatar.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     title: "Panda Haus | Soluciones Visuales & Digitales para Restaurantes",
     description:
