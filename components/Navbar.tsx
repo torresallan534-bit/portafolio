@@ -28,9 +28,9 @@ export default function Navbar({ whatsappNumber, ctaText }: NavbarProps = {}) {
 
   const finalWhatsappNumber = whatsappNumber || PANDA_HAUS_INFO.whatsappNumber;
   const whatsappUrl = `https://wa.me/${finalWhatsappNumber}?text=${encodeURIComponent(
-    "Hola Panda Haus, quiero hacer crecer las ventas de mi negocio"
+    "Hola Panda Haus, quiero un diagnóstico gratuito de mi web y ecosistema digital para mi negocio."
   )}`;
-  const finalCtaText = ctaText || "Pedir por WhatsApp";
+  const finalCtaText = ctaText || "Diagnóstico Gratis ⚡";
 
   return (
     <header
@@ -63,7 +63,7 @@ export default function Navbar({ whatsappNumber, ctaText }: NavbarProps = {}) {
                 Panda<span className="text-[#3DDC97]">Haus</span>
               </span>
               <span className="text-[10px] font-mono uppercase tracking-wider text-[#F2F4F3]/60 leading-tight mt-0.5">
-                Restaurantes &bull; Negocios Locales
+                Ecosistemas Digitales &bull; 2026
               </span>
             </div>
           </a>

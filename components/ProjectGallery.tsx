@@ -12,8 +12,11 @@ import {
   Scissors,
   CheckCircle2,
   ExternalLink,
+  Laptop,
+  Smartphone,
 } from "lucide-react";
 import { ProjectBlock } from "@/types/projects";
+import { IphoneMockup, MacbookMockup } from "./DeviceMockup";
 import SpecializedModal from "./SpecializedModal";
 import LiveMenuDemoModal from "./LiveMenuDemoModal";
 
@@ -26,16 +29,80 @@ export default function ProjectGallery({ initialProjects }: ProjectGalleryProps 
   const [isDemoOpen, setIsDemoOpen] = useState(false);
   const [demoRestaurantName, setDemoRestaurantName] = useState("Arepa Secreta — Menú QR");
 
-  // 3 Casos de Éxito Principales (Enfoque Restaurantes & Negocios Locales)
+  // 4 Casos de Estudio Emblemáticos montados en Mockups 3D de iPhone & MacBook
   const FEATURED_CASES = [
+    {
+      id: "nails-pastel-branding",
+      clientName: "Nails Pastel — Spa & Nails",
+      badge: "Spa & Belleza",
+      icon: Sparkles,
+      deviceType: "iphone" as const,
+      title: "Nails Pastel — Ecosistema de Tarifas & Agendamiento",
+      summary:
+        "Catálogo interactivo de servicios y tarifas que eliminó las preguntas repetitivas de precios por WhatsApp, logrando que las clientas elijan y agenden de inmediato.",
+      impactBadge: "+65% citas agendadas",
+      coverAsset: "/projects/nails-pastel-branding/flyers-1.webp",
+      hasLiveDemo: false,
+      colorPalette: [
+        { name: "Rosa Pastel", hex: "#EC4899" },
+        { name: "Lavanda Soft", hex: "#A855F7" },
+        { name: "Negro Seda", hex: "#111827" },
+      ],
+      details: {
+        id: "nails-pastel-branding",
+        clientId: "nails-pastel",
+        clientName: "Nails Pastel — Spa & Nails",
+        title: "Nails Pastel — Identidad de Marca, Catálogo de Tarifas & Video Promocional",
+        category: "branding" as const,
+        categoryLabel: "Catálogo de Tarifas & Branding",
+        summary:
+          "Diseño integral del tarifario digital interactivo y piezas promocionales para estados de WhatsApp e Instagram.",
+        challenge:
+          "El personal perdía más de 3 horas al día respondiendo cotizaciones manuales y enviando fotos desordenadas.",
+        solution:
+          "Estructuramos un catálogo visual elegante con precios transparentes y enlaces directos para apartar cita con abono.",
+        coverAsset: "/projects/nails-pastel-branding/flyers-1.webp",
+        coverMediaType: "image" as const,
+        assets: [
+          {
+            id: "nails-1",
+            title: "Nails Pastel — Catálogo de Tratamientos",
+            assetPath: "/projects/nails-pastel-branding/flyers-1.webp",
+            mediaType: "image" as const,
+            aspectRatio: "3:4" as const,
+          },
+          {
+            id: "nails-2",
+            title: "Nails Pastel — Tarifario de Uñas & Spa",
+            assetPath: "/projects/nails-pastel-branding/flyers-2.webp",
+            mediaType: "image" as const,
+            aspectRatio: "3:4" as const,
+          },
+          {
+            id: "nails-3",
+            title: "Nails Pastel — Identidad de Marca Oficial",
+            assetPath: "/projects/nails-pastel-branding/logo-nails-pastel.webp",
+            mediaType: "image" as const,
+            aspectRatio: "1:1" as const,
+          },
+        ],
+        colorPalette: [
+          { name: "Rosa Pastel", hex: "#EC4899" },
+          { name: "Lavanda Soft", hex: "#A855F7" },
+          { name: "Negro Seda", hex: "#111827" },
+        ],
+        year: 2026,
+      },
+    },
     {
       id: "arepa-secreta-menus",
       clientName: "Arepa Secreta",
-      badge: "Menús QR & Stickers",
+      badge: "Restaurantes & Bares",
       icon: QrCode,
-      title: "Arepa Secreta — Mock-up Menú QR + Stickers",
+      deviceType: "iphone" as const,
+      title: "Arepa Secreta — Menú QR Interactivo & Pedidos",
       summary:
-        "Diseño integral de cartas físicas y digitales para lectura rápida por código QR, aumentando la rotación de mesas y los pedidos de combos por WhatsApp.",
+        "Digitalización total de la carta física y digital con QR para lectura ultrarrápida, reduciendo tiempos de espera y aumentando la venta de combos sin pagar comisiones.",
       impactBadge: "+40% pedidos en combos",
       coverAsset: "/projects/arepa-secreta-menus/menu-fase-1-carta-1-1.webp",
       hasLiveDemo: true,
@@ -91,13 +158,68 @@ export default function ProjectGallery({ initialProjects }: ProjectGalleryProps 
       },
     },
     {
+      id: "barberia-the-king-flyers",
+      clientName: "Barbería The King",
+      badge: "Barberías & Grooming",
+      icon: Scissors,
+      deviceType: "macbook" as const,
+      title: "Barbería The King — Campaña VIP & Cuponeras 2x1",
+      summary:
+        "Piezas promocionales y cuponeras digitales de fidelización diseñadas para llenar la agenda los martes y miércoles con planes recurrentes de alto ticket.",
+      impactBadge: "Agenda llena entre semana",
+      coverAsset: "/projects/barberia-the-king-flyers/1.webp",
+      hasLiveDemo: false,
+      colorPalette: [
+        { name: "Dorado Rey", hex: "#EAB308" },
+        { name: "Negro Obsidiana", hex: "#09090B" },
+      ],
+      details: {
+        id: "barberia-the-king-flyers",
+        clientId: "barberia-the-king",
+        clientName: "Barbería The King",
+        title: "Barbería The King — Cartelería Urbana & Cuponeras 2x1",
+        category: "flyers" as const,
+        categoryLabel: "Flyers Combos",
+        summary:
+          "Afiches de alto contraste con estética streetwear y cupones de fidelización para clientes VIP.",
+        challenge:
+          "Diferenciarse de barberías tradicionales con una identidad visual contundente y moderna.",
+        solution:
+          "Tipografía contundente, paleta negro/oro y cuponera lista para volanteo físico y estados de WhatsApp.",
+        coverAsset: "/projects/barberia-the-king-flyers/1.webp",
+        coverMediaType: "image" as const,
+        assets: [
+          {
+            id: "barberia-1",
+            title: "Barbería The King — Pieza 1",
+            assetPath: "/projects/barberia-the-king-flyers/1.webp",
+            mediaType: "image" as const,
+            aspectRatio: "3:4" as const,
+          },
+          {
+            id: "barberia-2",
+            title: "Barbería The King — Pieza 2",
+            assetPath: "/projects/barberia-the-king-flyers/2.webp",
+            mediaType: "image" as const,
+            aspectRatio: "3:4" as const,
+          },
+        ],
+        colorPalette: [
+          { name: "Dorado Rey", hex: "#EAB308" },
+          { name: "Negro Obsidiana", hex: "#09090B" },
+        ],
+        year: 2025,
+      },
+    },
+    {
       id: "taqueria-df-flyers",
       clientName: "Taquería DF — La Capital del Taco",
-      badge: "Cartas Promo en Mesa",
+      badge: "Restaurantes & Taquerías",
       icon: Flame,
-      title: "Taquería DF — Cartas Promo en Mesa & Campañas 2x1",
+      deviceType: "iphone" as const,
+      title: "Taquería DF — Cartas Promo de Mesa & Combos",
       summary:
-        "Serie de cartas de mesa y afiches comerciales para promociones 2x1 de tacos al pastor, agilizando el despacho y aumentando el ticket medio.",
+        "Cartas de mesa y material promocional 2x1 para agilizar la rotación en horas pico y multiplicar el ticket promedio de consumo en local y domicilios.",
       impactBadge: "Despacho 30% más rápido",
       coverAsset: "/projects/taqueria-df-flyers/1.webp",
       hasLiveDemo: true,
@@ -145,59 +267,6 @@ export default function ProjectGallery({ initialProjects }: ProjectGalleryProps 
         year: 2025,
       },
     },
-    {
-      id: "barberia-the-king-flyers",
-      clientName: "Barbería The King",
-      badge: "Flyers Combos",
-      icon: Scissors,
-      title: "Barbería The King — Flyers Combos & Cuponeras",
-      summary:
-        "Piezas promocionales de alto impacto para historias de WhatsApp y cartelería local, llenando la agenda los días martes y miércoles.",
-      impactBadge: "Agenda llena entre semana",
-      coverAsset: "/projects/barberia-the-king-flyers/1.webp",
-      hasLiveDemo: false,
-      colorPalette: [
-        { name: "Dorado Rey", hex: "#EAB308" },
-        { name: "Negro Obsidiana", hex: "#09090B" },
-      ],
-      details: {
-        id: "barberia-the-king-flyers",
-        clientId: "barberia-the-king",
-        clientName: "Barbería The King",
-        title: "Barbería The King — Cartelería Urbana & Cuponeras 2x1",
-        category: "flyers" as const,
-        categoryLabel: "Flyers Combos",
-        summary:
-          "Afiches de alto contraste con estética streetwear y cupones de fidelización para clientes VIP.",
-        challenge:
-          "Diferenciarse de barberías tradicionales con una identidad visual contundente y moderna.",
-        solution:
-          "Tipografía contundente, paleta negro/oro y cuponera lista para volanteo físico y estados de WhatsApp.",
-        coverAsset: "/projects/barberia-the-king-flyers/1.webp",
-        coverMediaType: "image" as const,
-        assets: [
-          {
-            id: "barberia-1",
-            title: "Barbería The King — Pieza 1",
-            assetPath: "/projects/barberia-the-king-flyers/1.webp",
-            mediaType: "image" as const,
-            aspectRatio: "3:4" as const,
-          },
-          {
-            id: "barberia-2",
-            title: "Barbería The King — Pieza 2",
-            assetPath: "/projects/barberia-the-king-flyers/2.webp",
-            mediaType: "image" as const,
-            aspectRatio: "3:4" as const,
-          },
-        ],
-        colorPalette: [
-          { name: "Dorado Rey", hex: "#EAB308" },
-          { name: "Negro Obsidiana", hex: "#09090B" },
-        ],
-        year: 2025,
-      },
-    },
   ];
 
   const handleOpenDemo = (restaurantName: string, e: React.MouseEvent) => {
@@ -209,77 +278,90 @@ export default function ProjectGallery({ initialProjects }: ProjectGalleryProps 
   return (
     <section id="portafolio" className="py-24 sm:py-32 max-w-7xl mx-auto px-5 sm:px-8 border-b border-white/[0.06]">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 text-left">
         <div>
           <div className="text-xs font-mono text-[#3DDC97] uppercase tracking-wider mb-3 flex items-center gap-2">
             <Layers className="w-3.5 h-3.5" />
-            <span>Casos Reales de Éxito &bull; Negocios Locales &bull; Cero SaaS</span>
+            <span>Portafolio de Autoridad &bull; Mockups 3D &bull; Cero Capturas Planas</span>
           </div>
           <h2 className="text-3xl sm:text-5xl md:text-6xl font-display font-extrabold text-white tracking-tight leading-[1.05]">
-            Resultados Visuales en{" "}
+            Así se ve un negocio local{" "}
             <span className="font-serif italic font-normal text-[#3DDC97]">
-              Negocios Reales
+              facturando en 2026
             </span>
           </h2>
-          <p className="text-white/65 text-base sm:text-lg mt-3 max-w-xl font-sans font-light leading-relaxed">
-            Descubre cómo restaurantes y negocios locales transformaron su imagen comercial para vender más y retener comensales.
+          <p className="text-white/65 text-base sm:text-lg mt-3 max-w-2xl font-sans font-light leading-relaxed">
+            Nuestros ecosistemas presentados en dispositivos reales. Elimina la fricción visual y transmite el valor premium que justifica precios más altos.
           </p>
         </div>
 
-        <div className="flex items-center gap-2 text-xs font-mono text-white/80 bg-[#141618] px-4 py-2.5 rounded-2xl border border-white/[0.08] backdrop-blur-md w-fit shadow-sm">
+        <div className="flex items-center gap-2 text-xs font-mono text-white/80 bg-[#141618] px-4 py-2.5 rounded-2xl border border-white/[0.08] backdrop-blur-md w-fit shadow-sm shrink-0">
           <Sparkles className="w-3.5 h-3.5 text-[#3DDC97]" />
-          <span>3 Casos de Estudio Destacados</span>
+          <span>4 Ecosistemas de Alta Conversión</span>
         </div>
       </div>
 
-      {/* Grid de 3 Casos de Éxito Principales */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-7 sm:gap-8">
+      {/* Grid de Casos de Éxito en Mockups Flotantes 3D */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
         {FEATURED_CASES.map((item) => {
           const Icon = item.icon;
           return (
             <article
               key={item.id}
               onClick={() => setSelectedProject(item.details)}
-              className="group flex flex-col rounded-3xl bg-[#121417] border border-white/[0.07] hover:border-[#3DDC97]/40 cursor-pointer overflow-hidden shadow-sm hover:shadow-2xl hover:shadow-black/80 hover:-translate-y-1.5 transition-all duration-500 ease-out"
+              className="group flex flex-col rounded-3xl bg-[#111418] border border-white/[0.08] hover:border-[#3DDC97]/40 cursor-pointer overflow-hidden shadow-xl shadow-black/60 hover:shadow-2xl hover:shadow-black/90 transition-all duration-500 ease-out text-left"
             >
-              {/* Imagen de Portada con Smooth Zoom-In */}
-              <div className="relative w-full aspect-[4/5] bg-[#0A0B0D] overflow-hidden flex items-center justify-center">
-                <Image
-                  src={item.coverAsset}
-                  alt={item.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover object-center transition-all duration-500 ease-out group-hover:scale-105"
-                />
+              {/* Contenedor del Mockup 3D Flotante (Prohibidas capturas planas) */}
+              <div className="relative w-full py-10 px-6 sm:px-10 bg-gradient-to-b from-[#0A0D11] via-[#0E1116] to-[#12161B] overflow-hidden flex items-center justify-center min-h-[380px] sm:min-h-[440px]">
+                {/* Iluminación ambiental cenital */}
+                <div className="pointer-events-none absolute -top-16 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-[#3DDC97]/10 blur-3xl -z-0" />
 
                 {/* Badges superiores flotantes */}
-                <div className="absolute top-3.5 left-3.5 right-3.5 z-20 flex items-center justify-between pointer-events-none">
-                  <span className="text-[11px] font-mono tracking-wide px-3 py-1 rounded-xl bg-[#0D0D0D]/85 border border-white/[0.1] text-[#3DDC97] font-bold backdrop-blur-md shadow-sm">
+                <div className="absolute top-4 left-4 right-4 z-30 flex items-center justify-between pointer-events-none">
+                  <span className="text-[11px] font-mono tracking-wide px-3 py-1 rounded-xl bg-[#0D0D0D]/90 border border-white/[0.1] text-[#3DDC97] font-bold backdrop-blur-md shadow-sm">
                     {item.badge}
                   </span>
 
-                  <span className="text-[11px] font-mono px-2.5 py-1 rounded-xl bg-[#0D0D0D]/85 border border-white/[0.1] text-white/90 backdrop-blur-md shadow-sm">
+                  <span className="text-[11px] font-mono px-3 py-1 rounded-xl bg-[#0D0D0D]/90 border border-[#3DDC97]/30 text-white font-bold backdrop-blur-md shadow-sm">
                     {item.impactBadge}
                   </span>
                 </div>
 
-                {/* Botón flotante para Probar Demo en Vivo si aplica */}
+                {/* Renderizado de Mockup 3D de iPhone o MacBook */}
+                <div className="relative z-10 w-full flex items-center justify-center pt-6">
+                  {item.deviceType === "macbook" ? (
+                    <MacbookMockup
+                      imageSrc={item.coverAsset}
+                      imageAlt={item.title}
+                      urlTitle={`pandahaus.co/${item.id}`}
+                      className="max-w-[340px] sm:max-w-[420px]"
+                    />
+                  ) : (
+                    <IphoneMockup
+                      imageSrc={item.coverAsset}
+                      imageAlt={item.title}
+                      className="max-w-[210px] sm:max-w-[230px]"
+                    />
+                  )}
+                </div>
+
+                {/* Botón flotante para Probar Demo si aplica */}
                 {item.hasLiveDemo && (
-                  <div className="absolute bottom-4 left-4 right-4 z-20">
+                  <div className="absolute bottom-4 left-4 right-4 z-30">
                     <button
                       type="button"
                       onClick={(e) => handleOpenDemo(item.clientName, e)}
-                      className="w-full py-2.5 px-4 rounded-xl bg-[#0D0D0D]/90 hover:bg-[#3DDC97] text-white hover:text-[#0D0D0D] border border-white/[0.15] hover:border-[#3DDC97] text-xs font-display font-bold flex items-center justify-center gap-2 backdrop-blur-md transition-all shadow-lg shadow-black/60"
+                      className="w-full py-2.5 px-4 rounded-xl bg-[#0D0D0D]/90 hover:bg-[#3DDC97] text-white hover:text-[#0D0D0D] border border-white/[0.15] hover:border-[#3DDC97] text-xs font-display font-bold flex items-center justify-center gap-2 backdrop-blur-md transition-all shadow-lg"
                     >
                       <QrCode className="w-4 h-4 text-[#3DDC97] group-hover:text-[#0D0D0D]" />
-                      <span>Probar Demo de Menú en Vivo</span>
+                      <span>Probar Demo Interactiva en Vivo</span>
                     </button>
                   </div>
                 )}
               </div>
 
               {/* Información de la Tarjeta */}
-              <div className="p-6 flex flex-col flex-1 justify-between bg-[#121417] text-left border-t border-white/[0.06]">
+              <div className="p-6 sm:p-7 flex flex-col flex-1 justify-between bg-[#121519] border-t border-white/[0.06]">
                 <div>
                   <div className="flex items-center gap-2 mb-2">
                     <Icon className="w-4 h-4 text-[#3DDC97]" />
@@ -288,32 +370,32 @@ export default function ProjectGallery({ initialProjects }: ProjectGalleryProps 
                     </span>
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-display font-bold text-white leading-snug group-hover:text-[#3DDC97] transition-colors duration-300">
+                  <h3 className="text-lg sm:text-xl font-display font-bold text-white leading-snug group-hover:text-[#3DDC97] transition-colors duration-300">
                     {item.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-white/60 mt-2.5 line-clamp-3 leading-relaxed font-sans font-light">
+                  <p className="text-xs sm:text-sm text-white/65 mt-2.5 line-clamp-3 leading-relaxed font-sans font-light">
                     {item.summary}
                   </p>
                 </div>
 
-                {/* Footer de Tarjeta con Paleta y Botón para Ver Piezas */}
+                {/* Footer de Tarjeta con CTA para Ver Piezas */}
                 <div className="mt-5 pt-4 border-t border-white/[0.06] flex items-center justify-between">
-                  <div className="flex items-center gap-1.5" title="Paleta de color del negocio">
-                    {item.colorPalette.map((c, i) => (
+                  <div className="flex items-center gap-1.5">
+                    {item.colorPalette.map((color, i) => (
                       <span
                         key={i}
-                        className="w-3.5 h-3.5 rounded-full border border-white/20 shadow-sm"
-                        style={{ backgroundColor: c.hex }}
-                        title={`${c.name} (${c.hex})`}
+                        className="w-3.5 h-3.5 rounded-full border border-black/40 shadow-sm"
+                        style={{ backgroundColor: color.hex }}
+                        title={color.name}
                       />
                     ))}
                   </div>
 
-                  <div className="flex items-center gap-1.5 text-xs font-display font-bold text-white/80 group-hover:text-[#3DDC97] transition-colors duration-300">
-                    <span>Ver Piezas</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </div>
+                  <span className="text-xs font-display font-bold text-white/80 group-hover:text-[#3DDC97] flex items-center gap-1 transition-colors">
+                    <span>Ver Ecosistema Completo</span>
+                    <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                  </span>
                 </div>
               </div>
             </article>
@@ -321,13 +403,13 @@ export default function ProjectGallery({ initialProjects }: ProjectGalleryProps 
         })}
       </div>
 
-      {/* Modal Especializado para ver los artes en HD */}
+      {/* Modal para Ver Casos Detallados */}
       <SpecializedModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
       />
 
-      {/* Modal Interactivo: Demo de Menú Digital en Vivo */}
+      {/* Modal de Demo de Menú QR en Vivo */}
       <LiveMenuDemoModal
         isOpen={isDemoOpen}
         onClose={() => setIsDemoOpen(false)}

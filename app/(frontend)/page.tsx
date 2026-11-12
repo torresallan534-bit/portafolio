@@ -2,6 +2,7 @@ import { getPayload } from "payload";
 import configPromise from "@payload-config";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import NicheAuthority from "@/components/NicheAuthority";
 import SucursalDigital from "@/components/SucursalDigital";
 import ServiceCatalog, { ServiceItem } from "@/components/ServiceCatalog";
 import ProjectGallery from "@/components/ProjectGallery";
@@ -130,19 +131,19 @@ export default async function Home() {
     console.error("Payload CMS local fetch fallback to default values:", error);
   }
 
-  // Textos y configuraciones dinámicas alineados con el posicionamiento gastronómico
+  // Textos y configuraciones dinámicas alineados con el posicionamiento agresivo de conversión
   const heroBadge =
     settings?.heroBadgeText ||
-    "Soluciones Visuales & Digitales para Restaurantes y Negocios Locales";
+    "Ecosistemas Digitales de Alta Conversión • 2026";
   const heroTitle =
     settings?.heroTitle ||
-    "Hacemos que tu restaurante se vea profesional y venda más en digital.";
+    "Escalamos las ventas de tu negocio local con ecosistemas digitales rentables";
   const heroSubtitle =
     settings?.heroSubtitle ||
-    "Flyers de alto impacto entregados en 24 horas, menús interactivos con código QR y sucursales web para recibir pedidos directos a tu WhatsApp sin pagar comisiones.";
-  const heroPrimaryCta = settings?.heroPrimaryCtaText || "Ver Catálogo y Precios Oficiales";
-  const heroSecondaryCta = settings?.heroSecondaryCtaText || "Cotizar por WhatsApp";
-  const navbarCta = settings?.navbarCtaText || "Pedir por WhatsApp";
+    "Diseñamos portales de alta autoridad, cartas interactivas y embudos de venta directos a tu WhatsApp para que dejes de perder clientes con páginas de los 2000s.";
+  const heroPrimaryCta = settings?.heroPrimaryCtaText || "Quiero un diagnóstico de mi web";
+  const heroSecondaryCta = settings?.heroSecondaryCtaText || "Ver Casos de Éxito";
+  const navbarCta = settings?.navbarCtaText || "Diagnóstico Gratis ⚡";
   const whatsappNumber = settings?.whatsappNumber || "573248000501";
   const brandAccentColor = settings?.brandAccentColor || "#3DDC97";
   const socialLinks = settings?.socialLinks;
@@ -152,11 +153,11 @@ export default async function Home() {
       className="flex flex-col min-h-screen bg-[#0D0D0D] text-[#F2F4F3]"
       style={{ "--brand-accent": brandAccentColor } as React.CSSProperties}
     >
-      {/* 1. Barra de navegación con badge 24-72h y botón Pedir por WhatsApp */}
+      {/* 1. Barra de navegación con badge 24-72h y botón Diagnóstico Gratis */}
       <Navbar whatsappNumber={whatsappNumber} ctaText={navbarCta} />
 
       <main className="flex-1">
-        {/* 2. Hero Section con H1, badges de confianza y CTAs directos */}
+        {/* 2. Above the fold: H1 agresivo, botón de diagnóstico y 3D Mockup Nails Pastel */}
         <Hero
           badge={heroBadge}
           title={heroTitle}
@@ -166,10 +167,16 @@ export default async function Home() {
           whatsappNumber={whatsappNumber}
         />
 
-        {/* 3. Nueva Sección Destacada: Sucursal Digital Autogestionable ($390.000 COP) */}
+        {/* 3. Autoridad: Iconos de Nichos Dominados (Restaurantes, Spas, Barberías, Comercios) */}
+        <NicheAuthority />
+
+        {/* 4. Portafolio (Deseo): Mockups Flotantes 3D de iPhones y MacBooks */}
+        <ProjectGallery initialProjects={dynamicProjects} />
+
+        {/* 5. Solución Destacada: Sucursal Digital Autogestionable ($390.000 COP) */}
         <SucursalDigital />
 
-        {/* 4. Catálogo de Servicios A la Carta (Tabla comparativa responsive) */}
+        {/* 6. Catálogo de Servicios A la Carta (Tabla comparativa responsive) */}
         <ServiceCatalog
           services={dynamicServices.length > 0 ? dynamicServices : undefined}
           whatsappNumber={whatsappNumber}
@@ -179,9 +186,6 @@ export default async function Home() {
           guaranteePrimary={settings?.serviceCatalogGuaranteePrimary}
           guaranteeSecondary={settings?.serviceCatalogGuaranteeSecondary}
         />
-
-        {/* 5. Portafolio Gastronómico: Arepa Secreta, Taquería DF, The King + Demo en Vivo */}
-        <ProjectGallery initialProjects={dynamicProjects} />
 
         {/* 6. Sección de Combos y Planes Recurrentes */}
         <Pricing packages={dynamicPackages} whatsappNumber={whatsappNumber} />
